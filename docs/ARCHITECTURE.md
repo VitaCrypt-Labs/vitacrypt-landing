@@ -24,7 +24,7 @@ and JavaScript inline) — there is no shared stylesheet file yet.
 | `litepaper.html` | The technical brief — cryptography, threat model, integration spec, validation plan. Dark-only by design. |
 | `api/waitlist.js` | Serverless function: receives the waitlist form and forwards it to Telegram. |
 | `sitemap.xml`, `robots.txt`, `llms.txt`, `vercel.json` | SEO + hosting config. |
-| `img/` | Logos + the social-share image (`og-preview.jpg`, 1200×630). |
+| `img/` | Logos + the social-share image (`og-preview-v2.jpg`, 1200×630; old `og-preview.jpg` kept). |
 | `docs/` | Internal notes (research findings, decisions, backups). **Excluded from deploy** via `.vercelignore` — not public. |
 
 Navigation funnel: **landing (what it is) → platform (how it works) → litepaper (proof)**.
@@ -107,14 +107,19 @@ If the function ever fails, the form shows a fallback: "email marketing@vitacryp
   `docs/round-5/*.bak`; the Jun-2026 repositioning backups (all four pages +
   the old OG image) are in `docs/round-7/*.bak`.
 
-### Regenerating the social card (`img/og-preview.jpg`)
+### Regenerating the social card (current: `img/og-preview-v2.jpg`)
 It is a **pre-rendered 1200×630 binary** — editing `img/og-preview-template.html`
-alone changes nothing until the JPG is re-rendered. To regenerate:
+alone changes nothing until the JPG is re-rendered. **Always render to a NEW
+versioned filename** (`-v2` → `-v3` …): Telegram and other platforms cache the image
+binary *keyed on its URL* and will NOT re-download a changed image at the same URL even
+after a re-scrape — only a fresh URL forces a new fetch (learned 2026-06-15). To regenerate:
 ```
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
   --window-size=1200,630 --force-device-scale-factor=1 --virtual-time-budget=8000 \
   --screenshot=/tmp/og.png "file://$(pwd)/img/og-preview-template.html"
-sips -s format jpeg -s formatOptions 82 /tmp/og.png --out img/og-preview.jpg
+sips -s format jpeg -s formatOptions 82 /tmp/og.png --out img/og-preview-v3.jpg
 ```
-Then `vercel --prod`, and re-scrape OG caches (X / LinkedIn / Telegram / Facebook
-debuggers) since those platforms cache the image on their side.
+Then repoint all refs (`og:image`, `og:image:secure_url`, `twitter:image`, the JSON-LD
+image field in index/investor/platform/litepaper.html + `<image:loc>` in sitemap.xml) to
+the new filename, `vercel --prod`, and re-scrape OG caches (X Card Validator / LinkedIn
+Post Inspector / Telegram @WebpageBot / Facebook Sharing Debugger).

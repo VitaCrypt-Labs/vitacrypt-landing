@@ -471,3 +471,30 @@ in KNOWN_ISSUES still stands on its own).
 - Fix 3 (stale /index.html) confirmed already resolved: `/index.html` is byte-identical to the root and serves the current honest build (all old FHE markers 0).
 
 **Verified (post-deploy curl):** investor three-tier-router wording + hedged absolutes + no FHE keywords; /index.html == root (180,716 bytes), old markers all 0. `investor-page` pushed (523ec56..7bebb4d).
+
+## 2026-06-15 — OG social card cache-bust (Telegram showed stale "Powered by FHE" image)
+
+**Context:** Paul reported Telegram still rendering the old "Powered by FHE" social card. A
+@WebpageBot re-scrape updated the *title + description* to current copy but left the **old image**.
+
+**Root cause:** The `og:image` URL never changed — always `img/og-preview.jpg`; only its *contents*
+were swapped (FHE → "Your whole health" card) on 2026-06-07. Telegram (like other platforms) caches
+the image binary **keyed on its URL** and will not re-download a changed image at an *unchanged* URL
+even on re-scrape. Confirmed the origin was already correct: live Cloudflare `ETag` == local `md5`
+(`744c4d156bfc536f63675b3d19bcc10e`), so CF was not the culprit — the stale copy lived only inside
+Telegram's cache.
+
+**Fix (commit pending, NOT yet deployed):** copied the byte-identical correct card to a new URL
+`img/og-preview-v2.jpg` and repointed all 19 live refs (`og:image`, `og:image:secure_url`,
+`twitter:image`, JSON-LD image across index/investor/platform/litepaper.html + 3 `<image:loc>` in
+sitemap.xml). The ~60 `og-preview.jpg` refs in `docs/round-*/*.bak` were intentionally left frozen.
+
+**Convention going forward:** bump the image filename version (`-v2` → `-v3` …) on every card
+change — a re-scrape alone never refreshes a same-URL image. Documented in ARCHITECTURE.md.
+
+**Trade-off / left as-is:** the new file is identical content; the cosmetic template drift (card
+says "fused … evidence-checked", meta says "unified … AI-driven") was deliberately not fixed this
+round.
+
+**Pending:** deploy gated on Paul's explicit "go" (`vercel --prod`, must include the new JPG), then
+re-run @WebpageBot on all 4 URLs (+ X / LinkedIn / FB debuggers if those matter).

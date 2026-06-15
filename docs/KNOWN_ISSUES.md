@@ -1,15 +1,17 @@
 # Known Issues / Open Follow-ups
 
-_Last updated: 2026-06-11 (delta pass deployed: clinical framing + revenue levers)._
+_Last updated: 2026-06-15 (OG image URL bumped to `og-preview-v2.jpg` to bust Telegram's stale-image cache; deploy pending)._
 
 ## Open — needs a human / external action
-- **OG social-card cache.** `img/og-preview.jpg` was regenerated and is live (origin + CDN),
-  but X / LinkedIn / Telegram / Facebook cache OG images on their side. Existing share previews
-  keep showing the old "Powered by FHE" card until each is re-scraped via its debugger
-  (LinkedIn Post Inspector, FB Sharing Debugger, X Card Validator, Telegram @WebpageBot).
-  New shares pick up the new card automatically. The 2026-06-10 pass also changed og:description
-  text on all pages (added "AI-driven", litepaper de-overclaimed), so a re-scrape after the next
-  deploy refreshes both image and text; the image itself did not change this round.
+- **OG social-card cache — image URL bumped (fix applied 2026-06-15, deploy pending).** Telegram
+  kept showing the old "Powered by FHE" card even after @WebpageBot: a re-scrape refreshes
+  title/description but **not** a changed image at an *unchanged* URL — platforms cache the image
+  binary keyed on its URL, and `og:image` had always been `img/og-preview.jpg` (only its contents
+  changed on 2026-06-07). Proven not a CDN issue: live Cloudflare `ETag` == local `md5`. Fix: the
+  already-correct card was copied to a new URL `img/og-preview-v2.jpg` and all 19 live refs
+  repointed. **After the next `vercel --prod`,** re-scrape each platform that has a cached preview
+  (Telegram @WebpageBot, X Card Validator, LinkedIn Post Inspector, FB Sharing Debugger) — the new
+  URL has no prior cache, so the new card loads. Convention: bump `-vN` on every future card change.
 - **Litepaper §04 status badges vs investor traction table.** §04 marks Wearables / Labs /
   Microbiome as "MVP" while the investor page says Partial / Wired. The v2 litepaper brief did not
   cover §04, so it was left as-is — align in the next litepaper iteration.
