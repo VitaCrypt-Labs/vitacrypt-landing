@@ -1,15 +1,16 @@
 # Known Issues / Open Follow-ups
 
-_Last updated: 2026-06-15 (OG image URL bumped to `og-preview-v2.jpg` to bust Telegram's stale-image cache; deploy pending)._
+_Last updated: 2026-06-15 (OG image URL bumped to `og-preview-v2.jpg` to bust Telegram's stale-image cache; deployed — only the manual re-scrape remains)._
 
 ## Open — needs a human / external action
-- **OG social-card cache — image URL bumped (fix applied 2026-06-15, deploy pending).** Telegram
+- **OG social-card cache — image URL bumped + deployed 2026-06-15 (only the manual re-scrape remains).** Telegram
   kept showing the old "Powered by FHE" card even after @WebpageBot: a re-scrape refreshes
   title/description but **not** a changed image at an *unchanged* URL — platforms cache the image
   binary keyed on its URL, and `og:image` had always been `img/og-preview.jpg` (only its contents
   changed on 2026-06-07). Proven not a CDN issue: live Cloudflare `ETag` == local `md5`. Fix: the
   already-correct card was copied to a new URL `img/og-preview-v2.jpg` and all 19 live refs
-  repointed. **After the next `vercel --prod`,** re-scrape each platform that has a cached preview
+  repointed. **Deployed `dpl_3KPzvqBYLLfBYnWKq3ELqSyi65bH` — verified live (new URL 200, md5 ==
+  local, all 4 pages serve `-v2`).** Now re-scrape each platform that has a cached preview
   (Telegram @WebpageBot, X Card Validator, LinkedIn Post Inspector, FB Sharing Debugger) — the new
   URL has no prior cache, so the new card loads. Convention: bump `-vN` on every future card change.
 - **Litepaper §04 status badges vs investor traction table.** §04 marks Wearables / Labs /

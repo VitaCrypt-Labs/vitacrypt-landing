@@ -484,7 +484,7 @@ even on re-scrape. Confirmed the origin was already correct: live Cloudflare `ET
 (`744c4d156bfc536f63675b3d19bcc10e`), so CF was not the culprit — the stale copy lived only inside
 Telegram's cache.
 
-**Fix (commit pending, NOT yet deployed):** copied the byte-identical correct card to a new URL
+**Fix (commit `e827cca`, deployed 2026-06-15):** copied the byte-identical correct card to a new URL
 `img/og-preview-v2.jpg` and repointed all 19 live refs (`og:image`, `og:image:secure_url`,
 `twitter:image`, JSON-LD image across index/investor/platform/litepaper.html + 3 `<image:loc>` in
 sitemap.xml). The ~60 `og-preview.jpg` refs in `docs/round-*/*.bak` were intentionally left frozen.
@@ -496,5 +496,8 @@ change — a re-scrape alone never refreshes a same-URL image. Documented in ARC
 says "fused … evidence-checked", meta says "unified … AI-driven") was deliberately not fixed this
 round.
 
-**Pending:** deploy gated on Paul's explicit "go" (`vercel --prod`, must include the new JPG), then
-re-run @WebpageBot on all 4 URLs (+ X / LinkedIn / FB debuggers if those matter).
+**Deployed** 2026-06-15 on Paul's "deploy" (`vercel --prod` → `dpl_3KPzvqBYLLfBYnWKq3ELqSyi65bH`,
+READY, aliased vitacrypt.xyz). Verified live (post-deploy curl): `og-preview-v2.jpg` → 200 /
+102,685 B / `cf-cache-status: MISS`, live md5 == local (`744c4d15…`), all 4 pages serve `-v2`.
+**Remaining (manual, Paul only):** run @WebpageBot on the 4 URLs (+ X / LinkedIn / FB debuggers if
+those matter) — the new image URL has no prior Telegram cache, so the re-scrape pulls the new card.
