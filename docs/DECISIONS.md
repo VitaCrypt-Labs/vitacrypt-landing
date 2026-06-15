@@ -539,3 +539,14 @@ vitacrypt.xyz; commit `027dfb3` on `investor-page`, not pushed). **Verified live
 0 residual must-be-gone phrases; positive checks pass — Unified+Cited CTA, `SIGNAL`×6, Zama-free
 footer, Terra softened, FHE-matching = roadmap, PHQ-9 gone, litepaper title de-FHE'd + OG alt fixed,
 honest numbers (0 fabricated / 5 corpora / ~40M) intact.
+
+**Follow-up (commit `bb5f9bc`, `dpl_24ruZrWKwyperhn16FPPEeQoUFMs`):** a live re-check (WebFetch) caught a
+residual brief-flagged tagline the first scan missed — *"Private by design, targeting the Zama
+Concrete ML / TFHE stack"* survived in the JSON-LD schema `description` and the closing share-card
+`<p>` on index/platform/investor (my footer scan only matched the caps `TARGETING ZAMA CONCRETE ML`).
+Removed via sed → "Private by design."; also demoted Zama in platform meta keywords + litepaper JSON-LD
+keywords. **Kept (brief allows):** the roadmap-pillar "we are targeting the Zama Concrete ML / TFHE
+stack" mentions (platform/investor privacy-roadmap sections) and the factual Zama-96%-benchmark
+evidence citations. Live re-verified: tagline 0/3 pages, roadmap mentions 1/1 intact, WebFetch confirms
+the closing blurb now ends "Private by design." Lesson: scan lowercase `zama`/`tfhe`, not just the
+caps footer string.
