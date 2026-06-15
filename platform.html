@@ -3389,9 +3389,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <p class="lede">VitaCrypt pulls each source and normalizes it into one schema, so scattered data becomes a single queryable profile, built to fold in any health signal and grow over time. The privacy pillar is built so that profile is encrypted under your key and the server works with one ciphertext, not a separate plaintext feed per source.</p>
 
     <ol class="vc-steps">
-      <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables stream through Terra API; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
+      <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables connect via Apple Health today, with broader device APIs such as Terra at MVP launch; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
       <li><span class="n">2</span><div><strong>Normalize into one schema</strong><p>Different formats (VCF, FHIR, CSV, JSON) are mapped into one queryable health schema.</p></div></li>
-      <li><span class="n">3</span><div><strong>Encrypt under your key</strong><p>The unified profile is encrypted with a key held in your iOS Keychain / Android Keystore. The design goal: plaintext never leaves the device.</p></div></li>
+      <li><span class="n">3</span><div><strong>Encrypt under your key</strong><p>In the target custody model, the unified profile is encrypted with a key held in your iOS Keychain / Android Keystore. The design goal: plaintext never leaves the device.</p></div></li>
     </ol>
 
     <h3 class="pillar-sub">What's connected, and when</h3>
@@ -3399,9 +3399,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <thead><tr><th>Source</th><th>What it adds</th><th>Availability</th></tr></thead>
       <tbody>
         <tr><td>Genetics</td><td>Variants that reshape every other signal: folate cycle, lipids, caffeine, methylation</td><td><span class="badge ok">At MVP launch</span>23andMe / Ancestry upload</td></tr>
-        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">At MVP launch</span>Terra API · Apple Watch, Oura, Whoop</td></tr>
+        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">At MVP launch</span>Apple Health today; Terra at launch · Apple Watch, Oura, Whoop</td></tr>
         <tr><td>Environment</td><td>PM2.5, ozone, pollen, UV, by your location in real time</td><td><span class="badge ok">At MVP launch</span>PurpleAir / IQAir / OpenWeather</td></tr>
-        <tr><td>Lifestyle</td><td>Stress, mood, diet, sleep quality via NIH-validated PROMIS short-forms</td><td><span class="badge ok">At MVP launch</span>in-app check-ins</td></tr>
+        <tr><td>Lifestyle</td><td>Sleep, energy, stress, diet and workload, captured as lifestyle check-ins</td><td><span class="badge ok">At MVP launch</span>in-app check-ins</td></tr>
         <tr><td>Microbiome</td><td>Gut composition → inflammation, nutrient absorption, diet response</td><td><span class="badge soon">Upload at MVP</span>partner API on roadmap</td></tr>
         <tr><td>Labs &amp; blood</td><td>CRP, ApoB, HbA1c, lipid panels: the objective check on the wearable signal</td><td><span class="badge soon">Upload at MVP</span>HL7/FHIR connectors 2027</td></tr>
       </tbody>
@@ -3424,7 +3424,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h3 class="pillar-sub">How research-watch works</h3>
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>The model reads only public science</strong><p>An agent continuously scans public literature and guidelines. It never touches your data, it works entirely on published papers.</p></div></li>
-      <li><span class="n">2</span><div><strong>Matching is built to run under FHE</strong><p>Whether a finding applies to <em>you</em> is matched against your profile, with the privacy pillar built so that matching runs under FHE and the model never sees your genotype or labs in the clear.</p></div></li>
+      <li><span class="n">2</span><div><strong>Matching, with FHE on the roadmap</strong><p>Whether a finding applies to <em>you</em> is matched against your profile server-side, over a backend encrypted at rest. Running that match under FHE, so the model never sees your genotype or labs in the clear, is an R&amp;D roadmap goal.</p></div></li>
       <li><span class="n">3</span><div><strong>The citation travels with the advice</strong><p>Each surfaced recommendation carries the source it rests on, graded by evidence strength.</p></div></li>
     </ol>
 
@@ -3467,7 +3467,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h3 class="pillar-sub">How a protocol is built</h3>
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>Inputs</strong><p>Genotype + current exposures (air, season, location) + physiology (HRV, sleep, labs).</p></div></li>
-      <li><span class="n">2</span><div><strong>Interaction reasoning</strong><p>Gene × environment interactions are evaluated against the cited literature, with the privacy pillar built to keep that evaluation under FHE.</p></div></li>
+      <li><span class="n">2</span><div><strong>Interaction reasoning</strong><p>Gene × environment interactions are evaluated against the cited literature; keeping that evaluation under FHE is on the privacy roadmap.</p></div></li>
       <li><span class="n">3</span><div><strong>Action</strong><p>A small set of concrete, time-bound steps, each with its evidence attached.</p></div></li>
     </ol>
 
@@ -3538,7 +3538,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 
 <section class="final">
   <div class="wrap-tight">
-    <h2>Your whole health in one profile, built to be read by something that can't see.</h2>
+    <h2>Your whole health in one profile, read together and checked against real science.</h2>
     <p>VitaCrypt opens to its first design partners in Q4 2026. Investors and prospective partners, reach out directly.</p>
     <div class="hero-cta">
       <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-glow">
@@ -3594,7 +3594,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </div>
     <div class="bottom">
       <span>© 2026 VITACRYPT · ALL RIGHTS RESERVED</span>
-      <span>ARCHITECTURE DESIGNED FOR HIPAA/GDPR ALIGNMENT · HIPAA-AWARE · TARGETING ZAMA CONCRETE ML · WORKING PRODUCT, PRE-LAUNCH</span>
+      <span>ARCHITECTURE DESIGNED FOR HIPAA/GDPR ALIGNMENT · HIPAA-AWARE · WORKING PRODUCT, PRE-LAUNCH</span>
     </div>
   </div>
 </footer>

@@ -1,8 +1,14 @@
 # Known Issues / Open Follow-ups
 
-_Last updated: 2026-06-15 (OG image URL bumped to `og-preview-v2.jpg` to bust Telegram's stale-image cache; deployed — only the manual re-scrape remains)._
+_Last updated: 2026-06-15 (pivot-alignment pass across all 4 public pages: FHE/privacy demoted from headlines, reality-check copy fixed, questionnaires de-clinicalized; OG image URL bumped earlier this day)._
 
 ## Open — needs a human / external action
+- **Backend: remove PHQ-9 / GAD-7 from the questionnaire engine (separate app repo).** The
+  2026-06-15 pivot brief (Part 3) de-clinicalizes screeners. The *site* copy was updated this pass
+  (SOURCE 06, platform lifestyle row, investor traction table, litepaper survey tables — all PHQ-9/
+  GAD-7 site mentions removed), but the actual scoring engine lives in the app repo, not
+  `vitacrypt-landing`. Remove PHQ-9/GAD-7 (and any scoring against diagnostic thresholds) there and
+  swap in the non-clinical lifestyle/wellbeing questionnaire described in the brief.
 - **OG social-card cache — image URL bumped + deployed 2026-06-15 (only the manual re-scrape remains).** Telegram
   kept showing the old "Powered by FHE" card even after @WebpageBot: a re-scrape refreshes
   title/description but **not** a changed image at an *unchanged* URL — platforms cache the image

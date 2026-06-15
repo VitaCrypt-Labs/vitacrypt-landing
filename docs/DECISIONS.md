@@ -501,3 +501,37 @@ READY, aliased vitacrypt.xyz). Verified live (post-deploy curl): `og-preview-v2.
 102,685 B / `cf-cache-status: MISS`, live md5 == local (`744c4d15…`), all 4 pages serve `-v2`.
 **Remaining (manual, Paul only):** run @WebpageBot on the 4 URLs (+ X / LinkedIn / FB debuggers if
 those matter) — the new image URL has no prior Telegram cache, so the re-scrape pulls the new card.
+
+## 2026-06-15 (pm) — Public-site pivot alignment pass (brief 2026-06-15)
+
+**Context:** Brief `VitaCrypt_Brief_Public_Site_2026-06-15.md` — demote FHE/privacy from the headline,
+lead Unified + Cited, fix residual reality-check inaccuracies, de-clinicalize questionnaires. Applied
+across all 4 public pages by grep-by-phrase (12-June audit line numbers were stale).
+
+**Changes:**
+- **Emphasis (Part 1):** index hero — cut the blind-compute roadmap sentence; §01 thesis reframed
+  "Privacy is what makes centralizing it acceptable" → "Privacy is the trust layer, not the pitch"
+  (unified+cited lead); final CTA (index+platform) → "…read together and checked against real
+  science"; footer "TARGETING ZAMA CONCRETE ML" removed on index/platform/investor; pillar order +
+  "trust layer, not the headline" already correct, kept.
+- **Reality-check (Part 2):** every "proven today" → synthetic-PoC framing; present-tense
+  client-keys → target-custody verb; Terra → "Apple Health today; Terra at MVP launch";
+  FHE-as-matching → "matched server-side over an encrypted-at-rest backend; FHE match is an R&D
+  roadmap goal"; fixed counts removed (SOURCE 01–06 → uniform "SIGNAL"; "6 sources"/"4-in-1"/
+  "All-in-1" → open); "23andMe WGS" chip → "23andMe (genotyping)". Honest numbers kept (0 fabricated
+  / 5 corpora / ~40M).
+- **Questionnaires (Part 3, site only):** SOURCE 06 + platform lifestyle row de-clinicalized; PHQ-9
+  removed from investor traction table + litepaper §06/§07 tables (ALL site mentions, per decision).
+- **Litepaper:** metadata repositioned off FHE-first (title/og/twitter/schema/keywords); stale
+  "Powered by FHE" og/twitter alt → "Your whole health…"; standfirst + matching line softened;
+  technical §01–§09 content + honest hedging preserved.
+
+**Decisions (Paul):** fix ALL PHQ/GAD site mentions; FULL source de-numbering; deeper litepaper body
+de-FHE.
+
+**Verified local:** preview render clean (0 console errors, JS stages array intact); DoD grep = 0
+residual must-be-gone phrases across 4 pages; `SIGNAL`×6 + honest numbers intact.
+
+**Out of scope (separate app repo):** backend removal of PHQ-9/GAD-7 from the questionnaire engine.
+
+**Deploy:** pending this turn (`vercel --prod`), live-verify to follow.

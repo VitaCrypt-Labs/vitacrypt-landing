@@ -7,9 +7,9 @@
 <meta name="color-scheme" content="dark light">
 
 <!-- Primary SEO -->
-<title>VitaCrypt Litepaper · FHE Architecture & Threat Model</title>
-<meta name="description" content="VitaCrypt technical brief: cryptographic primitives (TFHE / Zama Concrete ML), threat model, performance budget, and integration spec for a privacy-native health stack.">
-<meta name="keywords" content="VitaCrypt litepaper, FHE, TFHE, Zama Concrete ML, blind computing, encrypted health data, threat model, cryptographic primitives, PubMed, GWAS, ClinVar">
+<title>VitaCrypt Litepaper · Architecture, threat model & integration spec</title>
+<meta name="description" content="VitaCrypt technical brief for a unified, evidence-cited personal health profile: system architecture, threat model, performance budget, and integration spec, including the FHE/Zama privacy roadmap.">
+<meta name="keywords" content="VitaCrypt litepaper, unified health profile, evidence-checked guidance, personal health stack, system architecture, threat model, integration spec, PubMed, GWAS, ClinVar, FHE roadmap">
 <meta name="author" content="VitaCrypt">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://vitacrypt.xyz/litepaper.html">
@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="VitaCrypt">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://vitacrypt.xyz/litepaper.html">
-<meta property="og:title" content="VitaCrypt Litepaper · FHE Architecture & Threat Model (v0.1.2)">
-<meta property="og:description" content="Cryptographic primitives, threat model, performance budget, and integration spec for a privacy-first health intelligence stack targeting Zama Concrete ML / TFHE.">
+<meta property="og:title" content="VitaCrypt Litepaper · Architecture & threat model (v0.1.2)">
+<meta property="og:description" content="System architecture, threat model, performance budget, and integration spec for a unified, evidence-cited personal health stack — including the FHE/Zama privacy roadmap.">
 <meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
 <meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+<meta property="og:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 <meta property="article:author" content="VitaCrypt">
 <meta property="article:section" content="Technical Brief">
 <meta property="article:tag" content="FHE">
@@ -46,18 +46,18 @@
 <meta name="twitter:site" content="@vita_crypt">
 <meta name="twitter:creator" content="@vita_crypt">
 <meta name="twitter:url" content="https://vitacrypt.xyz/litepaper.html">
-<meta name="twitter:title" content="VitaCrypt Litepaper · FHE Architecture (v0.1.2)">
-<meta name="twitter:description" content="Cryptographic primitives, threat model, and integration spec for VitaCrypt's privacy-first health stack targeting Zama Concrete ML / TFHE.">
+<meta name="twitter:title" content="VitaCrypt Litepaper · Architecture & threat model (v0.1.2)">
+<meta name="twitter:description" content="System architecture, threat model, and integration spec for VitaCrypt's unified, evidence-cited personal health stack — including the FHE/Zama privacy roadmap.">
 <meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
-<meta name="twitter:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+<meta name="twitter:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "VitaCrypt Litepaper — FHE Architecture, Threat Model & Integration Spec",
-  "description": "VitaCrypt technical brief: cryptographic primitives (TFHE / Zama Concrete ML), threat model, performance budget, and integration spec for a privacy-native personal health intelligence stack.",
+  "headline": "VitaCrypt Litepaper — Architecture, Threat Model & Integration Spec",
+  "description": "VitaCrypt technical brief for a unified, evidence-cited personal health profile: system architecture, threat model, performance budget, and integration spec, including the FHE/Zama privacy roadmap.",
   "url": "https://vitacrypt.xyz/litepaper.html",
   "image": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
   "datePublished": "2026-05-01",
@@ -607,7 +607,7 @@ footer {
     <h1>The architecture, threat model, and open questions for a <span class="ac">privacy-native</span> personal health stack.</h1>
 
     <p class="standfirst">
-      This brief is the technical companion to the landing page. The landing page tells you <strong>why</strong> we are building VitaCrypt and what an end user sees. This document describes <strong>how</strong> — the cryptographic primitives we rely on, the threat model we defend against, the performance budget the MVP commits to, and the questions we are still resolving in public.
+      This brief is the technical companion to the landing page. The landing page tells you <strong>why</strong> we are building VitaCrypt and what an end user sees. This document describes <strong>how</strong> — how any health signal is unified into one profile, how every recommendation is cited to live science, the threat model we defend against, the privacy architecture we are building toward (encrypted at rest today, FHE blind compute on the roadmap), and the questions we are still resolving in public.
     </p>
 
     <div class="byline">
@@ -819,10 +819,10 @@ footer {
         <tr><td class="c1">Microbiome</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (upload)</td></tr>
         <tr><td class="c1">Labs / hormones</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (BYO from Quest / Labcorp / Function / Superpower)</td></tr>
         <tr><td class="c1">Live environment (PM2.5 / pollen / UV)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (AirNow + OpenWeather + Pollen API)</td></tr>
-        <tr><td class="c1">Validated surveys (PROMIS / PHQ-9 / GAD-7)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong></td></tr>
+        <tr><td class="c1">Lifestyle &amp; wellbeing check-ins (sleep, energy, stress, diet)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong></td></tr>
         <tr><td class="c1">Live research lookup (PubMed / GWAS / ClinVar / USPSTF / WHO / NICE)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong></td></tr>
         <tr><td class="c1">Cross-source insight engine</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (the only one)</td></tr>
-        <tr><td class="c1">Data leaves device unencrypted</td><td>✓ (cloud)</td><td>✓ (cloud)</td><td>Mostly on-device</td><td>✓ (cloud)</td><td>Cloud-dependent</td><td><strong>By design: FHE</strong> (target end to end; blind compute proven on one slice today)</td></tr>
+        <tr><td class="c1">Data leaves device unencrypted</td><td>✓ (cloud)</td><td>✓ (cloud)</td><td>Mostly on-device</td><td>✓ (cloud)</td><td>Cloud-dependent</td><td><strong>By design: FHE</strong> (target end to end; blind compute shown on one slice, staging PoC)</td></tr>
         <tr><td class="c1">Data shared / sold for research</td><td>Per ToS</td><td>Aggregated</td><td>Mostly no</td><td>Per Samsung ToS</td><td>Cloud-dependent</td><td><strong>Never sold</strong>; the cryptographic guarantee (device-held keys) is the target, server-side custody today</td></tr>
         <tr><td class="c1">HIPAA-covered?</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td><strong>No</strong>; building toward cryptographic privacy stronger than the consumer-wearable norm</td></tr>
       </tbody>
@@ -862,7 +862,7 @@ footer {
     <ul>
       <li><strong>Model class:</strong> a frontier generalist LLM grounded in biomedical RAG over the corpora listed below. Our preferred posture is <strong>self-hosted open-weight</strong> (Llama 3.x / Mistral / Qwen class) — provider-free, no third-party API sees a single user-derived token. Hosted frontier models are an acceptable bootstrap option but not the long-term choice. Per <a href="https://arxiv.org/abs/2408.13833" target="_blank" rel="noopener">arXiv 2408.13833 (2024)</a>, fine-tuned biomedical LLMs (Meditron, Med42, OpenBioLLM) do not consistently outperform frontier generalist LLMs grounded in biomedical RAG — so we do not train or fine-tune a proprietary medical model either.</li>
       <li><strong>What the model reads:</strong> public papers and curated open biomedical corpora — never the user's profile. The model has no access to ciphertext or plaintext user data.</li>
-      <li><strong>How findings reach the user:</strong> the agent emits structured tags (e.g. <code>variant=MTHFR-C677T</code>, <code>exposure=PM2.5-chronic</code>). Profile-vs-tag matching happens under FHE — a cheap circuit, not transformer inference.</li>
+      <li><strong>How findings reach the user:</strong> the agent emits structured tags (e.g. <code>variant=MTHFR-C677T</code>, <code>exposure=PM2.5-chronic</code>). Profile-vs-tag matching is a cheap circuit, not transformer inference; running that match under FHE, so the server never sees the profile in the clear, is the privacy roadmap goal.</li>
       <li><strong>What we explicitly do NOT claim:</strong> "encrypted LLM inference." No production-grade FHE-compiled transformer exists today. Nillion (MPC) and Apple Swift HE (BFV primitives) are not yet a single-user LLM substitute. We will revisit if/when the landscape changes.</li>
     </ul>
 
@@ -904,7 +904,7 @@ footer {
     <p>FHE preserves the privacy of inputs. It does not, by itself, guarantee that the recommendations on the other side are clinically useful. Validation is a separate problem, addressed in three stages:</p>
 
     <h3>Stage 1 — Synthetic dose-response (Q4 2026)</h3>
-    <p>Closed-alpha cohort of ~50 design partners runs the full pipeline. Each receives weekly insights and reports adherence + outcome on standard questionnaires (PSQI, PHQ-9, custom biomarker check-ins). Goal: detect implementation defects and obvious clinical mis-calls before any external study.</p>
+    <p>Closed-alpha cohort of ~50 design partners runs the full pipeline. Each receives weekly insights and reports adherence + outcome on standard questionnaires (PSQI, wellbeing scales, custom biomarker check-ins). Goal: detect implementation defects and obvious mis-calls before any external study.</p>
 
     <h3>Stage 2 — IRB-supervised longitudinal study (Q1 2027 – H2 2027)</h3>
     <p>Partnership with an academic medical center for a 12-month open-enrollment longitudinal study. Endpoints: inflammatory marker trajectories (CRP, IL-6), HRV trends, glucose variability, validated quality-of-life scores. We do not promise clinical-trial-grade evidence at the MVP scale; we promise honest, IRB-supervised observational data.</p>
