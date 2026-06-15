@@ -534,4 +534,8 @@ residual must-be-gone phrases across 4 pages; `SIGNAL`×6 + honest numbers intac
 
 **Out of scope (separate app repo):** backend removal of PHQ-9/GAD-7 from the questionnaire engine.
 
-**Deploy:** pending this turn (`vercel --prod`), live-verify to follow.
+**Deployed** 2026-06-15 (`vercel --prod` → `dpl_8LyeVocRQCKpKVjrWSmMKgk7axYN`, READY, aliased
+vitacrypt.xyz; commit `027dfb3` on `investor-page`, not pushed). **Verified live (curl, 4 pages):**
+0 residual must-be-gone phrases; positive checks pass — Unified+Cited CTA, `SIGNAL`×6, Zama-free
+footer, Terra softened, FHE-matching = roadmap, PHQ-9 gone, litepaper title de-FHE'd + OG alt fixed,
+honest numbers (0 fabricated / 5 corpora / ~40M) intact.
