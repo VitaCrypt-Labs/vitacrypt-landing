@@ -550,3 +550,40 @@ stack" mentions (platform/investor privacy-roadmap sections) and the factual Zam
 evidence citations. Live re-verified: tagline 0/3 pages, roadmap mentions 1/1 intact, WebFetch confirms
 the closing blurb now ends "Private by design." Lesson: scan lowercase `zama`/`tfhe`, not just the
 caps footer string.
+
+## 2026-06-16 — Investor-Memo alignment (VitaCrypt_Site_Update_Instructions.md)
+
+**Context:** A reviewer flagged the site as still pre-pivot. Two causes found: (1) prior changes were
+deployed to Vercel prod but never pushed to GitHub, so a repo review saw old code (per Paul, GitHub is
+irrelevant — deploys are direct to Vercel); (2) this memo is a higher bar the earlier brief never
+covered. This pass closes (2) across investor (P0) / index (P1) / platform (P2).
+
+**Changes (commit `0214e68`, deployed `dpl_BkSWhDxWB6JbYVVoyb8Qvz8AM5xq`):**
+- **FHE → far-horizon roadmap only.** Removed every "proven / demonstrated end-to-end / ~0.5s /
+  staging proof / current build" and all Zama bounty#95 / 96% citations (this *reverses* the earlier
+  "keep synthetic-PoC + Zama citation" choice). Kept: the platform Today/Roadmap split's roadmap-column
+  "Blind compute (FHE): server analyzes without decrypting", and the index architecture note (honest).
+- **Privacy = trust enabler:** encrypted at rest, per-user keys, minimization + pseudonymization before
+  egress, crypto-shred, independence; self-hosted inference then FHE = roadmap.
+- **Evidence engine promoted (NET-NEW):** three-tier router (evidence-backed / exploratory / redirect),
+  software-enforced clinical boundary, confirmed-N-of-M, High/Moderate/Emerging confidence, CPIC
+  CYP2C9. Now a lead asset on all 3 pages (investor moat card + 3 new "what works today" rows; index
+  pillar-02 + NOW roadmap; platform insert block).
+- Terra no longer shown live/at-launch ("Apple Health export today; direct device APIs on the build
+  path"). investor CTA + both staging tiles → evidence-first. Footer already HIPAA-AWARE.
+
+**Decisions (Paul):** evidence-engine "Live / unit-tested / software-enforced" labels pasted verbatim
+per the Investor Memo — **stated as live on Paul's explicit confirmation** (the app backend is a
+separate repo I cannot verify from here). No git push (Vercel-direct deploy).
+
+**Deviations from the literal doc:** P0.8 hires were already correct from a prior pass (kept the more
+specific existing copy, only added the fractional-audit line); P0.11 footer + P0.12 keyword-removal
+were already done (verified); added a CPIC line to the index pillar-02 card (doc copy omitted it but
+the acceptance checklist requires CPIC on all 3 pages).
+
+**Verified live (curl, all 3 pages):** 0 must-be-gone violations; evidence engine present on each;
+no Zama/96%/Terra-at-launch/PHQ-9; visible copy em-dash-free. All 8 acceptance-checklist items pass.
+
+**Out of scope (flagged):** `litepaper.html` still carries the pre-pivot FHE-first narrative — same
+pass (FHE→roadmap, evidence engine + boundary promoted, Zama/Nillion removed) needed next. Backend
+evidence-engine implementation lives in the separate app repo.

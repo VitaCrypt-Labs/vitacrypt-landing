@@ -1,8 +1,17 @@
 # Known Issues / Open Follow-ups
 
-_Last updated: 2026-06-15 (pivot-alignment pass across all 4 public pages: FHE/privacy demoted from headlines, reality-check copy fixed, questionnaires de-clinicalized; OG image URL bumped earlier this day)._
+_Last updated: 2026-06-16 (Investor-Memo alignment: FHE→far-horizon roadmap, evidence engine promoted to lead asset on investor/index/platform; litepaper still pending)._
 
 ## Open — needs a human / external action
+- **litepaper.html still pre-pivot (do the same pass next).** The 2026-06-16 Investor-Memo alignment
+  covered investor/index/platform only (per the doc). `litepaper.html` still carries the FHE-first
+  threat-model/cryptography narrative and Zama references. Next pass: FHE → far-horizon roadmap,
+  promote the three-tier evidence engine + clinical boundary + CPIC, remove Zama/Nillion selling
+  points, keep the honest hedging. Every page links to it, so it is the last visible pre-pivot surface.
+- **Evidence-engine "Live" claims rest on the Investor Memo, not repo-verifiable.** investor/index/
+  platform now state the three-tier router / clinical boundary / CPIC as "Live / unit-tested /
+  software-enforced" per Paul's confirmation. The actual implementation is in the separate app repo;
+  if any of these is not yet truly live, the public claim must be softened.
 - **Backend: remove PHQ-9 / GAD-7 from the questionnaire engine (separate app repo).** The
   2026-06-15 pivot brief (Part 3) de-clinicalizes screeners. The *site* copy was updated this pass
   (SOURCE 06, platform lifestyle row, investor traction table, litepaper survey tables — all PHQ-9/
