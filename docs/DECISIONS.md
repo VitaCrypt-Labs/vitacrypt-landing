@@ -587,3 +587,32 @@ no Zama/96%/Terra-at-launch/PHQ-9; visible copy em-dash-free. All 8 acceptance-c
 **Out of scope (flagged):** `litepaper.html` still carries the pre-pivot FHE-first narrative — same
 pass (FHE→roadmap, evidence engine + boundary promoted, Zama/Nillion removed) needed next. Backend
 evidence-engine implementation lives in the separate app repo.
+
+## 2026-06-16 (pm) — Mobile drawer redesign + litepaper reframe
+
+**Context:** User flagged the mobile burger as a "soulless flat list" where the arrow links were
+unclear (page vs section), and asked for a real redesign + the heavy litepaper pivot + a layout QA.
+
+**Mobile drawer redesign (index/investor/platform), commit `ef1bbbd`, deployed
+`dpl_8Q7Ja4RNqb356EwynAr23Mufd4RW`:**
+- Replaced the flat `drawer-nav` list with two labelled groups: **"On this page"** (numbered section
+  chips with an active-section highlight) and **"Go to"** (cross-page cards: title + arrow + subtitle
+  saying what's there). Added a brand row. Dropped the redundant in-page "For investors" link.
+- **Removed the bottom `.mob-secnav`** (9 number-only pips + a duplicate burger) on all 3 pages — the
+  drawer is now the single mobile nav. The pip-bar's scroll-spy (`secObs`) was repurposed: the new
+  `IntersectionObserver` drives the drawer's active chip AND preserves the desktop `#platformToc`
+  highlight on investor/platform. Verified: 0 console errors, drawer renders on index+investor, all
+  3 pages serve the groups live with the pip-bar gone.
+
+**Litepaper heavy reframe:** §06 now LEADS with the three-tier evidence router + software-enforced
+clinical boundary + CPIC/CYP2C9 (the live asset); the FHE scoring path is demoted to a "target FHE
+path" subsection. §01 reframed as the privacy roadmap (encrypted-at-rest today; FHE far-horizon),
+relabelled "Privacy roadmap & threat model"; "compute layer is built on FHE" → target framing.
+Standfirst now evidence-first. Converted the introduced + threat-model em-dashes; ~25 technical/
+bibliographic em-dashes remain (logged in KNOWN_ISSUES).
+
+**Layout QA:** code audit found no fixed-height/overflow/clip risk from the earlier copy edits;
+pillar cards equal-height (fine). No breakage; drawers + key sections render clean at mobile+desktop.
+
+**Decision (user):** litepaper = heavy reframe (not surgical); evidence-engine "Live" labels stand
+on the Investor Memo. No git push (Vercel-direct).

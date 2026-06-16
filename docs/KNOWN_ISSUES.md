@@ -1,13 +1,14 @@
 # Known Issues / Open Follow-ups
 
-_Last updated: 2026-06-16 (Investor-Memo alignment: FHE→far-horizon roadmap, evidence engine promoted to lead asset on investor/index/platform; litepaper still pending)._
+_Last updated: 2026-06-16 pm (mobile drawer redesigned + bottom pip-bar removed across 3 pages; litepaper reframed evidence-first with FHE far-horizon)._
 
 ## Open — needs a human / external action
-- **litepaper.html still pre-pivot (do the same pass next).** The 2026-06-16 Investor-Memo alignment
-  covered investor/index/platform only (per the doc). `litepaper.html` still carries the FHE-first
-  threat-model/cryptography narrative and Zama references. Next pass: FHE → far-horizon roadmap,
-  promote the three-tier evidence engine + clinical boundary + CPIC, remove Zama/Nillion selling
-  points, keep the honest hedging. Every page links to it, so it is the last visible pre-pivot surface.
+- **litepaper.html residual em-dashes (~25, technical/bibliographic).** The 2026-06-16 reframe pass
+  promoted the three-tier evidence engine + clinical boundary + CPIC to the §06 lead, demoted FHE to a
+  far-horizon roadmap (§01 relabelled "Privacy roadmap & threat model"), and converted the em-dashes I
+  had introduced + the §01 threat-model list. Remaining em-dashes sit in dense technical lists, the
+  §07/§08 stage/question headings, and the §09 reference bibliography (citation-style separators),
+  historically accepted on this DD doc. Convert if a strict no-em-dash sweep is wanted; lower priority.
 - **Evidence-engine "Live" claims rest on the Investor Memo, not repo-verifiable.** investor/index/
   platform now state the three-tier router / clinical boundary / CPIC as "Live / unit-tested /
   software-enforced" per Paul's confirmation. The actual implementation is in the separate app repo;
