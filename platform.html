@@ -3389,7 +3389,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <p class="lede">VitaCrypt pulls each source and normalizes it into one schema, so scattered data becomes a single queryable profile, built to fold in any health signal and grow over time. The privacy pillar is built so that profile is encrypted under your key and the server works with one ciphertext, not a separate plaintext feed per source.</p>
 
     <ol class="vc-steps">
-      <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables connect via Apple Health today, with broader device APIs such as Terra at MVP launch; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
+      <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables connect via Apple Health export today, with direct device APIs on the build path; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
       <li><span class="n">2</span><div><strong>Normalize into one schema</strong><p>Different formats (VCF, FHIR, CSV, JSON) are mapped into one queryable health schema.</p></div></li>
       <li><span class="n">3</span><div><strong>Encrypt under your key</strong><p>In the target custody model, the unified profile is encrypted with a key held in your iOS Keychain / Android Keystore. The design goal: plaintext never leaves the device.</p></div></li>
     </ol>
@@ -3399,7 +3399,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <thead><tr><th>Source</th><th>What it adds</th><th>Availability</th></tr></thead>
       <tbody>
         <tr><td>Genetics</td><td>Variants that reshape every other signal: folate cycle, lipids, caffeine, methylation</td><td><span class="badge ok">At MVP launch</span>23andMe / Ancestry upload</td></tr>
-        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">At MVP launch</span>Apple Health today; Terra at launch · Apple Watch, Oura, Whoop</td></tr>
+        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">At MVP launch</span>Apple Health export today; direct device APIs on the build path · Apple Watch, Oura, Whoop</td></tr>
         <tr><td>Environment</td><td>PM2.5, ozone, pollen, UV, by your location in real time</td><td><span class="badge ok">At MVP launch</span>PurpleAir / IQAir / OpenWeather</td></tr>
         <tr><td>Lifestyle</td><td>Sleep, energy, stress, diet and workload, captured as lifestyle check-ins</td><td><span class="badge ok">At MVP launch</span>in-app check-ins</td></tr>
         <tr><td>Microbiome</td><td>Gut composition → inflammation, nutrient absorption, diet response</td><td><span class="badge soon">Upload at MVP</span>partner API on roadmap</td></tr>
@@ -3430,6 +3430,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 
     <h3 class="pillar-sub">What we actually query</h3>
     <p class="pillar-body"><strong>Live today,</strong> we search <strong>PubMed</strong> (~40M indexed records), <strong>Europe PMC</strong>, <strong>OpenAlex</strong>, <strong>ClinVar/dbSNP</strong> and the <strong>GWAS Catalog</strong>. <strong>On the roadmap:</strong> USPSTF, NICE, WHO and Cochrane. "Cross-referenced" means we search these indexes for evidence relevant to your profile, not that millions of studies stand behind any one recommendation.</p>
+
+    <h3 class="pillar-sub">Three tiers, and a boundary</h3>
+    <p class="pillar-body">Every insight is classified before it is shown. Evidence-backed insights carry real PMIDs, a confirmed-N-of-M corroboration check across the retrieved papers, and a High / Moderate / Emerging confidence indicator. Exploratory insights, the cross-domain connections the literature has not settled, are labelled preliminary rather than asserted. And anything clinical is withheld server-side and replaced with a warm handoff to the right clinician. For established pharmacogenomic markers (starting with CYP2C9) the published CPIC consortium guidance is shown as a descriptive reference, the one place the grade comes from a clinical consortium rather than a model.</p>
 
     <h3 class="pillar-sub">How a recommendation earns its citation</h3>
     <div class="grade-row">
@@ -3498,7 +3501,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap">
     <div class="eyebrow">Pillar 04 · Private by design</div>
     <h2 class="stitle">Private by design, on what is true today.</h2>
-    <p class="lede">Privacy here is concrete and present-day: your data is encrypted at rest under per-user keys, retention is minimal, and VitaCrypt is independent, not a feature of any single AI giant and built so the underlying model can be swapped rather than welded in. Fully private blind compute (FHE), where a server analyzes without ever decrypting, is the ceiling we are building toward.</p>
+    <p class="lede">Privacy here is concrete and present-day: your data is encrypted at rest under per-user keys, retention is minimal, the most sensitive data is minimized and pseudonymized before egress, and VitaCrypt is independent, not a feature of any single AI giant and built so the underlying model can be swapped rather than welded in. Stronger cryptographic guarantees, including fully homomorphic encryption, are a far-horizon roadmap item, not a current capability.</p>
 
     <h3 class="pillar-sub">Where the line is, honestly</h3>
     <div class="boundary">
@@ -3522,10 +3525,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <div class="b-note">On our funded R&amp;D roadmap, not yet live.</div>
       </div>
     </div>
-    <p class="pillar-body">On the roadmap, encryption and decryption run client-side, the pattern Zama shipped in its iOS FHE SDK (2025), with the heavy compute as centralized FHE on our servers. We're <strong>targeting the Zama Concrete ML / TFHE stack</strong>; multi-party blind computing (Nillion) is defense-in-depth, not in the MVP.</p>
 
     <h3 class="pillar-sub">Is this real yet? The honest status</h3>
-    <p class="pillar-body">Blind compute is demonstrated end to end on one encrypted genetic vector on staging: the client holds the key, the server computes on ciphertext in about half a second and never holds the secret key. That FHE model is a synthetic-data tech demo, not a validated polygenic risk score; production-wide blind compute and device-bound key custody are the roadmap, not shipped. Today the master key is server-side and the platform is not yet end-to-end blind. As external corroboration, Zama's published encrypted-DNA work (<a href="https://github.com/zama-ai/bounty-program/issues/95">bounty&nbsp;#95</a>, 2024) reached <strong>96% accuracy on encrypted DNA ancestry classification</strong> (chromosome 22, 1000 Genomes), evidence the primitive works.</p>
+    <p class="pillar-body">Today: encrypted at rest under per-user keys, minimal retention, and independence from any single AI giant. The near-term build is minimization and pseudonymization before egress and a BAA-grade zero-retention inference endpoint. Self-hosted open-weight inference and, far out, fully homomorphic encryption are roadmap, the strongest theoretical guarantee but today a poor fit for live multi-source cross-referencing. The master key is still server-side today and the platform is not yet end-to-end blind. We state this plainly.</p>
 
     <p class="pillar-foot-note">Architecture designed for HIPAA / GDPR alignment. Working product, pre-launch; no production health data yet.</p>
 

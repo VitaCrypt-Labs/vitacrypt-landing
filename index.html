@@ -3507,8 +3507,8 @@ body.drawer-open { overflow: hidden; }
       </a>
       <a class="pillar-card" href="platform.html#evidence">
         <div class="pc-head"><span class="pc-ix">02</span><span class="pc-tag">Cited</span></div>
-        <h3>Backed by live science</h3>
-        <p>Every recommendation cites a real source (PubMed PMID) retrieved live, and the model cannot invent citations. Re-evaluated as new evidence lands.</p>
+        <h3>Cited, with a clinical boundary</h3>
+        <p>Every insight is graded, cited, or withheld: evidence-backed insights carry real PMIDs and a confidence indicator, exploratory ones are labelled preliminary, and anything clinical is withheld and handed to a clinician. For established pharmacogenomic markers (starting with CYP2C9), CPIC consortium guidance is shown as a descriptive reference. The model cannot invent citations.</p>
         <span class="pc-more">Explore →</span>
       </a>
       <a class="pillar-card" href="platform.html#personalized">
@@ -3519,8 +3519,8 @@ body.drawer-open { overflow: hidden; }
       </a>
       <a class="pillar-card" href="platform.html#encrypted">
         <div class="pc-head"><span class="pc-ix">04</span><span class="pc-tag">Private</span></div>
-        <h3>Private by design</h3>
-        <p>Built so analysis can run on ciphertext rather than plaintext. A staging proof-of-concept on a synthetic model shows blind compute on one encrypted genetic vector; scaling it across the pipeline is the current build. The trust layer, not the headline.</p>
+        <h3>Private, the trust enabler</h3>
+        <p>Your whole profile is never sent intact: minimized and pseudonymized before egress, encrypted at rest under per-user keys, and independent of any single AI giant. Stronger guarantees (self-hosted inference, and far out, FHE) are on the roadmap, described as roadmap. The trust layer, not the headline.</p>
         <span class="pc-more">Explore →</span>
       </a>
     </div>
@@ -3543,7 +3543,7 @@ body.drawer-open { overflow: hidden; }
     <div class="thesis-grid">
       <div>
         <p class="clamp-mob">DNA in one report, wearables in another, labs in a PDF, microbiome on a third site. Each sees one fragment; the patterns live <em>between</em> them. VitaCrypt fuses all of it into one profile and reads it together, against your genotype and your environment, then returns guidance that cites its source.</p>
-        <p class="clamp-mob"><strong>Privacy is the trust layer, not the pitch.</strong> The most valuable signals are the ones you should trust the fewest companies with, so the platform is private by design: data is encrypted at rest under per-user keys, and in the target custody model your phone holds the key (iOS&nbsp;Keychain / Android&nbsp;Keystore) so analysis can run on ciphertext. A staging proof-of-concept on a synthetic model shows blind compute is feasible; productionizing it across the pipeline is what this build scales.<sup><a href="litepaper.html#threat">1</a></sup></p>
+        <p class="clamp-mob"><strong>Privacy is the trust layer, not the pitch.</strong> The most valuable signals are the ones you should trust the fewest companies with, so the platform is private by design: the most sensitive data is minimized and pseudonymized before anything leaves, the profile is encrypted at rest under per-user keys, and VitaCrypt stays independent of any single AI giant. Stronger cryptographic guarantees are on the roadmap, not claimed as shipped.<sup><a href="litepaper.html#threat">1</a></sup></p>
       </div>
       <div class="right" data-mcollapse="The four failures we replace">
         <h4>The four failures we replace</h4>
@@ -3573,7 +3573,7 @@ body.drawer-open { overflow: hidden; }
   <div class="wrap">
     <div class="eyebrow">02 · The data fabric</div>
     <h2 class="stitle">Every health signal. One queryable profile.</h2>
-    <p class="lede clamp-mob">Encryption is one pillar; the other is the scope of what we unify. Wearables (Apple Health today; broader device APIs such as <strong>Terra</strong> at MVP launch), open environmental data, lab results, microbiome assays, genetic reports, and lifestyle check-ins, all pulled together into one queryable profile. The target architecture assembles them on the device, in your possession, before anything is encrypted or transmitted.</p>
+    <p class="lede clamp-mob">Encryption is one pillar; the other is the scope of what we unify. Wearables (Apple Health export today; direct device APIs on the build path), open environmental data, lab results, microbiome assays, genetic reports, and lifestyle check-ins, all pulled together into one queryable profile. The target architecture assembles them on the device, in your possession, before anything is encrypted or transmitted.</p>
 
     <div class="fabric-wrap">
       <span class="fabric-swipe-hint">Swipe through the sources →</span>
@@ -3776,7 +3776,7 @@ body.drawer-open { overflow: hidden; }
           <div class="stage-tag"><span class="box" id="stTagBox">01</span> <span id="stTagText">COLLECT</span></div>
           <h3 id="stTitle">A unified profile, drawn from every source.</h3>
           <div class="summary" id="stSummary">
-            Wearables (Apple Health today; broader device APIs such as Terra at MVP launch), DNA, microbiome, labs, environment, and lifestyle check-ins ingest on-device into a single living profile. <strong>Nothing has left the device yet.</strong>
+            Wearables (Apple Health export today; direct device APIs on the build path), DNA, microbiome, labs, environment, and lifestyle check-ins ingest on-device into a single living profile. <strong>Nothing has left the device yet.</strong>
           </div>
           <div class="what">
             <div class="lbl">What this looks like in practice</div>
@@ -3856,7 +3856,7 @@ body.drawer-open { overflow: hidden; }
               <div class="arch-spacer"></div>
             </div>
 
-            <div class="arch-foot">ENCRYPTED AT REST · BLIND COMPUTE ON THE ROADMAP</div>
+            <div class="arch-foot">ENCRYPTED AT REST · MINIMIZED BEFORE EGRESS · INDEPENDENT</div>
           </div>
         </div>
 
@@ -3908,7 +3908,7 @@ body.drawer-open { overflow: hidden; }
         </div>
       </div>
       <div class="footnote">
-        <span class="k">Privacy moat</span>Built toward exposure being off the table: a staging proof-of-concept on a synthetic model demonstrates blind compute on an encrypted genetic vector (client-held key, ~0.5s on ciphertext); production-wide blind compute is the current build. <em>npj Digital Medicine</em> (2025) flagged Oura, Whoop, and Fitbit for permissive data-sharing terms.
+        <span class="k">Privacy moat</span>Built so exposure shrinks at every step: the most sensitive data is minimized and pseudonymized before egress, encrypted at rest under per-user keys, and independent of any single AI giant. Stronger guarantees (self-hosted inference, then FHE) are on the roadmap. <em>npj Digital Medicine</em> (2025) flagged Oura, Whoop, and Fitbit for permissive data-sharing terms, the exposure this design is built to avoid.
       </div>
     </div>
 
@@ -3926,10 +3926,10 @@ body.drawer-open { overflow: hidden; }
       <div class="diff-card">
         <div class="ix">02 · OWNERSHIP</div>
         <h3>Your data, your key, by design.</h3>
-        <p>In the consumer health stack, you are the data and the data is the asset. We're building the inverse: in the target custody model your key lives on your hardware and is the only way the insights become readable. A staging proof-of-concept on a synthetic model shows blind compute on one genetic slice; this round moves key custody device-bound.</p>
+        <p>In the consumer health stack, you are the data and the data is the asset. We are building the inverse: in the target custody model your key lives on your hardware and the profile is minimized before anything leaves, so exposure shrinks at every step. This round moves key custody device-bound.</p>
         <div class="vs">
           <div class="row them"><span class="k">Others</span><span>Platform owns and monetizes data.</span></div>
-          <div class="row us"><span class="k">VitaCrypt</span><span>Key custody device-bound by design; blind compute shown on one slice (staging PoC).</span></div>
+          <div class="row us"><span class="k">VitaCrypt</span><span>Key custody moving device-bound; profile minimized before egress.</span></div>
         </div>
       </div>
 
@@ -3939,7 +3939,7 @@ body.drawer-open { overflow: hidden; }
         <p>Every player in the category encrypts at rest, then decrypts the moment they want to look at it. A breach is permanent: you can rotate a password, not a genome.</p>
         <div class="vs">
           <div class="row them"><span class="k">Others</span><span>At-rest only. Plaintext during compute.</span></div>
-          <div class="row us"><span class="k">VitaCrypt</span><span>Encrypted at rest, with FHE blind compute on the roadmap (staging PoC on one slice).</span></div>
+          <div class="row us"><span class="k">VitaCrypt</span><span>Encrypted at rest under per-user keys, minimized before egress; stronger guarantees on the roadmap.</span></div>
         </div>
       </div>
     </div>
@@ -3994,7 +3994,7 @@ body.drawer-open { overflow: hidden; }
             </div>
 
             <h3>What never happened</h3>
-            <p>In the target design, David's genotype, his HRV time series, and his location-bound PM2.5 exposure never exist on a VitaCrypt server in a form anyone could read. <strong>The economics of a breach collapse when ciphertext is all that lives on the other side.</strong></p>
+            <p>By design, David's most sensitive signals are minimized and pseudonymized before they ever leave his device, and what reaches a server is the summary an insight needs, not his raw profile. <strong>The economics of a breach collapse when there is no readable profile to take.</strong></p>
           </div>
         </div>
 
@@ -4237,13 +4237,13 @@ body.drawer-open { overflow: hidden; }
         <div class="pip"></div>
         <div class="when">NOW · Q2–Q3 2026</div>
         <h5>Working product, pre-launch</h5>
-        <p>Core streams live (genetics, environment, surveys, lifestyle), with more sources on the way, plus evidence-cited recommendations (real PubMed PMIDs) and a blind-compute staging proof. Closed alpha for the first design partners.</p>
+        <p>Core streams live (genetics, environment, surveys, lifestyle), with more sources on the way, plus evidence-cited recommendations (real PubMed PMIDs), the three-tier evidence router, and the software-enforced clinical boundary, live in the invite demo. Closed alpha for the first design partners.</p>
       </div>
       <div class="r-node">
         <div class="pip"></div>
         <div class="when">Q4 2026</div>
         <h5>First design-partner cohort</h5>
-        <p>Blind compute moves from the staging proof toward the production pipeline. Microbiome and lab integrations. Invite-only waitlist activated.</p>
+        <p>First design-partner cohort. Microbiome and lab ingestion into the synthesis, a BAA-grade zero-retention inference endpoint, prompt minimization, and deeper evidence grading. Invite-only waitlist activated.</p>
       </div>
       <div class="r-node">
         <div class="pip"></div>
@@ -4266,7 +4266,7 @@ body.drawer-open { overflow: hidden; }
   <div class="wrap">
     <div class="eyebrow">09 · Why now</div>
     <h2 class="stitle">The signals, the demand and the technology all arrived at once.</h2>
-    <p class="lede">Enough people now carry genetic, wearable and lab data to make a unified profile meaningful; the category has serious capital; and the privacy technology that lets a person trust one app with all of it finally shipped. As external corroboration, Zama's encrypted-DNA benchmark hit <strong>96% ancestry-classification accuracy</strong> (<a href="https://github.com/zama-ai/bounty-program/issues/95">bounty #95</a>, 2024), evidence the field's primitive works. The gap is that no one has put these together.</p>
+    <p class="lede">Enough people now carry genetic, wearable and lab data to make a unified profile meaningful; the category has serious capital; and the privacy technology that lets a person trust one app with all of it finally shipped. The gap is that, to our knowledge, no one has put these together: enough data, real demand, models that can finally read it together, and a population that does not want a giant to hold it.</p>
 
     <div class="kpi-grid">
       <div class="kpi">
@@ -4285,9 +4285,9 @@ body.drawer-open { overflow: hidden; }
         <div class="desc">Users breached · $30M settlement, £2.31M ICO fine, Chapter 11, sold for $305M (2023–25)</div>
       </div>
       <div class="kpi">
-        <div class="label">STAGING PROOF</div>
-        <div class="val">~0.5<span class="unit">s</span></div>
-        <div class="desc">Our own staging proof-of-concept on a synthetic model: blind compute on an encrypted genetic vector, the server computes on ciphertext and never holds the key. A demonstration, not yet a product feature</div>
+        <div class="label">EVIDENCE FIRST</div>
+        <div class="val">0</div>
+        <div class="desc">Fabricated citations: every PMID verified, invented ones stripped automatically.</div>
       </div>
     </div>
   </div>
@@ -4507,7 +4507,7 @@ const stages = [
     headLabel: 'STAGE 01 / COLLECT',
     tagBox: '01', tagText: 'COLLECT',
     title: 'A unified profile, drawn from every source.',
-    summary: 'Wearables (Apple Health today; broader device APIs such as Terra at MVP launch), DNA, microbiome, labs, environment, and lifestyle check-ins flow into one place. <strong>Your whole biology, in a single living profile.</strong>',
+    summary: 'Wearables (Apple Health export today; direct device APIs on the build path), DNA, microbiome, labs, environment, and lifestyle check-ins flow into one place. <strong>Your whole biology, in a single living profile.</strong>',
     what: [
       'Upload 23andMe / AncestryDNA reports',
       'Connect Apple Watch or Oura ring',

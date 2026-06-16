@@ -9,7 +9,7 @@
 <!-- Primary SEO -->
 <title>VitaCrypt for Investors · Your whole health in one intelligent profile</title>
 <meta name="description" content="Your whole health in one intelligent profile: every signal you have, fused into actionable, AI-driven, evidence-checked guidance. Private by design.">
-<meta name="keywords" content="VitaCrypt investors, unified health profile, evidence-checked health guidance, personalized health, longevity, health data privacy, pre-seed, digital health investment">
+<meta name="keywords" content="VitaCrypt investors, unified health profile, evidence-checked health guidance, clinical boundary, three-tier evidence router, personalized health, longevity, health data privacy, pre-seed, digital health investment">
 <meta name="author" content="VitaCrypt">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
@@ -3437,9 +3437,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <div class="desc">Users breached; sold for $305M. Why centralizing health data demands a trust model the incumbents can't offer</div>
       </div>
       <div class="kpi">
-        <div class="label">STAGING PROOF</div>
-        <div class="val">~0.5<span class="unit">s</span></div>
-        <div class="desc">Our own staging proof-of-concept on a synthetic model: blind compute on an encrypted genetic vector, the server computes on ciphertext and never holds the key. A demonstration, not yet a product feature</div>
+        <div class="label">EVIDENCE FIRST</div>
+        <div class="val">0</div>
+        <div class="desc">Fabricated citations: every PMID is verified, invented ones are stripped automatically. The engine says no when the science is not there.</div>
       </div>
     </div>
 
@@ -3456,12 +3456,12 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 
     <div class="grade-row">
       <div class="grade"><span class="g">Unified holistic profile</span>Genetics, wearables, microbiome, labs, environment, lifestyle and more, fused into one profile and built to unify any health signal, not a fixed set. We have not found a product that brings all of a person's health into a single place. This is the core.</div>
-      <div class="grade"><span class="g">Evidence-checked, AI-driven guidance</span>Every recommendation cites real literature retrieved live across PubMed, Europe PMC and OpenAlex, graded by publication type, and the model is prevented from inventing citations. Genetics grounded on ClinVar, dbSNP and the GWAS Catalog. In production today, not frozen at ship date.</div>
+      <div class="grade"><span class="g">Evidence-checked, with a clinical boundary in software</span>Every insight is classified before it is shown into one of three honest tiers. Evidence-backed: real PubMed PMIDs, a confirmed-N-of-M corroboration check across the retrieved papers, and a High / Moderate / Emerging confidence indicator. Exploratory: cross-domain connections the literature has not settled, labelled preliminary rather than dressed up as fact. Redirect: anything clinical is withheld server-side and replaced with a warm handoff to the right clinician. For established pharmacogenomic markers (starting with CYP2C9) the published CPIC consortium guidance is shown as a descriptive reference. This is the most demonstrable asset today and the sharpest contrast with confident-by-default AI.</div>
       <div class="grade"><span class="g">Actionable, whole-profile</span>Guidance comes from reading the entire profile together, against your genotype and local exposures, so it is specific and usable, not a fragmented "you slept X, you walked Y".</div>
-      <div class="grade"><span class="g">Private by design</span>Blind compute is demonstrated end to end on a genetic vector: the client holds the key, the server computes on ciphertext in around half a second and never holds the secret key. A narrow proof today, not yet the production default; this round scales it across the pipeline. It is the trust layer, not the headline.</div>
+      <div class="grade"><span class="g">Private, the trust enabler</span>A person's whole profile is never sent intact: it is minimized and pseudonymized before anything leaves, so only the summary an insight needs is sent, and no single AI vendor is load-bearing. Today: encrypted at rest, per-user keys, crypto-shred, minimal retention. Building: prompt minimization, a BAA-grade zero-retention inference endpoint, and on-device document extraction. Roadmap, in order of horizon: self-hosted open-weight inference, and far out, fully homomorphic encryption. The trust layer, not the headline.</div>
     </div>
 
-    <p class="pillar-body">The privacy primitive is shown on staging, not just theorized: blind compute runs end to end on an encrypted genetic vector in about half a second, with the client holding the secret key and the server never holding it. That FHE model is a synthetic-data tech demo, not a validated polygenic risk score. As external corroboration, Zama's published encrypted-DNA benchmark (<a href="https://github.com/zama-ai/bounty-program/issues/95">bounty&nbsp;#95</a>, 2024) reached <strong>96% accuracy on encrypted ancestry classification</strong>, evidence the field's primitive works. We are <strong>targeting the Zama Concrete ML / TFHE stack</strong>.</p>
+    <p class="pillar-body">The one position a giant structurally will not take is independence: VitaCrypt is built so your profile never has to land in a single AI company's cloud to be understood. That is the gap their business model cannot close without ceasing to be itself.</p>
 
     <p class="pillar-links">
       <a href="platform.html">The full four-pillar deep dive →</a>
@@ -3474,31 +3474,33 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <section id="traction">
   <div class="wrap">
     <div class="eyebrow">04 · What works today</div>
-    <h2 class="stitle">A working product that unifies real health data, cites real research, and has proven blind compute on one slice.</h2>
-    <p class="lede">A working product, pre-launch, and honest about it: no revenue, no users yet. But the product already ingests real genetic, environmental, survey and lifestyle data into one profile, returns recommendations that cite real retrieved literature, and has a staging proof of blind compute on an encrypted genetic vector. What the round completes is depth and production hardening. The list below is deliberately conservative.</p>
+    <h2 class="stitle">A working product that unifies real health data, cites real research, and enforces a clinical boundary in software.</h2>
+    <p class="lede">A working product, pre-launch, and honest about it: no revenue, no users yet. But the product already ingests real genetic, environmental, survey and lifestyle data into one profile and returns recommendations classified through a three-tier evidence router with a software-enforced clinical boundary, each cited to real retrieved literature. What the round completes is depth and production hardening. The list below is deliberately conservative.</p>
 
     <table class="vc-table">
       <thead><tr><th>Capability</th><th>What it actually does today</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>Genetics</td><td>23andMe raw upload, SNP parsing, curated risk markers, health score</td><td><span class="badge ok">Live, E2E</span></td></tr>
         <tr><td>Environment</td><td>Live air quality, PM2.5, weather, geo-keyed to the user</td><td><span class="badge ok">Live</span></td></tr>
-        <tr><td>Surveys / lifestyle</td><td>Lifestyle &amp; wellbeing check-ins (sleep, energy, stress, diet), stored</td><td><span class="badge ok">Live</span></td></tr>
+        <tr><td>Evidence router</td><td>Three-tier classification, per-paper concordance, composite confidence indicator</td><td><span class="badge ok">Live, unit-tested</span></td></tr>
+        <tr><td>Clinical boundary</td><td>Clinical insights withheld server-side, warm handoff to a clinician</td><td><span class="badge ok">Live, software-enforced</span></td></tr>
+        <tr><td>CPIC reference</td><td>CYP2C9 descriptive pharmacogenomic reference</td><td><span class="badge ok">Live</span></td></tr>
+        <tr><td>Surveys / lifestyle</td><td>Lifestyle, context and goal check-ins; self-reported wellbeing as optimization signals, not clinical screeners</td><td><span class="badge ok">Live</span></td></tr>
         <tr><td>Recommendations</td><td>Cited next actions (real PMIDs), source badges, a concrete tiny-habit per tip</td><td><span class="badge ok">Live</span></td></tr>
         <tr><td>Health-score trend</td><td>Real dated history, charted from actual scores</td><td><span class="badge ok">Live</span></td></tr>
         <tr><td>Labs</td><td>OCR and biomarker parsing wired; awaiting a lab file to populate</td><td><span class="badge soon">Wired</span></td></tr>
         <tr><td>Wearables</td><td>Apple Health file import wired; direct OAuth sync not yet connected</td><td><span class="badge soon">Partial</span></td></tr>
-        <tr><td>Private compute (FHE)</td><td>Blind compute proven on a genetic slice (staging); not yet the prod default</td><td><span class="badge ok">Demonstrated</span></td></tr>
       </tbody>
     </table>
 
-    <p class="pillar-foot-note">Honest scope: the unified profile is built to ingest any health signal, with more added over time. The core streams are live in the demo (genetics, environment, surveys, lifestyle), with labs and wearables wired and awaiting a file or connection. Recommendations cite real retrieved literature today. Blind compute is proven end to end on one genetic slice on staging (client-held key, server computes on ciphertext, never holds the secret key); production-wide blind compute and validated clinical models are on the roadmap, not claimed as shipped. A clinical advisor joins ahead of the IRB validation study planned for 2027. The platform is not end-to-end "blind" yet: the master key still sits server-side. We state this plainly.</p>
+    <p class="pillar-foot-note">Honest scope: the unified profile is built to ingest any health signal, with more added over time. The core streams are live in the demo (genetics, environment, surveys, lifestyle), with labs and wearables wired and awaiting a file or connection. Recommendations cite real retrieved literature today. On privacy: data is encrypted at rest under per-user keys with minimal retention today; minimization and pseudonymization before egress and a BAA-grade zero-retention inference endpoint are the near-term build; self-hosted inference and, far out, FHE are roadmap, not claimed as shipped. A clinical advisor joins ahead of the IRB validation study planned for 2027. The master key is still server-side today, and we state that plainly.</p>
 
     <h3 class="pillar-sub">Now vs target</h3>
     <table class="vc-table">
       <thead><tr><th>Capability</th><th>Now (live MVP)</th><th>Target (this round and beyond)</th></tr></thead>
       <tbody>
         <tr><td>Unified profile</td><td>Core streams live (genetics, environment, surveys, lifestyle)</td><td>More signals, deeper coverage, any health data</td></tr>
-        <tr><td>Blind compute (FHE)</td><td>Proven on one genetic slice (staging)</td><td>Production-wide blind pipeline</td></tr>
+        <tr><td>Privacy</td><td>Encrypted at rest, per-user keys, minimal retention</td><td>Minimization and pseudonymization before egress, BAA-grade zero-retention endpoint, on-device extraction; self-hosted inference and FHE on the roadmap</td></tr>
         <tr><td>Key custody</td><td>Server-side master key</td><td>Device-bound (Secure Enclave)</td></tr>
         <tr><td>Clinical validity</td><td>Synthetic demo model</td><td>Validated models, IRB study 2027</td></tr>
       </tbody>
@@ -3520,6 +3522,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <li><span class="n">2</span><div><strong>Data engineering</strong><p>Wearables, genetics, microbiome and lab ingestion unified into one coherent profile.</p></div></li>
       <li><span class="n">3</span><div><strong>Data science</strong><p>Evidence-grading depth and validated-risk modeling, moving beyond associative readouts. The moat.</p></div></li>
     </ol>
+    <p class="pillar-body">Plus a fractional independent security audit in place of a full cryptographer hire.</p>
 
     <p class="pillar-body">Security is covered by an independent audit (fractional) rather than a senior-cryptographer hire. Private compute and FHE are on the R&amp;D roadmap, not a month-one central risk.</p>
 
@@ -3536,7 +3539,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 
     <div class="grade-row">
       <div class="grade"><span class="g">Use of funds</span>The first engineering hires, compute infrastructure for private-by-design inference, the source integrations that complete the unified profile, and a modest founder salary with the rest into build.</div>
-      <div class="grade"><span class="g">The milestone</span>Broader source coverage unified in one live profile, blind compute moved from one slice to the production pipeline, clinically validated models replacing the demo model, and the first design-partner cohort (Q4 2026) drawn from the biohacker and longevity communities, onboarded personally at founding-member pricing.</div>
+      <div class="grade"><span class="g">The milestone</span>Broader source coverage unified in one live profile, minimization and pseudonymization before egress with a BAA-grade zero-retention inference endpoint, clinically validated models replacing the demo model, and the first design-partner cohort (Q4 2026) drawn from the biohacker and longevity communities, onboarded personally at founding-member pricing.</div>
       <div class="grade"><span class="g">Instrument</span>A post-money SAFE with a valuation cap, the pre-seed standard. Direct access to the founder, the litepaper, and a full deck and data room on request.</div>
     </div>
   </div>
@@ -3545,7 +3548,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <!-- ========== FINAL — REQUEST THE DECK ========== -->
 <section class="final" id="contact">
   <div class="wrap-tight">
-    <h2>If you back privacy-first health, let's talk.</h2>
+    <h2>If you back a unified, evidence-checked health profile built to stay independent, let's talk.</h2>
     <p>The fastest way in is a short call and a look at the live product: a working demo with a fully populated profile is available to interested investors on request, granted personally. Request the deck and data room, or email <a href="mailto:investors@vitacrypt.xyz">investors@vitacrypt.xyz</a> directly. We respond within 48 hours.</p>
     <div class="hero-cta">
       <a href="mailto:investors@vitacrypt.xyz?subject=VitaCrypt%20deck%20request" data-action="open-waitlist" data-audience="investor" class="btn btn-glow">
