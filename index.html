@@ -2989,6 +2989,35 @@ footer .bottom {
 }
 .mobile-drawer .drawer-theme-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
 .mobile-drawer .drawer-cta { justify-content: center; text-align: center; }
+/* Redesigned drawer: labelled groups, numbered section chips, page cards */
+.mobile-drawer .drawer-brand { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; letter-spacing: -0.01em; color: var(--ink); }
+.mobile-drawer .drawer-brand img { width: 24px; height: 24px; border-radius: 6px; object-fit: cover; }
+.mobile-drawer .drawer-group-label {
+  font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-faint);
+  padding: 6px 22px 8px; margin-top: 14px;
+}
+.mobile-drawer .drawer-group-label:first-child { margin-top: 2px; }
+.mobile-drawer .drawer-sec {
+  display: flex; align-items: center; gap: 13px;
+  padding: 11px 22px; font-size: 15px; font-weight: 500; color: var(--ink);
+  border-left: 2px solid transparent; transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.mobile-drawer .drawer-sec .drawer-sec-n {
+  font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--ink-faint); min-width: 16px;
+}
+.mobile-drawer .drawer-sec:hover { background: var(--bg-2); border-left-color: var(--teal); }
+.mobile-drawer .drawer-sec.active { border-left-color: var(--teal); background: var(--bg-2); }
+.mobile-drawer .drawer-sec.active .drawer-sec-n { color: var(--teal); }
+.mobile-drawer .drawer-page {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 11px 22px; border-left: 2px solid transparent; transition: background 0.15s, border-color 0.15s;
+}
+.mobile-drawer .drawer-page:hover { background: var(--bg-2); border-left-color: var(--teal); }
+.mobile-drawer .drawer-page .drawer-page-t { display: flex; align-items: center; gap: 7px; font-size: 15px; font-weight: 500; color: var(--ink); }
+.mobile-drawer .drawer-page .drawer-page-arrow { color: var(--ink-faint); transition: color 0.15s, transform 0.15s; }
+.mobile-drawer .drawer-page:hover .drawer-page-arrow { color: var(--teal); transform: translateX(2px); }
+.mobile-drawer .drawer-page .drawer-page-s { font-size: 12.5px; color: var(--ink-mute); line-height: 1.4; }
 body.drawer-open { overflow: hidden; }
 
 @media (max-width: 768px) {
@@ -3286,7 +3315,7 @@ body.drawer-open { overflow: hidden; }
 <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
   <header>
-    <span id="drawerTitle" class="drawer-title">Menu</span>
+    <span id="drawerTitle" class="drawer-brand"><img src="/img/vitacrypt-logo-square.webp" alt="" aria-hidden="true">VitaCrypt</span>
     <button class="drawer-close" id="drawerClose" aria-label="Close menu">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -3295,16 +3324,25 @@ body.drawer-open { overflow: hidden; }
     </button>
   </header>
   <nav class="drawer-nav" aria-label="Sections">
-    <a href="#pillars" data-drawer-link>Four pillars overview</a>
-    <a href="#pipeline" data-drawer-link>Walkthrough</a>
-    <a href="#case" data-drawer-link>Case study</a>
-    <a href="#roadmap" data-drawer-link>Roadmap</a>
-    <a href="#why" data-drawer-link>Why now</a>
-    <a href="#investors" data-drawer-link>For investors</a>
-    <span class="drawer-sep" aria-hidden="true"></span>
-    <a href="investor.html" data-drawer-link>Investor page →</a>
-    <a href="platform.html" data-drawer-link>The platform, deep dive →</a>
-    <a href="litepaper.html" data-drawer-link>Read litepaper →</a>
+    <span class="drawer-group-label">On this page</span>
+    <a href="#pillars" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">01</span>Four pillars</a>
+    <a href="#pipeline" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">02</span>Walkthrough</a>
+    <a href="#case" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">03</span>Case study</a>
+    <a href="#roadmap" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">04</span>Roadmap</a>
+    <a href="#why" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">05</span>Why now</a>
+    <span class="drawer-group-label">Go to</span>
+    <a href="investor.html" class="drawer-page" data-drawer-link>
+      <span class="drawer-page-t">Investor page <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
+      <span class="drawer-page-s">The raise, traction, the moat</span>
+    </a>
+    <a href="platform.html" class="drawer-page" data-drawer-link>
+      <span class="drawer-page-t">The platform <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
+      <span class="drawer-page-s">Deep dive on the four pillars</span>
+    </a>
+    <a href="litepaper.html" class="drawer-page" data-drawer-link>
+      <span class="drawer-page-t">Read litepaper <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
+      <span class="drawer-page-s">Architecture &amp; the evidence engine</span>
+    </a>
   </nav>
   <footer class="drawer-foot">
     <button id="drawerThemeToggle" class="drawer-theme-btn" aria-label="Toggle theme">
@@ -4390,25 +4428,7 @@ body.drawer-open { overflow: hidden; }
   </div>
 </footer>
 
-<!-- ========== MOBILE STICKY SECTION NAV ========== -->
-<nav class="mob-secnav" aria-label="Sections">
-  <button data-target="thesis" aria-label="Thesis">01</button>
-  <button data-target="fabric" aria-label="The data fabric">02</button>
-  <button data-target="research" aria-label="Live science">03</button>
-  <button data-target="pipeline" aria-label="The architecture">04</button>
-  <button data-target="diff" aria-label="Versus the field">05</button>
-  <button data-target="case" aria-label="Case study">06</button>
-  <button data-target="insights" aria-label="A week in the protocol">07</button>
-  <button data-target="roadmap" aria-label="Trajectory">08</button>
-  <button data-target="why" aria-label="Why now">09</button>
-  <button class="mob-secnav-menu" data-action="open-drawer" aria-label="Open menu">
-    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
-      <line x1="0" y1="1" x2="16" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="0" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="0" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-  </button>
-</nav>
+<!-- (mobile sticky section nav removed: the drawer is the single mobile nav) -->
 
 <!-- ========== WAITLIST FORM MODAL ========== -->
 <div class="form-modal" id="waitlistModal" role="dialog" aria-modal="true" aria-labelledby="formTitle" aria-hidden="true">
@@ -4985,25 +5005,19 @@ if (heroProfile) {
     el.insertAdjacentElement('afterend', btn);
   });
 
-  // M7: sticky section nav — active highlight on scroll, tap → smooth scroll
-  const secNavBtns = document.querySelectorAll('.mob-secnav button');
-  if (secNavBtns.length) {
-    secNavBtns.forEach(b => {
-      b.addEventListener('click', () => {
-        const target = document.getElementById(b.dataset.target);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-    const secObs = new IntersectionObserver((entries) => {
+  // Drawer active-section highlight (replaces the removed sticky pip-bar scroll-spy)
+  const drawerSecs = document.querySelectorAll('.drawer-nav .drawer-sec');
+  if (drawerSecs.length) {
+    const drawerObs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          secNavBtns.forEach(b => b.classList.toggle('active', b.dataset.target === e.target.id));
+          drawerSecs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
         }
       });
     }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-    secNavBtns.forEach(b => {
-      const t = document.getElementById(b.dataset.target);
-      if (t) secObs.observe(t);
+    drawerSecs.forEach(a => {
+      const t = document.getElementById(a.getAttribute('href').slice(1));
+      if (t) drawerObs.observe(t);
     });
   }
 })();
