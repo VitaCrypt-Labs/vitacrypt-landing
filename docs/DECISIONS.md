@@ -616,3 +616,15 @@ pillar cards equal-height (fine). No breakage; drawers + key sections render cle
 
 **Decision (user):** litepaper = heavy reframe (not surgical); evidence-engine "Live" labels stand
 on the Investor Memo. No git push (Vercel-direct).
+
+---
+
+**SEO/indexation fixes, commit `52fd407`, deployed `dpl_4JnCDBqrKJYxMybuCrxyiLuh4RAn` (2026-07-16):**
+Ahrefs health score was 60 (Fair) — 9 errors from broken links + a non-canonical duplicate. Root causes and fixes:
+- **No research-doc leak** (Paul's concern). `docs/` is in `.vercelignore` → never deploys; `/RESEARCH_BRIEF.md` and `/docs/**` all 404. Ahrefs was catching a *dangling link* in `litepaper.html` (2×): `<a href="../../RESEARCH_BRIEF.md">` → `../../` clamps to domain root → `/RESEARCH_BRIEF.md` 404. De-linked both, kept plain text (doc is request-only).
+- **`/cdn-cgi/l/email-protection` 404 on all pages** was **not in source** — Cloudflare Email Address Obfuscation (Scrape Shield) rewriting `mailto:` at the edge (source had 0 `cdn-cgi`; live injected the link + `email-decode.min.js`). Paul **disabled Email Obfuscation in the Cloudflare dashboard**. Trade-off accepted: role emails (`marketing@`, `investors@`) now bot-scrapeable — fine for a landing page.
+- **Canonical/duplicate.** All 15 internal home links used `href="index.html"` while canonical = `/`, so `/` (in sitemap) had 0 inlinks and `/index.html` (200) hoarded them. Changed all → `/` (incl. `/#fabric` etc.). Added **301 `/index.html`→`/`** in `vercel.json` (`statusCode: 301`, not `permanent:true` which yields 308).
+
+Verified live: `/index.html`→301→`/`; `/`→200; all pages 0 `cdn-cgi`, 0 `href="index.html"`, 0 `RESEARCH_BRIEF`.
+**Fragile / revisit:** health score won't move until Ahrefs re-crawls (trigger a manual crawl). `/index.html` still exists at origin but now 301s; if `cleanUrls` is ever enabled in Vercel, re-check no redirect loop.
+**Decision (user):** Scrape Shield off; 301 redirect; deploy. No git push (Vercel-direct, feature branch `chore/footer-credit`).
