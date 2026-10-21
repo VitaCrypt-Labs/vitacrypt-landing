@@ -5,5 +5,11 @@
       "destination": "/",
       "statusCode": 301
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/agent",
+      "destination": "/agent.html"
+    }
   ]
 }
