@@ -1,1 +1,5 @@
-{}
+{
+  "rewrites": [
+    { "source": "/agent", "destination": "/agent.html" }
+  ]
+}
