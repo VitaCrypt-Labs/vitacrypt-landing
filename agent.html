@@ -3262,7 +3262,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   .boundary { grid-template-columns: 1fr; }
   .boundary .b-flow { flex-direction: row; justify-content: center; border-left: none; border-right: none; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); padding: 10px; }
   .evidence-grid { grid-template-columns: 1fr; }
-  .vc-table th:nth-child(2), .vc-table td:nth-child(2) { display: none; }
+  .vc-table { font-size: 12.5px; }
+  .vc-table th, .vc-table td { padding: 10px 8px; }
+  .vc-table td:first-child { white-space: normal; }
   .pillar-links { gap: 14px; }
 }
 
@@ -3313,7 +3315,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </a>
     <div class="tabs" id="platformToc">
       <a href="#loop">How it works</a>
-      <a href="#difference">Agent vs app</a>
+      <a href="#difference">Part of the app</a>
       <a href="#never">What it never does</a>
       <a href="#privacy">Privacy</a>
       <a href="#demo">Live demo</a>
@@ -3325,7 +3327,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
           <path d="M11.5 8.5a4.5 4.5 0 0 1-6-6 4.5 4.5 0 1 0 6 6Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <a class="cta-pill" href="https://app.vitacrypt.xyz/demo">Try the live demo</a>
+      <a class="cta-pill" href="https://app.vitacrypt.xyz/demo?start=agent">Try the live demo</a>
       <button class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
         <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
           <line x1="0" y1="1" x2="20" y2="1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -3352,7 +3354,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <nav class="drawer-nav" aria-label="Sections">
     <span class="drawer-group-label">On this page</span>
     <a href="#loop" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">01</span>How the agent works</a>
-    <a href="#difference" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">02</span>Agent vs app</a>
+    <a href="#difference" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">02</span>Part of the app</a>
     <a href="#never" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">03</span>What it never does</a>
     <a href="#privacy" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">04</span>Privacy</a>
     <a href="#demo" class="drawer-sec" data-drawer-link><span class="drawer-sec-n">05</span>Live demo</a>
@@ -3381,7 +3383,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       </svg>
       <span>Toggle theme</span>
     </button>
-    <a class="cta-pill drawer-cta" href="https://app.vitacrypt.xyz/demo">Try the live demo</a>
+    <a class="cta-pill drawer-cta" href="https://app.vitacrypt.xyz/demo?start=agent">Try the live demo</a>
   </footer>
 </aside>
 
@@ -3396,7 +3398,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <p class="lead lead-punch">The Lab Agent reads each new blood test, compares it with your last one and your DNA, checks the research, and keeps a plan you can act on.</p>
     <p class="lead">Next time you upload a lab, it checks whether the plan worked and changes it. It never diagnoses and never suggests doses or treatment changes; anything clinical becomes a question for your clinician.</p>
     <div class="hero-cta">
-      <a href="https://app.vitacrypt.xyz/demo" class="btn btn-glow">
+      <a href="https://app.vitacrypt.xyz/demo?start=agent" class="btn btn-glow">
         Try the live demo
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -3424,9 +3426,9 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </ol>
 
     <div class="agent-gallery" aria-label="Lab Agent screenshots">
-      <figure><img src="/img/agent/run-steps.jpg" alt="Lab Agent run with all seven steps completed" width="525" height="1136" loading="lazy" decoding="async"><figcaption>One run, seven steps, each with its result.</figcaption></figure>
-      <figure><img src="/img/agent/plan.jpg" alt="Plan with a cited habit, a repeat test and a question for the clinician" width="525" height="1136" loading="lazy" decoding="async"><figcaption>The plan: a cited habit, a repeat test, a clinician question.</figcaption></figure>
-      <figure><img src="/img/agent/learn.jpg" alt="Did your last plan work: each marker with its outcome and decision" width="525" height="1136" loading="lazy" decoding="async"><figcaption>Next lab: did the last plan work?</figcaption></figure>
+      <figure><img src="/img/agent/run-steps.jpg" alt="Lab Agent run: each step with its result and the literature searches it sent" width="525" height="1136" loading="lazy" decoding="async"><figcaption>One run, seven steps, and the searches it sent.</figcaption></figure>
+      <figure><img src="/img/agent/plan.jpg" alt="Plan: habits marked Cited or Hypothesis with PubMed IDs" width="525" height="1136" loading="lazy" decoding="async"><figcaption>The plan: habits marked Cited or Hypothesis.</figcaption></figure>
+      <figure><img src="/img/agent/learn.jpg" alt="Did your last plan work: each marker, its values and the habit log, and the decision" width="525" height="1136" loading="lazy" decoding="async"><figcaption>Next lab: did the last plan work?</figcaption></figure>
       <figure><img src="/img/agent/clinician-sheet.jpg" alt="Question sheet for the clinician" width="525" height="1136" loading="lazy" decoding="async"><figcaption>A short sheet for your clinician.</figcaption></figure>
     </div>
     <p class="pillar-foot-note">Screenshots from the live demo with synthetic data. Not a real patient.</p>
@@ -3436,11 +3438,11 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <!-- ========== 02 · AGENT VS APP ========== -->
 <section id="difference">
   <div class="wrap">
-    <div class="eyebrow">02 · Agent vs app</div>
-    <h2 class="stitle">The app gives you a snapshot. The agent follows up.</h2>
-    <p class="lede">The VitaCrypt app reads your data and writes a report for that moment. The Lab Agent remembers what it suggested and comes back to it.</p>
+    <div class="eyebrow">02 · Part of the app</div>
+    <h2 class="stitle">One app. The agent is the part that follows up.</h2>
+    <p class="lede">The Lab Agent is a tab of the VitaCrypt app. The app keeps your health file and matches it to research; the agent checks each new lab and keeps a plan with you. Its plan shows up on Today, in Habits and in Trends.</p>
     <table class="vc-table">
-      <thead><tr><th></th><th>App report</th><th>Lab Agent</th></tr></thead>
+      <thead><tr><th></th><th>Without the agent</th><th>With the Lab Agent</th></tr></thead>
       <tbody>
         <tr><td>Memory</td><td>A snapshot of today's data</td><td>Keeps every lab, plan and habit it suggested</td></tr>
         <tr><td>Plan</td><td>Recommendations to read</td><td>Habits in your tracker, repeat tests with dates, clinician questions</td></tr>
@@ -3455,11 +3457,12 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <section id="never">
   <div class="wrap">
     <div class="eyebrow">03 · What it never does</div>
-    <h2 class="stitle">Habits and questions. Never medicine.</h2>
-    <p class="lede">The Lab Agent is not medical advice and is not a medical device. Every sentence the model writes passes a guard that blocks doses, medication changes and diagnoses; if it fails, a fixed template is used instead.</p>
+    <h2 class="stitle">Reference, not prescription.</h2>
+    <p class="lede">The Lab Agent is not medical advice and is not a medical device. Every sentence the model writes passes a guard that blocks personal doses, medication changes and diagnoses; if it fails, a fixed template is used instead.</p>
     <div class="grade-row">
       <div class="grade"><span class="g">Never</span>Diagnoses a condition or tells you what a result "means" for your health.</div>
-      <div class="grade"><span class="g">Never</span>Suggests doses, supplements by amount, or starting or stopping a medicine.</div>
+      <div class="grade"><span class="g">Never</span>Sets a dose for you, or tells you to start, stop or change a medicine.</div>
+      <div class="grade"><span class="g">Reference</span>Where official guidelines exist, such as NIH reference intakes, shows them with the source, plus food sources and research context.</div>
       <div class="grade"><span class="g">Instead</span>Clinical topics become neutral questions for your clinician, on a sheet you can bring along.</div>
     </div>
   </div>
@@ -3485,7 +3488,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap">
     <div class="eyebrow">05 · Live demo</div>
     <h2 class="stitle">See it run in about three minutes.</h2>
-    <p class="lede">Open the demo, accept how the agent works, then run demo lab 1, 2 and 3 in order: a baseline, a follow-up, and a second follow-up where the agent checks its own plan.</p>
+    <p class="lede">Follow Alex, a fictional person with a year of synthetic lab history: a new lab arrives, the agent explains what it will do, searches the research while you watch, plans habits and questions, and eight weeks later checks whether the plan worked.</p>
     <div class="agent-media">
       <div class="agent-video" role="img" aria-label="Video walkthrough coming soon">
         <span class="agent-video-play" aria-hidden="true">
@@ -3493,7 +3496,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         </span>
         <span class="agent-video-label">Video walkthrough · coming soon</span>
       </div>
-      <figure class="agent-media-shot"><img src="/img/agent/demo-home.jpg" alt="Lab Agent home in demo mode with three demo labs" width="375" height="812" loading="lazy" decoding="async"><figcaption>Demo mode: synthetic data, resets in 24 h.</figcaption></figure>
+      <figure class="agent-media-shot"><img src="/img/agent/demo-home.jpg" alt="Lab Agent tab in the demo with dated synthetic lab reports" width="375" height="812" loading="lazy" decoding="async"><figcaption>Demo with synthetic data, deleted after 24 h.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -3503,7 +3506,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h2>Try it on a fictional person now. Use your own labs when you are invited.</h2>
     <p>The live demo needs no sign-up. Real lab uploads are open to approved beta members.</p>
     <div class="hero-cta">
-      <a href="https://app.vitacrypt.xyz/demo" class="btn btn-glow">
+      <a href="https://app.vitacrypt.xyz/demo?start=agent" class="btn btn-glow">
         Try the live demo
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -3531,7 +3534,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <h5>Lab Agent</h5>
         <ul>
           <li><a href="#loop">How it works</a></li>
-          <li><a href="#difference">Agent vs app</a></li>
+          <li><a href="#difference">Part of the app</a></li>
           <li><a href="#never">What it never does</a></li>
           <li><a href="#privacy">Privacy</a></li>
           <li><a href="/">← Back to home</a></li>
@@ -3540,7 +3543,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <div>
         <h5>Resources</h5>
         <ul>
-          <li><a href="https://app.vitacrypt.xyz/demo">Live demo</a></li>
+          <li><a href="https://app.vitacrypt.xyz/demo?start=agent">Live demo</a></li>
           <li><a href="investor.html">For investors</a></li>
           <li><a href="litepaper.html">Litepaper</a></li>
           <li><a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Waitlist</a></li>
