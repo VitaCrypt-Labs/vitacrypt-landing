@@ -62,6 +62,17 @@
       "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
       "description": "How the VitaCrypt Lab Agent follows up on blood tests: seven fixed steps per lab, a plan of habits, repeat tests and clinician questions, and a check of the plan at the next lab. Not medical advice.",
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://vitacrypt.xyz/agent#video",
+      "name": "VitaCrypt Lab Agent: live demo walkthrough",
+      "description": "The VitaCrypt Lab Agent in the live demo with synthetic data for a fictional person: one profile from six sources, a new lab checked against PubMed and Europe PMC, a plan routed as Cited, Hypothesis or Ask your clinician, and a check of that plan at the next lab. Early-stage MVP, not medical advice.",
+      "thumbnailUrl": "https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg",
+      "contentUrl": "https://vitacrypt.xyz/media/vitacrypt-lab-agent-demo.mp4",
+      "uploadDate": "2026-10-28",
+      "duration": "PT2M55S",
+      "inLanguage": "en"
     }
   ]
 }
@@ -3287,9 +3298,10 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 .agent-gallery img, .agent-media-shot img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid var(--line); background: var(--surface); }
 .agent-gallery figcaption, .agent-media-shot figcaption { margin-top: 8px; font-size: 12.5px; color: var(--ink-mute); line-height: 1.45; }
 .agent-media { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
-.agent-video { aspect-ratio: 16 / 9; border-radius: 18px; border: 1px dashed var(--line); background: var(--bg-2); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--ink-mute); }
-.agent-video-play { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--teal-glow); color: var(--teal); }
-.agent-video-label { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.agent-video { margin: 0; }
+.agent-video video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; border-radius: 18px; border: 1px solid var(--line); background: #141a4a; }
+.agent-video figcaption { margin-top: 8px; font-size: 12.5px; color: var(--ink-mute); line-height: 1.45; }
+.agent-video figcaption a { color: var(--teal); }
 @media (max-width: 900px) {
   .agent-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .agent-media { grid-template-columns: 1fr; }
@@ -3490,12 +3502,14 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h2 class="stitle">See it run in about three minutes.</h2>
     <p class="lede">Follow Alex, a fictional person with a year of synthetic lab history: a new lab arrives, the agent explains what it will do, searches the research while you watch, plans habits and questions, and eight weeks later checks whether the plan worked.</p>
     <div class="agent-media">
-      <div class="agent-video" role="img" aria-label="Video walkthrough coming soon">
-        <span class="agent-video-play" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 4.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
-        </span>
-        <span class="agent-video-label">Video walkthrough · coming soon</span>
-      </div>
+      <figure class="agent-video">
+        <video controls playsinline preload="none" poster="/media/vitacrypt-lab-agent-poster.jpg" width="1280" height="720" aria-label="Lab Agent demo video, 2 minutes 55 seconds, with English captions">
+          <source src="/media/vitacrypt-lab-agent-demo.mp4" type="video/mp4">
+          <track kind="captions" src="/media/vitacrypt-lab-agent-demo.en.vtt" srclang="en" label="English" default>
+          <a href="/media/vitacrypt-lab-agent-demo.mp4">Download the demo video (MP4, 18 MB)</a>
+        </video>
+        <figcaption>Recorded in the live demo, 2:55, English captions. Synthetic data, fictional person, early-stage MVP, not medical advice. <a href="/press">Press kit</a></figcaption>
+      </figure>
       <figure class="agent-media-shot"><img src="/img/agent/demo-home.jpg" alt="Lab Agent tab in the demo with dated synthetic lab reports" width="375" height="812" loading="lazy" decoding="async"><figcaption>Demo with synthetic data, deleted after 7 days.</figcaption></figure>
     </div>
   </div>
@@ -3546,6 +3560,8 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
           <li><a href="https://app.vitacrypt.xyz/demo?start=agent">Live demo</a></li>
           <li><a href="investor.html">For investors</a></li>
           <li><a href="litepaper.html">Litepaper</a></li>
+          <li><a href="/press">Press kit</a></li>
+          <li><a href="/media/vitacrypt-deck.pdf">Deck (PDF)</a></li>
           <li><a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Waitlist</a></li>
           <li><a href="https://x.com/vita_crypt">X / Twitter</a></li>
           <li><a href="https://t.me/paul_burg">Telegram</a></li>

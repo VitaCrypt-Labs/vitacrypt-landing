@@ -1,0 +1,189 @@
+WEBVTT
+
+1
+00:00:00.250 --> 00:00:03.277
+Your health data is scattered: DNA, blood
+
+2
+00:00:03.277 --> 00:00:06.452
+work, a wearable, even the air you breathe.
+
+3
+00:00:06.452 --> 00:00:09.701
+VitaCrypt joins it into one profile, and its
+
+4
+00:00:09.701 --> 00:00:13.023
+Lab Agent follows up on every new blood test.
+
+5
+00:00:13.023 --> 00:00:18.782
+This is our early-stage MVP, live, with synthetic data for a fictional person,
+
+6
+00:00:18.782 --> 00:00:19.151
+Alex.
+
+7
+00:00:19.851 --> 00:00:21.696
+The demo needs no sign-up.
+
+8
+00:00:21.696 --> 00:00:25.953
+Every visitor gets a private copy, deleted after seven days.
+
+9
+00:00:26.653 --> 00:00:32.049
+Alex connects six sources: two earlier blood tests, seventeen DNA variants,
+
+10
+00:00:32.049 --> 00:00:37.661
+sleep, steps and heart rate, eight questionnaires, a gut report, and local air
+
+11
+00:00:37.661 --> 00:00:38.237
+quality.
+
+12
+00:00:38.937 --> 00:00:43.296
+For this video, Alex is in New Delhi, with real archived air data
+
+13
+00:00:43.296 --> 00:00:47.790
+from the city: air quality index one hundred ninety one, unhealthy.
+
+14
+00:00:48.490 --> 00:00:53.072
+Today connects what no single app sees: months of heavy pollution,
+
+15
+00:00:53.072 --> 00:00:57.515
+a rising inflammation marker, and gene variants studied with it.
+
+16
+00:00:57.515 --> 00:01:00.153
+Each link is checked against research.
+
+17
+00:01:00.153 --> 00:01:05.082
+No study tested this combination, so it is labelled a hypothesis, not a
+
+18
+00:01:05.082 --> 00:01:05.429
+fact.
+
+19
+00:01:06.129 --> 00:01:08.317
+Then a new blood test arrives.
+
+20
+00:01:08.317 --> 00:01:13.862
+First, the agent shows its seven fixed steps and what leaves VitaCrypt: gene
+
+21
+00:01:13.862 --> 00:01:19.698
+and marker names, coded facts for the AI model, never Alex's name, file or exact
+
+22
+00:01:19.698 --> 00:01:20.209
+values.
+
+23
+00:01:20.909 --> 00:01:25.573
+It compares the lab with earlier ones, links changes to Alex's
+
+24
+00:01:25.573 --> 00:01:30.163
+DNA, and searches PubMed and Europe PMC, showing every query.
+
+25
+00:01:30.163 --> 00:01:35.956
+A language model checks each paper against each claim; fixed rules decide the
+
+26
+00:01:35.956 --> 00:01:36.333
+plan.
+
+27
+00:01:37.033 --> 00:01:39.438
+The plan already checks the last one.
+
+28
+00:01:39.438 --> 00:01:44.312
+Alex did the daylight habit on twenty two of twenty eight days, yet vitamin
+
+29
+00:01:44.312 --> 00:01:49.187
+D fell, so the agent swaps the habit and adds a question for the clinician.
+
+30
+00:01:49.187 --> 00:01:53.737
+Supplements appear only as official reference values, never as a dose.
+
+31
+00:01:54.437 --> 00:01:59.251
+Then it acts, only on Alex's tap: a retest reminder, labs nearby, a
+
+32
+00:01:59.251 --> 00:02:04.280
+repeat order, and a clinician link with a preview of exactly what they
+
+33
+00:02:04.280 --> 00:02:04.567
+see.
+
+34
+00:02:04.567 --> 00:02:08.160
+Orders and lab listings are simulated in the demo.
+
+35
+00:02:08.160 --> 00:02:09.669
+Every send is logged.
+
+36
+00:02:10.369 --> 00:02:13.898
+Eight weeks later, with a simulated habit log, the
+
+37
+00:02:13.898 --> 00:02:17.498
+next lab arrives and the agent grades its own plan.
+
+38
+00:02:17.498 --> 00:02:20.251
+Vitamin D is improving: keep the habit.
+
+39
+00:02:20.251 --> 00:02:25.263
+Homocysteine rose despite the habit: try another and ask the clinician.
+
+40
+00:02:25.263 --> 00:02:28.651
+The LDL habit was rarely done: do it more often.
+
+41
+00:02:29.351 --> 00:02:34.025
+Once a month, it becomes a one-page report: what changed, what worked,
+
+42
+00:02:34.025 --> 00:02:38.631
+and what comes next, ready to save as a PDF for the next appointment.
+
+43
+00:02:39.331 --> 00:02:43.811
+Many sources, one profile, research-checked insights, and an
+
+44
+00:02:43.811 --> 00:02:48.142
+agent that acts with your permission and learns from every
+
+45
+00:02:48.142 --> 00:02:48.441
+lab.
+
+46
+00:02:48.441 --> 00:02:50.905
+Not medical advice, never a dose.
+
+47
+00:02:50.905 --> 00:02:54.862
+Try the live demo at vitacrypt.xyz/agent.

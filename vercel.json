@@ -10,6 +10,21 @@
     {
       "source": "/agent",
       "destination": "/agent.html"
+    },
+    {
+      "source": "/press",
+      "destination": "/press.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
     }
   ]
 }

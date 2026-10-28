@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#070B1F">
+<meta name="color-scheme" content="dark">
+<title>Press kit · VitaCrypt</title>
+<meta name="description" content="VitaCrypt press kit: short descriptions, facts, the Lab Agent demo video with captions, the deck as PDF, screenshots from the live demo and logos. Early-stage MVP, synthetic demo data.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://vitacrypt.xyz/press">
+<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VitaCrypt">
+<meta property="og:url" content="https://vitacrypt.xyz/press">
+<meta property="og:title" content="VitaCrypt press kit">
+<meta property="og:description" content="Descriptions, facts, demo video, deck PDF, screenshots and logos.">
+<meta property="og:image" content="https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vita_crypt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGT34ZL8HV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NGT34ZL8HV', { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+<style>
+:root {
+  --bg: #070B1F; --bg-2: #0B1230; --surface: #121A3F; --line: #232C5E;
+  --ink: #F5F3EE; --ink-2: #D9D6CD; --ink-mute: #95A0CC; --teal: #6B8AFF; --teal-deep: #3B5BFF;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.lockup { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.lockup img { border-radius: 8px; }
+header.top nav { display: flex; gap: 18px; font-size: 14px; }
+header.top nav a { color: var(--ink-mute); text-decoration: none; }
+header.top nav a:hover { color: var(--ink); }
+.eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
+h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; margin: 56px 0 12px; font-weight: 600; }
+h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 16px; font-weight: 600; }
+.lede { color: var(--ink-2); font-size: 18px; max-width: 720px; margin: 0; }
+section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.card + .card { margin-top: 12px; }
+.card h3 { font-size: 13px; font-family: 'Geist Mono', ui-monospace, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 8px; font-weight: 500; }
+.card p { margin: 0; color: var(--ink-2); }
+.copy { margin-top: 10px; background: transparent; border: 1px solid var(--line); color: var(--ink-mute); border-radius: 8px; padding: 4px 10px; font: 500 12px 'Geist Mono', monospace; cursor: pointer; }
+.copy:hover { color: var(--ink); border-color: var(--teal); }
+dl.facts { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 10px 20px; margin: 0; }
+dl.facts dt { color: var(--ink-mute); }
+dl.facts dd { margin: 0; }
+.media-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+video { width: 100%; height: auto; aspect-ratio: 16 / 9; display: block; border-radius: 16px; border: 1px solid var(--line); background: #141a4a; }
+.dl { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; font-size: 14px; }
+.dl span { color: var(--ink-mute); }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.shots figure { margin: 0; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
+.shots figcaption { font-size: 12.5px; color: var(--ink-mute); margin-top: 6px; line-height: 1.4; }
+.logos { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.logos a { display: inline-block; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.note { color: var(--ink-mute); font-size: 14px; }
+footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
+@media (max-width: 760px) {
+  .media-grid { grid-template-columns: 1fr; }
+  dl.facts { grid-template-columns: 1fr; gap: 2px 0; }
+  dl.facts dd { margin-bottom: 10px; }
+  header.top nav a.hide-sm { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="/"><img src="/img/vitacrypt-logo-square.jpg" alt="" width="28" height="28">VitaCrypt</a>
+    <nav aria-label="Site">
+      <a href="/agent">Lab Agent</a>
+      <a href="/investor.html" class="hide-sm">Investors</a>
+      <a href="https://app.vitacrypt.xyz/demo">Live demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <h1>Press kit</h1>
+  <p class="lede">Descriptions, facts and media for anyone writing about VitaCrypt or its Lab Agent. Everything here may be used for coverage. Every screen shows a fictional person with synthetic data.</p>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow">01 · Descriptions</p>
+    <h2>Copy you can use</h2>
+    <div class="card">
+      <h3>One line</h3>
+      <p data-copy>VitaCrypt reads your DNA, labs, wearables and local air as one health profile, and its Lab Agent follows up on every new blood test.</p>
+      <button class="copy" type="button">Copy</button>
+    </div>
+    <div class="card">
+      <h3>About 50 words</h3>
+      <p data-copy>VitaCrypt is personal health intelligence: it joins DNA, blood tests, wearables, microbiome, check-ins and local air quality into one profile and checks every link against published research. Its Lab Agent reads each new lab, plans habits, repeat tests and clinician questions, and at the next lab checks whether that plan worked.</p>
+      <button class="copy" type="button">Copy</button>
+    </div>
+    <div class="card">
+      <h3>About 120 words</h3>
+      <p data-copy>VitaCrypt is an early-stage personal health intelligence MVP built by solo founder Paul Burg. It reads DNA, blood tests, wearables, microbiome reports, questionnaires and local air quality as one profile. Each link it finds is checked against PubMed and Europe PMC and labelled Cited or Hypothesis. The Lab Agent follows up on every new blood test in seven fixed steps: it compares the lab with earlier ones, links changes to the person's DNA, searches the research and shows every query, then plans habits, repeat tests and questions for a clinician. At the next lab it checks its own plan against the habit log and keeps, swaps or retires each habit. It gives no diagnoses and never sets a dose. A guided demo with synthetic data needs no sign-up.</p>
+      <button class="copy" type="button">Copy</button>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <div class="wrap">
+    <p class="eyebrow">02 · Facts</p>
+    <h2>At a glance</h2>
+    <dl class="facts">
+      <dt>Stage</dt><dd>Early-stage MVP. Pre-revenue, self-funded. Real lab uploads are open only to approved beta members.</dd>
+      <dt>Founder</dt><dd>Paul Burg, solo founder. Designed and built the platform, the Lab Agent and the live demo.</dd>
+      <dt>Live demo</dt><dd><a href="https://app.vitacrypt.xyz/demo">app.vitacrypt.xyz/demo</a>: a fictional person, Alex, with synthetic data. No sign-up; each visitor gets a private copy, deleted after 7 days.</dd>
+      <dt>Data sources</dt><dd>DNA, blood tests, wearables, microbiome, questionnaires, local air quality and climate.</dd>
+      <dt>Research</dt><dd>PubMed and Europe PMC. Each insight is labelled Cited (with PMIDs) or Hypothesis.</dd>
+      <dt>Agent run</dt><dd>Seven fixed steps per lab. A language model judges papers and words the result; fixed rules decide what the agent does.</dd>
+      <dt>Actions</dt><dd>Retest reminders, labs nearby, a repeat lab order (US sandbox), a private link for a clinician. Each one needs the person's tap. In the demo, orders and lab listings are simulated.</dd>
+      <dt>Privacy</dt><dd>Only coded facts reach the AI model, never a name, file or exact values. Health data is encrypted at rest under a per-user key held by our server; deleting data destroys that key.</dd>
+      <dt>Limits</dt><dd>Not medical advice and not a medical device. No diagnoses. Supplements appear only as official reference values with their source, never as a dose.</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <p class="eyebrow">03 · Video and deck</p>
+    <h2>Demo video</h2>
+    <div class="media-grid">
+      <video controls playsinline preload="none" poster="/media/vitacrypt-lab-agent-poster.jpg" width="1280" height="720" aria-label="Lab Agent demo video, 2 minutes 55 seconds, with English captions">
+        <source src="/media/vitacrypt-lab-agent-demo.mp4" type="video/mp4">
+        <track kind="captions" src="/media/vitacrypt-lab-agent-demo.en.vtt" srclang="en" label="English" default>
+      </video>
+      <div>
+        <p class="note">Recorded in the live demo, narrated, English captions. Synthetic data, fictional person.</p>
+        <ul class="dl">
+          <li><a href="/media/vitacrypt-lab-agent-demo.mp4" download>Full video</a> <span>· MP4, 2:55, 720p, 18 MB</span></li>
+          <li><a href="/media/vitacrypt-lab-agent-demo.en.vtt" download>Captions, full</a> <span>· WebVTT</span></li>
+          <li><a href="/media/vitacrypt-lab-agent-30s.mp4" download>Short cut</a> <span>· MP4, 0:28, 720p, 3 MB</span></li>
+          <li><a href="/media/vitacrypt-lab-agent-30s.en.vtt" download>Captions, short</a> <span>· WebVTT</span></li>
+          <li><a href="/media/vitacrypt-lab-agent-poster.jpg" download>Poster frame</a> <span>· JPG</span></li>
+          <li><a href="/media/vitacrypt-deck.pdf">Deck</a> <span>· PDF, 12 slides</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <p class="eyebrow">04 · Screenshots</p>
+    <h2>From the live demo</h2>
+    <p class="note" style="margin:0 0 16px">Phone width, October 2026. Alex's demo city is New Delhi, with real archived air data.</p>
+    <div class="shots">
+      <figure><a href="/img/press/e03-today-insights.jpg"><img src="/img/press/e03-today-insights.jpg" alt="Today: insights that join air, labs and DNA" width="750" height="1624" loading="lazy"></a><figcaption>Insights across sources</figcaption></figure>
+      <figure><a href="/img/press/e01-environment.jpg"><img src="/img/press/e01-environment.jpg" alt="Environment: AQI 191 in New Delhi" width="750" height="1624" loading="lazy"></a><figcaption>Local air quality</figcaption></figure>
+      <figure><a href="/img/press/d06-running-tour.jpg"><img src="/img/press/d06-running-tour.jpg" alt="Lab Agent run showing each step" width="750" height="1624" loading="lazy"></a><figcaption>Agent run, step by step</figcaption></figure>
+      <figure><a href="/img/press/e06-run1-plan.jpg"><img src="/img/press/e06-run1-plan.jpg" alt="Plan items labelled Cited or Hypothesis" width="750" height="1624" loading="lazy"></a><figcaption>Plan: Cited or Hypothesis</figcaption></figure>
+      <figure><a href="/img/press/e09-run2-learn.jpg"><img src="/img/press/e09-run2-learn.jpg" alt="Did the last plan work: markers against the habit log" width="750" height="1624" loading="lazy"></a><figcaption>Checking its own plan</figcaption></figure>
+      <figure><a href="/img/press/e10-share-preview.jpg"><img src="/img/press/e10-share-preview.jpg" alt="Preview of what a clinician will see" width="750" height="1624" loading="lazy"></a><figcaption>Clinician link preview</figcaption></figure>
+      <figure><a href="/img/press/d14-habits-air.jpg"><img src="/img/press/d14-habits-air.jpg" alt="Habits adjusted for today's air" width="750" height="1624" loading="lazy"></a><figcaption>Habits and today's air</figcaption></figure>
+      <figure><a href="/img/press/d15-what-left.jpg"><img src="/img/press/d15-what-left.jpg" alt="What left VitaCrypt: every destination and field type" width="750" height="1624" loading="lazy"></a><figcaption>What left VitaCrypt</figcaption></figure>
+      <figure><a href="/img/press/d16-report.jpg"><img src="/img/press/d16-report.jpg" alt="Monthly one-page report" width="750" height="1624" loading="lazy"></a><figcaption>Monthly report</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="logos">
+  <div class="wrap">
+    <p class="eyebrow">05 · Logos</p>
+    <h2>Logos</h2>
+    <div class="logos">
+      <a href="/img/vitacrypt-logo-square.jpg" download><img src="/img/vitacrypt-logo-square.jpg" alt="VitaCrypt square logo" width="64" height="64"></a>
+      <a href="/img/vitacrypt-logo-rect.png" download><img src="/img/vitacrypt-logo-rect.png" alt="VitaCrypt wide logo" height="64" style="width:auto"></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap">
+    <p class="eyebrow">06 · Contact</p>
+    <h2>Contact</h2>
+    <p>Paul Burg, founder: <a href="mailto:marketing@vitacrypt.xyz">marketing@vitacrypt.xyz</a> · <a href="https://t.me/paul_burg">t.me/paul_burg</a> · <a href="https://x.com/vita_crypt">@vita_crypt</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Early-stage MVP · Not medical advice · Not a medical device · © 2026 VitaCrypt</div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var t = b.parentElement.querySelector('[data-copy]').textContent;
+    navigator.clipboard.writeText(t).then(function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500); });
+  });
+});
+</script>
+</body>
+</html>
