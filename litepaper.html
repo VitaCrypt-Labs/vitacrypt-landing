@@ -700,7 +700,7 @@ footer {
     <div class="code-block"><span class="cm">// the encrypted payload returned to device</span>
 <span class="kw">struct</span> EncResult {
   actions:    [EncSlot; <span class="num">8</span>],   <span class="cm">// fixed array, padded</span>
-  metric:     EncFloat,        <span class="cm">// e.g. predicted ΔHRV</span>
+  metric:     EncFloat,        <span class="cm">// e.g. ΔHRV trend</span>
   cites:      [CiteRef; <span class="num">8</span>],   <span class="cm">// indices into citation pool</span>
   confidence: EncFloat
 }</div>
@@ -824,7 +824,7 @@ footer {
         <tr><td class="c1">Cross-source insight engine</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong> (the only one)</td></tr>
         <tr><td class="c1">Data leaves device unencrypted</td><td>✓ (cloud)</td><td>✓ (cloud)</td><td>Mostly on-device</td><td>✓ (cloud)</td><td>Cloud-dependent</td><td><strong>By design: FHE</strong> (target end to end; blind compute shown on one slice, staging PoC)</td></tr>
         <tr><td class="c1">Data shared / sold for research</td><td>Per ToS</td><td>Aggregated</td><td>Mostly no</td><td>Per Samsung ToS</td><td>Cloud-dependent</td><td><strong>Never sold</strong>; the cryptographic guarantee (device-held keys) is the target, server-side custody today</td></tr>
-        <tr><td class="c1">HIPAA-covered?</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td><strong>No</strong>; building toward cryptographic privacy stronger than the consumer-wearable norm</td></tr>
+        <tr><td class="c1">Covered by provider health-privacy law?</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td><strong>No</strong>; building toward cryptographic privacy stronger than the consumer-wearable norm</td></tr>
       </tbody>
     </table>
 
@@ -833,8 +833,8 @@ footer {
       <li><strong>None of them have DNA, microbiome, labs, environment, or live research.</strong> Every device in this category is a sensor company. VitaCrypt is a synthesis layer.</li>
       <li><strong>Every one of them stores your data unencrypted on their cloud.</strong> Not a moral judgment — it's how their compute works. They have to see it to analyse it. We don't.</li>
       <li><strong>Several actively monetise that data.</strong> Oura runs data-sharing agreements with academic and pharmaceutical partners. Whoop offers aggregated population-level data for research and commercial purposes. Fitbit (Google) ranked among the most permissive sharing terms in <a href="https://www.nature.com/articles/s41746-025-01757-1" target="_blank" rel="noopener">npj Digital Medicine's 2025 wearable-privacy systematic analysis</a>.</li>
-      <li><strong>None of them are HIPAA-covered.</strong> HIPAA applies to providers, insurers, and clearinghouses. Consumer wearables are categorically outside (<a href="https://athletechnews.com/wearables-hipaa-regulations-whoop-oura/" target="_blank" rel="noopener">Athletech News, 2024</a>).</li>
-      <li><strong>The legislative trend is favourable.</strong> <strong>HIPRA</strong> — the Health Information Privacy Reform Act, introduced by Senator Cassidy on <strong>November 4, 2025</strong> — would extend HIPAA-like protections to Apple Watch / Oura / Whoop data. Lawmakers are <em>currently drafting</em> the protection VitaCrypt already provides cryptographically.</li>
+      <li><strong>None of them are covered by US provider health-privacy law.</strong> That law applies to providers, insurers, and clearinghouses. Consumer wearables are categorically outside (<a href="https://athletechnews.com/wearables-hipaa-regulations-whoop-oura/" target="_blank" rel="noopener">Athletech News, 2024</a>).</li>
+      <li><strong>The legislative trend is favourable.</strong> <strong>HIPRA</strong> (the Health Information Privacy Reform Act, introduced by Senator Cassidy on <strong>November 4, 2025</strong>) would extend provider-grade privacy protections to Apple Watch / Oura / Whoop data. Lawmakers are <em>currently drafting</em> the protection VitaCrypt already provides cryptographically.</li>
     </ol>
 
     <h3>Positioning</h3>
@@ -884,15 +884,15 @@ footer {
       </thead>
       <tbody>
         <tr><td class="c1">PubMed</td><td>~37M biomedical citations</td><td>NLM open data, free API</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">OpenAlex</td><td>~250M scholarly works, citations graph</td><td>CC0 — fully open</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">Semantic Scholar</td><td>~200M papers, embeddings, AI-curated TLDRs</td><td>Free academic API (Allen AI)</td><td><span class="badge live">MVP</span></td></tr>
+        <tr><td class="c1">OpenAlex</td><td>~250M scholarly works, citations graph</td><td>CC0, fully open</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">Semantic Scholar</td><td>~200M papers, embeddings, AI-curated TLDRs</td><td>Free academic API (Allen AI)</td><td><span class="badge q">Roadmap</span></td></tr>
         <tr><td class="c1">Cochrane Library</td><td>~4,500 systematic reviews + meta-analyses</td><td>Subscription content; abstracts open</td><td><span class="badge q">MVP (abstracts)</span></td></tr>
         <tr><td class="c1">GWAS Catalog</td><td>Variant-trait associations from genome-wide studies</td><td>EBI/NHGRI open</td><td><span class="badge live">MVP</span></td></tr>
         <tr><td class="c1">ClinVar</td><td>Variant-clinical-significance interpretations</td><td>NCBI open, daily updates</td><td><span class="badge live">MVP</span></td></tr>
         <tr><td class="c1">ClinGen</td><td>Curated gene-disease validity, dosage sensitivity</td><td>NIH open</td><td><span class="badge q">MVP</span></td></tr>
         <tr><td class="c1">Open Targets</td><td>Drug-target-disease associations</td><td>Open (EMBL-EBI / GSK / Wellcome)</td><td><span class="badge q">MVP</span></td></tr>
         <tr><td class="c1">OpenFDA</td><td>Drug labels, adverse events, recalls</td><td>FDA open API</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">USPSTF</td><td>Preventive services recommendations (grade A/B)</td><td>Free public API</td><td><span class="badge live">MVP</span></td></tr>
+        <tr><td class="c1">USPSTF</td><td>Preventive services recommendations (grade A/B)</td><td>Free public API</td><td><span class="badge q">Roadmap</span></td></tr>
         <tr><td class="c1">WHO Guidelines</td><td>Global clinical guidance, cohort & trial data</td><td>Free, attribution required</td><td><span class="badge q">MVP</span></td></tr>
         <tr><td class="c1">NICE</td><td>UK clinical pathway recommendations</td><td>Free for non-commercial use</td><td><span class="badge q">MVP</span></td></tr>
         <tr><td class="c1">CDC data</td><td>Surveillance + environmental exposure baselines</td><td>Free public API</td><td><span class="badge q">MVP</span></td></tr>
@@ -919,7 +919,7 @@ footer {
     <p>Partnership with an academic medical center for a 12-month open-enrollment longitudinal study. Endpoints: inflammatory marker trajectories (CRP, IL-6), HRV trends, glucose variability, validated quality-of-life scores. We do not promise clinical-trial-grade evidence at the MVP scale; we promise honest, IRB-supervised observational data.</p>
 
     <h3>Stage 3 — Clinical decision support pilot (H2 2027+)</h3>
-    <p>HL7/FHIR connector + clinician-side decision support pilot with the same medical center. Optional HIPAA BAA path for partner providers.</p>
+    <p>HL7/FHIR connector + clinician-side decision support pilot with the same medical center. Compliance path agreed with partner providers.</p>
   </div>
 </section>
 
