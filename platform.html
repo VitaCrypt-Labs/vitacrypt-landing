@@ -87,7 +87,7 @@
       "isPartOf": {"@id": "https://vitacrypt.xyz/#website"},
       "about": {"@id": "https://vitacrypt.xyz/#organization"},
       "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
-      "description": "How VitaCrypt works across four pillars: a unified data fabric across any health signal, live-cited science, gene-environment personalization, and privacy by design (FHE).",
+      "description": "How VitaCrypt works across four pillars: a unified data fabric across any health signal, live-cited science, gene-environment personalization, and privacy by design.",
       "inLanguage": "en-US"
     },
     {
@@ -3426,7 +3426,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap">
     <div class="eyebrow">Pillar 01 · Unified</div>
     <h2 class="stitle">Every health signal, fused into one profile.</h2>
-    <p class="lede">VitaCrypt pulls each source and normalizes it into one schema, so scattered data becomes a single queryable profile, built to fold in any health signal and grow over time. The privacy pillar is built so that profile is encrypted under your key and the server works with one ciphertext, not a separate plaintext feed per source.</p>
+    <p class="lede">VitaCrypt pulls each source and normalizes it into one schema, so scattered data becomes a single queryable profile, built to fold in any health signal and grow over time. Today that profile is encrypted at rest under a per-user key; the privacy roadmap aims for a key only you hold.</p>
 
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables connect via Apple Health export today, with direct device APIs on the build path; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
@@ -3560,14 +3560,14 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <ul>
           <li>Tighter identifier minimization before any external inference</li>
           <li>Client-held keys (iOS Keychain / Android Keystore)</li>
-          <li>Blind compute (FHE): the server analyzes without decrypting</li>
+          <li>Encrypted compute (FHE): the server analyzes without decrypting</li>
         </ul>
-        <div class="b-note">On our funded R&amp;D roadmap, not yet live.</div>
+        <div class="b-note">On our R&amp;D roadmap, not yet live.</div>
       </div>
     </div>
 
     <h3 class="pillar-sub">Is this real yet? The honest status</h3>
-    <p class="pillar-body">Today: encrypted at rest under per-user keys, minimal retention, and independence from any single AI giant. The near-term build is minimization and pseudonymization before egress and a BAA-grade zero-retention inference endpoint. Self-hosted open-weight inference and, far out, fully homomorphic encryption are roadmap, the strongest theoretical guarantee but today a poor fit for live multi-source cross-referencing. The master key is still server-side today and the platform is not yet end-to-end blind. We state this plainly.</p>
+    <p class="pillar-body">Today: encrypted at rest under per-user keys, minimal retention, and independence from any single AI giant. The near-term build is minimization and pseudonymization before egress and a zero-retention inference endpoint. Self-hosted open-weight inference and, far out, fully homomorphic encryption are roadmap, the strongest theoretical guarantee but today a poor fit for live multi-source cross-referencing. The master key is still server-side today, so the server can read the data it processes. We state this plainly.</p>
 
     <p class="pillar-foot-note">Early-stage MVP live, pre-launch; no production health data yet.</p>
 
