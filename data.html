@@ -105,7 +105,7 @@ footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
   <div class="wrap narrow">
     <p class="eyebrow">01 · What we keep</p>
     <h2>Stored encrypted, with a key made for you</h2>
-    <p>Your health data is stored on our server: DNA results, lab results, questionnaires, daily check-ins, wearable values and your health profile. Your health records are encrypted with a key made for you.</p>
+    <p>Your health data is stored on our server: DNA results, lab results, questionnaires, daily check-ins, wearable values and your health profile. It is encrypted with a key made for you.</p>
     <p>Our server holds that key, so the app can read your data to build your insights. This is not end-to-end encryption: we are able to read your data, and we do not claim otherwise.</p>
     <p>Some things are stored without encryption: your account email, the summary score from your DNA file and how many variants it contained, air-quality readings and history for your area, your habits and the reasons shown with them, file names, which tests you ordered and when repeat tests are due, the type and date of each record, and the log of what left the app.</p>
     <p>Lab files are read on our server. Reading photos or scans with a cloud service is switched off, so the app asks for a PDF that contains text.</p>
@@ -115,13 +115,13 @@ footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
 <section id="outbound">
   <div class="wrap narrow">
     <p class="eyebrow">02 · What leaves, and to whom</p>
-    <h2>Only what each feature needs</h2>
+    <h2>Who receives what</h2>
     <h3 class="sub">When you use a feature</h3>
     <ul class="out">
       <li><span class="to">Anthropic (Claude)</span><b>Lab Agent</b>Coded facts only, without your name or email: the marker, whether it is low, normal or high, how it changed, and for DNA the gene, the variant ID and your genotype letters. No exact values, dates, places or file text. A second call sends general research claims with paper summaries, to check which papers support them.</li>
       <li><span class="to">PubMed, Europe PMC</span><b>Research search</b>Gene, marker and condition names drawn from your results, or the words you type into research search.</li>
       <li><span class="to">NCBI dbSNP, GWAS Catalog</span><b>DNA lookups</b>The IDs of your DNA variants, to fetch what is published about them.</li>
-      <li><span class="to">Open-Meteo, OpenAQ, WAQI, OpenStreetMap</span><b>Local air</b>Your location, rounded to about 1 km.</li>
+      <li><span class="to">Open-Meteo, OpenAQ, WAQI, Sensor.Community, OpenStreetMap</span><b>Local air</b>Your location, rounded to about 1 km.</li>
       <li><span class="to">Anthropic (Claude)</span><b>Insight cards</b>A fuller profile than the Lab Agent sends. See <a href="#not-yet">Not done yet</a>.</li>
       <li><span class="to">Anthropic (Claude)</span><b>Sleep and activity reports</b>If you upload one, up to 2,000 characters of its text, to pull out the numbers. The text is sent as it is, including any name or date printed in it.</li>
     </ul>
@@ -167,7 +167,6 @@ footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
     <ul class="gaps">
       <li>The older insight cards still send Claude a fuller profile than the Lab Agent does: lab values, DNA findings, microbiome, wearable and lifestyle numbers, questionnaire scores, check-in summaries, habits, local air and weather, and your city name. Emails, phone numbers and dates are filtered out.</li>
       <li>Server backups made before you erase your data still hold your key in protected form, and the unencrypted items listed above, until those backups are deleted.</li>
-      <li>We have not yet asked Anthropic for zero data retention, so Anthropic's standard retention applies to what the app sends to Claude.</li>
     </ul>
   </div>
 </section>
