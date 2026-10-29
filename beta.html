@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#070B1F">
+<meta name="color-scheme" content="dark">
+<title>Private beta · VitaCrypt</title>
+<meta name="description" content="Test VitaCrypt on your own labs: one profile from blood tests, DNA, wearable and city air, and a Lab Agent that checks its own plan at your next test. Early-stage MVP, private beta, small cohorts. The application form asks no health data.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vitacrypt.xyz/beta">
+<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VitaCrypt">
+<meta property="og:url" content="https://vitacrypt.xyz/beta">
+<meta property="og:title" content="Test VitaCrypt on your own labs · private beta">
+<meta property="og:description" content="Early-stage MVP, small cohorts. The form asks no health data.">
+<meta property="og:image" content="https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vita_crypt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+
+<style>
+:root {
+  --bg: #070B1F; --bg-2: #0B1230; --surface: #121A3F; --line: #232C5E;
+  --ink: #F5F3EE; --ink-2: #D9D6CD; --ink-mute: #95A0CC; --teal: #6B8AFF; --teal-deep: #3B5BFF;
+  --ok: #5FD4A0; --err: #FF8A8A;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 760px; }
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.lockup { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.lockup img { border-radius: 8px; }
+header.top nav { display: flex; gap: 18px; font-size: 14px; }
+header.top nav a { color: var(--ink-mute); text-decoration: none; }
+header.top nav a:hover { color: var(--ink); }
+.eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
+h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; margin: 56px 0 12px; font-weight: 600; }
+h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 16px; font-weight: 600; }
+.lede { color: var(--ink-2); font-size: 18px; max-width: 720px; margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+.tags li { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-deep); color: #fff; border: 0; border-radius: 12px; padding: 12px 20px; font: 600 15px 'Geist', sans-serif; text-decoration: none; cursor: pointer; }
+.btn:hover { background: var(--teal); }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.hero-cta { margin: 28px 0 56px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.hero-cta .alt { color: var(--ink-mute); font-size: 14px; }
+section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+section p { color: var(--ink-2); margin: 0 0 12px; }
+ul.out { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+ul.out li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; color: var(--ink-2); }
+ul.out b { color: var(--ink); font-weight: 600; display: block; }
+ul.out .to { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: var(--teal); letter-spacing: 0.04em; }
+.log-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 240px); gap: 28px; align-items: start; }
+.log-grid figure { margin: 0; }
+.log-grid img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
+.log-grid figcaption { font-size: 12.5px; color: var(--ink-mute); margin-top: 6px; line-height: 1.4; }
+.note { color: var(--ink-mute); font-size: 14px; }
+
+/* form */
+[hidden] { display: none !important; }
+.apply { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: grid; gap: 20px; }
+.field { display: grid; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.label, .field legend { font-size: 14px; font-weight: 500; color: var(--ink); padding: 0; margin: 0 0 6px; }
+.opt { color: var(--ink-mute); font-weight: 400; }
+.hint { font-size: 13px; color: var(--ink-mute); margin: 0; }
+input[type=text], input[type=email], select, textarea {
+  width: 100%; background: var(--bg-2); color: var(--ink); border: 1px solid var(--line); border-radius: 10px;
+  padding: 11px 12px; font: 400 16px 'Geist', sans-serif;
+}
+textarea { resize: vertical; min-height: 84px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, .check input:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+.checks { display: grid; gap: 8px; }
+.check { display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); font-size: 15px; line-height: 1.45; cursor: pointer; }
+.check input { margin: 3px 0 0; width: 18px; height: 18px; flex: none; accent-color: var(--teal-deep); }
+.seg { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg label { display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 9px 14px; cursor: pointer; color: var(--ink-2); }
+.seg label:has(input:checked) { border-color: var(--teal); color: var(--ink); }
+.seg input { accent-color: var(--teal-deep); margin: 0; }
+.consent { border-top: 1px solid var(--line); padding-top: 18px; }
+.nohealth { background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; color: var(--ink-2); margin: 0; }
+.honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.status { margin: 0; font-size: 15px; min-height: 1.4em; }
+.status.waking { color: var(--ink-2); }
+.status.ok { color: var(--ok); }
+.status.err { color: var(--err); }
+.spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--teal); border-radius: 50%; animation: spin 0.9s linear infinite; vertical-align: -1px; margin-right: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+.done { text-align: left; }
+.done h3 { margin: 0 0 8px; font-size: 20px; }
+footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
+footer p { margin: 0 0 6px; }
+@media (max-width: 760px) {
+  .log-grid { grid-template-columns: 1fr; }
+  .log-grid figure { max-width: 240px; }
+  header.top nav a.hide-sm { display: none; }
+  .apply { padding: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="/"><img src="/img/vitacrypt-logo-square.jpg" alt="" width="28" height="28">VitaCrypt</a>
+    <nav aria-label="Site">
+      <a href="/agent">Lab Agent</a>
+      <a href="/data" class="hide-sm">Your data</a>
+      <a href="https://app.vitacrypt.xyz/demo">Live demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap narrow">
+  <p class="eyebrow" style="margin-top:56px">Private beta</p>
+  <h1 style="margin-top:0">Test VitaCrypt on your own data.</h1>
+  <p class="lede">One profile from your blood tests, DNA, wearable and city air, every link marked Cited or Hypothesis, and a Lab Agent that checks its own plan at your next test.</p>
+  <ul class="tags" aria-label="About this beta">
+    <li>Early-stage MVP</li>
+    <li>Private beta</li>
+    <li>Small cohorts</li>
+    <li>App in English</li>
+  </ul>
+  <div class="hero-cta">
+    <a class="btn" href="#apply">Apply</a>
+    <span class="alt">Two minutes, no health questions. Or <a href="https://app.vitacrypt.xyz/demo?start=agent">try the demo</a> with a fictional person first.</span>
+  </div>
+</div>
+
+<section id="get">
+  <div class="wrap narrow">
+    <p class="eyebrow">01 · What you get</p>
+    <h2>One profile, and an agent that follows up</h2>
+    <ul class="out">
+      <li><b>One profile from your sources</b>Lab results, a DNA file, wearable data and the air quality where you live, read together instead of one PDF at a time.</li>
+      <li><b>Cited or Hypothesis on every link</b>Each connection the app draws is labelled: Cited, with the papers it rests on, or Hypothesis, when the evidence is thin.</li>
+      <li><b>A Lab Agent that checks its own plan</b>It suggests habits, a retest date and questions for your clinician. When your next lab arrives, it checks whether the plan worked and keeps, swaps or drops each habit. It never diagnoses and never suggests doses.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap narrow">
+    <p class="eyebrow">02 · What we ask</p>
+    <h2>Honest reports, about 10 minutes a week</h2>
+    <p>Tell us what broke, what confused you and what was missing. This is an early-stage MVP built by one person, so expect rough edges. Your reports decide what gets fixed first.</p>
+  </div>
+</section>
+
+<section id="leaves">
+  <div class="wrap narrow">
+    <p class="eyebrow">03 · What leaves the app</p>
+    <h2>What the Lab Agent sends, and to whom</h2>
+    <div class="log-grid">
+      <div>
+        <ul class="out">
+          <li><span class="to">PubMed, Europe PMC</span><b>Research databases</b>Gene and marker names, as search terms.</li>
+          <li><span class="to">Anthropic (Claude)</span><b>AI model</b>Coded facts, such as "LDL: high, rising", gene names, variant IDs and your genotype letters, without your name or email. No files, no exact values.</li>
+          <li><span class="to">Air-quality services, and only what you tap</span><b>Everything else</b>Air-quality services get your location rounded to about 1 km. Anything more, such as a lab order or a link for your clinician, is sent only when you tap an action that says what it will send.</li>
+        </ul>
+        <p class="note" style="margin-top:14px">Each Lab Agent send is logged in the app under "What left VitaCrypt". Some older parts of the app still send more than the Lab Agent; they are listed, with everything else, on <a href="/data">What happens to your data</a>, and they are fixed before the first tester uploads a lab.</p>
+      </div>
+      <figure><a href="/img/press/d15-what-left.jpg"><img src="/img/press/d15-what-left.jpg" alt="What left VitaCrypt screen: each destination and the kinds of fields sent" width="750" height="1624" loading="lazy"></a><figcaption>"What left VitaCrypt" in the live demo. Synthetic data.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap narrow">
+    <p class="eyebrow">04 · Who we invite first</p>
+    <h2>People who test their blood regularly</h2>
+    <p>We start with people who have a blood test from the last year and expect another one soon, because only they can see the agent check its own plan. A DNA file helps too. If you have none of these yet, apply anyway: we invite you once the app has a good first day without labs.</p>
+    <p>We invite in small groups, five people first, and email you if you are invited. We cannot promise a date.</p>
+  </div>
+</section>
+
+<section id="apply" style="border-bottom:0">
+  <div class="wrap narrow">
+    <p class="eyebrow">05 · Apply</p>
+    <h2>Application</h2>
+    <form class="apply" id="betaForm" novalidate>
+      <div class="field">
+        <label class="label" for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" required maxlength="100" autocomplete="name">
+      </div>
+      <div class="field">
+        <label class="label" for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" required maxlength="200" autocomplete="email" inputmode="email">
+        <p class="hint">Your invite comes here, and you sign up with this address.</p>
+      </div>
+      <div class="field">
+        <label class="label" for="f-country">Country you get lab tests in</label>
+        <select id="f-country" name="country" required><option value="" selected disabled>Choose a country</option></select>
+      </div>
+      <fieldset class="field" id="f-sources">
+        <legend>What you already have</legend>
+        <div class="checks">
+          <label class="check"><input type="checkbox" name="sources" value="blood_recent">A blood test from the last 12 months</label>
+          <label class="check"><input type="checkbox" name="sources" value="blood_next_3m">Another blood test expected in the next 3 months</label>
+          <label class="check"><input type="checkbox" name="sources" value="dna">A DNA file (23andMe, AncestryDNA, other)</label>
+          <label class="check"><input type="checkbox" name="sources" value="wearable">Apple Health or Health Connect data</label>
+          <label class="check"><input type="checkbox" name="sources" value="microbiome">A gut microbiome report</label>
+          <label class="check"><input type="checkbox" name="sources" value="none">None of these yet</label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Phone</legend>
+        <div class="seg">
+          <label><input type="radio" name="phone_platform" value="ios" required>iPhone</label>
+          <label><input type="radio" name="phone_platform" value="android">Android</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label class="label" for="f-heard">Where did you hear about VitaCrypt</label>
+        <select id="f-heard" name="heard_from" required>
+          <option value="" selected disabled>Choose one</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="x">X</option>
+          <option value="telegram">Telegram</option>
+          <option value="reddit">Reddit</option>
+          <option value="friend">A friend</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="label" for="f-msg">What would you want it to catch <span class="opt">(optional)</span></label>
+        <textarea id="f-msg" name="message" maxlength="500" rows="3" aria-describedby="f-msg-hint"></textarea>
+        <p class="hint" id="f-msg-hint">In general terms, please. Do not type lab values, diagnoses or medications here.</p>
+      </div>
+      <input class="honey" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field consent">
+        <label class="check"><input type="checkbox" name="consent" id="f-consent" required>I agree that VitaCrypt stores my name, email and the answers above on its own server to review my application and contact me about the beta. I am not sharing any health data in this form. I can ask for deletion at any time at privacy@vitacrypt.xyz, and applications not invited within 6 months are deleted.</label>
+      </div>
+      <p class="nohealth">This form asks no health data: no lab values, diagnoses, medications, date of birth, sex or files.</p>
+      <div>
+        <button class="btn" type="submit" id="f-submit">Apply for the beta</button>
+      </div>
+      <p class="status" id="f-status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="done" id="betaDone" hidden>
+      <div class="apply">
+        <h3 id="doneTitle">Application received</h3>
+        <p style="margin:0">Thank you. It is stored on our server and Paul reads every one. If you are invited, the email comes to the address you gave. Meanwhile, the <a href="https://app.vitacrypt.xyz/demo?start=agent">live demo</a> shows the Lab Agent on a fictional person.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>VitaCrypt is not a medical service. Not medical advice. Supplements appear only as official reference values, never as a dose.</p>
+    <p>Early-stage MVP · <a href="/data">What happens to your data</a> · <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a> · © 2026 VitaCrypt</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Must match BETA_APPLICATION_CONSENT in the app backend (backend/src/main.py).
+  var CONSENT_VERSION = 'application-v1';
+  var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var API = LOCAL ? 'http://127.0.0.1:8098' : 'https://app.vitacrypt.xyz/api';
+  var WAKE_LIMIT_MS = 120000, RETRY_MS = 5000;
+
+  var COUNTRIES = 'AF AX AL DZ AS AD AO AI AG AR AM AW AU AT AZ BS BH BD BB BY BE BZ BJ BM BT BO BA BW BR BN BG BF BI KH CM CA CV KY CF TD CL CN CO KM CG CD CK CR CI HR CU CW CY CZ DK DJ DM DO EC EG SV GQ ER EE SZ ET FO FJ FI FR GF PF GA GM GE DE GH GI GR GL GD GP GU GT GG GN GW GY HT HN HK HU IS IN ID IR IQ IE IM IL IT JM JP JE JO KZ KE KI XK KW KG LA LV LB LS LR LY LI LT LU MO MG MW MY MV ML MT MH MQ MR MU YT MX FM MD MC MN ME MS MA MZ MM NA NR NP NL NC NZ NI NE NG MK NO OM PK PW PS PA PG PY PE PH PL PT PR QA RE RO RU RW KN LC MF PM VC WS SM ST SA SN RS SC SL SG SX SK SI SB SO ZA KR SS ES LK SD SR SE CH SY TW TJ TZ TH TL TG TO TT TN TR TM TC TV UG UA AE GB US UY UZ VU VA VE VN VG VI YE ZM ZW'.split(' ');
+
+  var form = document.getElementById('betaForm');
+  var done = document.getElementById('betaDone');
+  var status = document.getElementById('f-status');
+  var submit = document.getElementById('f-submit');
+  var country = document.getElementById('f-country');
+  var sourcesBox = document.getElementById('f-sources');
+
+  var names = null;
+  try { names = new Intl.DisplayNames(['en'], { type: 'region' }); } catch (e) {}
+  COUNTRIES
+    .map(function (c) { return [c, names ? names.of(c) : c]; })
+    .sort(function (a, b) { return a[1].localeCompare(b[1], 'en'); })
+    .forEach(function (p) {
+      var o = document.createElement('option');
+      o.value = p[0];
+      o.textContent = p[1];
+      country.appendChild(o);
+    });
+
+  // "None of these yet" excludes the other boxes.
+  sourcesBox.addEventListener('change', function (e) {
+    if (e.target.name !== 'sources' || !e.target.checked) return;
+    sourcesBox.querySelectorAll('input[name=sources]').forEach(function (b) {
+      if ((e.target.value === 'none') !== (b.value === 'none')) b.checked = false;
+    });
+  });
+
+  // The app sleeps after a quiet spell and takes about 70 s to start. While it sleeps the
+  // edge answers without CORS headers and ignores preflight requests, so the browser
+  // only sees a failed fetch. A plain no-cors GET is what wakes it.
+  var wokeAt = 0;
+  function wake() {
+    if (Date.now() - wokeAt < 15000) return;
+    wokeAt = Date.now();
+    fetch(API + '/', { mode: 'no-cors', cache: 'no-store' }).catch(function () {});
+  }
+  form.addEventListener('focusin', wake, { once: true });
+
+  function setStatus(cls, html) {
+    status.className = 'status ' + cls;
+    status.innerHTML = html;
+  }
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  async function send(payload) {
+    var started = Date.now();
+    for (;;) {
+      var res = null, data = {};
+      try {
+        res = await fetch(API + '/beta-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        data = await res.json().catch(function () { return {}; });
+      } catch (e) { res = null; }
+      if (res && res.ok) return { ok: true };
+      var warming = !res || res.status === 502 || res.status === 503 || res.status === 504;
+      if (!warming) return { ok: false, detail: data.detail || data.error };
+      if (Date.now() - started > WAKE_LIMIT_MS) return { ok: false, timeout: true };
+      var left = Math.max(0, Math.round((WAKE_LIMIT_MS - (Date.now() - started)) / 1000));
+      setStatus('waking', '<span class="spinner" aria-hidden="true"></span>Waking the server. It sleeps when nobody uses it and takes about a minute to start. Please keep this page open (up to ' + left + ' s).');
+      wake();
+      await sleep(RETRY_MS);
+    }
+  }
+
+  function fail(text) {
+    status.className = 'status err';
+    status.textContent = text;
+    var p = document.createElement('span');
+    p.innerHTML = ' If it keeps failing, write to <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a>.';
+    status.appendChild(p);
+    submit.disabled = false;
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var fd = new FormData(form);
+    var sources = fd.getAll('sources');
+    if (!form.checkValidity() || !sources.length) {
+      if (!sources.length && form.checkValidity()) {
+        fail('Please tick what you already have, or "None of these yet".');
+        sourcesBox.querySelector('input').focus();
+      } else {
+        form.reportValidity();
+      }
+      return;
+    }
+    submit.disabled = true;
+    setStatus('waking', '<span class="spinner" aria-hidden="true"></span>Sending…');
+    var r = await send({
+      name: fd.get('name'),
+      email: fd.get('email'),
+      country: fd.get('country'),
+      sources: sources,
+      phone_platform: fd.get('phone_platform'),
+      heard_from: fd.get('heard_from'),
+      message: fd.get('message') || '',
+      consent: fd.get('consent') === 'on',
+      consent_version: CONSENT_VERSION,
+      company: fd.get('company') || ''
+    });
+    if (r.ok) {
+      form.hidden = true;
+      done.hidden = false;
+      done.querySelector('h3').setAttribute('tabindex', '-1');
+      done.querySelector('h3').focus();
+      return;
+    }
+    if (r.timeout) return fail('The server did not wake up in time. Please try again in a minute.');
+    fail(typeof r.detail === 'string' ? r.detail : 'Something went wrong. Please try again.');
+  });
+})();
+</script>
+</body>
+</html>

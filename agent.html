@@ -3414,7 +3414,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         Try the live demo
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-ghost">Request access for your own labs</a>
+      <a href="/beta" class="btn btn-ghost">Request access for your own labs</a>
     </div>
     <p class="agent-note">The demo uses a fictional person's synthetic data. No sign-up, no password; your copy is deleted after 7 days.</p>
   </div>
@@ -3524,7 +3524,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         Try the live demo
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-ghost">Request access for your own labs</a>
+      <a href="/beta" class="btn btn-ghost">Request access for your own labs</a>
     </div>
   </div>
 </section>
@@ -3562,7 +3562,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
           <li><a href="litepaper.html">Litepaper</a></li>
           <li><a href="/press">Press kit</a></li>
           <li><a href="/media/vitacrypt-deck.pdf">Deck (PDF)</a></li>
-          <li><a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Waitlist</a></li>
+          <li><a href="/beta">Beta application</a></li>
           <li><a href="https://x.com/vita_crypt">X / Twitter</a></li>
           <li><a href="https://t.me/paul_burg">Telegram</a></li>
         </ul>
@@ -3616,9 +3616,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <span class="form-label">I am a…</span>
         <select name="audience" required>
           <option value="" disabled selected>Select your role</option>
-          <option value="investor">Investor</option>
           <option value="user">User / patient</option>
-          <option value="press">Press / journalist</option>
           <option value="partner">Partner (lab / clinic / academic)</option>
         </select>
       </label>
@@ -3935,10 +3933,8 @@ if (heroProfile) {
       }
     });
 
-    // Deeplink: #waitlist opens form on load
-    if (location.hash === '#waitlist') {
-      setTimeout(() => openForm(), 300);
-    }
+    // Deeplink: old #waitlist links go to the beta application page
+    if (location.hash === '#waitlist') location.replace('/beta');
   }
 
   // M1: hero carousel dots
