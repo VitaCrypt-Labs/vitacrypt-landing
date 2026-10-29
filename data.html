@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#070B1F">
+<meta name="color-scheme" content="dark">
+<title>What happens to your data · VitaCrypt</title>
+<meta name="description" content="What the VitaCrypt app stores, what leaves it and to whom, how to erase your data, and what is not finished yet. Plain English, early-stage MVP.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vitacrypt.xyz/data">
+<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VitaCrypt">
+<meta property="og:url" content="https://vitacrypt.xyz/data">
+<meta property="og:title" content="What happens to your data · VitaCrypt">
+<meta property="og:description" content="What the app stores, what leaves it and to whom, and what is not finished yet.">
+<meta property="og:image" content="https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vita_crypt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGT34ZL8HV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NGT34ZL8HV', { anonymize_ip: true, cookie_flags: 'SameSite=None;Secure' });
+</script>
+
+<style>
+:root {
+  --bg: #070B1F; --bg-2: #0B1230; --surface: #121A3F; --line: #232C5E;
+  --ink: #F5F3EE; --ink-2: #D9D6CD; --ink-mute: #95A0CC; --teal: #6B8AFF; --teal-deep: #3B5BFF;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 760px; }
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+.lockup { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
+.lockup img { border-radius: 8px; }
+header.top nav { display: flex; gap: 18px; font-size: 14px; }
+header.top nav a { color: var(--ink-mute); text-decoration: none; }
+header.top nav a:hover { color: var(--ink); }
+.eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
+h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; margin: 56px 0 12px; font-weight: 600; }
+h2 { font-size: 24px; letter-spacing: -0.01em; margin: 0 0 16px; font-weight: 600; }
+.lede { color: var(--ink-2); font-size: 18px; max-width: 720px; margin: 0; }
+.stamp { color: var(--ink-mute); font-size: 14px; margin: 14px 0 48px; }
+section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+section p { color: var(--ink-2); margin: 0 0 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+.card + .card { margin-top: 12px; }
+.card h3 { font-size: 13px; font-family: 'Geist Mono', ui-monospace, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 8px; font-weight: 500; }
+.card p { margin: 0; color: var(--ink-2); }
+ul.out { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+ul.out li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; color: var(--ink-2); }
+ul.out b { color: var(--ink); font-weight: 600; display: block; }
+ul.out .to { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: var(--teal); letter-spacing: 0.04em; }
+h3.sub { font-size: 15px; font-weight: 600; margin: 28px 0 12px; color: var(--ink); }
+.log-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 260px); gap: 28px; align-items: start; }
+.log-grid figure { margin: 0; }
+.log-grid img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
+.log-grid figcaption { font-size: 12.5px; color: var(--ink-mute); margin-top: 6px; line-height: 1.4; }
+ul.gaps { margin: 0; padding-left: 20px; color: var(--ink-2); }
+ul.gaps li + li { margin-top: 10px; }
+.note { color: var(--ink-mute); font-size: 14px; }
+footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
+@media (max-width: 760px) {
+  .log-grid { grid-template-columns: 1fr; }
+  .log-grid figure { max-width: 260px; }
+  header.top nav a.hide-sm { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="lockup" href="/"><img src="/img/vitacrypt-logo-square.jpg" alt="" width="28" height="28">VitaCrypt</a>
+    <nav aria-label="Site">
+      <a href="/agent">Lab Agent</a>
+      <a href="/press" class="hide-sm">Press kit</a>
+      <a href="https://app.vitacrypt.xyz/demo">Live demo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap narrow">
+  <h1>What happens to your data</h1>
+  <p class="lede">What the VitaCrypt app keeps, what leaves it and to whom, how to erase it, and what is not finished yet. VitaCrypt is an early-stage MVP and not medical advice.</p>
+  <p class="stamp">Describes the app at app.vitacrypt.xyz as of 29 October 2026.</p>
+</div>
+
+<section id="stored">
+  <div class="wrap narrow">
+    <p class="eyebrow">01 · What we keep</p>
+    <h2>Stored encrypted, with a key made for you</h2>
+    <p>Your health data is stored on our server: DNA results, lab results, questionnaires, daily check-ins, wearable values and your health profile. It is encrypted with a key made for you.</p>
+    <p>Our server holds that key, so the app can read your data to build your insights. This is not end-to-end encryption: we are able to read your data, and we do not claim otherwise.</p>
+    <p>Some things are stored without encryption: your account email, the summary score from your DNA file and how many variants it contained, air-quality readings and history for your area, your habits and the reasons shown with them, file names, which tests you ordered and when repeat tests are due, the type and date of each record, and the log of what left the app.</p>
+    <p>Lab files are read on our server. Reading photos or scans with a cloud service is switched off, so the app asks for a PDF that contains text.</p>
+  </div>
+</section>
+
+<section id="outbound">
+  <div class="wrap narrow">
+    <p class="eyebrow">02 · What leaves, and to whom</p>
+    <h2>Who receives what</h2>
+    <h3 class="sub">When you use a feature</h3>
+    <ul class="out">
+      <li><span class="to">Anthropic (Claude)</span><b>Lab Agent</b>Coded facts only, without your name or email: the marker, whether it is low, normal or high, how it changed, and for DNA the gene, the variant ID and your genotype letters. No exact values, dates, places or file text. A second call sends general research claims with paper summaries, to check which papers support them.</li>
+      <li><span class="to">PubMed, Europe PMC</span><b>Research search</b>Gene, marker and condition names drawn from your results, or the words you type into research search.</li>
+      <li><span class="to">NCBI dbSNP, GWAS Catalog</span><b>DNA lookups</b>The IDs of your DNA variants, to fetch what is published about them.</li>
+      <li><span class="to">Open-Meteo, OpenAQ, WAQI, Sensor.Community, OpenStreetMap</span><b>Local air</b>Your location, rounded to about 1 km.</li>
+      <li><span class="to">Anthropic (Claude)</span><b>Insight cards</b>A fuller profile than the Lab Agent sends. See <a href="#not-yet">Not done yet</a>.</li>
+      <li><span class="to">Anthropic (Claude)</span><b>Sleep and activity reports</b>If you upload one, up to 2,000 characters of its text, to pull out the numbers. The text is sent as it is, including any name or date printed in it.</li>
+    </ul>
+    <h3 class="sub">Only when you tap</h3>
+    <ul class="out">
+      <li><span class="to">Your device</span><b>Calendar reminder</b>A calendar file you download, with a neutral title and a date. Nothing goes to anyone else.</li>
+      <li><span class="to">Telegram</span><b>Telegram reminder</b>After you link Telegram, a fixed reminder sentence 3 days before and on the day of each repeat test. No health data.</li>
+      <li><span class="to">OpenStreetMap, Overpass API</span><b>Labs near you</b>The city you type, then its location rounded to about 1 km.</li>
+      <li><span class="to">Junction (US, sandbox)</span><b>Repeat lab order</b>After you confirm: your name, date of birth, gender, phone, email and address, and which tests. This runs in test mode; in the demo the order is simulated.</li>
+      <li><span class="to">Whoever you give the link to</span><b>Clinician link</b>Only the items you pick, after a preview of exactly what they will see. The link works for 1 to 30 days and you can revoke it at any time. We send it nowhere; you pass it on. Each opening is logged with its time.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="log">
+  <div class="wrap narrow">
+    <p class="eyebrow">03 · The log</p>
+    <h2>"What left VitaCrypt"</h2>
+    <div class="log-grid">
+      <div>
+        <p>Sends from these features are written to a log in the app. Open Profile, then "What left VitaCrypt", to see when something was sent, where it went and which kinds of fields it carried.</p>
+        <p>The log names the fields, never their values. It shows the latest 200 entries. Some literature searches made for insight cards are not logged yet.</p>
+      </div>
+      <figure><a href="/img/press/d15-what-left.jpg"><img src="/img/press/d15-what-left.jpg" alt="What left VitaCrypt screen: each destination and the kinds of fields sent" width="750" height="1624" loading="lazy"></a><figcaption>The log in the live demo. Synthetic data.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="erase">
+  <div class="wrap narrow">
+    <p class="eyebrow">04 · Erasing</p>
+    <h2>Deleting your data destroys your key</h2>
+    <p>In Profile, "Permanently delete my health data" destroys your key and deletes your health records and Lab Agent data, including the log. Once older backups are deleted, anything encrypted with that key can no longer be read, by anyone, including us. This cannot be undone.</p>
+    <p>Habits you added yourself stay. Copies already sent to others, such as a lab order or a clinician link someone has opened, are not affected.</p>
+    <p>Your sign-in account stays. To have it removed as well, write to <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a>.</p>
+  </div>
+</section>
+
+<section id="not-yet">
+  <div class="wrap narrow">
+    <p class="eyebrow">05 · Not done yet</p>
+    <h2>What is not finished</h2>
+    <ul class="gaps">
+      <li>The older insight cards still send Claude a fuller profile than the Lab Agent does: lab values, DNA findings, microbiome, wearable and lifestyle numbers, questionnaire scores, check-in summaries, habits, local air and weather, and your city name. Emails, phone numbers and dates are filtered out.</li>
+      <li>Server backups made before you erase your data still hold your key in protected form, and the unencrypted items listed above, until those backups are deleted.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:0">
+  <div class="wrap narrow">
+    <p class="eyebrow">06 · Contact</p>
+    <h2>Questions</h2>
+    <p>Write to <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a>.</p>
+    <p class="note">This page is about the app. This website, vitacrypt.xyz, uses Google Analytics; the app does not.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">Early-stage MVP · Not medical advice · Not a medical device · © 2026 VitaCrypt</div>
+</footer>
+</body>
+</html>

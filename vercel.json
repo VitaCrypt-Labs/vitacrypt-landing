@@ -18,6 +18,10 @@
     {
       "source": "/press",
       "destination": "/press.html"
+    },
+    {
+      "source": "/data",
+      "destination": "/data.html"
     }
   ],
   "headers": [

@@ -30,6 +30,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://vitacrypt.xyz/data</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vitacrypt.xyz/platform.html</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
