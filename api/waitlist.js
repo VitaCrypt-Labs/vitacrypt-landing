@@ -1,4 +1,5 @@
 // VitaCrypt waitlist submission → Telegram bot
+// LEGACY Vercel copy, kept for rollback. Live handler: functions/api/waitlist.js (Cloudflare Pages).
 // Env vars required (set in Vercel dashboard):
 //   TG_BOT_TOKEN — bot token from BotFather (e.g. @paulburgcom_request_bot)
 //   TG_CHAT_ID   — chat id to receive submissions (personal chat id)

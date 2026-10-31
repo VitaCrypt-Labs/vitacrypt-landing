@@ -1,1 +1,38 @@
-{}
+{
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/beta",
+      "destination": "/beta.html"
+    },
+    {
+      "source": "/agent",
+      "destination": "/agent.html"
+    },
+    {
+      "source": "/press",
+      "destination": "/press.html"
+    },
+    {
+      "source": "/data",
+      "destination": "/data.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
+  ]
+}

@@ -3,27 +3,61 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vitacrypt.xyz/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://vitacrypt.xyz/img/og-preview.jpg</image:loc>
-      <image:title>VitaCrypt — Private Health Intelligence, Powered by FHE</image:title>
+      <image:loc>https://vitacrypt.xyz/img/og-preview-v2.jpg</image:loc>
+      <image:title>VitaCrypt · Your whole health in one intelligent profile</image:title>
     </image:image>
   </url>
   <url>
+    <loc>https://vitacrypt.xyz/beta</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vitacrypt.xyz/agent</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vitacrypt.xyz/press</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vitacrypt.xyz/data</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vitacrypt.xyz/platform.html</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://vitacrypt.xyz/img/og-preview.jpg</image:loc>
-      <image:title>The Platform — VitaCrypt's Four Pillars</image:title>
+      <image:loc>https://vitacrypt.xyz/img/og-preview-v2.jpg</image:loc>
+      <image:title>The Platform · VitaCrypt's four pillars</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vitacrypt.xyz/investor.html</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vitacrypt.xyz/img/og-preview-v2.jpg</image:loc>
+      <image:title>VitaCrypt for Investors</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://vitacrypt.xyz/litepaper.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

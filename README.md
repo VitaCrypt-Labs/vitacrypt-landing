@@ -28,7 +28,7 @@ truth until this repository is resynced.
 
 ## Stack
 
-Static HTML · deployed on Vercel.
+Static HTML · deployed on Cloudflare Pages (`./deploy-pages.sh`, form = `functions/api/waitlist.js`).
 
 ## Links
 

@@ -1,0 +1,5148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#06080C">
+<meta name="color-scheme" content="dark light">
+
+<!-- Primary SEO -->
+<title>VitaCrypt — Encrypted Health Intelligence (FHE Blind Computing)</title>
+<meta name="description" content="VitaCrypt unifies genetics, wearables, microbiome, environment & live science into one private health profile — analyzed under FHE on a blind server.">
+<meta name="keywords" content="VitaCrypt, FHE, fully homomorphic encryption, blind computing, encrypted health data, personal health intelligence, private genetics, live research watch, PubMed, Zama Concrete ML, TFHE, DeSci, longevity">
+<meta name="author" content="VitaCrypt">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://vitacrypt.xyz/">
+
+<!-- Favicon suite (WebP-first, JPEG fallback for older browsers) -->
+<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
+<link rel="shortcut icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/vitacrypt-logo-square.webp">
+<meta name="apple-mobile-web-app-title" content="VitaCrypt">
+<meta name="application-name" content="VitaCrypt">
+
+<!-- Open Graph / Facebook / LinkedIn / Slack / Discord / iMessage -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VitaCrypt">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://vitacrypt.xyz/">
+<meta property="og:title" content="VitaCrypt — Encrypted Health Intelligence (FHE Blind Computing)">
+<meta property="og:description" content="Genetics, wearables, microbiome, environment, and live science unified into one private health profile — analyzed under fully homomorphic encryption on a blind server.">
+<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview.jpg">
+<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vita_crypt">
+<meta name="twitter:creator" content="@vita_crypt">
+<meta name="twitter:url" content="https://vitacrypt.xyz/">
+<meta name="twitter:title" content="VitaCrypt — Encrypted Health Intelligence (FHE)">
+<meta name="twitter:description" content="Your genetics, wearables, microbiome, environment & live science — analyzed under fully homomorphic encryption. The server never sees your plaintext.">
+<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview.jpg">
+<meta name="twitter:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vitacrypt.xyz/#organization",
+      "name": "VitaCrypt",
+      "url": "https://vitacrypt.xyz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vitacrypt.xyz/img/vitacrypt-logo-square.jpg",
+        "width": 512,
+        "height": 512
+      },
+      "description": "Private health intelligence computed on encrypted biology. Targeting the Zama Concrete ML / TFHE stack.",
+      "sameAs": [
+        "https://x.com/vita_crypt"
+      ],
+      "contactPoint": [
+        {"@type": "ContactPoint", "email": "hello@vitacrypt.xyz", "contactType": "general"},
+        {"@type": "ContactPoint", "email": "investors@vitacrypt.xyz", "contactType": "investor relations"},
+        {"@type": "ContactPoint", "email": "press@vitacrypt.xyz", "contactType": "press"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vitacrypt.xyz/#website",
+      "url": "https://vitacrypt.xyz/",
+      "name": "VitaCrypt",
+      "publisher": {"@id": "https://vitacrypt.xyz/#organization"},
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vitacrypt.xyz/#webpage",
+      "url": "https://vitacrypt.xyz/",
+      "name": "VitaCrypt — Encrypted Health Intelligence (FHE Blind Computing)",
+      "isPartOf": {"@id": "https://vitacrypt.xyz/#website"},
+      "about": {"@id": "https://vitacrypt.xyz/#organization"},
+      "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview.jpg",
+      "description": "VitaCrypt unifies genetics, microbiome, wearables, and environment into one private health profile — analyzed under fully homomorphic encryption (FHE) on a blind server.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "VitaCrypt",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Encrypted personal health intelligence platform. Unifies genetics (23andMe), wearables (Apple Watch), microbiome, lab work, and environment data — analyzed under fully homomorphic encryption.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "publisher": {"@id": "https://vitacrypt.xyz/#organization"}
+    }
+  ]
+}
+</script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGT34ZL8HV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NGT34ZL8HV', {
+    anonymize_ip: true,
+    cookie_flags: 'SameSite=None;Secure'
+  });
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"></noscript>
+
+<style>
+:root {
+  --bg: #070B1F;
+  --bg-2: #0B1230;
+  --surface: #121A3F;
+  --surface-2: #1A2350;
+  --line: #232C5E;
+  --line-soft: #1A2350;
+  --ink: #F5F3EE;
+  --ink-2: #D9D6CD;
+  --ink-mute: #95A0CC;
+  --ink-faint: #7A85B5;
+  --teal: #6B8AFF;
+  --teal-deep: #3B5BFF;
+  --teal-glow: rgba(107, 138, 255, 0.20);
+  --indigo: #FF9882;
+  --indigo-glow: rgba(255, 152, 130, 0.18);
+  --amber: #FFC58A;
+  --rose: #FF7B6B;
+  /* Device (phone) palette — INVERTS vs page theme. Dark page → LIGHT device. */
+  --device-bg: #ECE6D9;
+  --device-frame-grad: linear-gradient(180deg, #E6E8EC 0%, #C6CAD2 100%);
+  --device-edge-1: #F2F3F5;
+  --device-edge-2: #B2B7C1;
+  --device-ink: #14161C;
+  --device-ink-rgb: 18, 20, 26;
+  --device-fill-rgb: 18, 20, 26;
+}
+
+html[data-theme="light"] {
+  --bg: #F4EFE5;
+  --bg-2: #EFE9DE;
+  --surface: #FFFFFF;
+  --surface-2: #F4EFE5;
+  --line: #DAD3BF;
+  --line-soft: #E6E0D2;
+  --ink: #0C0C0A;
+  --ink-2: #2A2A26;
+  --ink-mute: #5C5A50;
+  --ink-faint: #6E6B5E;
+  --teal: #3B5BFF;
+  --teal-deep: #1E3AFF;
+  --teal-glow: rgba(59, 91, 255, 0.10);
+  --indigo: #FF7B6B;
+  --indigo-glow: rgba(255, 123, 107, 0.10);
+  --amber: #B45309;
+  --rose: #B91C1C;
+  /* Light page → DARK device (original look). */
+  --device-bg: #050818;
+  --device-frame-grad: linear-gradient(180deg, #1A1F2A 0%, #0A0E14 100%);
+  --device-edge-1: #232932;
+  --device-edge-2: #11151D;
+  --device-ink: #F4F5F2;
+  --device-ink-rgb: 244, 245, 242;
+  --device-fill-rgb: 255, 255, 255;
+}
+
+/* Device screens render the OPPOSITE theme's accents so they read on the inverted background */
+.phone .screen,
+.pipe-phone .mini-screen,
+.case-device .mini-screen,
+.gal-screen,
+.arch-node:not(.server) .frame {
+  --teal: #3B5BFF;
+  --amber: #B45309;
+  --rose: #B91C1C;
+}
+html[data-theme="light"] .phone .screen,
+html[data-theme="light"] .pipe-phone .mini-screen,
+html[data-theme="light"] .case-device .mini-screen,
+html[data-theme="light"] .gal-screen,
+html[data-theme="light"] .arch-node:not(.server) .frame {
+  --teal: #6B8AFF;
+  --amber: #FFC58A;
+  --rose: #FF7B6B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; background: var(--bg); transition: background 0.5s ease; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Geist', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+.serif { font-family: 'Instrument Serif', serif; font-style: italic; letter-spacing: -0.01em; }
+.mono { font-family: 'Geist Mono', ui-monospace, monospace; }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+img, svg { display: block; max-width: 100%; }
+
+/* A11y: visible keyboard focus (mouse focus stays clean via :focus-visible) */
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; }
+.wrap-tight { max-width: 980px; margin: 0 auto; padding: 0 32px; position: relative; }
+
+/* ====================== NAV ====================== */
+nav.top {
+  position: sticky; top: 0; z-index: 60;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+nav.top .inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+nav.top .brand { display: flex; align-items: center; gap: 10px; }
+nav.top .brand img {
+  width: 28px; height: 28px; border-radius: 7px; object-fit: cover;
+  box-shadow: 0 0 0 1px var(--line), 0 0 20px var(--teal-glow);
+}
+nav.top .brand .word {
+  font-weight: 600; font-size: 16px; letter-spacing: -0.015em;
+}
+nav.top .brand .tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  margin-left: 6px;
+}
+nav.top .tabs {
+  display: flex; gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 4px;
+  border-radius: 999px;
+}
+nav.top .tabs a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--ink-mute);
+  padding: 7px 14px;
+  border-radius: 999px;
+  transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+nav.top .tabs a:hover { color: var(--ink); }
+nav.top .tabs a.demo-link {
+  color: var(--ink);
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+nav.top .tabs a.demo-link .pulse {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 8px var(--teal);
+  animation: heartbeat 1s ease-in-out infinite;
+}
+nav.top .right { display: flex; align-items: center; gap: 8px; }
+.t-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  transition: all 0.2s;
+}
+.t-toggle:hover { color: var(--ink); border-color: var(--ink-faint); }
+.cta-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.cta-pill:hover { transform: translateY(-1px); box-shadow: 0 8px 24px -6px var(--teal-glow); }
+
+@keyframes heartbeat {
+  0%, 100% { opacity: 0.55; transform: scale(0.85); }
+  50%      { opacity: 1;    transform: scale(1.15); }
+}
+
+/* ====================== HERO ====================== */
+.hero {
+  position: relative;
+  padding: 56px 0 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -100px -200px 0 -200px;
+  background:
+    radial-gradient(ellipse 700px 500px at 70% 30%, var(--teal-glow), transparent 60%),
+    radial-gradient(ellipse 600px 400px at 10% 60%, var(--indigo-glow), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero .inner {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 64px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .hero .inner { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.hero .status {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.hero .status .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 12px var(--teal);
+  animation: heartbeat 1s ease-in-out infinite;
+}
+.hero .status strong { color: var(--ink); font-weight: 600; }
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.96;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 28px;
+  max-width: 13ch;
+  text-wrap: balance;
+}
+.hero h1 .accent {
+  color: var(--teal);
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+.hero p.lead {
+  font-size: clamp(18px, 1.5vw, 21px);
+  color: var(--ink-mute);
+  max-width: 52ch;
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+.hero p.lead strong { color: var(--ink); font-weight: 500; }
+.hero p.lead-punch {
+  font-size: clamp(20px, 1.75vw, 24px);
+  color: var(--ink-2);
+  max-width: 54ch;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.hero p.lead-punch em { color: var(--teal); font-style: normal; font-weight: 600; }
+
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  letter-spacing: -0.005em;
+  border: 1px solid transparent;
+}
+.btn-glow {
+  background: var(--teal);
+  color: #02110D;
+  box-shadow: 0 16px 36px -12px rgba(45, 212, 191, 0.45);
+}
+html[data-theme="light"] .btn-glow { color: #FFFFFF; }
+.btn-glow:hover {
+  --lift: -2px;
+  box-shadow: 0 22px 48px -12px rgba(45, 212, 191, 0.7), 0 0 0 4px var(--teal-glow);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-ghost:hover { border-color: var(--ink-faint); background: var(--surface); }
+.btn .arrow { transition: transform 0.25s; }
+.btn:hover .arrow { transform: translateX(3px); }
+
+.hero-quick {
+  display: flex; gap: 18px; align-items: center;
+  margin-top: 28px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+.hero-quick span { display: inline-flex; align-items: center; gap: 6px; }
+.hero-quick span::before {
+  content: ''; width: 4px; height: 4px; border-radius: 50%;
+  background: var(--ink-faint);
+}
+
+/* ====================== HERO DEVICE (phone) ====================== */
+.phone {
+  position: absolute;
+  inset: 0;
+  border-radius: 44px;
+  background:
+    var(--device-frame-grad);
+  box-shadow:
+    0 50px 120px -30px rgba(0,0,0,0.85),
+    0 0 0 2px var(--device-edge-1),
+    0 0 0 4px var(--device-edge-2),
+    0 24px 60px -12px var(--teal-glow);
+  overflow: hidden;
+  transform: rotateX(8deg) rotateY(-12deg) rotateZ(2deg);
+  transform-style: preserve-3d;
+  transition: transform 0.18s ease-out;
+}
+.phone .screen {
+  position: absolute; inset: 6px;
+  border-radius: 38px;
+  background: var(--device-bg);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.phone .notch {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  width: 102px; height: 28px;
+  background: #000;
+  border-radius: 14px;
+  z-index: 5;
+}
+.phone-statusbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 28px 0;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: rgba(var(--device-ink-rgb), 0.7);
+  position: relative; z-index: 4;
+}
+.phone-app {
+  flex: 1;
+  padding: 56px 18px 24px;
+  display: flex; flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+.phone-app .app-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 6px;
+  margin-bottom: 6px;
+}
+.phone-app .app-title {
+  font-size: 11px;
+  font-family: 'Geist Mono', monospace;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb), 0.55);
+  text-transform: uppercase;
+}
+.phone-app .lock-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.3);
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+.phone-app .lock-pill svg { width: 9px; height: 9px; }
+
+.phone-app .headline {
+  padding: 8px 8px 12px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--device-ink);
+}
+.phone-app .headline .accent {
+  color: var(--teal);
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.phone-card {
+  background: linear-gradient(180deg, rgba(var(--device-fill-rgb),0.04), rgba(var(--device-fill-rgb),0.02));
+  border: 1px solid rgba(var(--device-fill-rgb),0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.phone-card .head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb), 0.4);
+  text-transform: uppercase;
+}
+.phone-card .head .tag {
+  background: rgba(245, 199, 126, 0.12);
+  color: var(--amber);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 199, 126, 0.25);
+  font-size: 8px;
+}
+.phone-card .body {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(var(--device-ink-rgb), 0.85);
+  font-weight: 400;
+}
+.phone-card .body strong { color: var(--device-ink); font-weight: 500; }
+.phone-card .body .em-teal { color: var(--teal); font-weight: 500; }
+.phone-card .meta {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(var(--device-fill-rgb),0.1);
+  display: flex; justify-content: space-between;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: rgba(var(--device-ink-rgb), 0.4);
+  text-transform: uppercase;
+}
+
+.phone-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.phone-mini {
+  background: rgba(var(--device-fill-rgb),0.03);
+  border: 1px solid rgba(var(--device-fill-rgb),0.08);
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+.phone-mini .lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb), 0.4);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.phone-mini .v {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--device-ink);
+  font-variant-numeric: tabular-nums;
+}
+.phone-mini .v .unit {
+  font-size: 9px; color: rgba(var(--device-ink-rgb), 0.5);
+  margin-left: 2px; font-weight: 400;
+}
+.phone-mini .delta {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  color: var(--teal);
+  margin-top: 1px;
+}
+.phone-mini .delta.warn { color: var(--rose); }
+
+.phone-tabbar {
+  margin-top: auto;
+  display: flex; justify-content: space-around;
+  padding: 12px 0 4px;
+  border-top: 1px solid rgba(var(--device-fill-rgb),0.08);
+}
+.phone-tabbar .tb {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb), 0.4);
+  text-transform: uppercase;
+}
+.phone-tabbar .tb.active { color: var(--teal); }
+.phone-tabbar .tb .ic {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: rgba(var(--device-ink-rgb), 0.15);
+}
+.phone-tabbar .tb.active .ic {
+  background: var(--teal); box-shadow: 0 0 8px var(--teal);
+}
+
+/* ====================== FACTS RIBBON ====================== */
+.facts {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-2) 80%, transparent);
+}
+.fact { padding: 32px 28px; border-right: 1px solid var(--line); }
+.fact:last-child { border-right: none; }
+.fact .num {
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  margin-bottom: 12px;
+}
+.fact .num .unit { color: var(--teal); font-size: 18px; margin-left: 2px; vertical-align: top; }
+.fact .lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .fact:nth-child(2) { border-right: none; }
+  .fact:nth-child(1), .fact:nth-child(2) { border-bottom: 1px solid var(--line); }
+}
+
+/* ====================== FOUR PILLARS OVERVIEW (5D) ====================== */
+.pillars-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pillar-card {
+  display: flex; flex-direction: column;
+  padding: 24px 22px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.pillar-card:hover {
+  border-color: color-mix(in srgb, var(--teal) 50%, var(--line));
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -20px rgba(0,0,0,0.5), 0 0 0 1px var(--teal-glow);
+}
+.pillar-card .pc-head {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.pillar-card .pc-ix { color: var(--ink-faint); }
+.pillar-card .pc-tag { color: var(--teal); }
+.pillar-card h3 {
+  font-size: 18px; font-weight: 500; letter-spacing: -0.02em;
+  margin-bottom: 10px; line-height: 1.2;
+}
+.pillar-card p {
+  font-size: 13.5px; line-height: 1.5; color: var(--ink-mute);
+  margin-bottom: 18px; flex: 1;
+}
+.pillar-card p em { color: var(--ink-2); font-style: italic; }
+.pillar-card .pc-more {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--teal);
+}
+.pillars-cta { margin-top: 32px; }
+@media (max-width: 900px) { .pillars-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .pillars-grid { grid-template-columns: 1fr; } }
+
+/* ====================== SECTIONS ====================== */
+section { padding: 120px 0; position: relative; }
+@media (max-width: 768px) {
+  section { padding: 56px 0; }
+  .hero h1 { font-size: clamp(36px, 8vw, 56px); max-width: 14ch; }
+}
+@media (max-width: 480px) {
+  section { padding: 48px 0; }
+  .facts { padding: 0; }
+  .fact { padding: 22px 18px; }
+  h1, h2.stitle, .hero p.lead, .hero p.lead-punch, .lede, section p {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  /* 5A.5: aggressive mobile compaction */
+  .hero p.lead { display: none; }
+  .hero p.lead-punch { font-size: 17px; line-height: 1.4; }
+  section h3 { margin-top: 18px; }
+  .lede { font-size: 15px; margin-bottom: 12px; }
+}
+
+/* ====================== A11Y: REDUCED MOTION ====================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--teal); }
+
+h2.stitle {
+  font-size: clamp(38px, 5.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+  font-weight: 500;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+h2.stitle .ac {
+  color: var(--teal);
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lede {
+  font-size: 19px;
+  color: var(--ink-mute);
+  max-width: 60ch;
+  line-height: 1.55;
+}
+
+/* ====================== PIPELINE (combined method + demo) ====================== */
+.pipe-wrap {
+  margin-top: 56px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+.pipe-head {
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+.pipe-head .ttl {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.pipe-head .ttl::before {
+  content: ''; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 10px var(--teal);
+  animation: heartbeat 1s ease-in-out infinite;
+}
+.pipe-tabs {
+  display: flex; gap: 2px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 4px;
+}
+.pipe-tabs button {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 8px 14px;
+  color: var(--ink-mute);
+  border-radius: 7px;
+  transition: all 0.2s;
+}
+.pipe-tabs button.active {
+  background: var(--surface);
+  color: var(--teal);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+.pipe-tabs button:hover:not(.active) { color: var(--ink); }
+
+.pipe-body {
+  display: grid;
+  grid-template-columns: 360px 1fr 280px;
+  min-height: 560px;
+}
+@media (max-width: 1100px) {
+  .pipe-body { grid-template-columns: 1fr; }
+}
+
+/* LEFT: explanation column */
+.pipe-explain {
+  padding: 32px 28px;
+  border-right: 1px solid var(--line);
+  display: flex; flex-direction: column;
+}
+.pipe-explain .stage-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.pipe-explain .stage-tag .box {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--teal);
+  border-radius: 4px;
+  font-weight: 600;
+}
+.pipe-explain h3 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.pipe-explain .summary {
+  font-size: 15px;
+  color: var(--ink-mute);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.pipe-explain .summary strong { color: var(--ink); font-weight: 500; }
+.pipe-explain .what {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.pipe-explain .what .lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.pipe-explain .what ul {
+  list-style: none;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+.pipe-explain .what li {
+  display: flex; gap: 8px;
+  padding: 3px 0;
+}
+.pipe-explain .what li::before {
+  content: '→'; color: var(--teal); flex-shrink: 0;
+}
+
+/* MIDDLE: architecture visual */
+.pipe-arch {
+  background: var(--bg-2);
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 24px;
+  border-right: 1px solid var(--line);
+  overflow: hidden;
+}
+.pipe-arch::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle, var(--line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.arch-stage {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 1.05;
+}
+.arch-node {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+.arch-node .frame {
+  width: 96px; height: 144px;
+  border-radius: 14px;
+  background: var(--device-bg);
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px -12px rgba(0,0,0,0.6);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+.arch-node .frame.active {
+  border-color: var(--teal);
+  box-shadow: 0 16px 40px -10px var(--teal-glow), 0 0 0 1px var(--teal-glow);
+}
+.arch-node .frame .ringer {
+  position: absolute; top: 6px; left: 50%; transform: translateX(-50%);
+  width: 24px; height: 4px;
+  background: #000; border-radius: 2px;
+}
+.arch-node .frame .content {
+  position: absolute; inset: 14px 8px 14px;
+  display: flex; flex-direction: column;
+  gap: 3px;
+}
+.arch-node .frame .content .bar {
+  height: 6px;
+  background: color-mix(in srgb, var(--device-ink) 14%, transparent);
+  border-radius: 2px;
+}
+.arch-node .frame .content .bar.tall { height: 10px; }
+.arch-node .frame .content .bar.teal { background: var(--teal); opacity: 0.7; }
+.arch-node .frame .content .bar.short { width: 60%; }
+.arch-node .frame.active .content .bar.teal { box-shadow: 0 0 6px var(--teal); }
+
+.arch-node.server .frame {
+  width: 140px; height: 110px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
+}
+.arch-node.server .frame .content { inset: 8px; gap: 4px; }
+.arch-node.server .frame .content .lat {
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  color: var(--ink-faint);
+  letter-spacing: 0.06em;
+}
+.arch-node.server .frame .content .ct {
+  flex: 1;
+  background:
+    repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 3px);
+  border-radius: 4px;
+  position: relative;
+}
+.arch-node.server .frame.active .content .ct {
+  background:
+    repeating-linear-gradient(90deg, var(--teal) 0 1px, transparent 1px 3px);
+}
+
+.arch-node .label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 14ch;
+}
+.arch-node .label .sub {
+  display: block;
+  color: var(--ink-faint);
+  font-size: 9px;
+  margin-top: 2px;
+}
+.arch-node.active .label { color: var(--teal); }
+.arch-node.active .label .sub { color: var(--ink-mute); }
+
+.arch-node.left { top: 18%; left: 0; }
+.arch-node.center { top: 30%; left: 50%; transform: translateX(-50%); }
+.arch-node.right { top: 18%; right: 0; }
+
+.arch-key {
+  position: absolute;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background: rgba(245, 199, 126, 0.08);
+  border: 1px solid rgba(245, 199, 126, 0.3);
+  border-radius: 4px;
+}
+.arch-key.left { top: 4%; left: 6%; }
+.arch-key.right { top: 4%; right: 6%; }
+.arch-key.middle {
+  top: 4%; left: 50%; transform: translateX(-50%);
+  color: var(--ink-mute);
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.arch-flow {
+  position: absolute;
+  bottom: 16%;
+  left: 8%; right: 8%;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 0;
+}
+.arch-arrow {
+  flex: 1;
+  height: 28px;
+  position: relative;
+}
+.arch-arrow svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.arch-arrow .line {
+  stroke: var(--line);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  fill: none;
+  transition: stroke 0.6s;
+}
+.arch-arrow.active .line {
+  stroke: var(--teal);
+  animation: flowDash 1.5s linear infinite;
+}
+@keyframes flowDash {
+  to { stroke-dashoffset: -16; }
+}
+.arch-arrow .arrowhead {
+  fill: var(--line);
+  transition: fill 0.6s;
+}
+.arch-arrow.active .arrowhead { fill: var(--teal); }
+.arch-arrow .lbl {
+  position: absolute;
+  top: -14px; left: 50%; transform: translateX(-50%);
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.arch-arrow.active .lbl { color: var(--teal); }
+
+.arch-spacer { width: 96px; flex-shrink: 0; }
+.arch-spacer.wide { width: 140px; }
+
+.arch-foot {
+  position: absolute;
+  bottom: 4%;
+  left: 50%; transform: translateX(-50%);
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+
+/* RIGHT: live phone state */
+.pipe-phone {
+  padding: 28px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 16px;
+  background: var(--surface-2);
+}
+.pipe-phone .col-lbl {
+  align-self: stretch;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.pipe-phone .mini-phone {
+  width: 100%; max-width: 220px;
+  aspect-ratio: 9 / 18.5;
+  border-radius: 28px;
+  background: var(--device-frame-grad);
+  box-shadow: 0 20px 50px -16px rgba(0,0,0,0.7),
+              0 0 0 1px var(--device-edge-1),
+              inset 0 0 0 2px var(--device-edge-2);
+  padding: 4px;
+  position: relative;
+}
+.pipe-phone .mini-screen {
+  width: 100%; height: 100%;
+  background: var(--device-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  padding: 18px 12px 12px;
+  gap: 8px;
+  position: relative;
+}
+.pipe-phone .mini-screen::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 50%; transform: translateX(-50%);
+  width: 50px; height: 14px;
+  background: #000;
+  border-radius: 7px;
+}
+.mini-stage-tag {
+  margin-top: 14px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 8px;
+  background: rgba(45,212,191,0.1);
+  border: 1px solid rgba(45,212,191,0.3);
+  border-radius: 999px;
+  align-self: center;
+}
+.mini-body {
+  flex: 1;
+  display: flex; flex-direction: column; gap: 6px;
+  font-family: 'Geist', sans-serif;
+}
+.mini-card {
+  background: rgba(var(--device-fill-rgb),0.04);
+  border: 1px solid rgba(var(--device-fill-rgb),0.08);
+  border-radius: 8px;
+  padding: 8px 9px;
+  transition: all 0.5s;
+}
+.mini-card.encrypted {
+  border-color: rgba(45,212,191,0.4);
+  background: rgba(45,212,191,0.06);
+}
+.mini-card.glow {
+  border-color: rgba(45,212,191,0.5);
+  background: linear-gradient(180deg, rgba(45,212,191,0.08), rgba(45,212,191,0.02));
+  box-shadow: 0 0 16px rgba(45,212,191,0.18);
+}
+.mini-card .lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb),0.45);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.mini-card .v {
+  font-size: 11px;
+  color: var(--device-ink);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.mini-card.encrypted .v {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  color: var(--teal);
+  word-break: break-all;
+  line-height: 1.3;
+}
+.mini-card .insight-t {
+  font-size: 11px;
+  color: var(--device-ink);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.mini-card .insight-b {
+  font-size: 9px;
+  color: rgba(var(--device-ink-rgb),0.7);
+  line-height: 1.4;
+}
+.mini-card .insight-b .em-teal { color: var(--teal); font-weight: 500; }
+.pipe-phone .caption {
+  font-size: 12px;
+  color: var(--ink-mute);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 28ch;
+  margin-top: 4px;
+}
+
+/* ====================== THESIS ====================== */
+.thesis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+@media (max-width: 1000px) { .thesis-grid { grid-template-columns: 1fr; gap: 48px; } }
+.thesis-grid p {
+  font-size: 19px;
+  color: var(--ink-mute);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  max-width: 50ch;
+}
+.thesis-grid p strong { color: var(--ink); font-weight: 500; }
+.thesis-grid .right {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+}
+.thesis-grid .right h4 {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.thesis-grid .right .item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.thesis-grid .right .item:last-child { border-bottom: none; }
+.thesis-grid .right .item strong {
+  display: block;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+/* ====================== DIFFERENTIATION ====================== */
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 56px;
+}
+@media (max-width: 900px) { .diff-grid { grid-template-columns: 1fr; } }
+.diff-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.diff-card .ix {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.diff-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.diff-card p {
+  font-size: 14px;
+  color: var(--ink-mute);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.diff-card .vs {
+  padding: 14px 16px;
+  background: var(--bg-2);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.diff-card .vs .row {
+  display: flex; gap: 10px;
+  padding: 4px 0;
+}
+.diff-card .vs .row .k {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  min-width: 56px;
+  padding-top: 3px;
+}
+.diff-card .vs .row.them { color: var(--ink-mute); }
+.diff-card .vs .row.us { color: var(--ink); }
+.diff-card .vs .row.us::before {
+  display: none;
+}
+
+/* Wearables panel — "What only VitaCrypt does" */
+.diff-banner {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-top: 40px;
+}
+.diff-banner .hd {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.diff-banner .hd::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-soft);
+}
+.diff-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .diff-banner-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (max-width: 540px) { .diff-banner-grid { grid-template-columns: 1fr; } }
+.diff-banner-grid .item h4 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  margin: 0 0 6px 0;
+  color: var(--ink);
+}
+.diff-banner-grid .item h4 .ix {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin-right: 8px;
+}
+.diff-banner-grid .item p {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  line-height: 1.5;
+  margin: 0;
+}
+.diff-banner .footnote {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+.diff-banner .footnote .k {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.diff-banner .footnote em { font-style: italic; color: var(--ink-2); }
+.diff-banner + .diff-grid { margin-top: 20px; }
+
+/* ====================== LIVE RESEARCH (Pillar 3) ====================== */
+.research-corpora {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 48px;
+}
+@media (max-width: 900px) { .research-corpora { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .research-corpora { grid-template-columns: 1fr; } }
+.corpus {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 20px;
+  position: relative;
+  transition: border-color .25s ease, transform .25s ease;
+}
+.corpus:hover {
+  border-color: color-mix(in srgb, var(--teal) 40%, var(--line));
+  transform: translateY(-1px);
+}
+.corpus .nm {
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.corpus .nm .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--teal) 60%, transparent);
+}
+.corpus .why {
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.5;
+  margin: 0;
+}
+.research-arch {
+  margin-top: 36px;
+  padding: 28px 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 700px) { .research-arch { grid-template-columns: 1fr; gap: 14px; padding: 24px 22px; } }
+.research-arch .k {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  text-transform: uppercase;
+  padding-top: 4px;
+  border-right: 1px solid var(--line-soft);
+  padding-right: 24px;
+  min-height: 60px;
+}
+@media (max-width: 700px) { .research-arch .k { border-right: none; border-bottom: 1px solid var(--line-soft); padding-right: 0; padding-bottom: 10px; min-height: 0; } }
+.research-arch p {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  margin: 0;
+}
+.research-arch p strong { color: var(--ink); font-weight: 500; }
+.research-arch .out {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-mute);
+}
+.research-arch .out a {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--teal) 40%, transparent);
+  transition: border-color .2s ease;
+}
+.research-arch .out a:hover { border-bottom-color: var(--teal); }
+
+/* ====================== CASE STUDY ====================== */
+.case-wrap {
+  margin-top: 56px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.case-wrap::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--teal-glow), transparent 70%);
+  pointer-events: none;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: 280px 1.2fr 280px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1100px) { .case-grid { grid-template-columns: 1fr; } }
+
+.case-profile {
+  padding: 36px 28px;
+  background: var(--surface-2);
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 1100px) { .case-profile { border-right: none; border-bottom: 1px solid var(--line); } }
+.case-profile .avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--teal) 30%, var(--surface)) 0%, var(--surface-2) 65%, var(--bg-2) 100%);
+  box-shadow: 0 0 0 1px var(--line), 0 0 24px var(--teal-glow);
+  margin-bottom: 20px;
+}
+.case-profile .avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--teal) 25%, transparent) 0.6px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+.case-profile .avatar svg {
+  position: relative;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+/* Avatar silhouettes: theme-aware so they stay visible on the light-theme orb */
+.case-profile .avatar svg circle:not([stroke]),
+.case-profile .avatar svg path,
+.gallery-banner .who .avatar svg circle:not([stroke]),
+.gallery-banner .who .avatar svg path {
+  fill: color-mix(in srgb, var(--ink) 85%, transparent);
+}
+.case-profile h4 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.case-profile .role {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-bottom: 24px;
+}
+.case-profile .fields {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.case-profile .fields div {
+  display: flex; justify-content: space-between;
+  padding: 6px 0;
+  font-size: 12px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.case-profile .fields div:last-child { border-bottom: none; }
+.case-profile .fields .k {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.case-profile .fields .v { color: var(--ink); font-weight: 500; }
+
+.case-narrative {
+  padding: 40px 36px;
+}
+@media (max-width: 768px) { .case-narrative { padding: 28px 24px; } }
+.case-narrative h3 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin: 26px 0 10px;
+}
+.case-narrative h3:first-child { margin-top: 0; }
+.case-narrative p {
+  color: var(--ink-mute);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  max-width: 58ch;
+}
+.case-narrative p strong { color: var(--ink); font-weight: 500; }
+.case-narrative .insight-box {
+  background: linear-gradient(135deg, var(--surface-2), color-mix(in srgb, var(--teal-glow) 80%, transparent));
+  border: 1px solid var(--teal-deep);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  position: relative;
+}
+.case-narrative .insight-box .lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.case-narrative .insight-box .body {
+  font-family: 'Instrument Serif', serif;
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--ink);
+  font-style: italic;
+}
+.case-narrative .protocol {
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.case-narrative .protocol .row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 14px;
+}
+.case-narrative .protocol .row:last-child { border-bottom: none; }
+.case-narrative .protocol .tag {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+.case-narrative .protocol .txt { color: var(--ink-2); }
+
+.case-device {
+  padding: 36px 24px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--surface-2);
+  border-left: 1px solid var(--line);
+}
+@media (max-width: 1100px) { .case-device { border-left: none; border-top: 1px solid var(--line); } }
+.case-device .col-lbl {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.case-device .mini-phone {
+  width: 200px;
+  aspect-ratio: 9 / 18.5;
+  border-radius: 26px;
+  background: var(--device-frame-grad);
+  box-shadow: 0 24px 50px -12px rgba(0,0,0,0.7), 0 0 0 1px var(--device-edge-1);
+  padding: 4px;
+}
+.case-device .mini-screen {
+  width: 100%; height: 100%;
+  background: var(--device-bg);
+  border-radius: 22px;
+  overflow: hidden;
+  padding: 18px 11px 11px;
+  display: flex; flex-direction: column;
+  gap: 7px;
+  position: relative;
+}
+.case-device .mini-screen::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 50%; transform: translateX(-50%);
+  width: 44px; height: 12px;
+  background: #000;
+  border-radius: 6px;
+}
+.case-device .alert {
+  margin-top: 8px;
+  background: linear-gradient(180deg, rgba(45,212,191,0.12), rgba(45,212,191,0.04));
+  border: 1px solid rgba(45,212,191,0.35);
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+.case-device .alert .h {
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.case-device .alert .b {
+  font-size: 10px;
+  color: var(--device-ink);
+  line-height: 1.35;
+  font-weight: 500;
+}
+.case-device .row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.case-device .chip {
+  background: rgba(var(--device-fill-rgb),0.04);
+  border: 1px solid rgba(var(--device-fill-rgb),0.08);
+  border-radius: 7px;
+  padding: 6px 7px;
+}
+.case-device .chip .l {
+  font-family: 'Geist Mono', monospace;
+  font-size: 6.5px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb),0.45);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.case-device .chip .v {
+  font-size: 11px;
+  color: var(--device-ink);
+  font-weight: 500;
+}
+.case-device .chip .v .u { font-size: 7px; color: rgba(var(--device-ink-rgb),0.5); }
+.case-device .chip .delta {
+  font-family: 'Geist Mono', monospace;
+  font-size: 7px;
+  color: var(--teal);
+  margin-top: 1px;
+}
+
+/* ====================== ROADMAP ====================== */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  position: relative;
+}
+.roadmap-grid::before {
+  content: '';
+  position: absolute;
+  top: 9px; left: 4%; right: 4%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--teal), var(--indigo), var(--line) 70%);
+  z-index: 0;
+}
+.r-node { position: relative; z-index: 1; }
+.r-node .pip {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--ink-faint);
+  margin-bottom: 20px;
+}
+.r-node.active .pip {
+  border-color: var(--teal);
+  background: var(--teal);
+  box-shadow: 0 0 0 6px var(--teal-glow);
+}
+.r-node .when {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.r-node.active .when { color: var(--teal); }
+.r-node h5 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.r-node p {
+  font-size: 13px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+@media (max-width: 900px) {
+  .roadmap-grid { grid-template-columns: 1fr; }
+  .roadmap-grid::before { display: none; }
+}
+
+/* ====================== WHY NOW / KPIs ====================== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 48px;
+}
+.kpi {
+  background: var(--surface);
+  padding: 28px 24px;
+}
+.kpi .label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.kpi .val {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.kpi .val .unit { color: var(--teal); font-size: 16px; vertical-align: top; margin-left: 1px; }
+.kpi .desc {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  line-height: 1.5;
+}
+@media (max-width: 768px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ====================== FINAL ====================== */
+.final {
+  text-align: center;
+  position: relative;
+}
+.final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 700px 400px at 50% 50%, var(--teal-glow), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+.final h2 {
+  font-size: clamp(44px, 6.5vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  max-width: 18ch;
+  margin-inline: auto;
+  text-wrap: balance;
+  font-weight: 500;
+}
+.final h2 .ac {
+  color: var(--teal);
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.final p {
+  font-size: 19px;
+  color: var(--ink-mute);
+  max-width: 50ch;
+  margin: 0 auto 36px;
+}
+.final .hero-cta { justify-content: center; }
+
+/* ====================== FOOTER ====================== */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 72px 0 32px;
+  position: relative;
+  z-index: 1;
+}
+footer .fgrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+@media (max-width: 768px) { footer .fgrid { grid-template-columns: 1fr 1fr; } }
+footer .brand-col .lockup { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+footer .brand-col .lockup img { width: 26px; height: 26px; border-radius: 7px; }
+footer .brand-col .lockup span { font-size: 16px; font-weight: 600; letter-spacing: -0.015em; }
+footer .brand-col p {
+  font-size: 13px; color: var(--ink-mute);
+  max-width: 36ch; line-height: 1.55;
+}
+footer h5 {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 8px; }
+footer ul li a {
+  font-size: 13px; color: var(--ink-mute);
+  transition: color 0.2s;
+}
+footer ul li a:hover { color: var(--ink); }
+footer .bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+@media (max-width: 768px) { footer .bottom { flex-direction: column; gap: 10px; } }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ====================== DATA FABRIC ====================== */
+.fabric-wrap {
+  margin-top: 56px;
+  position: relative;
+}
+.fabric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 900px) { .fabric-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .fabric-grid { grid-template-columns: 1fr; } }
+.fabric-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.fabric-card:hover { border-color: var(--ink-faint); transform: translateY(-3px); }
+.fabric-card .hd {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px;
+}
+.fabric-card .hd .ix {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px; letter-spacing: 0.12em;
+  color: var(--ink-faint); text-transform: uppercase;
+}
+.fabric-card .hd .ic {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--teal);
+}
+.fabric-card h4 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.fabric-card .why {
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+.fabric-card .sources {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+.fabric-card .src {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 4px 9px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  border-radius: 999px;
+}
+.fabric-card .src.live::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.fabric-card.is-profile {
+  background: linear-gradient(180deg, var(--surface) 0%, color-mix(in srgb, var(--teal-glow) 60%, var(--surface)) 100%);
+  border-color: var(--teal-deep);
+}
+.fabric-card.is-profile .hd .ic { color: var(--teal); border-color: var(--teal-deep); }
+.fabric-card.is-profile .why strong { color: var(--ink); font-weight: 500; }
+
+.fabric-foot {
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 16px;
+}
+.fabric-foot .l {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.fabric-foot .l strong { color: var(--ink); font-weight: 500; }
+.fabric-foot .legend {
+  display: flex; gap: 16px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.fabric-foot .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.fabric-foot .legend .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal);
+}
+.fabric-foot .legend .dot.q { background: var(--ink-faint); }
+
+/* ====================== INSIGHTS GALLERY ====================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+@media (max-width: 1000px) { .gallery-grid { grid-template-columns: 1fr; } }
+.gal-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 28px 26px 32px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.gal-card .moment {
+  align-self: stretch;
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 16px;
+}
+.gal-card .moment .when {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  text-transform: uppercase;
+}
+.gal-card .moment .who {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.gal-card h4 {
+  align-self: stretch;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+.gal-card h4 .ac {
+  color: var(--teal); font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400;
+}
+.gal-phone {
+  width: 100%; max-width: 220px;
+  aspect-ratio: 9 / 18.5;
+  border-radius: 26px;
+  background: var(--device-frame-grad);
+  box-shadow: 0 24px 50px -12px rgba(0,0,0,0.6), 0 0 0 1px var(--device-edge-1);
+  padding: 4px;
+  margin-bottom: 18px;
+}
+.gal-screen {
+  width: 100%; height: 100%;
+  background: var(--device-bg);
+  border-radius: 22px;
+  overflow: hidden;
+  padding: 18px 11px 11px;
+  display: flex; flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.gal-screen::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 50%; transform: translateX(-50%);
+  width: 44px; height: 12px;
+  background: #000;
+  border-radius: 6px;
+}
+.gal-screen .stamp {
+  margin-top: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: rgba(var(--device-ink-rgb),0.45);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(var(--device-fill-rgb),0.06);
+}
+.gal-screen .hero-row {
+  background: linear-gradient(180deg, rgba(45,212,191,0.14), rgba(45,212,191,0.04));
+  border: 1px solid rgba(45,212,191,0.35);
+  border-radius: 10px;
+  padding: 9px 11px;
+}
+.gal-screen .hero-row.warn {
+  background: linear-gradient(180deg, rgba(248,113,113,0.12), rgba(248,113,113,0.02));
+  border-color: rgba(248,113,113,0.35);
+}
+.gal-screen .hero-row.amber {
+  background: linear-gradient(180deg, rgba(245,199,126,0.12), rgba(245,199,126,0.02));
+  border-color: rgba(245,199,126,0.35);
+}
+.gal-screen .hero-row .h {
+  font-family: 'Geist Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.gal-screen .hero-row.warn .h { color: var(--rose); }
+.gal-screen .hero-row.amber .h { color: var(--amber); }
+.gal-screen .hero-row .b {
+  font-size: 10.5px;
+  color: var(--device-ink);
+  line-height: 1.4;
+  font-weight: 500;
+}
+.gal-screen .hero-row .b .em-teal { color: var(--teal); }
+.gal-screen .row-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.gal-screen .chip {
+  background: rgba(var(--device-fill-rgb),0.04);
+  border: 1px solid rgba(var(--device-fill-rgb),0.08);
+  border-radius: 7px;
+  padding: 6px 7px;
+}
+.gal-screen .chip .l {
+  font-family: 'Geist Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  color: rgba(var(--device-ink-rgb),0.45);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.gal-screen .chip .v {
+  font-size: 11px;
+  color: var(--device-ink);
+  font-weight: 500;
+}
+.gal-screen .chip .v .u { font-size: 7px; color: rgba(var(--device-ink-rgb),0.5); }
+.gal-card .summary {
+  font-size: 13.5px;
+  color: var(--ink-mute);
+  line-height: 1.55;
+  text-align: center;
+  max-width: 30ch;
+}
+.gal-card .summary strong { color: var(--ink); font-weight: 500; }
+
+/* New gallery elements */
+.gal-card .signal-meter {
+  align-self: stretch;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.gal-card .signal-meter .signals {
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.gal-card .signal-meter .sig {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  padding: 3px 7px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.gal-card .signal-meter .fuse {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.gal-card .outcome {
+  align-self: stretch;
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px;
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px dashed var(--line);
+}
+.gal-card .outcome .metric {
+  font-size: 12px;
+  color: var(--ink-2);
+  letter-spacing: -0.005em;
+}
+.gal-card .outcome .metric strong { color: var(--teal); font-weight: 500; text-transform: uppercase; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; margin-right: 6px; }
+.gal-card .outcome .cited {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.gallery-foot {
+  margin-top: 40px;
+  padding: 22px 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--teal);
+  border-radius: 0 14px 14px 0;
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  max-width: 80ch;
+}
+.gallery-foot strong { color: var(--ink); font-weight: 500; }
+
+/* ====================== HERO STAGE (phone + profile + cipher) ====================== */
+.hero-stage {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: stretch;
+  min-height: 640px;
+}
+.hero-stage .side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  padding: 12px 0;
+}
+.hero-stage .phone-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+  aspect-ratio: 9 / 18.5;
+  perspective: 1400px;
+  align-self: center;
+}
+.hero-stage .phone-wrap .phone {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(4deg) rotateY(-6deg) rotateZ(0.5deg);
+}
+
+/* Floating side cards */
+.hero-card {
+  position: relative;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 24px 48px -16px rgba(0,0,0,0.55), 0 0 0 1px color-mix(in srgb, var(--teal-glow) 30%, transparent);
+  z-index: 3;
+}
+.hero-card .hc-head {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.hero-card .hc-head .live-dot {
+  display: inline-flex; align-items: center; gap: 5px;
+  color: var(--teal);
+}
+.hero-card .hc-head .live-dot::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 6px var(--teal);
+  animation: heartbeat 1s ease-in-out infinite;
+}
+
+/* Profile card */
+.hero-card.profile {
+  width: 100%;
+}
+.hero-card.profile .completion {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.hero-card.profile .completion .pct {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1;
+}
+.hero-card.profile .completion .pct .of {
+  font-size: 11px;
+  color: var(--ink-faint);
+  font-family: 'Geist Mono', monospace;
+  margin-left: 4px;
+  letter-spacing: 0.04em;
+}
+.hero-card.profile .completion .label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.4;
+}
+.hero-card.profile .source-rows {
+  display: flex; flex-direction: column;
+  gap: 7px;
+}
+.hero-card.profile .src-row {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 10.5px;
+  color: var(--ink-2);
+}
+.hero-card.profile .src-row .glyph {
+  width: 14px; height: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--teal);
+}
+.hero-card.profile .src-row .name {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+}
+.hero-card.profile .src-row .meta {
+  font-family: 'Geist Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+.hero-card.profile .src-bar {
+  grid-column: 2 / -1;
+  height: 3px;
+  background: var(--bg-2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-card.profile .src-bar .fill {
+  position: absolute;
+  inset: 0 100% 0 0;
+  background: linear-gradient(90deg, var(--teal-deep), var(--teal));
+  transition: right 1.4s cubic-bezier(.2,.7,.2,1);
+  border-radius: 2px;
+}
+.hero-card.profile .src-bar .fill.live {
+  box-shadow: 0 0 8px var(--teal);
+}
+.hero-card.profile .src-bar .fill.live::after {
+  content: '';
+  position: absolute;
+  right: -2px; top: -1px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--teal); box-shadow: 0 0 6px var(--teal);
+  animation: heartbeat 1s ease-in-out infinite;
+}
+.hero-card.profile.in .src-bar .fill { right: var(--gap, 6%); }
+
+/* Cipher card */
+.hero-card.cipher {
+  width: 100%;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 95%, transparent), color-mix(in srgb, var(--bg-2) 95%, transparent));
+}
+.hero-card.cipher .danger-tag {
+  color: var(--amber);
+}
+.hero-card.cipher .danger-tag::before {
+  background: var(--amber); box-shadow: 0 0 6px var(--amber);
+}
+.cipher-stream {
+  position: relative;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  color: var(--teal);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 11px;
+  height: 92px;
+  overflow: hidden;
+}
+.cipher-stream .row {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  opacity: 0.82;
+  filter: blur(0.15px);
+  transition: opacity 0.5s;
+}
+.cipher-stream .row.dim { opacity: 0.4; }
+.cipher-stream::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--teal-glow) 60%, transparent) 50%, transparent 100%);
+  height: 30%;
+  pointer-events: none;
+  animation: cipherScan 3.2s linear infinite;
+  animation-play-state: paused;
+}
+.hero-card.cipher.cs-active .cipher-stream::before { animation-play-state: running; }
+@keyframes cipherScan {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(340%); opacity: 0; }
+}
+.cipher-stream::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 2px, color-mix(in srgb, var(--bg) 70%, transparent) 2px 3px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+.cipher-foot {
+  display: flex; justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.cipher-foot .zero {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+/* Phone shell tweaks for stage */
+.hero-stage .phone-wrap .phone .screen { inset: 5px; border-radius: 32px; }
+.hero-stage .phone-wrap .phone {
+  border-radius: 38px;
+  box-shadow:
+    0 50px 100px -28px rgba(0,0,0,0.85),
+    0 0 0 2px var(--device-edge-1),
+    0 0 0 4px var(--device-edge-2),
+    0 24px 60px -12px var(--teal-glow);
+}
+
+@media (max-width: 1000px) {
+  .hero-stage { grid-template-columns: 200px 1fr; gap: 14px; }
+}
+@media (max-width: 768px) {
+  .hero-stage {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+  .hero-stage .side-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hero-stage .side-stack .hero-card { flex: 1 1 240px; }
+  .hero-stage .phone-wrap { max-width: 280px; }
+}
+
+/* ====================== GALLERY · WEEK ====================== */
+.week-strip {
+  margin-top: 32px;
+  display: flex; align-items: stretch;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.week-strip .seg {
+  flex: 1;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 14px 16px;
+  background: var(--surface);
+  position: relative;
+}
+.week-strip .seg .day {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+}
+.week-strip .seg.active .day { color: var(--teal); }
+.week-strip .seg.active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--indigo));
+}
+.week-strip .seg .moment {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.week-strip .seg .driver {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  .week-strip { flex-direction: column; }
+}
+
+.gallery-banner {
+  margin: 32px 0 8px;
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 18px;
+}
+.gallery-banner .left {
+  display: flex; align-items: center; gap: 16px;
+  flex-wrap: wrap;
+}
+.gallery-banner .who {
+  display: flex; align-items: center; gap: 10px;
+}
+.gallery-banner .who .avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--teal) 28%, var(--surface)) 0%, var(--surface-2) 65%, var(--bg-2) 100%);
+  box-shadow: 0 0 0 1px var(--line), 0 0 14px var(--teal-glow);
+  flex-shrink: 0;
+}
+.gallery-banner .who .avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--teal) 28%, transparent) 0.5px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+.gallery-banner .who .avatar svg {
+  position: relative;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+.gallery-banner .who .ttl {
+  font-size: 15px; font-weight: 500; letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.gallery-banner .who .sub {
+  font-family: 'Geist Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.gallery-banner .vs {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+}
+.gallery-banner .vs .pill {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+}
+.gallery-banner .vs .pill.us {
+  color: var(--teal);
+  border-color: color-mix(in srgb, var(--teal-deep) 80%, var(--line));
+}
+.gallery-banner .vs .arrow { color: var(--ink-faint); }
+
+/* ====================== COMMIT 4D: DESKTOP POLISH ====================== */
+/* A4: magnetic cursor on .btn-glow (gated to desktop via JS); --lift folds in :hover rise */
+.btn-glow {
+  transform: translate(var(--mag-x, 0px), calc(var(--mag-y, 0px) + var(--lift, 0px)));
+  transition: transform 0.22s ease-out, box-shadow 0.25s ease;
+}
+
+/* A5: hue-shift on scoped decorative elements only */
+@media (min-width: 1024px) {
+  .cipher-stream,
+  .src-bar .fill,
+  .arch-arrow .line {
+    filter: hue-rotate(var(--accent-shift, 0deg));
+    transition: filter 0.6s ease;
+  }
+}
+
+/* E2: theme scramble overlay */
+.theme-scramble-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 999;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  text-align: center;
+  padding: 32px;
+}
+.theme-scramble-overlay.show { opacity: 1; pointer-events: auto; }
+
+/* ====================== COMMIT 4C: PREMIUM ANIMATIONS (pruned 5B.1) ====================== */
+/* Kept: A3 section scanline only. Removed: E3 typewriter ghost/caret, A1 dissolve cap, A2 hero waveform. */
+
+/* A3: section decryption scanline (one-shot) */
+.decrypt-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.decrypt-sweep::after {
+  content: '9F3B C24E 7AD1 8802 F15C B43E AA90 6B2D E14A 0C81 7E22 4F0B AC73 5601 E88A 12FD B6C0 4D29 71F4 8E32';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100%;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--teal);
+  opacity: 0;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    color-mix(in srgb, var(--teal-glow) 90%, transparent) 45%,
+    color-mix(in srgb, var(--teal-glow) 90%, transparent) 55%,
+    transparent 100%);
+  pointer-events: none;
+  transform: translateY(-100%);
+  white-space: pre-wrap;
+  word-break: break-all;
+  padding: 20px 22px;
+  z-index: 4;
+  animation: scanSweep 1100ms ease-out forwards;
+  mix-blend-mode: screen;
+}
+@keyframes scanSweep {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translateY(130%); opacity: 0; }
+}
+
+/* ====================== COMMIT 5A.4: WAITLIST FORM MODAL ====================== */
+.form-modal {
+  position: fixed; inset: 0;
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 90;
+  padding: 24px;
+}
+.form-modal.open { display: flex; }
+.form-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.65);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.form-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 36px 80px -20px rgba(0,0,0,0.6);
+  z-index: 1;
+}
+.form-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.form-eyebrow {
+  display: inline-block;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.form-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.form-close {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.form-close:hover { color: var(--ink); border-color: var(--ink-faint); }
+.form-intro {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-bottom: 20px;
+}
+.form-fields {
+  display: flex; flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.form-field {
+  display: flex; flex-direction: column;
+  gap: 6px;
+}
+.form-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.form-optional {
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink-faint);
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 14px;
+  transition: all 0.15s;
+  width: 100%;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--ink-faint);
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-glow);
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 70px;
+  font-family: inherit;
+}
+.form-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2395A0CC' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.form-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  color: var(--ink-mute);
+  line-height: 1.45;
+  cursor: pointer;
+}
+.form-consent input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 16px; height: 16px;
+  margin-top: 2px;
+  accent-color: var(--teal);
+}
+.form-honey {
+  position: absolute; left: -9999px;
+  width: 1px; height: 1px;
+  opacity: 0;
+}
+.form-submit { width: 100%; justify-content: center; }
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.form-status {
+  margin-top: 12px;
+  font-size: 13px;
+  text-align: center;
+  min-height: 18px;
+}
+.form-status.error { color: var(--rose); }
+.form-status.success { color: var(--teal); }
+.form-fallback {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+.form-fallback a { color: var(--teal); }
+.form-fallback a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .form-modal { padding: 0; align-items: stretch; }
+  .form-card {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+    padding: 24px 22px 32px;
+  }
+}
+
+/* ====================== COMMIT 5A.2: HAMBURGER DRAWER ====================== */
+.burger {
+  display: none;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.burger:hover { color: var(--ink); border-color: var(--ink-faint); }
+
+.drawer-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+  z-index: 79;
+}
+.drawer-backdrop.open { opacity: 1; pointer-events: auto; }
+
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: min(320px, 86vw);
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0.0, 0.2, 1);
+  z-index: 80;
+  visibility: hidden;
+}
+.mobile-drawer.open { transform: translateX(0); visibility: visible; }
+.mobile-drawer header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-drawer .drawer-title {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.mobile-drawer .drawer-close {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.mobile-drawer .drawer-close:hover { color: var(--ink); border-color: var(--ink-faint); }
+.mobile-drawer .drawer-nav {
+  flex: 1;
+  display: flex; flex-direction: column;
+  padding: 12px 0;
+  overflow-y: auto;
+}
+.mobile-drawer .drawer-nav a {
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  border-left: 2px solid transparent;
+  transition: all 0.15s;
+}
+.mobile-drawer .drawer-nav a:hover {
+  background: var(--bg-2);
+  border-left-color: var(--teal);
+}
+.mobile-drawer .drawer-nav .drawer-sep {
+  display: block; height: 1px; margin: 10px 22px;
+  background: var(--line);
+}
+.mobile-drawer .drawer-foot {
+  padding: 16px 22px 22px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.mobile-drawer .drawer-theme-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+  width: max-content;
+  transition: all 0.2s;
+}
+.mobile-drawer .drawer-theme-btn:hover { color: var(--ink); border-color: var(--ink-faint); }
+.mobile-drawer .drawer-cta { justify-content: center; text-align: center; }
+body.drawer-open { overflow: hidden; }
+
+@media (max-width: 768px) {
+  .burger { display: inline-flex; }
+  nav.top .right > .cta-pill { display: none; }
+  nav.top .right > .t-toggle { display: none; }
+}
+
+/* ====================== COMMIT 4B: MOBILE LAYOUT TRANSFORMS ====================== */
+.mob-secnav { display: none; }
+.more-btn { display: none; }
+.mob-dots { display: none; }
+.m-toggle { display: none; }
+.fabric-swipe-hint { display: none; }
+
+@media (max-width: 768px) {
+  /* M8: top-nav cleanup */
+  nav.top .tabs { display: none; }
+  nav.top .right { gap: 6px; }
+  .cta-pill { padding: 8px 12px; font-size: 12px; }
+
+  /* M0: hero composition order via display:contents + order */
+  .hero .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .hero .inner > div:first-child { display: contents; }
+  .hero .status     { order: 1; margin-bottom: 4px; }
+  .hero h1          { order: 2; margin-bottom: 4px; }
+  .hero-cta         { order: 3; margin-bottom: 4px; }
+  .hero-stage       { order: 4; }
+  .hero p.lead-punch{ order: 5; margin: 0; }
+  .hero p.lead      { order: 6; margin: 0; }
+  .hero-quick       { order: 7; margin-top: 0; }
+
+  /* M1: hero side-stack → horizontal scroll-snap carousel */
+  .hero-stage {
+    grid-template-columns: 1fr !important;
+    min-height: unset;
+    gap: 14px;
+  }
+  .hero-stage .side-stack {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding: 2px 2px 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .hero-stage .side-stack::-webkit-scrollbar { display: none; }
+  .hero-stage .side-stack .hero-card {
+    flex: 0 0 88% !important;
+    scroll-snap-align: center;
+  }
+  .hero-stage .phone-wrap { max-width: 260px; }
+  .mob-dots {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 4px;
+  }
+  .mob-dots .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--ink-faint); opacity: 0.45;
+    transition: all 0.2s;
+  }
+  .mob-dots .dot.active {
+    background: var(--teal); opacity: 1; transform: scale(1.35);
+  }
+
+  /* M4: pipeline 3-col → horizontal swipe */
+  .pipe-body {
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    min-height: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pipe-body::-webkit-scrollbar { display: none; }
+  .pipe-explain, .pipe-arch, .pipe-phone {
+    flex: 0 0 92% !important;
+    scroll-snap-align: center;
+    border-right: none !important;
+    border-bottom: 1px solid var(--line-soft) !important;
+  }
+  .pipe-phone { border-bottom: none !important; }
+
+  /* M5: insights gallery + week strip → horizontal swipe */
+  .gallery-grid {
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery-grid::-webkit-scrollbar { display: none; }
+  .gallery-grid .gal-card {
+    flex: 0 0 86% !important;
+    scroll-snap-align: center;
+  }
+  .week-strip {
+    flex-direction: row !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .week-strip::-webkit-scrollbar { display: none; }
+  .week-strip .seg { flex: 0 0 70% !important; scroll-snap-align: start; }
+
+  /* M6: progressive disclosure */
+  .clamp-mob {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .clamp-mob.open { -webkit-line-clamp: unset; }
+  .more-btn {
+    display: inline-flex; align-items: center;
+    margin-top: 10px;
+    padding: 4px 0;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    text-transform: uppercase;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .more-btn::after { content: ' →'; margin-left: 4px; transition: transform 0.2s; }
+  .more-btn.open::after { content: ' ↑'; }
+
+  /* 5C.1: Fabric grid → horizontal swipe carousel (heaviest mobile section) */
+  .fabric-grid {
+    display: flex !important;
+    flex-direction: row;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fabric-grid::-webkit-scrollbar { display: none; }
+  .fabric-card { flex: 0 0 82% !important; scroll-snap-align: center; }
+  .fabric-wrap { position: relative; }
+  .fabric-swipe-hint {
+    display: block;
+    font-family: 'Geist Mono', monospace;
+    font-size: 10px; letter-spacing: 0.1em;
+    color: var(--ink-mute); text-transform: uppercase;
+    margin: 10px 0 0;
+  }
+
+  /* 5C.1: reusable section-level progressive disclosure */
+  .m-collapse:not(.m-open) { display: none; }
+  .m-collapse.m-open { animation: mFade 0.3s ease; }
+  @keyframes mFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .m-toggle {
+    display: flex; width: 100%;
+    align-items: center; justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px; padding: 13px 0;
+    min-height: 44px;
+    background: none; border: none;
+    border-top: 1px solid var(--line);
+    color: var(--teal);
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: left;
+  }
+  .m-toggle .chev { transition: transform 0.3s ease; font-size: 9px; flex-shrink: 0; }
+  .m-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  /* thesis: block-flow so .right collapses cleanly (grid items leak max-height) */
+  #thesis .thesis-grid { display: block; }
+  #thesis .thesis-grid > div:first-child { margin-bottom: 8px; }
+  /* button label replaces the inner h4 to avoid redundancy */
+  #thesis .thesis-grid .right h4 { display: none; }
+
+  /* 5C.3 perf: drop backdrop-blur on scroll-repainting fixed bars (mobile paint cost) */
+  nav.top { backdrop-filter: none; -webkit-backdrop-filter: none; background: color-mix(in srgb, var(--bg) 94%, transparent); }
+  .mob-secnav { backdrop-filter: none; -webkit-backdrop-filter: none; background: color-mix(in srgb, var(--bg) 96%, transparent); }
+
+  /* M7: sticky bottom section nav */
+  body { padding-bottom: 56px; }
+  .mob-secnav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 48px;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+    border-top: 1px solid var(--line);
+    z-index: 70;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    padding: 0 10px;
+    gap: 2px;
+  }
+  .mob-secnav::-webkit-scrollbar { display: none; }
+  .mob-secnav button {
+    flex: 0 0 auto;
+    min-width: 44px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--ink-mute);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .mob-secnav button.active {
+    color: var(--teal);
+    background: var(--surface);
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+  .mob-secnav .mob-secnav-menu {
+    margin-left: auto;
+    width: 36px; height: 36px;
+    padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-left: 1px solid var(--line);
+    border-radius: 0;
+    background: var(--surface);
+    color: var(--ink-mute);
+    flex-shrink: 0;
+    position: sticky;
+    right: 0;
+  }
+  .mob-secnav .mob-secnav-menu:hover { color: var(--teal); }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="top">
+  <div class="wrap inner">
+    <a class="brand" href="#">
+      <picture>
+        <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
+        <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" decoding="async">
+      </picture>
+      <span class="word">VitaCrypt</span>
+      <span class="tag">MVP</span>
+    </a>
+    <div class="tabs">
+      <a href="#pillars">Platform</a>
+      <a href="#pipeline" class="demo-link"><span class="pulse"></span>Walkthrough</a>
+      <a href="litepaper.html">Read paper</a>
+      <a href="#case">Case</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="investor.html">Investors</a>
+    </div>
+    <div class="right">
+      <button class="t-toggle" id="themeToggle" aria-label="toggle theme">
+        <svg id="themeIcon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M11.5 8.5a4.5 4.5 0 0 1-6-6 4.5 4.5 0 1 0 6 6Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <a class="cta-pill" href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Join waitlist</a>
+      <button class="burger" id="burgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+          <line x1="0" y1="1" x2="20" y2="1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="0" y1="13" x2="20" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== MOBILE DRAWER ========== -->
+<div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+<aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+  <header>
+    <span id="drawerTitle" class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+  <nav class="drawer-nav" aria-label="Sections">
+    <a href="#pillars" data-drawer-link>Four pillars overview</a>
+    <a href="#pipeline" data-drawer-link>Walkthrough</a>
+    <a href="#case" data-drawer-link>Case study</a>
+    <a href="#roadmap" data-drawer-link>Roadmap</a>
+    <a href="#why" data-drawer-link>Why now</a>
+    <a href="#investors" data-drawer-link>For investors</a>
+    <span class="drawer-sep" aria-hidden="true"></span>
+    <a href="investor.html" data-drawer-link>Investor page →</a>
+    <a href="platform.html" data-drawer-link>The platform — deep dive →</a>
+    <a href="litepaper.html" data-drawer-link>Read litepaper →</a>
+  </nav>
+  <footer class="drawer-foot">
+    <button id="drawerThemeToggle" class="drawer-theme-btn" aria-label="Toggle theme">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M11.5 8.5a4.5 4.5 0 0 1-6-6 4.5 4.5 0 1 0 6 6Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Toggle theme</span>
+    </button>
+    <a class="cta-pill drawer-cta" href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Join waitlist</a>
+  </footer>
+</aside>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="wrap inner">
+    <div>
+      <div class="status">
+        <span class="dot"></span>
+        <span><strong>MVP in development</strong> · private beta Q4 2026</span>
+      </div>
+
+      <h1>Your biology, <span class="accent">read by no one.</span></h1>
+
+      <p class="lead lead-punch">
+        Every wearable reads one signal. We read <em>all of them</em> — plus your DNA, your environment, and the latest science — without ever seeing your data.
+      </p>
+
+      <p class="lead">
+        VitaCrypt encrypts your DNA, wearable, and environment signals under a key only you hold. A blind server analyzes them on ciphertext alone. Microbiome and lab connections follow in 2027.
+      </p>
+
+      <div class="hero-cta">
+        <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-glow">
+          Join the waitlist
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#pipeline" class="btn btn-ghost">See it work</a>
+      </div>
+
+      <div class="hero-quick">
+        <span>End-to-end encrypted</span>
+        <span>6 data layers unified</span>
+        <span>Evidence-cited</span>
+      </div>
+    </div>
+
+    <!-- Phone + unified profile + ciphertext stream stage -->
+    <div class="hero-stage" id="heroStage">
+      <!-- LEFT COLUMN: profile + ciphertext stacked -->
+      <div class="side-stack">
+
+        <!-- UNIFIED PROFILE -->
+        <div class="hero-card profile" id="heroProfile">
+        <div class="hc-head">
+          <span>Unified profile · on device</span>
+          <span class="live-dot">Preview</span>
+        </div>
+        <div class="completion">
+          <div class="pct">94<span class="of">/ 100</span></div>
+          <div class="label">6 sources<br>synced 2m ago</div>
+        </div>
+        <div class="source-rows">
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M3 3c0 4 8 4 8 8M11 3c0 4-8 4-8 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+            <span class="name">Genetics · 23andMe</span>
+            <span class="meta">WGS · ✓</span>
+            <span class="src-bar"><span class="fill" style="--gap: 0%"></span></span>
+          </div>
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><rect x="4" y="2" width="6" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="10" r="0.7" fill="currentColor"/></svg></span>
+            <span class="name">Apple Watch</span>
+            <span class="meta">14d · live</span>
+            <span class="src-bar"><span class="fill live" style="--gap: 0%"></span></span>
+          </div>
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M2 7h10M7 2c1.5 2 1.5 8 0 10M7 2c-1.5 2-1.5 8 0 10" stroke="currentColor" stroke-width="0.9"/></svg></span>
+            <span class="name">PurpleAir · 1.2km</span>
+            <span class="meta">live</span>
+            <span class="src-bar"><span class="fill live" style="--gap: 0%"></span></span>
+          </div>
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M5 2v4l-2.5 5.2a1 1 0 0 0 .9 1.4h7.2a1 1 0 0 0 .9-1.4L9 6V2M4 2h6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+            <span class="name">LabCorp · CRP/ApoB</span>
+            <span class="meta">8w</span>
+            <span class="src-bar"><span class="fill" style="--gap: 0%"></span></span>
+          </div>
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><circle cx="4.5" cy="4.5" r="1.6" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="6.5" r="2" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="10" r="1.4" stroke="currentColor" stroke-width="1.2"/></svg></span>
+            <span class="name">Tiny Health · gut</span>
+            <span class="meta">30d</span>
+            <span class="src-bar"><span class="fill" style="--gap: 8%"></span></span>
+          </div>
+          <div class="src-row">
+            <span class="glyph"><svg width="11" height="11" viewBox="0 0 14 14" fill="none"><path d="M3 11v-2a4 4 0 1 1 8 0v2M7 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.2"/></svg></span>
+            <span class="name">Daily check-in</span>
+            <span class="meta">6/7</span>
+            <span class="src-bar"><span class="fill" style="--gap: 14%"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT SERVERS SEE — stacked below profile -->
+      <div class="hero-card cipher">
+        <div class="hc-head">
+          <span>Vitacrypt servers see</span>
+          <span class="live-dot danger-tag">TFHE</span>
+        </div>
+        <div class="cipher-stream" id="cipherStream">
+          <div class="row">9F3B C24E 7AD1 8802 F15C B43E AA90</div>
+          <div class="row">E14A 6B2D 0C81 9F77 33EE 2B0A C5D1</div>
+          <div class="row dim">7E22 D198 4F0B AC73 5601 E88A 12FD</div>
+          <div class="row">B6C0 4D29 71F4 8E32 0A95 C8B7 5E2D</div>
+          <div class="row dim">3F71 EA08 95BC 6D40 22CF 49A1 D830</div>
+        </div>
+        <div class="cipher-foot">
+          <span>Mathematical noise</span>
+          <span class="zero">0 bytes readable</span>
+        </div>
+      </div>
+
+      </div><!-- /side-stack -->
+
+      <div class="mob-dots" id="heroDots" aria-hidden="true">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!-- PHONE — right column -->
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="phone-statusbar">
+              <span>9:41</span>
+              <span>● ● ● ●</span>
+            </div>
+            <div class="phone-app">
+              <div class="app-head">
+                <span class="app-title">Today · David</span>
+                <span class="lock-pill">
+                  <svg viewBox="0 0 9 9" fill="none"><path d="M2 4V3a2.5 2.5 0 0 1 5 0v1m-5 0h5v4H2V4Z" stroke="currentColor" stroke-width="0.8"/></svg>
+                  Encrypted
+                </span>
+              </div>
+
+              <div class="headline">Today, your air is fighting <span class="accent">your folate cycle.</span></div>
+
+              <div class="phone-card">
+                <div class="head">
+                  <span>Priority insight</span>
+                  <span class="tag">Act today</span>
+                </div>
+                <div class="body">
+                  <strong>PM2.5 forecast 78 μg/m³</strong> · your MTHFR variant slows inflammation clearance. Shift cardio to <span class="em-teal">6–9am low-AQI window</span>; HEPA auto-triggers at 14:00.
+                </div>
+                <div class="meta">
+                  <span>Cited · PubMed +4</span>
+                  <span>Confidence 92%</span>
+                </div>
+              </div>
+
+              <div class="phone-mini-grid">
+                <div class="phone-mini">
+                  <div class="lbl">HRV · 3d</div>
+                  <div class="v">38<span class="unit">ms</span></div>
+                  <div class="delta warn">↓ 22%</div>
+                </div>
+                <div class="phone-mini">
+                  <div class="lbl">Air · home</div>
+                  <div class="v">52<span class="unit">μg/m³</span></div>
+                  <div class="delta warn">↑ p97</div>
+                </div>
+                <div class="phone-mini">
+                  <div class="lbl">Folate</div>
+                  <div class="v">5-MTHF</div>
+                  <div class="delta">Optimal form</div>
+                </div>
+                <div class="phone-mini">
+                  <div class="lbl">Sleep</div>
+                  <div class="v">7h 12m</div>
+                  <div class="delta">On target</div>
+                </div>
+              </div>
+
+              <div class="phone-tabbar">
+                <div class="tb active"><div class="ic"></div>Today</div>
+                <div class="tb"><div class="ic"></div>Trends</div>
+                <div class="tb"><div class="ic"></div>Protocol</div>
+                <div class="tb"><div class="ic"></div>Sources</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT SERVERS SEE — bottom left -->
+
+    </div><!-- /hero-stage -->
+  </div><!-- /wrap inner -->
+</header>
+
+<!-- ========== FACTS ========== -->
+<div class="facts">
+  <div class="fact"><div class="num">6</div><div class="lbl">Layers unified · DNA · microbiome · wearable · lab · environment · PROMIS survey</div></div>
+  <div class="fact"><div class="num">TFHE</div><div class="lbl">Compute on ciphertext · Zama Concrete ML target stack</div></div>
+  <div class="fact"><div class="num">0</div><div class="lbl">Bytes ever decrypted on VitaCrypt infrastructure</div></div>
+  <div class="fact"><div class="num">~40M</div><div class="lbl">Records indexed across PubMed &amp; Cochrane · cross-referenced per recommendation</div></div>
+</div>
+
+<!-- ========== FOUR PILLARS OVERVIEW ========== -->
+<section id="pillars">
+  <div class="wrap">
+    <div class="eyebrow">The platform</div>
+    <h2 class="stitle">Four pillars. One encrypted profile.</h2>
+    <p class="lede">Most tools do one of these. The value is in how they compound. Here's the whole platform in one view — open any pillar for the full detail.</p>
+
+    <div class="pillars-grid">
+      <a class="pillar-card" href="platform.html#unified">
+        <div class="pc-head"><span class="pc-ix">01</span><span class="pc-tag">Unified</span></div>
+        <h3>Six streams, one profile</h3>
+        <p>DNA, microbiome, wearables, labs, environment, and self-report — fused on your device into a single queryable profile.</p>
+        <span class="pc-more">Explore →</span>
+      </a>
+      <a class="pillar-card" href="platform.html#evidence">
+        <div class="pc-head"><span class="pc-ix">02</span><span class="pc-tag">Cited</span></div>
+        <h3>Backed by live science</h3>
+        <p>Every recommendation traces to PubMed, Cochrane, GWAS and clinical guidance — re-evaluated as new evidence lands.</p>
+        <span class="pc-more">Explore →</span>
+      </a>
+      <a class="pillar-card" href="platform.html#encrypted">
+        <div class="pc-head"><span class="pc-ix">03</span><span class="pc-tag">Encrypted</span></div>
+        <h3>Computed, never seen</h3>
+        <p>Fully homomorphic encryption: our servers run the analysis on ciphertext. Without your key it's mathematical noise.</p>
+        <span class="pc-more">Explore →</span>
+      </a>
+      <a class="pillar-card" href="platform.html#personalized">
+        <div class="pc-head"><span class="pc-ix">04</span><span class="pc-tag">Personalized</span></div>
+        <h3>Your genes × your world</h3>
+        <p>The same biology reads differently by genotype and local environment. Guidance adapts to <em>you</em>, not the median.</p>
+        <span class="pc-more">Explore →</span>
+      </a>
+    </div>
+
+    <div class="pillars-cta">
+      <a href="platform.html" class="btn btn-glow">
+        Explore the platform
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THESIS ========== -->
+<section id="thesis">
+  <div class="wrap">
+    <div class="eyebrow">01 · Thesis</div>
+    <h2 class="stitle">Most health apps see your raw data. We don't.</h2>
+
+    <div class="thesis-grid">
+      <div>
+        <p class="clamp-mob">The most valuable signals about your health — your DNA, your microbiome, your bloodwork — are the ones you should trust the fewest companies with. Today the deal is binary: hand over plaintext biology, or live with advice tuned to the median human who doesn't exist.</p>
+        <p class="clamp-mob"><strong>Fully Homomorphic Encryption changes the bargain.</strong> Your phone encrypts under a key only you hold (iOS&nbsp;Keychain / Android&nbsp;Keystore). Our compute servers run analysis directly on the ciphertext. Without your key, the data is mathematically indistinguishable from noise.<sup><a href="litepaper.html#threat">1</a></sup></p>
+      </div>
+      <div class="right" data-mcollapse="The four failures we replace">
+        <h4>The four failures we replace</h4>
+        <div class="item">
+          <strong>Fragmentation</strong>
+          Wearables, DNA kits, labs, and doctors all hold pieces. The patterns live <em>between</em> them.
+        </div>
+        <div class="item">
+          <strong>Exposed plaintext</strong>
+          "At-rest encryption" is marketing. Analysis still decrypts on someone else's server.
+        </div>
+        <div class="item">
+          <strong>Generic advice</strong>
+          Optimized for the median person. Ignores genotype, microbiome, and local context.
+        </div>
+        <div class="item">
+          <strong>Environmental blindness</strong>
+          No tool fuses outdoor air, exposures, and biology against <em>your</em> vulnerabilities.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DATA FABRIC ========== -->
+<section id="fabric">
+  <div class="wrap">
+    <div class="eyebrow">02 · The data fabric</div>
+    <h2 class="stitle">Six streams of biology. One queryable profile.</h2>
+    <p class="lede clamp-mob">Encryption is one pillar; the other is the scope of what we unify. Wearable APIs (unified via <strong>Terra API</strong>), open environmental data, lab results, microbiome assays, genetic reports, and NIH-validated <strong>PROMIS</strong> short-forms — all pulled together on the device, in your possession, before anything is encrypted or transmitted.</p>
+
+    <div class="fabric-wrap">
+      <span class="fabric-swipe-hint">Swipe all six sources →</span>
+      <div class="fabric-grid">
+        <div class="fabric-card">
+          <div class="hd">
+            <span class="ix">SOURCE 01</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 3c0 4 8 4 8 8M11 3c0 4-8 4-8 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+          <h4>Genetics</h4>
+          <p class="why">DNA reports surface variants that change what every other recommendation should mean for this person — folate cycle, lipid handling, methylation, caffeine clearance, exercise response.</p>
+          <div class="sources">
+            <span class="src">23andMe</span>
+            <span class="src">AncestryDNA</span>
+            <span class="src">Nebula WGS</span>
+            <span class="src">Self-decoded raw</span>
+          </div>
+        </div>
+
+        <div class="fabric-card">
+          <div class="hd">
+            <span class="ix">SOURCE 02</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="2" width="6" height="10" rx="1.5" stroke="currentColor" stroke-width="1.1"/><circle cx="7" cy="10" r="0.7" fill="currentColor"/></svg>
+            </span>
+          </div>
+          <h4>Wearables</h4>
+          <p class="why">Continuous physiology — HRV, resting heart, sleep stages, recovery, respiration, body temperature, daily activity load. The minute-by-minute reaction to everything else we measure.</p>
+          <div class="sources">
+            <span class="src live">Apple Watch</span>
+            <span class="src live">Oura</span>
+            <span class="src live">Whoop</span>
+            <span class="src">Fitbit</span>
+            <span class="src">Garmin</span>
+          </div>
+        </div>
+
+        <div class="fabric-card">
+          <div class="hd">
+            <span class="ix">SOURCE 03</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2v4l-2.5 5.2a1 1 0 0 0 .9 1.4h7.2a1 1 0 0 0 .9-1.4L9 6V2M4 2h6" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+          <h4>Labs &amp; blood</h4>
+          <p class="why">CRP, ApoB, fasting glucose, HbA1c, vitamin D, B12, iron, lipid panels. The objective check against the wearable signal — what your physiology is actually doing under the skin.</p>
+          <div class="sources">
+            <span class="src">Manual upload</span>
+            <span class="src">Quest portal</span>
+            <span class="src">LabCorp portal</span>
+            <span class="src">Function Health</span>
+          </div>
+        </div>
+
+        <div class="fabric-card">
+          <div class="hd">
+            <span class="ix">SOURCE 04</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4.5" cy="4.5" r="1.6" stroke="currentColor" stroke-width="1.1"/><circle cx="9.5" cy="6.5" r="2" stroke="currentColor" stroke-width="1.1"/><circle cx="5.5" cy="10" r="1.4" stroke="currentColor" stroke-width="1.1"/></svg>
+            </span>
+          </div>
+          <h4>Microbiome</h4>
+          <p class="why">Gut composition shapes inflammation, mood, nutrient absorption, and how a person responds to any dietary protocol. The map between food, stress, and outcome only makes sense with it.</p>
+          <div class="sources">
+            <span class="src">Viome</span>
+            <span class="src">Tiny Health</span>
+            <span class="src">Sun Genomics</span>
+            <span class="src">Bristol surveys</span>
+          </div>
+        </div>
+
+        <div class="fabric-card">
+          <div class="hd">
+            <span class="ix">SOURCE 05</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M2 7h10M7 2c1.5 2 1.5 8 0 10M7 2c-1.5 2-1.5 8 0 10" stroke="currentColor" stroke-width="0.9"/></svg>
+            </span>
+          </div>
+          <h4>Environment</h4>
+          <p class="why">PM2.5, ozone, pollen, UV, indoor humidity, water quality, ambient noise. The boundary condition every cell in the body is reacting to in real time — and the one most people never see.</p>
+          <div class="sources">
+            <span class="src live">PurpleAir</span>
+            <span class="src live">IQAir</span>
+            <span class="src live">OpenWeather</span>
+            <span class="src">NASA AQ</span>
+            <span class="src">USGS water</span>
+          </div>
+        </div>
+
+        <div class="fabric-card is-profile">
+          <div class="hd">
+            <span class="ix">SOURCE 06</span>
+            <span class="ic">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11v-2a4 4 0 1 1 8 0v2M7 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.1"/></svg>
+            </span>
+          </div>
+          <h4>Lifestyle &amp; PROMIS</h4>
+          <p class="why">Stress, sleep quality, mood, diet logs, supplement stack, work load — captured via NIH-validated <strong>PROMIS</strong> short-forms. The user's <strong>own annotation</strong> of why this week looks the way it does — context the data alone won't surface.</p>
+          <div class="sources">
+            <span class="src">Daily check-in</span>
+            <span class="src">Symptom diary</span>
+            <span class="src">Supplement log</span>
+            <span class="src">PROMIS short-form</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fabric-foot">
+        <div class="l">All six streams resolve into <strong>one unified profile</strong> on your device · then encrypted under your key before any byte leaves.</div>
+        <div class="legend">
+          <span><span class="dot"></span>Direct API · at MVP launch</span>
+          <span><span class="dot q"></span>Upload / partner</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LIVE RESEARCH (Pillar 3) ========== -->
+<section id="research">
+  <div class="wrap">
+    <div class="eyebrow">03 · Live science</div>
+    <h2 class="stitle">Every recommendation cites its source.</h2>
+    <p class="lede clamp-mob">Most health apps tell you what was true in 2018. We tell you what was published this week. Recommendations re-evaluate every time a new paper, GWAS hit, or regulatory update lands in one of the corpora below.</p>
+
+    <div class="research-corpora" data-mcollapse="The 8 sources we query live">
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>PubMed</div>
+        <p class="why">~40M indexed records · NLM open data · queried live</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>OpenAlex</div>
+        <p class="why">~250M scholarly works · open-access first ranking · full text where licensed</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>GWAS Catalog</div>
+        <p class="why">Variant-trait associations · curated genome-wide hits · EBI/NHGRI</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>ClinVar</div>
+        <p class="why">Variant-clinical-significance mapping · NCBI · daily updates</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>USPSTF</div>
+        <p class="why">US Preventive Services Task Force · grade A/B recommendations</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>WHO</div>
+        <p class="why">Global clinical guidance · WHO Guidelines · cohort & trial data</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>NICE</div>
+        <p class="why">UK National Institute for Health and Care Excellence · clinical pathways</p>
+      </div>
+      <div class="corpus">
+        <div class="nm"><span class="dot"></span>Cochrane</div>
+        <p class="why">~4,500 systematic reviews · evidence weighting · meta-analysis</p>
+      </div>
+    </div>
+
+    <div class="research-arch">
+      <div class="k">Architecture</div>
+      <div>
+        <p>An agent watches the public science for you — across all eight corpora above. <strong>The model only reads public papers.</strong> Your encrypted profile never reaches the model. The match between a paper's findings and your profile happens <strong>under FHE — cryptographically, not by sending your data anywhere.</strong></p>
+        <div class="out">Full source menu, model layer, and matching protocol in the <a href="litepaper.html#engine">litepaper →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PIPELINE — combined arch + live demo ========== -->
+<section id="pipeline">
+  <div class="wrap">
+    <div class="eyebrow">04 · The architecture · live</div>
+    <h2 class="stitle">Walk through the architecture.</h2>
+    <p class="lede">Click any stage. The architecture, the encryption state, and the phone respond together. Auto-plays on first scroll.</p>
+
+    <div class="pipe-wrap">
+      <div class="pipe-head">
+        <div class="ttl"><span id="pipeHeadLabel">STAGE 01 / COLLECT</span></div>
+        <div class="pipe-tabs">
+          <button class="active" data-step="0">01 COLLECT</button>
+          <button data-step="1">02 ENCRYPT</button>
+          <button data-step="2">03 COMPUTE</button>
+          <button data-step="3">04 ACT</button>
+        </div>
+      </div>
+
+      <div class="pipe-body">
+        <!-- LEFT: explanation in plain language -->
+        <div class="pipe-explain">
+          <div class="stage-tag"><span class="box" id="stTagBox">01</span> <span id="stTagText">COLLECT</span></div>
+          <h3 id="stTitle">A unified profile, drawn from every source.</h3>
+          <div class="summary" id="stSummary">
+            Wearables (via Terra API), DNA, microbiome, labs, environment, and PROMIS surveys ingest on-device into a single living profile. <strong>Nothing has left the device yet.</strong>
+          </div>
+          <div class="what">
+            <div class="lbl">What this looks like in practice</div>
+            <ul id="stWhatList">
+              <li>Upload 23andMe / AncestryDNA reports</li>
+              <li>Connect Apple Watch or Oura ring</li>
+              <li>Pull air-quality + UV from your location</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MIDDLE: visual architecture -->
+        <div class="pipe-arch">
+          <div class="arch-stage">
+            <div class="arch-key left" id="archKeyLeft">🔑 KEY · ON DEVICE</div>
+            <div class="arch-key middle" id="archKeyMiddle">CIPHERTEXT ONLY</div>
+            <div class="arch-key right" id="archKeyRight">🔑 KEY · ON DEVICE</div>
+
+            <div class="arch-node left" id="archLeft">
+              <div class="frame active">
+                <div class="ringer"></div>
+                <div class="content">
+                  <div class="bar tall"></div>
+                  <div class="bar short"></div>
+                  <div class="bar teal"></div>
+                  <div class="bar short"></div>
+                  <div class="bar"></div>
+                  <div class="bar short"></div>
+                </div>
+              </div>
+              <div class="label">Your device<span class="sub">Raw biology</span></div>
+            </div>
+
+            <div class="arch-node server center" id="archCenter">
+              <div class="frame">
+                <div class="content">
+                  <div class="lat">VITACRYPT COMPUTE</div>
+                  <div class="ct"></div>
+                  <div class="lat">// no decryption</div>
+                </div>
+              </div>
+              <div class="label">FHE compute<span class="sub">Sees only noise</span></div>
+            </div>
+
+            <div class="arch-node right" id="archRight">
+              <div class="frame">
+                <div class="ringer"></div>
+                <div class="content">
+                  <div class="bar short"></div>
+                  <div class="bar tall"></div>
+                  <div class="bar teal"></div>
+                  <div class="bar"></div>
+                  <div class="bar short teal"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+              <div class="label">Your device<span class="sub">Insight, decrypted</span></div>
+            </div>
+
+            <div class="arch-flow">
+              <div class="arch-spacer"></div>
+              <div class="arch-arrow" id="archArrow1">
+                <span class="lbl">encrypt →</span>
+                <svg viewBox="0 0 100 28" preserveAspectRatio="none">
+                  <line class="line" x1="2" y1="14" x2="92" y2="14"/>
+                  <polygon class="arrowhead" points="92,9 100,14 92,19"/>
+                </svg>
+              </div>
+              <div class="arch-spacer wide"></div>
+              <div class="arch-arrow" id="archArrow2">
+                <span class="lbl">return ciphertext →</span>
+                <svg viewBox="0 0 100 28" preserveAspectRatio="none">
+                  <line class="line" x1="2" y1="14" x2="92" y2="14"/>
+                  <polygon class="arrowhead" points="92,9 100,14 92,19"/>
+                </svg>
+              </div>
+              <div class="arch-spacer"></div>
+            </div>
+
+            <div class="arch-foot">KEYS NEVER LEAVE THE TWO DEVICES</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: live phone state -->
+        <div class="pipe-phone">
+          <div class="col-lbl">// product · what david sees</div>
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="mini-stage-tag" id="phoneStage">Connecting sources</div>
+              <div class="mini-body" id="phoneBody">
+                <!-- populated by JS -->
+              </div>
+            </div>
+          </div>
+          <div class="caption" id="phoneCaption">
+            Sources sync locally. Nothing has been transmitted.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DIFFERENTIATION ========== -->
+<section id="diff">
+  <div class="wrap">
+    <div class="eyebrow">05 · Versus the field</div>
+    <h2 class="stitle">Unified health profiles always meant centralized databases. Until now.</h2>
+    <p class="lede">Keep your Oura. Keep your Apple Watch. Keep your Whoop. We connect to all of them — and add what they can't see. Three axes where the consumer health stack breaks down — and what we do instead.</p>
+
+    <div class="diff-banner">
+      <div class="hd">What only VitaCrypt adds — beyond your wearable</div>
+      <div class="diff-banner-grid">
+        <div class="item">
+          <h4><span class="ix">01</span>DNA &amp; genetics</h4>
+          <p>Upload 23andMe / AncestryDNA / Nebula WGS — analyzed on-device, never sent.</p>
+        </div>
+        <div class="item">
+          <h4><span class="ix">02</span>Microbiome</h4>
+          <p>Upload Tiny Health, Viome, or uBiome — gut signal in context with everything else.</p>
+        </div>
+        <div class="item">
+          <h4><span class="ix">03</span>Labs &amp; hormones</h4>
+          <p>Bring your own from Quest, Labcorp, Function, Superpower. We don't resell tests.</p>
+        </div>
+        <div class="item">
+          <h4><span class="ix">04</span>Live environment</h4>
+          <p>PM2.5, pollen, UV from AirNow / OpenWeather / Pollen API at your exact location.</p>
+        </div>
+      </div>
+      <div class="footnote">
+        <span class="k">Privacy moat</span>And the only one in this category where data never leaves your device unencrypted. <em>npj Digital Medicine</em> (2025) flagged Oura, Whoop, and Fitbit for permissive data-sharing terms.
+      </div>
+    </div>
+
+    <div class="diff-grid" data-mcollapse="See the three-way comparison">
+      <div class="diff-card">
+        <div class="ix">01 · ENCRYPTION</div>
+        <h3>Decrypt to compute, or don't compute.</h3>
+        <p>Every player in the category encrypts at rest, then decrypts the moment they want to look at it. A breach is permanent: you can rotate a password, not a genome.</p>
+        <div class="vs">
+          <div class="row them"><span class="k">Others</span><span>At-rest only. Plaintext during compute.</span></div>
+          <div class="row us"><span class="k">VitaCrypt</span><span>FHE end-to-end. Compute on ciphertext.</span></div>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="ix">02 · DATA SCOPE</div>
+        <h3>One slice doesn't see the pattern.</h3>
+        <p>Wearables know sleep. DNA kits know genes. Labs know markers. No single tool fuses six layers against your local environment in real time.</p>
+        <div class="vs">
+          <div class="row them"><span class="k">Others</span><span>One silo (wearable / DNA / labs).</span></div>
+          <div class="row us"><span class="k">VitaCrypt</span><span>Six layers, unified, contextualized.</span></div>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="ix">03 · OWNERSHIP</div>
+        <h3>You hold the only key.</h3>
+        <p>In the consumer health stack, you are the data and the data is the asset. We invert that — your key, on your hardware, is the only way the insights become readable.</p>
+        <div class="vs">
+          <div class="row them"><span class="k">Others</span><span>Platform owns and monetizes data.</span></div>
+          <div class="row us"><span class="k">VitaCrypt</span><span>You hold the key. We can't read it.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CASE ========== -->
+<section id="case">
+  <div class="wrap">
+    <div class="eyebrow">06 · Case study</div>
+    <h2 class="stitle">25, Los Angeles, breathing on the 97th percentile.</h2>
+    <p class="lede">A composite case from the litepaper. Values illustrative, methodology real.</p>
+
+    <div class="case-wrap">
+      <div class="case-grid">
+        <div class="case-profile">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="26" r="8.5" fill="rgba(244,245,242,0.92)"/>
+              <path d="M14 64 c0 -11 8 -19 18 -19 s18 8 18 19" fill="rgba(244,245,242,0.92)"/>
+              <circle cx="32" cy="32" r="30" stroke="color-mix(in srgb, var(--teal) 40%, transparent)" stroke-width="0.8" stroke-dasharray="2 3" fill="none"/>
+            </svg>
+          </div>
+          <h4>David</h4>
+          <div class="role">Engineer, Echo Park</div>
+          <div class="fields">
+            <div><span class="k">Age</span><span class="v">25</span></div>
+            <div><span class="k">PM2.5 zone</span><span class="v">p97</span></div>
+            <div><span class="k">MTHFR</span><span class="v">C677T (TT)</span></div>
+            <div><span class="k">APOE</span><span class="v">3/4</span></div>
+            <div><span class="k">Wearable</span><span class="v">Apple Watch</span></div>
+            <div><span class="k">Sources</span><span class="v">5</span></div>
+          </div>
+        </div>
+
+        <div class="case-narrative">
+          <h3>Healthy on paper — until you connect the signals.</h3>
+          <p class="clamp-mob">David sleeps seven hours, exercises four times a week, eats well. He also lives where ambient PM2.5 routinely exceeds the WHO guideline by 5×, carries an <strong>MTHFR C677T (TT)</strong> variant that blunts folate-to-5MTHF conversion (his homocysteine runs high on a "normal" diet), and an <strong>APOE ε3/ε4</strong> that makes him cardiovascularly sensitive to the air his commute pipes into his lungs. No single app sees both. VitaCrypt does.</p>
+
+          <div class="insight-box">
+            <div class="lbl">VitaCrypt insight</div>
+            <div class="body">"Your MTHFR TT plus PM2.5 p97 plus a 22% HRV decline indicates sustained low-grade inflammatory pressure on a vascular system your APOE 3/4 already taxes. Activate home HEPA on forecast windows; supplement <em>methylated</em> folate (5-MTHF) + DHA; shift cardio to the 6–9am low-AQI window."</div>
+          </div>
+
+          <div data-mcollapse="Show the protocol &amp; privacy guarantee">
+            <h3>The protocol</h3>
+            <div class="protocol">
+              <div class="row"><span class="tag">DIET</span><span class="txt">Methylated folate (5-MTHF), DHA-rich foods, prebiotic fiber for stress-driven dysbiosis.</span></div>
+              <div class="row"><span class="tag">ENV</span><span class="txt">HEPA auto-triggers when forecast AQI &gt; 100. Outdoor cardio reschedules to 6–9am.</span></div>
+              <div class="row"><span class="tag">RECOVERY</span><span class="txt">Replace one HIIT/week with zone-2 cardio until HRV recovers ≥10%.</span></div>
+              <div class="row"><span class="tag">TRACKING</span><span class="txt">Re-evaluate inflammatory markers in 8 weeks — encrypted intake.</span></div>
+            </div>
+
+            <h3>What never happened</h3>
+            <p>At no point did David's genotype, his HRV time series, or his location-bound PM2.5 exposure exist on a VitaCrypt server in a form anyone could read. <strong>The economics of a breach collapse when ciphertext is all that lives on the other side.</strong></p>
+          </div>
+        </div>
+
+        <div class="case-device">
+          <div class="col-lbl">// what david receives</div>
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="alert">
+                <div class="h">⚡ Tomorrow · 14:00</div>
+                <div class="b">PM2.5 forecast 78 μg/m³. HEPA armed. Outdoor cardio rescheduled to 7am.</div>
+              </div>
+              <div class="alert" style="background: linear-gradient(180deg, rgba(245,199,126,0.1), rgba(245,199,126,0.02)); border-color: rgba(245,199,126,0.3);">
+                <div class="h" style="color: var(--amber);">🧬 Tonight</div>
+                <div class="b">Add 5-MTHF 800µg with dinner. Skip standard folic acid.</div>
+              </div>
+              <div class="row-3">
+                <div class="chip">
+                  <div class="l">HRV trend</div>
+                  <div class="v">↓ 22%</div>
+                  <div class="delta">6-week</div>
+                </div>
+                <div class="chip">
+                  <div class="l">CRP</div>
+                  <div class="v">3.2<span class="u">mg/L</span></div>
+                  <div class="delta" style="color: var(--amber);">Borderline</div>
+                </div>
+                <div class="chip">
+                  <div class="l">Sleep</div>
+                  <div class="v">7h12</div>
+                  <div class="delta">On target</div>
+                </div>
+                <div class="chip">
+                  <div class="l">Cites</div>
+                  <div class="v">+4</div>
+                  <div class="delta">PubMed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INSIGHTS GALLERY ========== -->
+<section id="insights">
+  <div class="wrap">
+    <div class="eyebrow">07 · A week in the protocol</div>
+    <h2 class="stitle">One person. Three combinations. Three prescriptions.</h2>
+    <p class="lede clamp-mob">A single living profile means the answer changes when the inputs change. Here is David — same biology, same person — across three moments of the same week. Each card is the action VitaCrypt actually puts in front of him.</p>
+
+    <div class="gallery-banner">
+      <div class="left">
+        <div class="who">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="16" r="5.5" fill="rgba(244,245,242,0.92)"/>
+              <path d="M8 40 c0 -7 5 -12 12 -12 s12 5 12 12" fill="rgba(244,245,242,0.92)"/>
+            </svg>
+          </div>
+          <div>
+            <div class="ttl">David · 25 · Los Angeles</div>
+            <div class="sub">Engineer · 6 sources · MTHFR TT · APOE 3/4</div>
+          </div>
+        </div>
+      </div>
+      <div class="vs">
+        <span class="pill">Every other app · same advice all week</span>
+        <span class="arrow">→</span>
+        <span class="pill us">VitaCrypt · re-prescribes daily</span>
+      </div>
+    </div>
+
+    <div class="week-strip">
+      <div class="seg active">
+        <div class="day">Tue · 06:42</div>
+        <div class="moment">Air × MTHFR × HRV</div>
+        <div class="driver">Smoke event tomorrow</div>
+      </div>
+      <div class="seg active">
+        <div class="day">Thu · 19:15</div>
+        <div class="moment">Caffeine × CYP1A2 × sleep debt</div>
+        <div class="driver">3rd late espresso this wk</div>
+      </div>
+      <div class="seg active">
+        <div class="day">Sun · 09:30</div>
+        <div class="moment">Training load × ApoE × ApoB</div>
+        <div class="driver">Weekly protocol reset</div>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- TUESDAY -->
+      <div class="gal-card">
+        <div class="moment">
+          <span class="when">Tue · 06:42</span>
+          <span class="who">Air × MTHFR × HRV</span>
+        </div>
+        <h4>Your air, your folate cycle, your HRV are one story.</h4>
+
+        <div class="signal-meter">
+          <div class="signals">
+            <span class="sig">DNA · MTHFR C677T</span>
+            <span class="sig">Air · PM2.5 p97</span>
+            <span class="sig">Wear · HRV ↓22%</span>
+          </div>
+          <div class="fuse">3 signals → 1 action</div>
+        </div>
+
+        <div class="gal-phone">
+          <div class="gal-screen">
+            <div class="stamp">Today · David</div>
+            <div class="hero-row">
+              <div class="h">⚡ Tomorrow · 14:00</div>
+              <div class="b">PM2.5 forecast 78 μg/m³. HEPA armed. Outdoor cardio → <span class="em-teal">7am low-AQI window.</span></div>
+            </div>
+            <div class="hero-row amber">
+              <div class="h">🧬 Tonight</div>
+              <div class="b">Add 5-MTHF 800µg with dinner. Skip standard folic acid.</div>
+            </div>
+            <div class="row-pair">
+              <div class="chip"><div class="l">PM2.5</div><div class="v">52<span class="u">μg</span></div></div>
+              <div class="chip"><div class="l">HRV 3d</div><div class="v">38<span class="u">ms</span></div></div>
+              <div class="chip"><div class="l">CRP</div><div class="v">3.2<span class="u">mg/L</span></div></div>
+              <div class="chip"><div class="l">Cites</div><div class="v">+4</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="outcome">
+          <span class="metric"><strong>Predicted</strong> · 25% lower inflammation pressure / 8 wk</span>
+          <span class="cited">PubMed +4 · Cochrane +1</span>
+        </div>
+      </div>
+
+      <!-- THURSDAY -->
+      <div class="gal-card">
+        <div class="moment">
+          <span class="when">Thu · 19:15</span>
+          <span class="who">Caffeine × CYP1A2 × debt</span>
+        </div>
+        <h4>Your espresso clears 8 hours slower than the average human.</h4>
+
+        <div class="signal-meter">
+          <div class="signals">
+            <span class="sig">DNA · CYP1A2 *1F slow</span>
+            <span class="sig">Log · espresso 16:40</span>
+            <span class="sig">Sleep · debt +2.1h</span>
+          </div>
+          <div class="fuse">3 signals → 1 action</div>
+        </div>
+
+        <div class="gal-phone">
+          <div class="gal-screen">
+            <div class="stamp">Today · David</div>
+            <div class="hero-row amber">
+              <div class="h">☕ 21:00 cut-off</div>
+              <div class="b">No caffeine after <span style="color: var(--amber);">11:30am</span> on slow-metabolizer days. Your liver still has <span style="color: var(--amber);">62 mg circulating.</span></div>
+            </div>
+            <div class="hero-row">
+              <div class="h">🌙 Tonight</div>
+              <div class="b">Magnesium glycinate 400mg, wind-down 22:30. <span class="em-teal">Skip HIIT.</span> Zone-2 only.</div>
+            </div>
+            <div class="row-pair">
+              <div class="chip"><div class="l">Caffeine</div><div class="v">62<span class="u">mg</span></div></div>
+              <div class="chip"><div class="l">Debt</div><div class="v">+2.1<span class="u">h</span></div></div>
+              <div class="chip"><div class="l">RHR</div><div class="v">64<span class="u">bpm</span></div></div>
+              <div class="chip"><div class="l">Cites</div><div class="v">+3</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="outcome">
+          <span class="metric"><strong>Predicted</strong> · +18 min deep sleep tonight</span>
+          <span class="cited">PubMed +3</span>
+        </div>
+      </div>
+
+      <!-- SUNDAY -->
+      <div class="gal-card">
+        <div class="moment">
+          <span class="when">Sun · 09:30</span>
+          <span class="who">Training × ApoE × ApoB</span>
+        </div>
+        <h4>Your weekly load is helping your heart more than your brain.</h4>
+
+        <div class="signal-meter">
+          <div class="signals">
+            <span class="sig">DNA · APOE 3/4</span>
+            <span class="sig">Lab · ApoB 88 mg/dL</span>
+            <span class="sig">Load · 4× HIIT / wk</span>
+          </div>
+          <div class="fuse">3 signals → 1 action</div>
+        </div>
+
+        <div class="gal-phone">
+          <div class="gal-screen">
+            <div class="stamp">Week 21 · David</div>
+            <div class="hero-row">
+              <div class="h">📈 Next 7 days</div>
+              <div class="b">Swap 2× HIIT → <span class="em-teal">zone-2 + heavy lifting.</span> APOE 3/4 favors lipid-clearing endurance, not stress spikes.</div>
+            </div>
+            <div class="hero-row amber">
+              <div class="h">🥑 Diet</div>
+              <div class="b">Monounsaturated fats ≥40% of intake. ApoB target &lt;80.</div>
+            </div>
+            <div class="row-pair">
+              <div class="chip"><div class="l">ApoB</div><div class="v">88<span class="u">mg/dL</span></div></div>
+              <div class="chip"><div class="l">VO2</div><div class="v">47<span class="u">ml/kg</span></div></div>
+              <div class="chip"><div class="l">HRV 7d</div><div class="v">↑ 4%</div></div>
+              <div class="chip"><div class="l">Cites</div><div class="v">+6</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="outcome">
+          <span class="metric"><strong>Predicted</strong> · ApoB ≤80 in 10 weeks</span>
+          <span class="cited">PubMed +6 · Cochrane +2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-foot">
+      <div>Every other app gives David the same week of advice every week. <strong>VitaCrypt re-runs the protocol on Sunday night</strong> — over the same encrypted profile — and changes the prescription when the signals change. None of these recommendations exist in any single product today.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ROADMAP ========== -->
+<!-- ========== ROADMAP ========== -->
+<section id="roadmap">
+  <div class="wrap-tight">
+    <div class="eyebrow">08 · Trajectory</div>
+    <h2 class="stitle">A measured path to general availability.</h2>
+    <p class="lede">Depth before breadth. Each phase compounds on the last.</p>
+
+    <div class="roadmap-grid">
+      <div class="r-node active">
+        <div class="pip"></div>
+        <div class="when">NOW · Q2–Q3 2026</div>
+        <h5>MVP in development</h5>
+        <p>Encrypted ingestion + closed alpha for the first ~50 design partners. DNA, wearable, environment online.</p>
+      </div>
+      <div class="r-node">
+        <div class="pip"></div>
+        <div class="when">Q4 2026</div>
+        <h5>Private beta</h5>
+        <p>FHE recommendations engine ships. Microbiome integration. Invite-only waitlist activated.</p>
+      </div>
+      <div class="r-node">
+        <div class="pip"></div>
+        <div class="when">Q1 2027</div>
+        <h5>Public beta</h5>
+        <p>Open enrollment + academic-medical-center partnership for IRB-supervised longitudinal validation.</p>
+      </div>
+      <div class="r-node">
+        <div class="pip"></div>
+        <div class="when">H2 2027+</div>
+        <h5>Clinical-grade</h5>
+        <p>HL7/FHIR connectors, clinician decision support, optional HIPAA BAA path for partner providers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHY NOW ========== -->
+<section id="why">
+  <div class="wrap">
+    <div class="eyebrow">09 · Why now</div>
+    <h2 class="stitle">Three curves met in the last eighteen months.</h2>
+    <p class="lede">Zama's encrypted-DNA benchmark hit <strong>96% ancestry-classification accuracy in ~5 minutes</strong> on chromosome 22 (<a href="https://github.com/zama-ai/bounty-program/issues/95">bounty #95</a>, July 2024). Mobile FHE client SDKs (iOS, May 2025) made client-side encryption practical for consumer apps. And the 23andMe breach finished the job of teaching consumers that &quot;we encrypt at rest&quot; is not a privacy story.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">FHE BENCHMARK</div>
+        <div class="val">~300<span class="unit">s</span></div>
+        <div class="desc">Encrypted ancestry inference, whole genome · Zama bounty&nbsp;#95, 1000 Genomes</div>
+      </div>
+      <div class="kpi">
+        <div class="label">ENCRYPTED ACCURACY</div>
+        <div class="val">96<span class="unit">%</span></div>
+        <div class="desc">Matches plaintext baseline on the same task · Zama public benchmark</div>
+      </div>
+      <div class="kpi">
+        <div class="label">23ANDME FALLOUT</div>
+        <div class="val">6.9<span class="unit">M</span></div>
+        <div class="desc">Users breached · $30M settlement, £2.31M ICO fine, Chapter 11, sold for $305M (2023–25)</div>
+      </div>
+      <div class="kpi">
+        <div class="label">CORE STACK</div>
+        <div class="val">Zama</div>
+        <div class="desc">Concrete ML · TFHE · production FHE framework targeted for MVP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOR INVESTORS ========== -->
+<section id="investors">
+  <div class="wrap">
+    <div class="eyebrow">For investors</div>
+    <h2 class="stitle">Backing the privacy layer the health-data race is missing.</h2>
+    <p class="lede">Consumer health is drawing serious capital while every incumbent still holds plaintext. VitaCrypt is a founder-led, pre-MVP startup building the encrypted alternative: analysis under fully homomorphic encryption, so the server never sees your biology. Here is the short version for investors.</p>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">STAGE</div>
+        <div class="val">Pre-MVP</div>
+        <div class="desc">Founder-led, capital-efficient build. Raising to ship the MVP and make the first key hires</div>
+      </div>
+      <div class="kpi">
+        <div class="label">WHY NOW</div>
+        <div class="val">FHE</div>
+        <div class="desc">Client SDKs shipped (2024–25); the 23andMe fallout and the HIPRA bill make the timing</div>
+      </div>
+      <div class="kpi">
+        <div class="label">THE MOAT</div>
+        <div class="val">4-in-1</div>
+        <div class="desc">Encrypted compute, unified data fabric, live-cited science, gene-environment personalization</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="investor.html" class="btn btn-glow">
+        Open the investor page
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="investor.html#contact" class="btn btn-ghost">Request the deck</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL ========== -->
+<section class="final">
+  <div class="wrap-tight">
+    <h2>If your biology is going to be read, it should be by something that can't see.</h2>
+    <p>VitaCrypt opens to its first design partners in Q4 2026. Investors and prospective partners — reach out directly.</p>
+    <div class="hero-cta">
+      <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-glow">
+        Request access
+        <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="litepaper.html" class="btn btn-ghost">Read the litepaper</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="brand-col">
+        <div class="lockup">
+          <picture>
+            <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
+            <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" loading="lazy" decoding="async">
+          </picture>
+          <span>VitaCrypt</span>
+        </div>
+        <p>Private health intelligence on encrypted biology. Encrypted on your device under a key only you hold; analyzed on a blind server. Targeting the Zama Concrete ML / TFHE stack.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#thesis">Thesis</a></li>
+          <li><a href="#pipeline">Walkthrough</a></li>
+          <li><a href="#research">Live research</a></li>
+          <li><a href="#case">Case study</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="investor.html">For investors</a></li>
+          <li><a href="litepaper.html">Litepaper</a></li>
+          <li><a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Waitlist</a></li>
+          <li><a href="https://x.com/vita_crypt">X / Twitter</a></li>
+          <li><a href="https://t.me/vita_crypt">Telegram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@vitacrypt.xyz">hello@vitacrypt.xyz</a></li>
+          <li><a href="mailto:investors@vitacrypt.xyz">Investors</a></li>
+          <li><a href="mailto:press@vitacrypt.xyz">Press</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 VITACRYPT · ALL RIGHTS RESERVED</span>
+      <span>ARCHITECTURE DESIGNED FOR HIPAA/GDPR ALIGNMENT · HIPRA-AWARE · TARGETING ZAMA CONCRETE ML · PRE-MVP</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== MOBILE STICKY SECTION NAV ========== -->
+<nav class="mob-secnav" aria-label="Sections">
+  <button data-target="thesis" aria-label="Thesis">01</button>
+  <button data-target="fabric" aria-label="The data fabric">02</button>
+  <button data-target="research" aria-label="Live science">03</button>
+  <button data-target="pipeline" aria-label="The architecture">04</button>
+  <button data-target="diff" aria-label="Versus the field">05</button>
+  <button data-target="case" aria-label="Case study">06</button>
+  <button data-target="insights" aria-label="A week in the protocol">07</button>
+  <button data-target="roadmap" aria-label="Trajectory">08</button>
+  <button data-target="why" aria-label="Why now">09</button>
+  <button class="mob-secnav-menu" data-action="open-drawer" aria-label="Open menu">
+    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+      <line x1="0" y1="1" x2="16" y2="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="0" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ========== WAITLIST FORM MODAL ========== -->
+<div class="form-modal" id="waitlistModal" role="dialog" aria-modal="true" aria-labelledby="formTitle" aria-hidden="true">
+  <div class="form-backdrop" id="formBackdrop"></div>
+  <form class="form-card" id="waitlistForm" novalidate>
+    <header class="form-head">
+      <div>
+        <span class="form-eyebrow">VitaCrypt access</span>
+        <h3 id="formTitle">Join the waitlist</h3>
+      </div>
+      <button type="button" class="form-close" id="formClose" aria-label="Close form">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </header>
+    <p class="form-intro">Tell us who you are. We respond within 48 hours.</p>
+    <div class="form-fields">
+      <label class="form-field">
+        <span class="form-label">Name</span>
+        <input name="name" type="text" required maxlength="100" autocomplete="name" placeholder="Your full name">
+      </label>
+      <label class="form-field">
+        <span class="form-label">Email</span>
+        <input name="email" type="email" required maxlength="200" autocomplete="email" placeholder="you@domain.com">
+      </label>
+      <label class="form-field">
+        <span class="form-label">I am a…</span>
+        <select name="audience" required>
+          <option value="" disabled selected>Select your role</option>
+          <option value="investor">Investor</option>
+          <option value="user">User / patient</option>
+          <option value="press">Press / journalist</option>
+          <option value="partner">Partner (lab / clinic / academic)</option>
+        </select>
+      </label>
+      <label class="form-field">
+        <span class="form-label">Message <span class="form-optional">(optional)</span></span>
+        <textarea name="message" maxlength="500" rows="3" placeholder="What brings you here?"></textarea>
+      </label>
+      <label class="form-consent">
+        <input name="consent" type="checkbox" required>
+        <span>I consent to VitaCrypt receiving and reviewing this message. We do not share, sell, or store it beyond our internal review.</span>
+      </label>
+      <input type="text" name="company" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
+    </div>
+    <button type="submit" class="btn btn-glow form-submit" id="formSubmit">
+      Send
+      <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <p class="form-status" id="formStatus" aria-live="polite"></p>
+    <p class="form-fallback">Prefer email? <a href="mailto:marketing@vitacrypt.xyz">marketing@vitacrypt.xyz</a></p>
+  </form>
+</div>
+
+<script>
+// ====================== GLOBAL UTILS (commit 4C) ======================
+const HEX = '0123456789ABCDEF';
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function randHex(){ return HEX[Math.floor(Math.random()*16)]; }
+
+// THEME (single handler; optional "re-encrypt" scramble overlay when motion allowed)
+const root = document.documentElement;
+const tBtn = document.getElementById('themeToggle');
+const stored = localStorage.getItem('vc-theme-d');
+if (stored) { root.setAttribute('data-theme', stored); }
+else if (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) { root.setAttribute('data-theme', 'light'); }
+function syncThemeColor(t){ const m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute('content', t === 'light' ? '#F4EFE5' : '#06080C'); }
+syncThemeColor(root.getAttribute('data-theme'));
+let themeOverlay = null;
+function setTheme(next){ root.setAttribute('data-theme', next); localStorage.setItem('vc-theme-d', next); syncThemeColor(next); }
+function toggleTheme(){
+  const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  if (RM) { setTheme(next); return; }
+  if (!themeOverlay){
+    themeOverlay = document.createElement('div');
+    themeOverlay.className = 'theme-scramble-overlay';
+    themeOverlay.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(themeOverlay);
+  }
+  themeOverlay.classList.add('show');
+  let n = 0;
+  const id = setInterval(() => {
+    n++;
+    themeOverlay.textContent = 're-encrypting view ' + Array.from({length:12}, randHex).join('');
+    if (n === 8) setTheme(next);
+    if (n > 16) { clearInterval(id); themeOverlay.classList.remove('show'); }
+  }, 32);
+}
+tBtn.addEventListener('click', toggleTheme);
+
+// PIPELINE STAGES
+const stages = [
+  {
+    headLabel: 'STAGE 01 / COLLECT',
+    tagBox: '01', tagText: 'COLLECT',
+    title: 'A unified profile, drawn from every source.',
+    summary: 'Wearables (via Terra API), DNA, microbiome, labs, environment, and PROMIS surveys ingest on-device into a single living profile. <strong>Nothing has left the device yet.</strong>',
+    what: [
+      'Upload 23andMe / AncestryDNA reports',
+      'Connect Apple Watch or Oura ring',
+      'Pull air quality + UV from your location'
+    ],
+    arch: { left: 'active', center: '', right: '', arrow1: '', arrow2: '' },
+    archKeys: { left: '🔑 KEY · ON DEVICE', mid: 'LOCAL · NOT TRANSMITTED', right: '🔑 KEY · ON DEVICE' },
+    phoneStage: '01 · Collect · Local',
+    phoneCaption: 'Sources sync locally. Nothing has been transmitted.',
+    phoneCards: [
+      { lbl: 'DNA · MTHFR C677T', v: 'TT', cls: '' },
+      { lbl: 'WEARABLE · HRV 3d', v: '38 ms', cls: '' },
+      { lbl: 'ENVIRONMENT · LA', v: '52 μg/m³ PM2.5', cls: '' },
+      { lbl: 'LABS · CRP', v: '3.2 mg/L', cls: '' }
+    ]
+  },
+  {
+    headLabel: 'STAGE 02 / ENCRYPT',
+    tagBox: '02', tagText: 'ENCRYPT',
+    title: 'Your phone encrypts it.',
+    summary: 'Signals are encrypted with your key into TFHE ciphertext. The <strong>key never leaves your device</strong>. Encrypted form is what travels.',
+    what: [
+      'TFHE encryption on-device with your key',
+      'Encrypted payload uploaded to compute',
+      'Plaintext destroyed after encryption'
+    ],
+    arch: { left: 'active', center: '', right: '', arrow1: 'active', arrow2: '' },
+    archKeys: { left: '🔑 KEY · ON DEVICE', mid: 'CIPHERTEXT IN FLIGHT', right: '🔑 KEY · ON DEVICE' },
+    phoneStage: '02 · Encrypt · On device',
+    phoneCaption: 'Each signal converts to ciphertext. Your key stays here.',
+    phoneCards: [
+      { lbl: 'DNA · encrypted', v: 'enc("0x9af3…7e88")', cls: 'encrypted' },
+      { lbl: 'WEARABLE · encrypted', v: 'enc("0xf270…b91d")', cls: 'encrypted' },
+      { lbl: 'ENVIRONMENT · encrypted', v: 'enc("0x1c44…2009")', cls: 'encrypted' },
+      { lbl: 'LABS · encrypted', v: 'enc("0x8b1e…4a02")', cls: 'encrypted' }
+    ]
+  },
+  {
+    headLabel: 'STAGE 03 / COMPUTE',
+    tagBox: '03', tagText: 'COMPUTE',
+    title: 'The server runs models on ciphertext.',
+    summary: 'AI models built on Zama Concrete ML run <strong>directly on encrypted data</strong>. The engine surfaces patterns without ever seeing inputs.',
+    what: [
+      'Concrete ML inference on TFHE ciphertext',
+      'No decryption at any compute step',
+      'Server sees mathematical noise'
+    ],
+    arch: { left: '', center: 'active', right: '', arrow1: '', arrow2: '' },
+    archKeys: { left: '🔑 KEY · STILL ON DEVICE', mid: 'COMPUTING ON CIPHERTEXT', right: '🔑 KEY · ON DEVICE' },
+    phoneStage: '03 · Compute · Remote',
+    phoneCaption: 'The server is working. It cannot see what.',
+    phoneCards: [
+      { lbl: 'STATE', v: 'Running FHE inference…', cls: 'encrypted' },
+      { lbl: 'LATENCY', v: '~5 minutes', cls: 'encrypted' },
+      { lbl: 'OPS', v: '4,812 enc gates', cls: 'encrypted' },
+      { lbl: 'SERVER VIEW', v: 'enc("0x????…????")', cls: 'encrypted' }
+    ]
+  },
+  {
+    headLabel: 'STAGE 04 / ACT',
+    tagBox: '04', tagText: 'ACT',
+    title: 'Your phone decrypts and tells you what to do.',
+    summary: 'Encrypted output returns to your device. Only your key can open it. The output is not a dashboard — it is <strong>a small, ordered list of actions</strong>, cited to peer-reviewed literature.',
+    what: [
+      'Encrypted result returned to your phone',
+      'Decrypted locally with your key',
+      'Cross-referenced to PubMed + Cochrane'
+    ],
+    arch: { left: '', center: '', right: 'active', arrow1: '', arrow2: 'active' },
+    archKeys: { left: '🔑 KEY · ON DEVICE', mid: 'CIPHERTEXT RETURN', right: '🔑 KEY · DECRYPTS' },
+    phoneStage: '04 · Act · On device',
+    phoneCaption: 'You see plain language. The server still saw nothing.',
+    phoneCards: [
+      { lbl: 'INSIGHT', v: 'Inflammatory pressure detected', cls: 'glow', t: 'Inflammatory pressure detected', b: 'Your MTHFR × PM2.5 × HRV decline indicates sustained low-grade inflammation. <span class="em-teal">Methylated folate + HEPA + zone-2 cardio.</span>' },
+      { lbl: 'ACTION', v: '3 today · 4 weekly', cls: '' },
+      { lbl: 'CITES', v: 'PubMed +4 · Cochrane +1', cls: '' }
+    ]
+  }
+];
+
+const pipeButtons = document.querySelectorAll('.pipe-tabs button');
+const headLabel = document.getElementById('pipeHeadLabel');
+const tagBox = document.getElementById('stTagBox');
+const tagText = document.getElementById('stTagText');
+const stTitle = document.getElementById('stTitle');
+const stSummary = document.getElementById('stSummary');
+const stWhatList = document.getElementById('stWhatList');
+const archLeft = document.getElementById('archLeft');
+const archCenter = document.getElementById('archCenter');
+const archRight = document.getElementById('archRight');
+const archArrow1 = document.getElementById('archArrow1');
+const archArrow2 = document.getElementById('archArrow2');
+const archKeyLeft = document.getElementById('archKeyLeft');
+const archKeyMid = document.getElementById('archKeyMiddle');
+const archKeyRight = document.getElementById('archKeyRight');
+const phoneStage = document.getElementById('phoneStage');
+const phoneCaption = document.getElementById('phoneCaption');
+const phoneBody = document.getElementById('phoneBody');
+
+function applyStage(i) {
+  const s = stages[i];
+  headLabel.textContent = s.headLabel;
+  tagBox.textContent = s.tagBox;
+  tagText.textContent = s.tagText;
+  stTitle.textContent = s.title;
+  stSummary.innerHTML = s.summary;
+  stWhatList.innerHTML = s.what.map(w => '<li>' + w + '</li>').join('');
+
+  // Architecture node states
+  [archLeft, archCenter, archRight].forEach(n => n.classList.remove('active'));
+  [archArrow1, archArrow2].forEach(a => a.classList.remove('active'));
+  archLeft.querySelector('.frame').classList.remove('active');
+  archCenter.querySelector('.frame').classList.remove('active');
+  archRight.querySelector('.frame').classList.remove('active');
+
+  if (s.arch.left) {
+    archLeft.classList.add('active');
+    archLeft.querySelector('.frame').classList.add('active');
+  }
+  if (s.arch.center) {
+    archCenter.classList.add('active');
+    archCenter.querySelector('.frame').classList.add('active');
+  }
+  if (s.arch.right) {
+    archRight.classList.add('active');
+    archRight.querySelector('.frame').classList.add('active');
+  }
+  if (s.arch.arrow1) archArrow1.classList.add('active');
+  if (s.arch.arrow2) archArrow2.classList.add('active');
+
+  archKeyLeft.textContent = s.archKeys.left;
+  archKeyMid.textContent = s.archKeys.mid;
+  archKeyRight.textContent = s.archKeys.right;
+
+  // Phone state
+  phoneStage.textContent = s.phoneStage;
+  phoneCaption.textContent = s.phoneCaption;
+  phoneBody.innerHTML = s.phoneCards.map(c => {
+    if (c.t) {
+      return '<div class="mini-card ' + c.cls + '"><div class="lbl">' + c.lbl + '</div><div class="insight-t">' + c.t + '</div><div class="insight-b">' + c.b + '</div></div>';
+    }
+    return '<div class="mini-card ' + c.cls + '"><div class="lbl">' + c.lbl + '</div><div class="v">' + c.v + '</div></div>';
+  }).join('');
+
+  // Active button
+  pipeButtons.forEach((b, idx) => b.classList.toggle('active', idx === i));
+}
+
+pipeButtons.forEach((b, i) => b.addEventListener('click', () => {
+  clearInterval(autoplay);
+  applyStage(i);
+}));
+
+let cur = 0;
+let autoplay = null;
+function startAutoplay() {
+  if (RM) return;  // honor prefers-reduced-motion (manual tab control only)
+  autoplay = setInterval(() => {
+    cur = (cur + 1) % stages.length;
+    applyStage(cur);
+  }, 4500);
+}
+
+// Init
+applyStage(0);
+
+// Start autoplay when pipeline is visible, pause when offscreen (perf)
+const pipeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !autoplay) {
+      startAutoplay();
+    } else if (!e.isIntersecting && autoplay) {
+      clearInterval(autoplay);
+      autoplay = null;
+    }
+  });
+}, { threshold: 0.3 });
+pipeObs.observe(document.getElementById('pipeline'));
+
+// Reveal on scroll — extended with A3 scanline + A7 odometer (commit 4C)
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObs.unobserve(e.target);
+      // A3: one-shot decryption scanline
+      if (!RM && !e.target.dataset.swept) {
+        e.target.dataset.swept = '1';
+        e.target.classList.add('decrypt-sweep');
+        setTimeout(() => e.target.classList.remove('decrypt-sweep'), 1300);
+      }
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('section, .facts, .case-wrap').forEach(el => {
+  el.classList.add('reveal');
+  revealObs.observe(el);
+});
+
+// HERO PROFILE — animate source bars when in view
+const heroProfile = document.getElementById('heroProfile');
+if (heroProfile) {
+  const heroObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        heroProfile.classList.add('in');
+        heroObs.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+  heroObs.observe(heroProfile);
+}
+
+// HERO CIPHER — live mutate hex chars, paused when offscreen or tab hidden (perf)
+(function cipherLoop(){
+  if (RM) return;  // honor prefers-reduced-motion (no text churn)
+  const stream = document.getElementById('cipherStream');
+  if (!stream) return;
+  const cipherCard = stream.closest('.hero-card.cipher') || stream;
+  const HEX = '0123456789ABCDEF';
+  const rows = Array.from(stream.querySelectorAll('.row'));
+  let timer = null;
+  let inView = false;
+
+  function mutate(){
+    const row = rows[Math.floor(Math.random() * rows.length)];
+    if (!row) return;
+    const text = row.textContent.split('');
+    const targets = new Set();
+    let safety = 0;
+    while (targets.size < 3 && safety++ < 30) {
+      const i = Math.floor(Math.random() * text.length);
+      if (/[0-9A-Fa-f]/.test(text[i])) targets.add(i);
+    }
+    targets.forEach(i => { text[i] = HEX[Math.floor(Math.random()*16)]; });
+    row.textContent = text.join('');
+    rows.forEach(r => r.classList.remove('flash'));
+    row.classList.add('flash');
+  }
+  function start(){
+    if (timer || !inView || document.hidden) return;
+    cipherCard.classList.add('cs-active');
+    timer = setInterval(mutate, 320);
+  }
+  function stop(){
+    if (!timer) return;
+    clearInterval(timer);
+    timer = null;
+    cipherCard.classList.remove('cs-active');
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { inView = e.isIntersecting; inView ? start() : stop(); });
+  }, { threshold: 0.1 });
+  obs.observe(cipherCard);
+  document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+})();
+
+// ====================== MOBILE UI (commit 4B) ======================
+(function mobileUI(){
+  const MOBILE_MQ = window.matchMedia('(max-width: 768px)');
+  const PIPE_AUTOPLAY_PAUSE_MS = 8000;
+
+  // 5A.2: Hamburger drawer
+  const burger = document.getElementById('burgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+  const backdrop = document.getElementById('drawerBackdrop');
+  const drawerClose = document.getElementById('drawerClose');
+  const drawerThemeToggle = document.getElementById('drawerThemeToggle');
+  const drawerLinks = document.querySelectorAll('[data-drawer-link]');
+
+  if (burger && drawer && backdrop) {
+    let prevFocus = null;
+
+    function getFocusable() {
+      return drawer.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+    }
+    function openDrawer() {
+      prevFocus = document.activeElement;
+      drawer.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.classList.add('drawer-open');
+      burger.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+      backdrop.setAttribute('aria-hidden', 'false');
+      // focus first focusable element
+      const focusables = getFocusable();
+      if (focusables.length) setTimeout(() => focusables[0].focus(), 100);
+    }
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+      burger.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      backdrop.setAttribute('aria-hidden', 'true');
+      if (prevFocus && prevFocus.focus) prevFocus.focus();
+    }
+
+    burger.addEventListener('click', openDrawer);
+    drawerClose.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    drawerLinks.forEach(a => a.addEventListener('click', closeDrawer));
+
+    // Esc to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    // Focus trap
+    drawer.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab' || !drawer.classList.contains('open')) return;
+      const focusables = Array.from(getFocusable());
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    // Drawer theme toggle reuses main toggle
+    if (drawerThemeToggle && tBtn) {
+      drawerThemeToggle.addEventListener('click', () => tBtn.click());
+    }
+
+    // 5A.5: bottom sticky-nav hamburger opens drawer
+    document.querySelectorAll('[data-action="open-drawer"]').forEach(b => {
+      b.addEventListener('click', (e) => { e.preventDefault(); openDrawer(); });
+    });
+  }
+
+  // 5A.4: Waitlist form modal
+  const modal = document.getElementById('waitlistModal');
+  const form = document.getElementById('waitlistForm');
+  const formBackdrop = document.getElementById('formBackdrop');
+  const formClose = document.getElementById('formClose');
+  const formStatus = document.getElementById('formStatus');
+  const formSubmit = document.getElementById('formSubmit');
+  const formTriggers = document.querySelectorAll('[data-action="open-waitlist"]');
+
+  if (modal && form) {
+    let prevFocus = null;
+    function getFormFocusable() {
+      return modal.querySelectorAll('input, select, textarea, button, a');
+    }
+    function openForm(e) {
+      if (e) e.preventDefault();
+      prevFocus = document.activeElement;
+      // close drawer if open
+      if (drawer && drawer.classList.contains('open')) {
+        drawer.classList.remove('open');
+        backdrop.classList.remove('open');
+        document.body.classList.remove('drawer-open');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+      }
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('drawer-open'); // reuse scroll lock
+      // update URL hash for deeplink (no scroll)
+      if (location.hash !== '#waitlist') history.replaceState(null, '', '#waitlist');
+      // focus first input
+      setTimeout(() => form.querySelector('input[name="name"]')?.focus(), 100);
+    }
+    function closeForm() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('drawer-open');
+      if (location.hash === '#waitlist') history.replaceState(null, '', location.pathname);
+      formStatus.textContent = '';
+      formStatus.className = 'form-status';
+      formSubmit.disabled = false;
+      if (prevFocus && prevFocus.focus) prevFocus.focus();
+    }
+
+    formTriggers.forEach(t => t.addEventListener('click', openForm));
+    formClose.addEventListener('click', closeForm);
+    formBackdrop.addEventListener('click', closeForm);
+
+    // Esc to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeForm();
+    });
+
+    // Focus trap inside form
+    form.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab' || !modal.classList.contains('open')) return;
+      const focusables = Array.from(getFormFocusable()).filter(el => !el.disabled && el.offsetParent !== null);
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    // Submit handler
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      // Native validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      formStatus.textContent = 'Sending…';
+      formStatus.className = 'form-status';
+      formSubmit.disabled = true;
+
+      const fd = new FormData(form);
+      const payload = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        audience: fd.get('audience'),
+        message: fd.get('message') || '',
+        consent: fd.get('consent') === 'on',
+        company: fd.get('company') || ''
+      };
+
+      try {
+        const r = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok) {
+          throw new Error(data.error || `HTTP ${r.status}`);
+        }
+        formStatus.textContent = "Thanks. We'll reach out within 48h.";
+        formStatus.className = 'form-status success';
+        form.reset();
+        setTimeout(closeForm, 2400);
+      } catch (err) {
+        console.error('Waitlist submit failed:', err);
+        formStatus.textContent = 'Submission failed. Please email marketing@vitacrypt.xyz';
+        formStatus.className = 'form-status error';
+        formSubmit.disabled = false;
+      }
+    });
+
+    // Deeplink: #waitlist opens form on load
+    if (location.hash === '#waitlist') {
+      setTimeout(() => openForm(), 300);
+    }
+  }
+
+  // M1: hero carousel dots
+  const sideStack = document.querySelector('.hero-stage .side-stack');
+  const heroDots = document.querySelectorAll('#heroDots .dot');
+  if (sideStack && heroDots.length) {
+    let raf = 0;
+    sideStack.addEventListener('scroll', () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const cards = sideStack.querySelectorAll('.hero-card');
+        if (!cards.length) return;
+        const center = sideStack.scrollLeft + sideStack.clientWidth / 2;
+        let bestIdx = 0, bestDist = Infinity;
+        cards.forEach((c, i) => {
+          const cardCenter = c.offsetLeft + c.offsetWidth / 2;
+          const d = Math.abs(cardCenter - center);
+          if (d < bestDist) { bestDist = d; bestIdx = i; }
+        });
+        heroDots.forEach((d, i) => d.classList.toggle('active', i === bestIdx));
+      });
+    }, { passive: true });
+  }
+
+  // M4: pipeline swipe pauses autoplay
+  const pipeBody = document.querySelector('.pipe-body');
+  if (pipeBody) {
+    let resumeTimer = null;
+    const pauseAutoplay = () => {
+      if (typeof autoplay !== 'undefined' && autoplay) {
+        clearInterval(autoplay);
+        autoplay = null;
+      }
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => {
+        if (MOBILE_MQ.matches && typeof startAutoplay === 'function' && !autoplay) {
+          startAutoplay();
+        }
+      }, PIPE_AUTOPLAY_PAUSE_MS);
+    };
+    pipeBody.addEventListener('touchstart', pauseAutoplay, { passive: true });
+    pipeBody.addEventListener('scroll', pauseAutoplay, { passive: true });
+  }
+
+  // M6: progressive disclosure — insert "more / less" buttons
+  document.querySelectorAll('.clamp-mob').forEach(el => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'more-btn';
+    btn.textContent = 'more';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', () => {
+      const open = el.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.textContent = open ? 'less' : 'more';
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    el.insertAdjacentElement('afterend', btn);
+  });
+
+  // 5C.1: section-level progressive disclosure (data-mcollapse="Label")
+  document.querySelectorAll('[data-mcollapse]').forEach(el => {
+    const label = el.getAttribute('data-mcollapse');
+    el.classList.add('m-collapse');
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'm-toggle';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="lbl"></span><span class="chev" aria-hidden="true">▾</span>';
+    btn.querySelector('.lbl').textContent = label;
+    btn.addEventListener('click', () => {
+      const open = el.classList.toggle('m-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.querySelector('.lbl').textContent = open ? ('Hide ' + label.replace(/^(Show|See|The) /i, '').toLowerCase()) : label;
+    });
+    el.insertAdjacentElement('afterend', btn);
+  });
+
+  // M7: sticky section nav — active highlight on scroll, tap → smooth scroll
+  const secNavBtns = document.querySelectorAll('.mob-secnav button');
+  if (secNavBtns.length) {
+    secNavBtns.forEach(b => {
+      b.addEventListener('click', () => {
+        const target = document.getElementById(b.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    const secObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          secNavBtns.forEach(b => b.classList.toggle('active', b.dataset.target === e.target.id));
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    secNavBtns.forEach(b => {
+      const t = document.getElementById(b.dataset.target);
+      if (t) secObs.observe(t);
+    });
+  }
+})();
+
+// ====================== PREMIUM ANIMATIONS (commit 4C — pruned in 5B.1) ======================
+// E1 heartbeat tempo, E3 hero typewriter, A1 dissolve cap, A2 living waveform —
+// removed per AI-slop audit (Phase 1.5). Kept: A3 scanline (via revealObs),
+// A7 odometer (via revealObs).
+
+// ====================== DESKTOP POLISH (commit 4D) ======================
+
+const DESKTOP_MQ = matchMedia('(min-width: 1024px) and (hover: hover)');
+
+// A4: magnetic cursor on .btn-glow
+(function magneticCTA(){
+  if (RM) return;
+  const R = 60, MAX = 7;           // capture radius beyond button, max px pull
+  const btns = Array.from(document.querySelectorAll('.btn-glow'));
+  if (!btns.length) return;
+  let active = new Set();
+  let ticking = false, lastE = null;
+  function reset(btn){ btn.style.removeProperty('--mag-x'); btn.style.removeProperty('--mag-y'); }
+  function process(){
+    ticking = false;
+    if (!lastE || !DESKTOP_MQ.matches) return;
+    const e = lastE;
+    for (const btn of btns){
+      // skip offscreen/hidden buttons (e.g. modal CTA, drawer CTA when closed)
+      if (btn.offsetParent === null) { if (active.has(btn)) { reset(btn); active.delete(btn); } continue; }
+      const r = btn.getBoundingClientRect();
+      const dx = e.clientX - (r.left + r.width / 2);
+      const dy = e.clientY - (r.top + r.height / 2);
+      const maxR = Math.max(r.width, r.height) / 2 + R;
+      if (Math.hypot(dx, dy) > maxR) {
+        if (active.has(btn)) { reset(btn); active.delete(btn); }
+      } else {
+        const k = Math.min(1, (maxR - Math.hypot(dx, dy)) / maxR) * MAX;
+        btn.style.setProperty('--mag-x', (dx / maxR * k).toFixed(2) + 'px');
+        btn.style.setProperty('--mag-y', (dy / maxR * k).toFixed(2) + 'px');
+        active.add(btn);
+      }
+    }
+  }
+  // single delegated listener; rAF-throttled; reads rects only inside the frame
+  window.addEventListener('mousemove', (e) => {
+    lastE = e;
+    if (!ticking) { ticking = true; requestAnimationFrame(process); }
+  }, { passive: true });
+})();
+
+// A5: hue-shift on scoped decorative elements (desktop scroll-bound)
+(function hueShift(){
+  if (RM) return;
+  let raf = 0;
+  function update(){
+    raf = 0;
+    if (!DESKTOP_MQ.matches) {
+      root.style.setProperty('--accent-shift', '0deg');
+      return;
+    }
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max <= 0) return;
+    const t = Math.max(0, Math.min(1, window.scrollY / max));
+    const shift = (t * 14).toFixed(1) + 'deg'; // 0 → 14deg sweep
+    root.style.setProperty('--accent-shift', shift);
+  }
+  window.addEventListener('scroll', () => {
+    if (raf) return;
+    raf = requestAnimationFrame(update);
+  }, { passive: true });
+  update();
+})();
+
+// E2: theme-toggle scramble overlay
+</script>
+
+</body>
+</html>

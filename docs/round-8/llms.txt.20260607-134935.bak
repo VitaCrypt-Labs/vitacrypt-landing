@@ -1,0 +1,11 @@
+# VitaCrypt
+> VitaCrypt unifies a person's whole health, genetics, wearables, labs, microbiome, environment and lifestyle, into one profile that returns actionable, evidence-checked guidance. Private by design.
+
+## Core Concepts
+- **Unified profile:** Six biological streams fused into one queryable health profile. No current product brings all of a person's health into a single place.
+- **Evidence-checked guidance:** Every recommendation cites a real source (PubMed PMID) retrieved live; the model cannot invent citations.
+- **Actionable, whole-profile:** Guidance is read against your genotype and local environment, not fragmented single-metric readouts.
+- **Private by design (FHE):** The trust layer that makes centralizing sensitive data acceptable. Blind compute (the server computing on ciphertext) is demonstrated on one encrypted genetic slice on staging today; production-wide blind compute is on the roadmap. The platform is not yet end-to-end blind: the master key is currently server-side.
+
+## Status
+Pre-MVP, founder-led. Targeting the Zama Concrete ML / TFHE stack. Contact: investors@vitacrypt.xyz, t.me/paul_burg.
