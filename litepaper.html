@@ -7,9 +7,9 @@
 <meta name="color-scheme" content="dark light">
 
 <!-- Primary SEO -->
-<title>VitaCrypt Litepaper — FHE Architecture & Threat Model</title>
-<meta name="description" content="VitaCrypt technical brief: cryptographic primitives (TFHE / Zama Concrete ML), threat model, performance budget, and integration spec for a privacy-native health stack.">
-<meta name="keywords" content="VitaCrypt litepaper, FHE, TFHE, Zama Concrete ML, blind computing, encrypted health data, threat model, cryptographic primitives, PubMed, GWAS, ClinVar">
+<title>VitaCrypt Litepaper · Architecture, threat model & integration spec</title>
+<meta name="description" content="VitaCrypt technical brief for a unified, evidence-cited personal health profile: system architecture, threat model, performance budget, and integration spec, including the FHE/Zama privacy roadmap.">
+<meta name="keywords" content="VitaCrypt litepaper, unified health profile, evidence-checked guidance, personal health stack, system architecture, threat model, integration spec, PubMed, GWAS, ClinVar, FHE roadmap">
 <meta name="author" content="VitaCrypt">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://vitacrypt.xyz/litepaper.html">
@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="VitaCrypt">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://vitacrypt.xyz/litepaper.html">
-<meta property="og:title" content="VitaCrypt Litepaper — FHE Architecture & Threat Model (v0.1.0)">
-<meta property="og:description" content="Cryptographic primitives, threat model, performance budget, and integration spec for an encrypted personal health intelligence stack on Zama Concrete ML / TFHE.">
-<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview.jpg">
-<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview.jpg">
+<meta property="og:title" content="VitaCrypt Litepaper · Architecture & threat model (v0.1.2)">
+<meta property="og:description" content="System architecture, threat model, performance budget, and integration spec for a unified, evidence-cited personal health stack, including the FHE/Zama privacy roadmap.">
+<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+<meta property="og:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 <meta property="article:author" content="VitaCrypt">
 <meta property="article:section" content="Technical Brief">
 <meta property="article:tag" content="FHE">
@@ -46,26 +46,26 @@
 <meta name="twitter:site" content="@vita_crypt">
 <meta name="twitter:creator" content="@vita_crypt">
 <meta name="twitter:url" content="https://vitacrypt.xyz/litepaper.html">
-<meta name="twitter:title" content="VitaCrypt Litepaper — FHE Architecture (v0.1.0)">
-<meta name="twitter:description" content="Cryptographic primitives, threat model, and integration spec for VitaCrypt's encrypted health intelligence stack on Zama Concrete ML / TFHE.">
-<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview.jpg">
-<meta name="twitter:image:alt" content="VitaCrypt — Private Health Intelligence, Powered by FHE">
+<meta name="twitter:title" content="VitaCrypt Litepaper · Architecture & threat model (v0.1.2)">
+<meta name="twitter:description" content="System architecture, threat model, and integration spec for VitaCrypt's unified, evidence-cited personal health stack, including the FHE/Zama privacy roadmap.">
+<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta name="twitter:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "VitaCrypt Litepaper — FHE Architecture, Threat Model & Integration Spec",
-  "description": "VitaCrypt technical brief: cryptographic primitives (TFHE / Zama Concrete ML), threat model, performance budget, and integration spec for a privacy-native personal health intelligence stack.",
+  "headline": "VitaCrypt Litepaper: Architecture, Threat Model & Integration Spec",
+  "description": "VitaCrypt technical brief for a unified, evidence-cited personal health profile: system architecture, threat model, performance budget, and integration spec, including the FHE/Zama privacy roadmap.",
   "url": "https://vitacrypt.xyz/litepaper.html",
-  "image": "https://vitacrypt.xyz/img/og-preview.jpg",
+  "image": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
   "datePublished": "2026-05-01",
-  "dateModified": "2026-05-28",
+  "dateModified": "2026-06-10",
   "inLanguage": "en-US",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "proficiencyLevel": "Expert",
-  "keywords": "FHE, TFHE, Zama Concrete ML, blind computing, encrypted health data, threat model",
+  "keywords": "unified health profile, evidence-checked guidance, system architecture, threat model, integration spec, FHE privacy roadmap, Zama Concrete ML",
   "author": {
     "@type": "Organization",
     "name": "VitaCrypt",
@@ -428,6 +428,7 @@ li strong { color: var(--ink); font-weight: 500; }
 .spec-table .badge.live { background: var(--teal-glow); color: var(--teal); border: 1px solid var(--teal-deep); }
 .spec-table .badge.q { background: rgba(255, 197, 138, 0.12); color: var(--amber); border: 1px solid rgba(255, 197, 138, 0.3); }
 .spec-table .badge.no { background: rgba(255, 123, 107, 0.10); color: var(--rose); border: 1px solid rgba(255, 123, 107, 0.3); }
+@media (max-width: 640px) { .spec-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
 @media (max-width: 768px) {
   .spec-table { font-size: 13px; }
   .spec-table th, .spec-table td { padding: 10px 12px; }
@@ -571,13 +572,13 @@ footer {
 
 <nav class="top">
   <div class="inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="/">
       <picture>
         <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
         <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" decoding="async">
       </picture>
       <span class="word">VitaCrypt</span>
-      <span class="tag">brief · v0.1.0</span>
+      <span class="tag">brief · v0.1.2</span>
     </a>
     <div class="toc">
       <a href="#threat">§01</a>
@@ -590,15 +591,16 @@ footer {
       <a href="#open">§08</a>
       <a href="#refs">§09</a>
     </div>
-    <a class="back" href="index.html">← Landing</a>
+    <a class="back" href="investor.html">Investors</a>
+    <a class="back" href="/">← Landing</a>
   </div>
 </nav>
 
 <header class="doc-head">
   <div class="wrap">
     <div class="doc-meta">
-      <div class="item"><div class="k">Document</div><div class="v">Technical brief · v0.1.0</div></div>
-      <div class="item"><div class="k">Status</div><div class="v">MVP in development</div></div>
+      <div class="item"><div class="k">Document</div><div class="v">Technical brief · v0.1.2</div></div>
+      <div class="item"><div class="k">Status</div><div class="v">Early-stage MVP live, pre-launch</div></div>
       <div class="item"><div class="k">Filed</div><div class="v">May 2026</div></div>
       <div class="item"><div class="k">Audience</div><div class="v">Technical investors &amp; partners</div></div>
     </div>
@@ -606,15 +608,15 @@ footer {
     <h1>The architecture, threat model, and open questions for a <span class="ac">privacy-native</span> personal health stack.</h1>
 
     <p class="standfirst">
-      This brief is the technical companion to the landing page. The landing page tells you <strong>why</strong> we are building VitaCrypt and what an end user sees. This document describes <strong>how</strong> — the cryptographic primitives we rely on, the threat model we defend against, the performance budget the MVP commits to, and the questions we are still resolving in public.
+      This brief is the technical companion to the landing page. The landing page tells you <strong>why</strong> we are building VitaCrypt and what an end user sees. This document describes <strong>how</strong>: how any health signal is unified into one profile, how the three-tier evidence engine cites and bounds every recommendation (with a software-enforced clinical boundary), the threat model we defend against, the privacy architecture we are building toward (encrypted at rest today, fully homomorphic encryption far on the roadmap), and the questions we are still resolving in public.
     </p>
 
     <div class="byline">
       <span>FILED BY <strong>VITACRYPT LABS</strong></span>
       <span>·</span>
-      <span><a href="mailto:hello@vitacrypt.xyz">hello@vitacrypt.xyz</a></span>
+      <span><a href="mailto:investors@vitacrypt.xyz">investors@vitacrypt.xyz</a></span>
       <span>·</span>
-      <span><a href="index.html">← back to landing</a></span>
+      <span><a href="/">← back to landing</a></span>
     </div>
   </div>
 </header>
@@ -622,26 +624,26 @@ footer {
 <!-- §01 -->
 <section id="threat">
   <div class="wrap">
-    <div class="section-id"><span class="num">§01</span><span>Cryptography &amp; threat model</span></div>
+    <div class="section-id"><span class="num">§01</span><span>Privacy roadmap &amp; threat model</span></div>
     <h2>What we defend against, and <span class="ac">what we don't.</span></h2>
 
     <h3>Primitives</h3>
-    <p>The compute layer is built on <strong>Fully Homomorphic Encryption</strong>, specifically the TFHE family of schemes. We target Zama's <code>Concrete ML</code> framework for production inference because it is the only mature toolchain that compiles ordinary ML graphs (linear models, decision trees, small neural nets) into FHE circuits without per-model cryptographer effort.</p>
-    <p>We layer FHE with <strong>device-bound key custody</strong>: each user's secret key is generated and stored inside the platform's hardware-backed keystore (iOS Secure Enclave, Android StrongBox) and never exported. Encryption and decryption happen client-side; the key never traverses the network.</p>
+    <p>Today, computation runs server-side over data encrypted at rest, with minimization and pseudonymization before egress. The <strong>target</strong> privacy architecture is built on <strong>Fully Homomorphic Encryption</strong> (the TFHE family of schemes), a far-horizon R&amp;D goal rather than a current capability. For that eventual encrypted-compute path we target Zama's <code>Concrete ML</code> framework, the only mature toolchain that compiles ordinary ML graphs (linear models, decision trees, small neural nets) into FHE circuits without per-model cryptographer effort.</p>
+    <p>The <strong>target custody model is device-bound</strong>: each user's secret key generated and stored inside a hardware-backed keystore (iOS Secure Enclave, Android StrongBox), never exported, with encryption and decryption client-side so the key never traverses the network. In the current MVP, key custody is server-side; moving to device-bound custody is part of the build this round funds.</p>
 
     <h3>Threat model</h3>
     <p>Five attacker classes, in order of severity:</p>
     <ul>
-      <li><strong>VitaCrypt-infrastructure breach</strong> — adversary controls our compute infrastructure. Sees: ciphertext only. Cannot recover plaintext without the user's device-bound key. <em>Mitigated.</em></li>
-      <li><strong>Compute substrate insider</strong> — adversary is a privileged operator on a co-located GPU. Sees: ciphertext, model weights. Cannot recover plaintext. <em>Mitigated.</em></li>
-      <li><strong>Network observer</strong> — adversary on-path between device and compute. Sees: TLS-encrypted ciphertext blobs. <em>Mitigated.</em></li>
-      <li><strong>Device compromise</strong> — adversary has root on user's device. Sees: plaintext signals, key, all decrypted insights. <em>Not mitigated</em> — fundamental to any client-side architecture.</li>
-      <li><strong>Side-channel timing</strong> — adversary observes per-query latency to infer input class. <em>Partially mitigated</em> via padding to fixed-cost circuits; still being characterized.</li>
+      <li><strong>VitaCrypt-infrastructure breach:</strong> adversary controls our compute infrastructure. Sees: ciphertext only. Cannot recover plaintext without the user's device-bound key. <em>Mitigated.</em></li>
+      <li><strong>Compute substrate insider:</strong> adversary is a privileged operator on a co-located GPU. Sees: ciphertext, model weights. Cannot recover plaintext. <em>Mitigated.</em></li>
+      <li><strong>Network observer:</strong> adversary on-path between device and compute. Sees: TLS-encrypted ciphertext blobs. <em>Mitigated.</em></li>
+      <li><strong>Device compromise:</strong> adversary has root on user's device. Sees: plaintext signals, key, all decrypted insights. <em>Not mitigated</em>, fundamental to any client-side architecture.</li>
+      <li><strong>Side-channel timing:</strong> adversary observes per-query latency to infer input class. <em>Partially mitigated</em> via padding to fixed-cost circuits; still being characterized.</li>
     </ul>
 
     <div class="note warn">
       <div class="lbl">Honest scope</div>
-      <p>FHE protects data <em>in transit and at compute</em>. It does not protect against device compromise, against the user's own deliberate sharing, or against statistical inference from the small, structured outputs we return. The brief in §08 lists what we are still doing to harden against the last category.</p>
+      <p>In the target architecture, FHE would protect data <em>in transit and at compute</em>. It would not protect against device compromise, against the user's own deliberate sharing, or against statistical inference from the small, structured outputs we return. The brief in §08 lists what we are still doing to harden against the last category. The "Mitigated" states in the threat model above describe the target architecture; in the current MVP the master key is held server-side.</p>
     </div>
   </div>
 </section>
@@ -651,7 +653,12 @@ footer {
   <div class="wrap">
     <div class="section-id"><span class="num">§02</span><span>System architecture</span></div>
     <h2>Three principals. One invariant.</h2>
-    <p>Every byte of plaintext lives in exactly one place: the user's hardware. Everything else — transport, storage, compute — handles ciphertext only.</p>
+    <p><strong>Target invariant:</strong> every byte of plaintext lives in exactly one place, the user's hardware. Everything else, transport, storage and compute, handles ciphertext only.</p>
+
+    <div class="note warn">
+      <div class="lbl">Current state</div>
+      <p>This is the architecture we are building toward. In the current MVP the master key is held server-side and inference runs on plaintext. A standalone FHE proof of concept (client-held key, server computing on ciphertext, about 0.5s) has run on one synthetic genetic slice on staging; it is a tech demo, not part of the product. Moving the full pipeline behind this invariant is a long-term R&amp;D goal.</p>
+    </div>
 
     <div class="flow">
       <div class="node us">
@@ -683,7 +690,7 @@ footer {
       <tbody>
         <tr><td class="c1">01 · Collect</td><td><code>collect(sources) → Signals</code></td><td>User device</td></tr>
         <tr><td class="c1">02 · Encrypt</td><td><code>encrypt(Signals, k) → Ciphertext</code></td><td>User device</td></tr>
-        <tr><td class="c1">03 · Compute</td><td><code>infer(Ciphertext, W) → EncResult</code></td><td><strong>Nowhere</strong> · compute on ciphertext</td></tr>
+        <tr><td class="c1">03 · Compute</td><td><code>infer(Ciphertext, W) → EncResult</code></td><td><strong>Target:</strong> nowhere in plaintext, compute on ciphertext. <strong>MVP today:</strong> plaintext server-side; FHE proof of concept on one synthetic slice only</td></tr>
         <tr><td class="c1">04 · Act</td><td><code>decrypt(EncResult, k) → Insight</code></td><td>User device</td></tr>
       </tbody>
     </table>
@@ -694,10 +701,29 @@ footer {
     <div class="code-block"><span class="cm">// the encrypted payload returned to device</span>
 <span class="kw">struct</span> EncResult {
   actions:    [EncSlot; <span class="num">8</span>],   <span class="cm">// fixed array, padded</span>
-  metric:     EncFloat,        <span class="cm">// e.g. predicted ΔHRV</span>
+  metric:     EncFloat,        <span class="cm">// e.g. ΔHRV trend</span>
   cites:      [CiteRef; <span class="num">8</span>],   <span class="cm">// indices into citation pool</span>
   confidence: EncFloat
 }</div>
+
+    <h3>Implementation status: now vs target</h3>
+    <table class="spec-table">
+      <thead>
+        <tr><th>Capability</th><th>Now (MVP)</th><th>Target (this round → beyond)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="c1">Unified profile</td><td>Live: core streams (genetics, environment, surveys, lifestyle)</td><td>More signals, deeper coverage, any health data</td></tr>
+        <tr><td class="c1">Evidence citations</td><td>Live: real PMIDs, no invented cites</td><td>Broader corpus coverage</td></tr>
+        <tr><td class="c1">Actionable insights</td><td>Live: whole-profile, tiny-habit</td><td>Deeper personalization</td></tr>
+        <tr><td class="c1">Encrypted compute (FHE)</td><td>Proof of concept on one synthetic slice (staging script, not in the product)</td><td>Roadmap: FHE across the pipeline</td></tr>
+        <tr><td class="c1">Key custody</td><td>Server-side master key</td><td>Device-bound (Secure Enclave / StrongBox)</td></tr>
+        <tr><td class="c1">Clinical validity</td><td>Synthetic demo model</td><td>Validated models + IRB study (2027)</td></tr>
+      </tbody>
+    </table>
+    <div class="note warn">
+      <div class="lbl">We do not blur the two</div>
+      <p>We show both columns on purpose. The left is what runs today; the right is the architecture this round is built to deliver.</p>
+    </div>
   </div>
 </section>
 
@@ -706,7 +732,7 @@ footer {
   <div class="wrap">
     <div class="section-id"><span class="num">§03</span><span>Performance budget</span></div>
     <h2>Latency, throughput, and the <span class="ac">cost frontier.</span></h2>
-    <p>FHE was theoretical in 2020 and is production-tractable in 2026. Our MVP performance targets are bounded by what is honestly achievable on the current Concrete ML stack on commodity GPU servers.</p>
+    <p>FHE is not part of the MVP. The targets below are for the roadmap FHE path, bounded by what is honestly achievable on the current Concrete ML stack on commodity GPU servers.</p>
 
     <div class="kvs">
       <div class="kv">
@@ -731,7 +757,7 @@ footer {
     <p>We avoid running FHE on every user interaction. The product surface is asynchronous by design: the user composes a query (or the system schedules a daily one), the server runs inference, and the result lands as a notification 3–10 minutes later. Interactive UI uses cached plaintext on the user's own device.</p>
 
     <h3>What 300s buys us</h3>
-    <p>The widely cited Zama benchmark for encrypted DNA ancestry inference at ~96% accuracy with sub-300-second latency is for a single-task, single-domain query on a representative SNP subset. Multi-layer inference (DNA × environment × wearable signal × microbiome) is multiplicatively heavier; our ~5-minute target reflects that. <em>Source verification pending — see §08.</em></p>
+    <p>The widely cited Zama benchmark for encrypted DNA ancestry inference at ~96% accuracy with sub-300-second latency is for a single-task, single-domain query on a representative SNP subset. Multi-layer inference (DNA × environment × wearable signal × microbiome) is multiplicatively heavier; our ~5-minute target reflects that. <em>Source verification pending; see §08.</em></p>
   </div>
 </section>
 
@@ -739,31 +765,31 @@ footer {
 <section id="integ">
   <div class="wrap">
     <div class="section-id"><span class="num">§04</span><span>Integration spec</span></div>
-    <h2>Six streams of biology.</h2>
-    <p>Each row below reflects MVP status, not aspirational endpoint. Live = production-ready integration today. Planned = on the 2026 roadmap. Partner = requires explicit partnership we have not yet signed.</p>
+    <h2>Health signals, unified into one profile.</h2>
+    <p>The profile is built to ingest any health signal; the current set is below. Each row reflects current status, not the aspirational endpoint. Live = in the app today. Wired = pipeline built, waiting on a file or connection. Beta / Partial = limited today. A date = roadmap.</p>
 
     <table class="spec-table">
       <thead>
-        <tr><th>Stream</th><th>Sources (MVP)</th><th>Format</th><th>Status</th></tr>
+        <tr><th>Signal</th><th>Sources (MVP)</th><th>Format</th><th>Status</th></tr>
       </thead>
       <tbody>
-        <tr><td class="c1">Genetics</td><td>23andMe, AncestryDNA raw exports</td><td><code>.txt</code> SNP table</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">Wearables</td><td>Apple HealthKit, Oura, Whoop</td><td><code>HealthKit · JSON</code></td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">Labs</td><td>Manual upload (PDF / CSV)</td><td><code>structured CSV</code></td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">Microbiome</td><td>Viome, Tiny Health uploads</td><td><code>JSON / CSV</code></td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">Environment</td><td>PurpleAir, IQAir, OpenWeather</td><td><code>geo-keyed JSON</code></td><td><span class="badge live">MVP</span></td></tr>
+        <tr><td class="c1">Genetics</td><td>23andMe, AncestryDNA raw exports</td><td><code>.txt</code> SNP table</td><td><span class="badge live">Live</span></td></tr>
+        <tr><td class="c1">Wearables</td><td>Apple Health export and HealthKit sync; Oura, Whoop planned</td><td><code>HealthKit · XML</code></td><td><span class="badge q">Wired</span></td></tr>
+        <tr><td class="c1">Labs</td><td>Manual upload (PDF / photo, OCR)</td><td><code>PDF · image</code></td><td><span class="badge q">Invite-only beta</span></td></tr>
+        <tr><td class="c1">Microbiome</td><td>Viome, Tiny Health and similar report uploads</td><td><code>JSON / CSV</code></td><td><span class="badge q">Partial</span></td></tr>
+        <tr><td class="c1">Environment</td><td>Open-Meteo (air quality, CAMS pollen, UV), OpenAQ stations</td><td><code>geo-keyed JSON</code></td><td><span class="badge live">Live</span></td></tr>
         <tr><td class="c1">HL7 / FHIR</td><td>Clinical-system labs &amp; records</td><td><code>FHIR R4</code></td><td><span class="badge no">2027</span></td></tr>
       </tbody>
     </table>
 
     <h3>Client-side requirements</h3>
-    <p>The encryption stage runs on the user's device. Minimum hardware requirements at MVP:</p>
+    <p>In the target architecture the encryption stage runs on the user's device. Target hardware:</p>
     <ul>
-      <li><strong>iOS</strong> — A14 Bionic or later (Secure Enclave with Cryptokit), iOS 16+.</li>
-      <li><strong>Android</strong> — StrongBox-class TEE, Android 13+.</li>
-      <li><strong>Desktop / web (fallback)</strong> — WebCrypto + IndexedDB-stored key, scoped per origin. <em>Acceptable but weaker custody than mobile keystore.</em></li>
+      <li><strong>iOS:</strong> A14 Bionic or later (Secure Enclave with Cryptokit), iOS 16+.</li>
+      <li><strong>Android:</strong> StrongBox-class TEE, Android 13+.</li>
+      <li><strong>Desktop / web (fallback):</strong> WebCrypto + IndexedDB-stored key, scoped per origin. <em>Acceptable but weaker custody than mobile keystore.</em></li>
     </ul>
-    <p>FHE encryption of a typical multi-layer payload runs on-device in 8–20 seconds. Heavier formats (whole-genome) are pre-summarized into compact SNP subsets before encryption.</p>
+    <p>On-device FHE encryption is not yet benchmarked on our payloads. Heavier formats (whole-genome) would be pre-summarized into compact SNP subsets before encryption.</p>
   </div>
 </section>
 
@@ -771,7 +797,7 @@ footer {
 <section id="vs-wearables">
   <div class="wrap">
     <div class="section-id"><span class="num">§05</span><span>Head-to-head vs popular wearables</span></div>
-    <h2>What we add — and where the privacy line gets crossed elsewhere.</h2>
+    <h2>What we add, and where the privacy line gets crossed elsewhere.</h2>
     <p>Every wearable on the market is a single-signal sensor plus a closed app. VitaCrypt is a synthesis layer that <em>uses</em> the sensor's data alongside DNA, microbiome, labs, environment, and survey context. The honest comparison below.</p>
 
     <table class="spec-table vs-table">
@@ -787,33 +813,33 @@ footer {
         </tr>
       </thead>
       <tbody>
-        <tr><td class="c1">Sensor (HRV / sleep / temp / HR)</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓ (in-bed)</td><td>Reads from any/all via HealthKit / Health Connect</td></tr>
-        <tr><td class="c1">ECG</td><td>—</td><td>✓ (FDA-cleared, MG)</td><td>✓</td><td>—</td><td>—</td><td>Reads if the device captures it</td></tr>
-        <tr><td class="c1">CGM (Dexcom / Abbott)</td><td>Overlay only</td><td>—</td><td>3rd-party</td><td>—</td><td>—</td><td>Direct integration + overlay</td></tr>
-        <tr><td class="c1">DNA / genetics</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (upload + analysis)</td></tr>
-        <tr><td class="c1">Microbiome</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (upload)</td></tr>
-        <tr><td class="c1">Labs / hormones</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (BYO from Quest / Labcorp / Function / Superpower)</td></tr>
-        <tr><td class="c1">Live environment (PM2.5 / pollen / UV)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (AirNow + OpenWeather + Pollen API)</td></tr>
-        <tr><td class="c1">Validated surveys (PROMIS / PHQ-9 / GAD-7)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong></td></tr>
-        <tr><td class="c1">Live research lookup (PubMed / GWAS / ClinVar / USPSTF / WHO / NICE)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong></td></tr>
-        <tr><td class="c1">Cross-source insight engine</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><strong>✓</strong> (the only one)</td></tr>
-        <tr><td class="c1">Data leaves device unencrypted</td><td>✓ (cloud)</td><td>✓ (cloud)</td><td>Mostly on-device</td><td>✓ (cloud)</td><td>Cloud-dependent</td><td><strong>Never</strong> — FHE end-to-end</td></tr>
-        <tr><td class="c1">Data shared / sold for research</td><td>Per ToS</td><td>Aggregated</td><td>Mostly no</td><td>Per Samsung ToS</td><td>Cloud-dependent</td><td><strong>Never</strong> — we don't hold the keys</td></tr>
-        <tr><td class="c1">HIPAA-covered?</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td><strong>No — but cryptographically equivalent</strong></td></tr>
+        <tr><td class="c1">Sensor (HRV / sleep / temp / HR)</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓ (in-bed)</td><td>Apple Health import today; Health Connect planned</td></tr>
+        <tr><td class="c1">ECG</td><td>·</td><td>✓ (FDA-cleared, MG)</td><td>✓</td><td>·</td><td>·</td><td>Planned</td></tr>
+        <tr><td class="c1">CGM (Dexcom / Abbott)</td><td>Overlay only</td><td>·</td><td>3rd-party</td><td>·</td><td>·</td><td>Planned</td></tr>
+        <tr><td class="c1">DNA / genetics</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong> (upload + analysis)</td></tr>
+        <tr><td class="c1">Microbiome</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong> (upload)</td></tr>
+        <tr><td class="c1">Labs / hormones</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong> (PDF upload, invite-only beta)</td></tr>
+        <tr><td class="c1">Live environment (PM2.5 / pollen / UV)</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong> (Open-Meteo, CAMS pollen, OpenAQ)</td></tr>
+        <tr><td class="c1">Lifestyle &amp; wellbeing check-ins (sleep, energy, stress, diet)</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong></td></tr>
+        <tr><td class="c1">Live research lookup (PubMed / Europe PMC / ClinVar / GWAS)</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong></td></tr>
+        <tr><td class="c1">Cross-source insight engine</td><td>·</td><td>·</td><td>·</td><td>·</td><td>·</td><td><strong>✓</strong></td></tr>
+        <tr><td class="c1">Data leaves device unencrypted</td><td>✓ (cloud)</td><td>✓ (cloud)</td><td>Mostly on-device</td><td>✓ (cloud)</td><td>Cloud-dependent</td><td>TLS in transit, encrypted at rest under per-user keys; FHE on the roadmap</td></tr>
+        <tr><td class="c1">Data shared / sold for research</td><td>Per ToS</td><td>Aggregated</td><td>Mostly no</td><td>Per Samsung ToS</td><td>Cloud-dependent</td><td><strong>Never sold</strong>; the cryptographic guarantee (device-held keys) is the target, server-side custody today</td></tr>
+        <tr><td class="c1">Covered by provider health-privacy law?</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td><strong>No</strong>; building toward cryptographic privacy stronger than the consumer-wearable norm</td></tr>
       </tbody>
     </table>
 
     <h3>The five things that matter</h3>
     <ol>
       <li><strong>None of them have DNA, microbiome, labs, environment, or live research.</strong> Every device in this category is a sensor company. VitaCrypt is a synthesis layer.</li>
-      <li><strong>Every one of them stores your data unencrypted on their cloud.</strong> Not a moral judgment — it's how their compute works. They have to see it to analyse it. We don't.</li>
+      <li><strong>Every one of them analyses your data in readable form on their cloud.</strong> Not a moral judgment; it's how their compute works. Today so do we; FHE is how we plan to change that.</li>
       <li><strong>Several actively monetise that data.</strong> Oura runs data-sharing agreements with academic and pharmaceutical partners. Whoop offers aggregated population-level data for research and commercial purposes. Fitbit (Google) ranked among the most permissive sharing terms in <a href="https://www.nature.com/articles/s41746-025-01757-1" target="_blank" rel="noopener">npj Digital Medicine's 2025 wearable-privacy systematic analysis</a>.</li>
-      <li><strong>None of them are HIPAA-covered.</strong> HIPAA applies to providers, insurers, and clearinghouses. Consumer wearables are categorically outside (<a href="https://athletechnews.com/wearables-hipaa-regulations-whoop-oura/" target="_blank" rel="noopener">Athletech News, 2024</a>).</li>
-      <li><strong>The legislative trend is favourable.</strong> <strong>HIPRA</strong> — the Health Information Privacy Reform Act, introduced by Senator Cassidy on <strong>November 4, 2025</strong> — would extend HIPAA-like protections to Apple Watch / Oura / Whoop data. Lawmakers are <em>currently drafting</em> the protection VitaCrypt already provides cryptographically.</li>
+      <li><strong>None of them are covered by US provider health-privacy law.</strong> That law applies to providers, insurers, and clearinghouses. Consumer wearables are categorically outside (<a href="https://athletechnews.com/wearables-hipaa-regulations-whoop-oura/" target="_blank" rel="noopener">Athletech News, 2024</a>).</li>
+      <li><strong>The legislative trend is favourable.</strong> <strong>HIPRA</strong> (the Health Information Privacy Reform Act, introduced by Senator Cassidy on <strong>November 4, 2025</strong>) would extend provider-grade privacy protections to Apple Watch / Oura / Whoop data. Lawmakers are <em>currently drafting</em> the kind of protection VitaCrypt is building toward.</li>
     </ol>
 
     <h3>Positioning</h3>
-    <p><strong>We don't replace, we connect.</strong> Keep your Oura. Keep your Apple Watch. Keep your Whoop. We pull what they read and add what they can't see — DNA, microbiome, labs, environment, validated surveys, live science. The encryption is the price of admission, not the product.</p>
+    <p><strong>We don't replace, we connect.</strong> Keep your Oura. Keep your Apple Watch. Keep your Whoop. We pull what they read and add what they can't see: DNA, microbiome, labs, environment, validated surveys, live science. The encryption is the price of admission, not the product.</p>
   </div>
 </section>
 
@@ -821,53 +847,63 @@ footer {
 <section id="engine">
   <div class="wrap">
     <div class="section-id"><span class="num">§06</span><span>The recommendation engine</span></div>
-    <h2>From ciphertext patterns to <span class="ac">cited next actions.</span></h2>
+    <h2>From your profile to <span class="ac">cited, bounded next actions.</span></h2>
 
-    <h3>Inference model</h3>
-    <p>The encrypted inference model is intentionally small. Large neural nets are not yet practical under TFHE. We compose the system from:</p>
+    <h3>Three tiers, and a clinical boundary</h3>
+    <p>Every insight is classified before it is shown. This router, the boundary, and the CPIC reference are the live, unit-tested core of the product today; the cryptographic primitives in §01 to §03 describe the privacy <em>roadmap</em> for how this computation could eventually run under encryption.</p>
     <ul>
-      <li><strong>FHE-compiled gradient-boosted decision trees</strong> — for genotype × environment interaction lookups. Concrete ML supports this natively.</li>
-      <li><strong>FHE-compiled linear / logistic regressors</strong> — for risk scoring on continuous biometric inputs.</li>
-      <li><strong>A small set of hand-curated decision rules</strong> — encoded as FHE-friendly boolean circuits, derived from systematic reviews.</li>
+      <li><strong>Evidence-backed:</strong> real PubMed PMIDs, a <strong>confirmed-N-of-M</strong> corroboration check across the retrieved papers, and a composite <strong>High / Moderate / Emerging</strong> confidence indicator.</li>
+      <li><strong>Exploratory:</strong> cross-domain connections the literature has not settled, labelled preliminary rather than asserted as fact.</li>
+      <li><strong>Redirect:</strong> anything clinical is withheld server-side and replaced with a warm handoff to the right clinician. The boundary is software-enforced, not a disclaimer.</li>
+    </ul>
+    <p>For established pharmacogenomic markers (starting with <strong>CYP2C9</strong>) the published <strong>CPIC</strong> consortium guidance is shown as a descriptive reference, the one place a grade comes from a clinical consortium rather than a model.</p>
+
+    <h3>Scoring model (target FHE path)</h3>
+    <p>Under the hood the scoring model is intentionally small; large neural nets are not practical under FHE, which is why the FHE path stays a roadmap item. The target FHE pipeline composes from:</p>
+    <ul>
+      <li><strong>FHE-compiled gradient-boosted decision trees</strong>, for genotype × environment interaction lookups. Concrete ML supports this natively.</li>
+      <li><strong>FHE-compiled linear / logistic regressors</strong>, for risk scoring on continuous biometric inputs.</li>
+      <li><strong>A small set of hand-curated decision rules</strong>, encoded as FHE-friendly boolean circuits, derived from systematic reviews.</li>
     </ul>
     <p>Output is a vector of action proposals, each with a confidence score and a reference into the citation pool. The citation pool itself is a pre-cleared index over the corpora listed below, computed in plaintext at indexing time; the lookup that maps from inference to citation happens on-device after decryption.</p>
 
     <h3>Research-agent (model layer)</h3>
     <p>A separate, non-FHE component watches the public scientific literature for new findings relevant to the action proposals our inference model generates. <strong>This is a vendor-agnostic architectural choice, not an LLM endorsement.</strong></p>
     <ul>
-      <li><strong>Model class:</strong> a frontier generalist LLM grounded in biomedical RAG over the corpora listed below. Our preferred posture is <strong>self-hosted open-weight</strong> (Llama 3.x / Mistral / Qwen class) — provider-free, no third-party API sees a single user-derived token. Hosted frontier models are an acceptable bootstrap option but not the long-term choice. Per <a href="https://arxiv.org/abs/2408.13833" target="_blank" rel="noopener">arXiv 2408.13833 (2024)</a>, fine-tuned biomedical LLMs (Meditron, Med42, OpenBioLLM) do not consistently outperform frontier generalist LLMs grounded in biomedical RAG — so we do not train or fine-tune a proprietary medical model either.</li>
-      <li><strong>What the model reads:</strong> public papers and curated open biomedical corpora — never the user's profile. The model has no access to ciphertext or plaintext user data.</li>
-      <li><strong>How findings reach the user:</strong> the agent emits structured tags (e.g. <code>variant=MTHFR-C677T</code>, <code>exposure=PM2.5-chronic</code>). Profile-vs-tag matching happens under FHE — a cheap circuit, not transformer inference.</li>
+      <li><strong>Model class:</strong> a frontier generalist LLM grounded in biomedical RAG over the corpora listed below. Our preferred posture is <strong>self-hosted open-weight</strong> (Llama 3.x / Mistral / Qwen class): provider-free, so no third-party API sees a user-derived token. Today a hosted frontier model is used as the bootstrap option; it is not the long-term choice. Per <a href="https://arxiv.org/abs/2408.13833" target="_blank" rel="noopener">arXiv 2408.13833 (2024)</a>, fine-tuned biomedical LLMs (Meditron, Med42, OpenBioLLM) do not consistently outperform frontier generalist LLMs grounded in biomedical RAG, so we do not train or fine-tune a proprietary medical model either.</li>
+      <li><strong>What the model reads:</strong> today, public papers plus a minimized, pseudonymized summary of the user's profile, which it needs to write the recommendations. Target: public papers and curated open corpora only, with the profile match done under FHE.</li>
+      <li><strong>How findings reach the user:</strong> the agent emits structured tags (e.g. <code>variant=MTHFR-C677T</code>, <code>exposure=PM2.5-chronic</code>). Profile-vs-tag matching is a cheap circuit, not transformer inference; running that match under FHE, so the server never sees the profile in the clear, is the privacy roadmap goal.</li>
       <li><strong>What we explicitly do NOT claim:</strong> "encrypted LLM inference." No production-grade FHE-compiled transformer exists today. Nillion (MPC) and Apple Swift HE (BFV primitives) are not yet a single-user LLM substitute. We will revisit if/when the landscape changes.</li>
     </ul>
 
-    <h3>Citation pipeline — full source menu</h3>
-    <p>Every action surfaced to the user carries a citation count. The "37M+ records cross-referenced" figure on the landing refers to the size of the upstream PubMed corpus we query against, not the number of papers behind any single recommendation. PubMed sits at ~37M indexed records per the NLM open-data portal; Cochrane Library hosts ~4,500 systematic reviews. The full MVP source menu:</p>
+    <h3>Citation pipeline: sources, live and roadmap</h3>
+    <p>Every action surfaced to the user carries a citation count. The "~40M" figure on the landing refers to the size of the PubMed corpus we search live, not the number of papers behind any single recommendation. Cochrane Library hosts ~4,500 systematic reviews. Sources, live and roadmap:</p>
 
     <table class="spec-table">
       <thead>
         <tr><th>Source</th><th>Content</th><th>License / Cost</th><th>Status</th></tr>
       </thead>
       <tbody>
-        <tr><td class="c1">PubMed</td><td>~37M biomedical citations</td><td>NLM open data, free API</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">OpenAlex</td><td>~250M scholarly works, citations graph</td><td>CC0 — fully open</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">Semantic Scholar</td><td>~200M papers, embeddings, AI-curated TLDRs</td><td>Free academic API (Allen AI)</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">Cochrane Library</td><td>~4,500 systematic reviews + meta-analyses</td><td>Subscription content; abstracts open</td><td><span class="badge q">MVP (abstracts)</span></td></tr>
-        <tr><td class="c1">GWAS Catalog</td><td>Variant-trait associations from genome-wide studies</td><td>EBI/NHGRI open</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">ClinVar</td><td>Variant-clinical-significance interpretations</td><td>NCBI open, daily updates</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">ClinGen</td><td>Curated gene-disease validity, dosage sensitivity</td><td>NIH open</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">Open Targets</td><td>Drug-target-disease associations</td><td>Open (EMBL-EBI / GSK / Wellcome)</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">OpenFDA</td><td>Drug labels, adverse events, recalls</td><td>FDA open API</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">USPSTF</td><td>Preventive services recommendations (grade A/B)</td><td>Free public API</td><td><span class="badge live">MVP</span></td></tr>
-        <tr><td class="c1">WHO Guidelines</td><td>Global clinical guidance, cohort & trial data</td><td>Free, attribution required</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">NICE</td><td>UK clinical pathway recommendations</td><td>Free for non-commercial use</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">CDC data</td><td>Surveillance + environmental exposure baselines</td><td>Free public API</td><td><span class="badge q">MVP</span></td></tr>
-        <tr><td class="c1">NIH ODS</td><td>Office of Dietary Supplements fact sheets</td><td>Free, attribution required</td><td><span class="badge q">MVP</span></td></tr>
+        <tr><td class="c1">PubMed</td><td>~40M biomedical citations</td><td>NLM open data, free API</td><td><span class="badge live">Live</span></td></tr>
+        <tr><td class="c1">Europe PMC</td><td>Life-science literature, abstracts and full text</td><td>EMBL-EBI open, free API</td><td><span class="badge live">Live</span></td></tr>
+        <tr><td class="c1">OpenAlex</td><td>~250M scholarly works, citations graph</td><td>CC0, fully open</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">Semantic Scholar</td><td>~200M papers, embeddings, AI-curated TLDRs</td><td>Free academic API (Allen AI)</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">Cochrane Library</td><td>~4,500 systematic reviews + meta-analyses</td><td>Subscription content; abstracts open</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">GWAS Catalog</td><td>Variant-trait associations from genome-wide studies</td><td>EBI/NHGRI open</td><td><span class="badge live">Live</span></td></tr>
+        <tr><td class="c1">ClinVar / dbSNP</td><td>Variant-clinical-significance interpretations</td><td>NCBI open, daily updates</td><td><span class="badge live">Live</span></td></tr>
+        <tr><td class="c1">ClinGen</td><td>Curated gene-disease validity, dosage sensitivity</td><td>NIH open</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">Open Targets</td><td>Drug-target-disease associations</td><td>Open (EMBL-EBI / GSK / Wellcome)</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">OpenFDA</td><td>Drug labels, adverse events, recalls</td><td>FDA open API</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">USPSTF</td><td>Preventive services recommendations (grade A/B)</td><td>Free public API</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">WHO Guidelines</td><td>Global clinical guidance, cohort & trial data</td><td>Free, attribution required</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">NICE</td><td>UK clinical pathway recommendations</td><td>Free for non-commercial use</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">CDC data</td><td>Surveillance + environmental exposure baselines</td><td>Free public API</td><td><span class="badge q">Roadmap</span></td></tr>
+        <tr><td class="c1">NIH ODS</td><td>Office of Dietary Supplements fact sheets (reference values, not personal doses)</td><td>Free, attribution required</td><td><span class="badge live">Live</span></td></tr>
       </tbody>
     </table>
 
     <h3>What the output never includes</h3>
-    <p>Free-form natural language generated from the user's encrypted profile. We do not run LLM completions over ciphertext at MVP scale — FHE-friendly transformer inference exists in research but is not yet production-viable. All copy presented to the user is composed on-device from short templated insight slots, with tags sourced from the research-agent layer above.</p>
+    <p>Personal doses, medication changes or diagnoses. Today recommendations are written server-side by a hosted LLM over a minimized profile summary; a guard then blocks doses, medication changes and diagnoses, and falls back to a fixed template if a sentence fails. We do not run LLM completions over ciphertext; FHE-friendly transformer inference exists in research but is not yet production-viable.</p>
   </div>
 </section>
 
@@ -878,14 +914,14 @@ footer {
     <h2>How we will know it works.</h2>
     <p>FHE preserves the privacy of inputs. It does not, by itself, guarantee that the recommendations on the other side are clinically useful. Validation is a separate problem, addressed in three stages:</p>
 
-    <h3>Stage 1 — Synthetic dose-response (Q4 2026)</h3>
-    <p>Closed-alpha cohort of ~50 design partners runs the full pipeline. Each receives weekly insights and reports adherence + outcome on standard questionnaires (PSQI, PHQ-9, custom biomarker check-ins). Goal: detect implementation defects and obvious clinical mis-calls before any external study.</p>
+    <h3>Stage 1: Closed alpha (Q4 2026)</h3>
+    <p>Closed-alpha cohort of ~50 design partners runs the full pipeline. Each receives weekly insights and reports adherence + outcome on standard questionnaires (PSQI, wellbeing scales, custom biomarker check-ins). Goal: detect implementation defects and obvious mis-calls before any external study.</p>
 
-    <h3>Stage 2 — IRB-supervised longitudinal study (Q1 2027 – H2 2027)</h3>
+    <h3>Stage 2: IRB-supervised longitudinal study (Q1 2027 – H2 2027)</h3>
     <p>Partnership with an academic medical center for a 12-month open-enrollment longitudinal study. Endpoints: inflammatory marker trajectories (CRP, IL-6), HRV trends, glucose variability, validated quality-of-life scores. We do not promise clinical-trial-grade evidence at the MVP scale; we promise honest, IRB-supervised observational data.</p>
 
-    <h3>Stage 3 — Clinical decision support pilot (H2 2027+)</h3>
-    <p>HL7/FHIR connector + clinician-side decision support pilot with the same medical center. Optional HIPAA BAA path for partner providers.</p>
+    <h3>Stage 3: Clinical decision support pilot (H2 2027+)</h3>
+    <p>HL7/FHIR connector + clinician-side decision support pilot with the same medical center. Compliance path agreed with partner providers.</p>
   </div>
 </section>
 
@@ -894,9 +930,16 @@ footer {
   <div class="wrap">
     <div class="section-id"><span class="num">§08</span><span>Open technical questions</span></div>
     <h2>Where we are still resolving the story in public.</h2>
-    <p>The honest answer to "is the architecture on the landing exactly what is on GitHub" is: <strong>directionally yes, in detail not yet.</strong> The MVP is in development. The list below tracks every claim on the landing we are independently verifying before lock.</p>
+    <p>The honest answer to "is the architecture on the landing exactly what is on GitHub" is: <strong>directionally yes, in detail not yet.</strong> The MVP is live, early-stage and pre-launch. The list below tracks every claim on the landing we are independently verifying before lock.</p>
 
     <div class="openq-list">
+      <div class="openq">
+        <div class="ix">✓</div>
+        <div>
+          <div class="q">Does encrypted compute (FHE) actually run end to end on our stack, or is it only theory?</div>
+          <div class="why"><strong>Shown once, as a proof of concept.</strong> A standalone script on staging ran one encrypted genetic vector end to end: the client holds the key, the server computes on ciphertext in about 0.5s and never holds the secret key. The model is synthetic, a tech demo, not a validated risk score, and it is not part of the product. FHE in the product is a long-term roadmap item.</div>
+        </div>
+      </div>
       <div class="openq">
         <div class="ix">Q01</div>
         <div>
@@ -908,40 +951,40 @@ footer {
         <div class="ix">Q02</div>
         <div>
           <div class="q">Is the ~300s / 96% Zama benchmark direct-citable?</div>
-          <div class="why">Yes. <strong>Resolved.</strong> Zama bounty&nbsp;#95 — the <code>soptq</code> and <code>alephzerox</code> submissions achieve ~96% accuracy on encrypted ancestry classification of the 1000 Genomes test set at ~300s on a single CPU. This is <em>ancestry classification</em>, not whole-genome variant calling. We cite it as the field's public benchmark, not our product throughput yet.</div>e Zama research community."</div>
+          <div class="why">Yes. <strong>Resolved.</strong> Zama bounty&nbsp;#95: the <code>soptq</code> and <code>alephzerox</code> submissions achieve ~96% accuracy on encrypted ancestry classification of the 1000 Genomes test set at ~300s on a single CPU. This is <em>ancestry classification</em>, not whole-genome variant calling. We cite it as the field's public benchmark, not our product throughput.</div>
         </div>
       </div>
       <div class="openq">
         <div class="ix">Q03</div>
         <div>
-          <div class="q">Centralised FHE compute vs distributed / blind computing (Nillion)?</div>
-          <div class="why">MVP is centralised FHE compute on infrastructure we control. Nillion's blind-computing layer is on the longer-term roadmap as a second-line defence-in-depth measure, not an MVP commitment.</div>
+          <div class="q">Centralised FHE compute vs distributed MPC (Nillion)?</div>
+          <div class="why">The MVP does not run FHE; compute is server-side on infrastructure we control. If FHE ships, it starts centralised. Nillion's MPC layer is a longer-term option for defence in depth, not a commitment.</div>
         </div>
       </div>
       <div class="openq">
         <div class="ix">Q04</div>
         <div>
           <div class="q">Is "30M+ studies behind each recommendation" the right framing?</div>
-          <div class="why">No — the correct phrasing is <strong>"cross-referenced against PubMed (~37M indexed records) and Cochrane systematic reviews."</strong> Per the NLM open-data portal (datadiscovery.nlm.nih.gov/Literature/PubMed-total-records-by-publication-year), MEDLINE/PubMed sits at ~37M citations. Cochrane Library hosts ~4,500 systematic reviews. Landing copy has been corrected.</div>
+          <div class="why">No. The correct phrasing is <strong>"searched live across PubMed (~40M citations) and Europe PMC."</strong> That is the size of the corpus, not the number of papers behind one recommendation. Landing copy has been corrected.</div>
         </div>
       </div>
       <div class="openq">
         <div class="ix">Q05</div>
         <div>
-          <div class="q">zkSNARKs — load-bearing, or ornamental?</div>
-          <div class="why"><strong>Ornamental at MVP.</strong> FHE already gives the user a correctness guarantee: only the key-holder can decrypt, so a corrupted result decrypts to garbage. zkSNARKs would matter only if we needed third-party verifiable proof that the published model ran on the user's ciphertext (e.g., for regulators or auditors). Removed from headline copy. Re-introduced only if we add public proof-of-compute in V2+.</div>iv>
+          <div class="q">zkSNARKs: load-bearing, or ornamental?</div>
+          <div class="why"><strong>Ornamental.</strong> In the target FHE design the user gets a correctness guarantee: only the key-holder can decrypt, so a corrupted result decrypts to garbage. zkSNARKs would matter only if we needed third-party verifiable proof that the published model ran on the user's ciphertext (e.g., for regulators or auditors). Removed from headline copy. Re-introduced only if we add public proof-of-compute in V2+.</div>
         </div>
       </div>
       <div class="openq">
         <div class="ix">Q06</div>
         <div>
-          <div class="q">Statistical inference from structured output — how much does it leak?</div>
-          <div class="why">Active characterization. Output structure is fixed-size and padded; values are encrypted. An adversary observing only output sizes learns query timing, not content. Per-user differential-privacy noise on metric slots is on the hardening roadmap.</div>
+          <div class="q">Statistical inference from structured output: how much does it leak?</div>
+          <div class="why">Open, for the target design. Output structure would be fixed-size and padded; values are encrypted. An adversary observing only output sizes learns query timing, not content. Per-user differential-privacy noise on metric slots is on the hardening roadmap.</div>
         </div>
       </div>
     </div>
 
-    <p>A full pre-launch resolution of these questions is the contract of this document's <a href="../../RESEARCH_BRIEF.md">research brief</a>. Investors and prospective partners who want the current status on any specific item can request it directly.</p>
+    <p>A full pre-launch resolution of these questions is the contract of this document's research brief. Investors and prospective partners who want the current status on any specific item can request it directly.</p>
   </div>
 </section>
 
@@ -950,8 +993,8 @@ footer {
   <div class="wrap">
     <div class="cta-block">
       <h3>Talk to us about the architecture.</h3>
-      <p>We are looking for technically-fluent design partners and investors who want to interrogate the stack — not be marketed at. If that is you, please reach out.</p>
-      <a class="cta-btn" href="mailto:hello@vitacrypt.xyz">hello@vitacrypt.xyz →</a>
+      <p>We are looking for technically-fluent design partners and investors who want to interrogate the stack, not be marketed at. If that is you, please reach out.</p>
+      <a class="cta-btn" href="mailto:investors@vitacrypt.xyz">investors@vitacrypt.xyz →</a>
     </div>
   </div>
 </section>
@@ -961,24 +1004,25 @@ footer {
   <div class="wrap">
     <div class="section-id"><span class="num">§09</span><span>References &amp; further reading</span></div>
     <ul class="refs">
-      <li><strong>[1]</strong> Zama — <em>Concrete ML</em> documentation. github.com/zama-ai/concrete-ml. Production FHE toolchain targeted by our compute layer.</li>
-      <li><strong>[2]</strong> Chillotti, Gama, Georgieva, Izabachène — <em>TFHE: Fast Fully Homomorphic Encryption over the Torus.</em> Journal of Cryptology, 2020.</li>
-      <li><strong>[3]</strong> Zama — <em>bounty submission #95: encrypted whole-genome ancestry classification, 96% accuracy at ~300s latency on a single CPU (1000 Genomes test set).</em> <a href="https://github.com/zama-ai/bounty-and-grant-program/issues/95">github.com/zama-ai/bounty-and-grant-program/issues/95</a></li>
-      <li><strong>[4]</strong> Grand View Research — <em>Digital Health Market Size, Outlook 2024–2030.</em></li>
-      <li><strong>[5]</strong> Bank of America Global Research — <em>The Longevity Economy.</em> 2025 industry sizing.</li>
-      <li><strong>[6]</strong> PubMed (National Library of Medicine) — primary biomedical literature index, ~37M records.</li>
-      <li><strong>[7]</strong> Cochrane Library — systematic reviews; secondary source for protocol recommendations.</li>
-      <li><strong>[8]</strong> Apple — <em>Secure Enclave overview.</em> developer.apple.com/security.</li>
-      <li><strong>[9]</strong> Android — <em>StrongBox keystore.</em> source.android.com/security.</li>
+      <li><strong>[1]</strong> Zama, <em>Concrete ML</em> documentation. github.com/zama-ai/concrete-ml. FHE toolchain targeted by our roadmap compute layer.</li>
+      <li><strong>[2]</strong> Chillotti, Gama, Georgieva, Izabachène, <em>TFHE: Fast Fully Homomorphic Encryption over the Torus.</em> Journal of Cryptology, 2020.</li>
+      <li><strong>[3]</strong> Zama, <em>bounty submission #95: encrypted whole-genome ancestry classification, 96% accuracy at ~300s latency on a single CPU (1000 Genomes test set).</em> <a href="https://github.com/zama-ai/bounty-and-grant-program/issues/95">github.com/zama-ai/bounty-and-grant-program/issues/95</a></li>
+      <li><strong>[4]</strong> Grand View Research, <em>Digital Health Market Size, Outlook 2024–2030.</em></li>
+      <li><strong>[5]</strong> Bank of America Global Research, <em>The Longevity Economy.</em> 2025 industry sizing.</li>
+      <li><strong>[6]</strong> PubMed (National Library of Medicine), primary biomedical literature index, ~40M citations.</li>
+      <li><strong>[7]</strong> Cochrane Library, systematic reviews; secondary source for protocol recommendations.</li>
+      <li><strong>[8]</strong> Apple, <em>Secure Enclave overview.</em> developer.apple.com/security.</li>
+      <li><strong>[9]</strong> Android, <em>StrongBox keystore.</em> source.android.com/security.</li>
     </ul>
     <p style="margin-top: 18px; font-size: 13px; color: var(--ink-faint);">
-      This is v0.1.0. Items marked <em>pending verification</em> are tracked in §08 and the linked <a href="../../RESEARCH_BRIEF.md">research brief</a>. Numbers and stack-specific claims will be locked once independent verification completes.
+      This is v0.1.2. Items marked <em>pending verification</em> are tracked in §08 and the research brief. Numbers and stack-specific claims will be locked once independent verification completes.
     </p>
   </div>
 </section>
 
 <footer>
-  © 2026 VITACRYPT · TECHNICAL BRIEF V0.1.0 · MAY 2026
+  © 2026 VITACRYPT · TECHNICAL BRIEF V0.1.2 · MAY 2026
+  <span style="display:block;margin-top:6px">Built by <a href="https://paulburg.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">Paul Burg</a></span>
 </footer>
 
 </body>

@@ -1,6 +1,11 @@
 # VitaCrypt
-> VitaCrypt enables encrypted personal health intelligence using FHE (Fully Homomorphic Encryption).
+> VitaCrypt unifies a person's whole health, genetics, wearables, labs, microbiome, environment and lifestyle, into one profile that returns actionable, AI-driven, evidence-checked guidance. Private by design.
 
 ## Core Concepts
-- **Blind Computing:** Processing data where the server never sees the raw inputs.
-- **FHE:** Compute on encrypted data without decryption.
+- **Unified profile:** Any health signal fused into one queryable profile (genetics, wearables, labs, microbiome, environment, lifestyle and more), built to grow over time, the more it holds, the better it reads the person. We have not found a product that unifies it this way.
+- **Evidence-checked, AI-driven guidance:** Every recommendation cites real literature retrieved live across PubMed and Europe PMC, graded by publication type; the model cannot invent citations. Genetics grounded on ClinVar, dbSNP and the GWAS Catalog.
+- **Actionable, whole-profile:** Guidance is read against your genotype and local environment, not fragmented single-metric readouts.
+- **Private by design:** Data is encrypted at rest under per-user keys and never sold. The master key is currently server-side, so the server can read the data it processes. Fully homomorphic encryption (FHE) is a long-term R&D roadmap item, not part of the product.
+
+## Status
+Early-stage MVP live, pre-launch, founder-led. Live demo with synthetic data: https://app.vitacrypt.xyz/demo. Contact: investors@vitacrypt.xyz, t.me/paul_burg.
