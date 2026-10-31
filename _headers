@@ -1,0 +1,11 @@
+/*
+  Strict-Transport-Security: max-age=63072000
+
+/media/*
+  Cache-Control: public, max-age=604800
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

@@ -5,7 +5,8 @@ set -euo pipefail
 cd "$(dirname "$0")"
 OUT=$(mktemp -d)
 trap 'rm -rf "$OUT"' EXIT
-cp index.html 404.html platform.html litepaper.html llms.txt robots.txt sitemap.xml "$OUT"/
-cp -R img assets "$OUT"/
+# Same file set Vercel served: repo minus .vercelignore entries, functions, configs.
+rsync -a --exclude-from=.vercelignore --exclude='.*' --exclude=api --exclude=functions \
+  --exclude=vercel.json --exclude=deploy-pages.sh "./" "$OUT/"
 CLOUDFLARE_ACCOUNT_ID=a7e9c308efff0b6c92c2b4a3fff30cf3 \
   npx --yes wrangler@4.144.0 pages deploy "$OUT" --project-name vitacrypt-landing --branch "${1:-preview}" --commit-dirty=true
