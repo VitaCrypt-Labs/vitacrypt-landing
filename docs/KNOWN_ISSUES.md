@@ -58,6 +58,13 @@ _Last updated: 2026-06-16 pm (mobile drawer redesigned + bottom pip-bar removed 
 - **Self-contained pages duplicate nav/footer/waitlist form** across index/investor/platform
   (litepaper has a minimal footer). They drift; a change to a shared block must be applied to all.
   Candidate fix: extract `assets/shared.css` + `assets/app.js` when a change next touches all pages.
-- **Waitlist rate-limiting is best-effort** (in-memory per Vercel instance). Proper fix = Vercel KV.
-- **Waitlist env vars are Production-scoped only** — Preview/Dev deploys error on the form until
-  `TG_BOT_TOKEN` / `TG_CHAT_ID` are added to those scopes.
+- **Waitlist rate-limiting is best-effort** (in-memory per Cloudflare isolate). Proper fix = Workers KV
+  or a Cloudflare rate-limiting rule.
+- **Cloudflare Pages quirks we work around (2026-10-31):** Pages 308s `/x.html` → `/x`, so
+  `functions/*.html.js` serve the `.html` URLs 200; `_redirects` also applies to `env.ASSETS.fetch`
+  inside a Function (a `/platform → /platform.html` rule there loops), so bare-path 301s live in
+  Functions. `/beta.html`, `/agent.html`, `/press.html`, `/data.html` now 308 to their canonical
+  (Vercel served them 200). `/platform.html/` (trailing slash) answers 200.
+- **Vercel leftovers kept for rollback until mid-Dec 2026:** `api/`, `vercel.json`, `.vercelignore`,
+  the Vercel project and its domains. Rollback = point the apex + www DNS records back to
+  `vitacrypt-landing-ccv7vf74n-paulburgeths-projects.vercel.app` (once the Vercel team is unpaused).

@@ -628,3 +628,11 @@ Ahrefs health score was 60 (Fair) — 9 errors from broken links + a non-canonic
 Verified live: `/index.html`→301→`/`; `/`→200; all pages 0 `cdn-cgi`, 0 `href="index.html"`, 0 `RESEARCH_BRIEF`.
 **Fragile / revisit:** health score won't move until Ahrefs re-crawls (trigger a manual crawl). `/index.html` still exists at origin but now 301s; if `cleanUrls` is ever enabled in Vercel, re-check no redirect loop.
 **Decision (user):** Scrape Shield off; 301 redirect; deploy. No git push (Vercel-direct, feature branch `chore/footer-credit`).
+
+## 2026-10-31 — Hosting moved Vercel → Cloudflare Pages
+**Why:** the Vercel Hobby team was paused until 2026-11-30 (Fluid Active CPU limit), and every site returned 402. Paul chose Cloudflare Pages (free; DNS was already on Cloudflare).
+**What:** Pages project `vitacrypt-landing`, deployed by `deploy-pages.sh` (wrangler 4.144.0, direct upload, no Git integration). The waitlist runs as a Pages Function (`functions/api/waitlist.js`, same validation and Telegram format). `TG_BOT_TOKEN`/`TG_CHAT_ID` are Pages secrets (prod + preview).
+**Source of truth:** the repo's `main` did not match production. The 44 files of the live Vercel deployment were downloaded through the Vercel API and matched `feat/beta-page` byte for byte, so that branch was merged here.
+**SEO parity (proved with curl before the switch):** all 8 sitemap URLs return 200 with 0 redirects, and all 41 served files are byte-identical to Vercel. The `vercel.json` rules were carried over: `/index.html` 301 → `/`, the `/beta|agent|press|data` rewrites (native on Pages), and media `Cache-Control` 7d. HSTS stays as Vercel sent it. www → apex 308 (was a Vercel domain redirect) is now a Cloudflare zone redirect rule. `*.pages.dev` gets `X-Robots-Tag: noindex`; the custom domain does not.
+**Trade-offs:** `/beta.html`-style URLs now 308 to their canonical instead of 200. Bare `/platform` 301s to `/platform.html` (it was 404 on Vercel).
+**Rollback:** keep the Vercel project and domains until mid-Dec 2026; repoint the apex + www CNAMEs at `vitacrypt-landing-ccv7vf74n-paulburgeths-projects.vercel.app`.
