@@ -68,3 +68,6 @@ _Last updated: 2026-06-16 pm (mobile drawer redesigned + bottom pip-bar removed 
 - **Vercel leftovers kept for rollback until mid-Dec 2026:** `api/`, `vercel.json`, `.vercelignore`,
   the Vercel project and its domains. Rollback = point the apex + www DNS records back to
   `vitacrypt-landing-ccv7vf74n-paulburgeths-projects.vercel.app` (once the Vercel team is unpaused).
+
+## 2026-11-06: `media/vitacrypt-deck.pdf` is outdated
+Stays as is until the rebuild; do not reuse it as it stands. The next version gets current information. The list of outdated PDFs is in the app repo, `docs/submission/PDF_STATUS.md`.
