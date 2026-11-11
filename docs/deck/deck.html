@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VitaCrypt deck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=IBM+Plex+Sans:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+@page { size: 1920px 1080px; margin: 0 }
+html, body { margin: 0; padding: 0; background: #10162F }
+section { width: 1920px; height: 1080px; box-sizing: border-box; position: relative; overflow: hidden; break-after: page }
+section:last-of-type { break-after: auto }
+p, h1, h2, h3, ul { margin: 0 }
+ul { padding-left: 1.1em }
+aside { display: none }
+table { border-collapse: collapse; width: 100% }
+th { text-align: left; font-weight: 600; padding: 14px 16px }
+td { padding: 14px 16px; vertical-align: top }
+section.dark th { color: #C3C8DE; border-bottom: 1px solid #3B4680 }
+section.dark td { border-bottom: 1px solid #2E3762 }
+section.light th { color: #4A5068; border-bottom: 1px solid #C9C5BA }
+section.light td { border-bottom: 1px solid #DEDBD2 }
+</style>
+</head>
+<body>
+<section class="dark" id="cover" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:96px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">Air, DNA and labs in one profile · Lab Agent</p>
+<h1 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:88px;font-weight:600;line-height:1.05;color:#EEF0F8">Your whole health, read together. An agent that acts on it.</h1>
+<p style="font-size:38px;line-height:1.35;color:#C3C8DE">VitaCrypt reads DNA, labs, wearables, microbiome, check-ins and the air you breathe as one profile, checks every link against research, and its Lab Agent turns it into a plan that it follows up.</p>
+<p style="font-size:32px;color:#C3C8DE"><b style="color:#EEF0F8">Paul Burg</b>, solo founder · Early-stage MVP · Guided live demo on synthetic data</p>
+</div>
+<img src="img/cover.jpg" alt="Monthly status report: what changed, labelled Your data, Cited or Hypothesis" style="width:376px;height:812px;object-fit:contain;border-radius:28px;border:2px solid #2E3762">
+<p style="position:absolute;left:128px;bottom:64px;width:1300px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">app.vitacrypt.xyz/demo · no sign-up, no password</p>
+</section>
+<section class="light" id="problem" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">01 · The problem</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:68px;font-weight:600;line-height:1.1">Your health lives in a dozen apps. The patterns live between them.</h2>
+<div style="display:flex;flex-direction:row;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFFFF;padding:36px;border:1px solid #DEDBD2;border-radius:20px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Fragments</h3>
+<p style="font-size:28px;line-height:1.4;color:#4A5068">DNA in one report, labs in a PDF, sleep in a watch app. The air you breathe is in none of them.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFFFF;padding:36px;border:1px solid #DEDBD2;border-radius:20px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Dashboards, not actions</h3>
+<p style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:28px;line-height:1.4;color:#4A5068">Each app shows its own numbers. Nobody checks later whether what you changed worked.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FFFFFF;padding:36px;border:1px solid #DEDBD2;border-radius:20px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Trust</h3>
+<p style="font-size:28px;line-height:1.4;color:#4A5068">Advice mixes studies with guesses and sales. And the 23andMe breach exposed 6.9 million people’s data.</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#4A5068">Health AI today mostly <b style="color:#1A2040">reads one source and explains it</b>. It does not read the whole person, and it does not come back.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#6A6F82">VitaCrypt · 02</p>
+</section>
+<section class="dark" id="platform" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:80px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">02 · VitaCrypt: four pillars, one profile</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:60px;font-weight:600;line-height:1.1">Most tools do one of these. The value is how they compound.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#18204A;padding:28px 32px;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#8E9BFF">Unified</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">DNA, labs, wearables, microbiome, check-ins, environment in one profile</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#18204A;padding:28px 32px;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#5FD3A6">Cited</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">Every link checked against PubMed and Europe PMC; no invented PMIDs</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#18204A;padding:28px 32px;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#E8B062">Personal</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">Your genes × your world: the same lab reads differently by genotype and air</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#18204A;padding:28px 32px;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#EEF0F8">Private</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">Minimized before anything leaves, encrypted per user; all model calls go to Claude today</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#C3C8DE">We have not found another product that reads all of these together.</p>
+</div>
+<img src="img/platform.jpg" alt="Insights from all your data, combining labs, habit logs and Delhi air" style="width:380px;height:824px;object-fit:contain;border-radius:28px;border:2px solid #2E3762">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">Live app, fictional person, synthetic data · 03</p>
+</section>
+<section class="light" id="environment" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:48px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">03 · Holistic, in practice</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">Your genes × your world: three signals, one action</h2>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#3B47C9">AIR · PM2.5 mean 125 µg/m³, 56 days</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#3B47C9">LAB · hs-CRP 1.6 to 2.1 mg/L</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#3B47C9">DNA · IL6 and TNF variants</p>
+<p style="font-size:30px;line-height:1.35;color:#1A2040"><b>“Watch inflammation in heavy-pollution months”</b>, labelled Hypothesis: each link cited, the combination is ours.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:20px;border-left:6px solid #D9653B">
+<p style="font-size:28px;line-height:1.4;color:#1A2040">Today’s air changes the plan: the walk habit becomes <b>“AQI 191: do it indoors”</b>.</p>
+</div>
+</div>
+<img src="img/environment-1.jpg" alt="Environment screen for New Delhi, US AQI 191, unhealthy" style="width:330px;height:714px;object-fit:contain;border-radius:28px;border:2px solid #C9C5BA">
+<img src="img/environment-2.jpg" alt="Habits screen: the walk habit with the note to do it indoors because of AQI 191" style="width:330px;height:714px;object-fit:contain;border-radius:28px;border:2px solid #C9C5BA">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#6A6F82">Live app, Alex moved to New Delhi (real Open-Meteo archive air), synthetic data · 04</p>
+</section>
+<section class="dark" id="agent" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:72px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">04 · The Lab Agent: the profile, in action</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">What makes it an agent</h2>
+<table style="font-size:24px;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:26%">Definition</th><th style="width:74%">Lab Agent, as built</th></tr>
+<tr><td>Goal</td><td>Bring out-of-range markers toward range, with no clinical advice</td></tr>
+<tr><td>Decisions</td><td>Cited, Hypothesis or Ask your clinician; keep, swap or retire habits</td></tr>
+<tr><td>Tools</td><td>Lab reader, DNA annotation, PubMed, Europe PMC, AI judge, maps</td></tr>
+<tr><td>Actions</td><td>Habits, retest date, reminders, clinician link, lab order (sandbox)</td></tr>
+<tr><td>Multi-step plan</td><td>Seven fixed steps per lab; a plan over weeks to the next lab</td></tr>
+<tr><td>Other systems</td><td>Telegram, calendar, Junction (US sandbox), OpenStreetMap, Anthropic</td></tr>
+<tr><td>Learns</td><td>Next lab vs its own plan and the habit log</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.4;color:#8E9BFF">No chat box. The visitor watches each step and the real search queries.</p>
+</div>
+<img src="img/agent.jpg" alt="Live agent run: each step shows what it found, with the guided tour card" style="width:360px;height:780px;object-fit:contain;border-radius:28px;border:2px solid #2E3762">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">Live run with the guided tour, step 7 of 12 · 05</p>
+</section>
+<section class="light" id="decisions" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:96px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">05 · Decisions you can check</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:60px;font-weight:600;line-height:1.1">Every plan item is routed</h2>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFFFF;padding:24px 32px;border-radius:16px;border-left:6px solid #2E9C74">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#1F7A5A">Cited</h3>
+<p style="font-size:28px;line-height:1.4;color:#4A5068">Retrieved papers support it; PMIDs shown.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFFFF;padding:24px 32px;border-radius:16px;border-left:6px solid #C98A2E">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#9A6514">Hypothesis</h3>
+<p style="font-size:28px;line-height:1.4;color:#4A5068">Not confirmed by a cited study yet.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFFFF;padding:24px 32px;border-radius:16px;border-left:6px solid #3B47C9">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600;color:#3B47C9">Ask your clinician</h3>
+<p style="font-size:28px;line-height:1.4;color:#4A5068">Clinical topics become neutral questions.</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#4A5068"><b style="color:#1A2040">Reference, not prescription:</b> supplements appear only as official values for adults with their source (NIH), never as a dose chosen for you. No diagnoses.</p>
+</div>
+<img src="img/decisions.jpg" alt="Plan with Cited and Hypothesis habits and questions for the clinician" style="width:380px;height:824px;object-fit:contain;border-radius:28px;border:2px solid #C9C5BA">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#6A6F82">Live app, fictional person, synthetic data · 06</p>
+</section>
+<section class="dark" id="learn" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:96px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:30px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">06 · Learns from results</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:600;line-height:1.1">On the next lab, the agent checks its own plan</h2>
+<table style="font-size:28px;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:46%">Marker and habit log</th><th style="width:54%">Decision</th></tr>
+<tr><td>Moved away, habit done 22 of 28 days</td><td>Swap the habit, ask the clinician</td></tr>
+<tr><td>Moved away, habit done 4 of 28 days</td><td>Keep it, do it more often</td></tr>
+<tr><td>Moved toward range</td><td>Keep the habit</td></tr>
+<tr><td>Back in range</td><td>Retire the habit</td></tr>
+</table>
+<p style="font-size:28px;line-height:1.4;color:#C3C8DE">Live run on the second demo lab: homocysteine 16.8 to 17.9 with the habit done on 22 of 28 days, so the agent swapped it and added a clinician question.</p>
+</div>
+<img src="img/learn.jpg" alt="Did your last plan work: homocysteine, LDL and vitamin D with habit adherence and decisions" style="width:380px;height:824px;object-fit:contain;border-radius:28px;border:2px solid #2E3762">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">Live app, fictional person, synthetic data · 07</p>
+</section>
+<section class="light" id="actions" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:96px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:36px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">07 · Actions in the real world</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">Each action needs your tap and shows what will be shared</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600">Retest reminders</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5068">Calendar file and Telegram reminders</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600">Share with clinician</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5068">Private page, no name, 1 to 30 days, withdraw any time</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600">Order the same tests</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5068">Junction lab-ordering sandbox, US only; simulated in the demo</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:28px 32px;border:1px solid #DEDBD2;border-radius:16px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:34px;font-weight:600">Labs near you</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A5068">OpenStreetMap search by city, nothing about your health</p>
+</div>
+</div>
+</div>
+<img src="img/actions.jpg" alt="Share with your clinician: the exact page the clinician will see, before the link is created" style="width:380px;height:824px;object-fit:contain;border-radius:28px;border:2px solid #C9C5BA">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#6A6F82">Live app, fictional person, synthetic data · 08</p>
+</section>
+<section class="dark" id="privacy" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:96px;align-items:start">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">08 · Data protection, as built</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">Leakage minimized by design, and logged</h2>
+<ul style="font-size:26px;line-height:1.42;color:#C3C8DE">
+<li><b style="color:#EEF0F8">Lab Agent run:</b> a coded minimum (marker band, trend, gene code), never name, email, file or exact values</li>
+<li><b style="color:#EEF0F8">Lab files</b> are read on our own server; identity lines are removed before an outside service reads the values</li>
+<li><b style="color:#EEF0F8">Insight cards</b> send values to the model without name, email or city</li>
+<li><b style="color:#EEF0F8">Search queries</b> carry gene and marker names only</li>
+<li><b style="color:#EEF0F8">Encrypted at rest</b> with a per-user key held by our server; delete destroys the key (crypto-shred)</li>
+<li><b style="color:#EEF0F8">File text never triggers tools;</b> the tool set is fixed in code</li>
+<li><b style="color:#EEF0F8">Every send is listed in the app:</b> destination and field type, never the content; logs carry no content</li>
+</ul>
+<p style="font-size:26px;line-height:1.4;color:#8E9BFF">All model calls go to Claude today. Demo: fictional person, private copy deleted after 7 days, uploads off, outbound simulated.</p>
+</div>
+<img src="img/privacy.jpg" alt="What left VitaCrypt log: research databases with generic queries, AI model with field names only" style="width:380px;height:824px;object-fit:contain;border-radius:28px;border:2px solid #2E3762">
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">Live app, fictional person, synthetic data · 09</p>
+</section>
+<section class="light" id="different" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">09 · Why VitaCrypt</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">Others see one source. VitaCrypt reads the whole person, and follows up.</h2>
+<table style="font-size:24px;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:16%">What matters</th><th style="width:34%">Typical health AI today</th><th style="width:50%">VitaCrypt</th></tr>
+<tr><td>Whole person</td><td>One source at a time</td><td><b>DNA, labs, wearables, microbiome, check-ins, air together</b></td></tr>
+<tr><td>Personal</td><td>Rarely combines genotype with environment</td><td><b>Your genotype × your local air and climate</b></td></tr>
+<tr><td>Evidence</td><td>Answers without a label per claim</td><td><b>Each item Cited (PMIDs) or Hypothesis; no invented PMIDs</b></td></tr>
+<tr><td>Follow-up</td><td>Explains a report when asked</td><td><b>An agent that checks its own plan at the next lab</b></td></tr>
+<tr><td>Action</td><td>Read only, or inside one clinic network</td><td><b>Reminders, clinician link, lab order, each after a tap</b></td></tr>
+<tr><td>Safety</td><td>Varies by product</td><td><b>No diagnoses, no personal doses; clinician questions</b></td></tr>
+<tr><td>Privacy</td><td>Full records shared with the assistant</td><td><b>Lab Agent run: only coded fields; sends listed in the app</b></td></tr>
+<tr><td>Incentive</td><td>Some sell supplements or own services</td><td><b>No token, no DAO, no supplement sales, no affiliate fees</b></td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:20px;line-height:1.4;color:#6A6F82">Typical: Amazon Health AI, ChatGPT, Claude, Copilot, Function; public pages, Oct 2026. Vita App (VitaDAO) combines labs, wearables and AI; its public pages, Nov 2026, show no local air input and no plan-to-retest check; not tested from inside · 10</p>
+</section>
+<section class="dark" id="business" data-transition="fade" style="background:#10162F;color:#EEF0F8;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#8E9BFF;text-transform:uppercase">10 · Business model and cost</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:600;line-height:1.1">Cheap to run, priced on follow-up</h2>
+<div style="display:flex;flex-direction:row;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#18204A;padding:32px;border-radius:20px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:600;color:#8E9BFF">~$0.02</p>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">per agent run, measured (2 model calls)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#18204A;padding:32px;border-radius:20px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:600;color:#8E9BFF">$0.02-0.06</p>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">model cost per active user per month, estimate</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#18204A;padding:32px;border-radius:20px">
+<p style="font-family:'Space Grotesk', Arial, sans-serif;font-size:64px;font-weight:600;color:#8E9BFF">$30-60</p>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">per month infrastructure today, one server</p>
+</div>
+</div>
+<ul style="font-size:30px;line-height:1.5;color:#C3C8DE">
+<li><b style="color:#EEF0F8">Subscription</b> for individuals; price tested in the founder and closed beta</li>
+<li><b style="color:#EEF0F8">Pay per call</b> for other AI agents via MCP + x402 (roadmap)</li>
+<li><b style="color:#EEF0F8">Partner labs and clinics</b> receive orders and sheets the user approves</li>
+</ul>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BFF">Pre-revenue, no users yet, self-funded · USD · research databases are free · 11</p>
+</section>
+<section class="light" id="roadmap" data-transition="fade" style="background:#F5F3EE;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:row;gap:72px;align-items:start">
+<div style="flex:3;display:flex;flex-direction:column;gap:32px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;letter-spacing:3px;color:#3B47C9;text-transform:uppercase">11 · Roadmap, team, ask</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:56px;font-weight:600;line-height:1.1">From live demo to real labs</h2>
+<table style="font-size:24px;color:#1A2040;font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr><th style="width:28%">Stage</th><th style="width:72%">What</th></tr>
+<tr><td>Shipped by 5 Nov</td><td>Lab files read on our server with identity lines removed; Apple Health export read on the phone; iPhone Shortcut (not yet tested on a real iPhone); body composition; visible warnings when a source fails</td></tr>
+<tr><td>Founder beta</td><td>Paul’s own labs: local lab formats, units, manual correction before a run</td></tr>
+<tr><td>Production privacy</td><td>Zero-retention model terms, keys held by the user</td></tr>
+<tr><td>Bring your own agent</td><td>Lab Agent as an MCP server; x402 pay per call</td></tr>
+<tr><td>UAE</td><td>Partner integration with labs and clinics, roadmap, after legal review</td></tr>
+</table>
+</div>
+<div style="flex:2;display:flex;flex-direction:column;gap:22px;background:#10162F;color:#EEF0F8;padding:48px;border-radius:24px">
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Team</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE"><b style="color:#EEF0F8">Paul Burg</b>, solo founder. Designed and built VitaCrypt alone: platform, Lab Agent, live demo. Environmental science: M.Sc., PhD coursework (ABD) in Sustainable Development. Founder of his own ventures since 2011.</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Ask</h3>
+<p style="font-size:26px;line-height:1.4;color:#C3C8DE">Technical mentorship, UAE lab and clinic partners, a hard review of our safety claims.</p>
+<h3 style="font-family:'Space Grotesk', Arial, sans-serif;font-size:38px;font-weight:600">Try it</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:26px;line-height:1.4;color:#8E9BFF">app.vitacrypt.xyz/demo</p>
+<p style="font-size:24px;line-height:1.4;color:#C3C8DE">Guided tour, about 5 minutes, no sign-up</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#6A6F82">Early-stage MVP · Not medical advice · Not a medical device · 12</p>
+</section>
+</body>
+</html>
