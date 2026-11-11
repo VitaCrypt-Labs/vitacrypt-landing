@@ -71,3 +71,5 @@ _Last updated: 2026-06-16 pm (mobile drawer redesigned + bottom pip-bar removed 
 
 ## 2026-11-06: `media/vitacrypt-deck.pdf` is outdated
 Stays as is until the rebuild; do not reuse it as it stands. The next version gets current information. The list of outdated PDFs is in the app repo, `docs/submission/PDF_STATUS.md`.
+
+2026-11-11: rebuilt on branch `claude/deck-rebuild-nov` from `docs/deck/deck.html` (`docs/deck/build.sh`). Resolved once merged and deployed.
