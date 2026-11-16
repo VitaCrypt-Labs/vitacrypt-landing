@@ -9,17 +9,16 @@
 <!-- Primary SEO -->
 <title>The Platform · VitaCrypt's four pillars (Unified, Cited, Personalized, Private)</title>
 <meta name="description" content="How VitaCrypt works: any health signal unified into one profile with actionable, AI-driven, evidence-checked guidance, personalized to you. Private by design.">
-<meta name="keywords" content="VitaCrypt platform, unified health profile, evidence-checked guidance, live science, PubMed, Cochrane, personalized health, gene environment, MTHFR, APOE, private by design, FHE privacy roadmap">
+<meta name="keywords" content="VitaCrypt platform, unified health profile, evidence-checked guidance, live science, PubMed, Cochrane, personalized health, gene environment, MTHFR, APOE, private by design, Lab Agent">
 <meta name="author" content="VitaCrypt">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://vitacrypt.xyz/platform.html">
 
 <!-- Favicon suite (WebP-first, JPEG fallback for older browsers) -->
-<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
-<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
-<link rel="shortcut icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/svg+xml" href="/img/vitacrypt-mark.svg">
+<link rel="icon" type="image/png" href="/img/vitacrypt-mark-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/vitacrypt-mark-180.png">
 <meta name="apple-mobile-web-app-title" content="VitaCrypt">
 <meta name="application-name" content="VitaCrypt">
 
@@ -30,8 +29,8 @@
 <meta property="og:url" content="https://vitacrypt.xyz/platform.html">
 <meta property="og:title" content="The Platform · VitaCrypt's four pillars">
 <meta property="og:description" content="Any health signal unified into one profile, every recommendation cited to live science, personalized to your genes and environment, and private by design.">
-<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
-<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
+<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -44,7 +43,7 @@
 <meta name="twitter:url" content="https://vitacrypt.xyz/platform.html">
 <meta name="twitter:title" content="The Platform · VitaCrypt's four pillars">
 <meta name="twitter:description" content="Unified, Cited, Personalized, Private: how VitaCrypt turns any health signal into one profile with actionable, AI-driven, evidence-checked guidance.">
-<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
 <meta name="twitter:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 
 <!-- Schema.org structured data -->
@@ -59,7 +58,7 @@
       "url": "https://vitacrypt.xyz/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://vitacrypt.xyz/img/vitacrypt-logo-square.jpg",
+        "url": "https://vitacrypt.xyz/img/vitacrypt-mark-512.png",
         "width": 512,
         "height": 512
       },
@@ -86,7 +85,7 @@
       "name": "The Platform · VitaCrypt's four pillars",
       "isPartOf": {"@id": "https://vitacrypt.xyz/#website"},
       "about": {"@id": "https://vitacrypt.xyz/#organization"},
-      "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
+      "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v3.jpg",
       "description": "How VitaCrypt works across four pillars: a unified data fabric across any health signal, live-cited science, gene-environment personalization, and privacy by design.",
       "inLanguage": "en-US"
     },
@@ -146,7 +145,7 @@
   --indigo-glow: rgba(255, 152, 130, 0.18);
   --amber: #FFC58A;
   --rose: #FF7B6B;
-  /* Device (phone) palette — INVERTS vs page theme. Dark page → LIGHT device. */
+  /* Device (phone) palette: INVERTS vs page theme. Dark page → LIGHT device. */
   --device-bg: #ECE6D9;
   --device-frame-grad: linear-gradient(180deg, #E6E8EC 0%, #C6CAD2 100%);
   --device-edge-1: #F2F3F5;
@@ -1286,7 +1285,7 @@ h2.stitle .ac {
   display: none;
 }
 
-/* Wearables panel — "What only VitaCrypt does" */
+/* Wearables panel: "What only VitaCrypt does" */
 .diff-banner {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -3326,8 +3325,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap inner">
     <a class="brand" href="/">
       <picture>
-        <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
-        <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" decoding="async">
+        <img src="/img/vitacrypt-mark.svg" alt="VitaCrypt" width="32" height="32" decoding="async">
       </picture>
       <span class="word">VitaCrypt</span>
       <span class="tag">MVP</span>
@@ -3337,7 +3335,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <a href="#evidence">Cited</a>
       <a href="#personalized">Personalized</a>
       <a href="#encrypted">Private</a>
-      <a href="litepaper.html">Read paper</a>
+      <a href="/agent">Lab Agent</a>
       <a href="investor.html">Investors</a>
     </div>
     <div class="right">
@@ -3363,7 +3361,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
   <header>
-    <span id="drawerTitle" class="drawer-brand"><img src="/img/vitacrypt-logo-square.webp" alt="" aria-hidden="true">VitaCrypt</span>
+    <span id="drawerTitle" class="drawer-brand"><img src="/img/vitacrypt-mark.svg" alt="" aria-hidden="true">VitaCrypt</span>
     <button class="drawer-close" id="drawerClose" aria-label="Close menu">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -3384,11 +3382,11 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </a>
     <a href="investor.html" class="drawer-page" data-drawer-link>
       <span class="drawer-page-t">For investors <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
-      <span class="drawer-page-s">The raise, traction, the moat</span>
+      <span class="drawer-page-s">Stage, plan and the numbers</span>
     </a>
-    <a href="litepaper.html" class="drawer-page" data-drawer-link>
-      <span class="drawer-page-t">Read litepaper <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
-      <span class="drawer-page-s">Architecture &amp; the evidence engine</span>
+    <a href="/data" class="drawer-page" data-drawer-link>
+      <span class="drawer-page-t">Your data <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
+      <span class="drawer-page-s">What we store and what leaves</span>
     </a>
   </nav>
   <footer class="drawer-foot">
@@ -3411,7 +3409,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </div>
     <h1>Four pillars. <span class="accent">One unified profile.</span></h1>
     <p class="lead lead-punch">Most health tools do one of these. VitaCrypt does all four, and the value is in how they compound.</p>
-    <p class="lead">A unified data fabric built to ingest any health signal; every recommendation cited to live science; personalization down to your genotype and local environment; and privacy built in by design, so centralizing this data never means exposing it. Here is how each one works.</p>
+    <p class="lead">A unified data fabric built to ingest any health signal; every recommendation cited to live science; personalization down to your genotype and local environment; and privacy built in by design, so what leaves the app is kept small and logged. Here is how each one works.</p>
     <div class="hero-quick" role="navigation" aria-label="Jump to pillar">
       <span><a href="#unified">Unified</a></span>
       <span><a href="#evidence">Cited</a></span>
@@ -3421,7 +3419,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   </div>
 </header>
 
-<!-- ========== PILLAR 01 — UNIFIED ========== -->
+<!-- ========== PILLAR 01: UNIFIED ========== -->
 <section id="unified">
   <div class="wrap">
     <div class="eyebrow">Pillar 01 · Unified</div>
@@ -3431,40 +3429,40 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>Connect or upload</strong><p>Wearables connect via Apple Health export today, with direct device APIs on the build path; DNA, microbiome and lab files are uploaded; environment is pulled from your location.</p></div></li>
       <li><span class="n">2</span><div><strong>Normalize into one schema</strong><p>Different formats (VCF, FHIR, CSV, JSON) are mapped into one queryable health schema.</p></div></li>
-      <li><span class="n">3</span><div><strong>Encrypt under your key</strong><p>In the target custody model, the unified profile is encrypted with a key held in your iOS Keychain / Android Keystore. The design goal: plaintext never leaves the device.</p></div></li>
+      <li><span class="n">3</span><div><strong>Encrypt under your key</strong><p>Today the profile is encrypted at rest under a per-user key that our server holds, so it can run the agent. Client-held keys (iOS Keychain / Android Keystore) are roadmap.</p></div></li>
     </ol>
 
     <h3 class="pillar-sub">What's connected, and when</h3>
     <table class="vc-table">
       <thead><tr><th>Source</th><th>What it adds</th><th>Availability</th></tr></thead>
       <tbody>
-        <tr><td>Genetics</td><td>Variants that reshape every other signal: folate cycle, lipids, caffeine, methylation</td><td><span class="badge ok">At MVP launch</span>23andMe / Ancestry upload</td></tr>
-        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">At MVP launch</span>Apple Health export today; direct device APIs on the build path · Apple Watch, Oura, Whoop</td></tr>
-        <tr><td>Environment</td><td>PM2.5, ozone, pollen, UV, by your location in real time</td><td><span class="badge ok">At MVP launch</span>PurpleAir / IQAir / OpenWeather</td></tr>
-        <tr><td>Lifestyle</td><td>Sleep, energy, stress, diet and workload, captured as lifestyle check-ins</td><td><span class="badge ok">At MVP launch</span>in-app check-ins</td></tr>
-        <tr><td>Microbiome</td><td>Gut composition → inflammation, nutrient absorption, diet response</td><td><span class="badge soon">Upload at MVP</span>partner API on roadmap</td></tr>
-        <tr><td>Labs &amp; blood</td><td>CRP, ApoB, HbA1c, lipid panels: the objective check on the wearable signal</td><td><span class="badge soon">Upload at MVP</span>HL7/FHIR connectors 2027</td></tr>
+        <tr><td>Genetics</td><td>Variants that reshape every other signal: folate cycle, lipids, caffeine, methylation</td><td><span class="badge ok">In the MVP</span>23andMe / Ancestry upload</td></tr>
+        <tr><td>Wearables</td><td>HRV, sleep stages, recovery, resting heart, activity load</td><td><span class="badge ok">In the MVP</span>Apple Health export today; direct device APIs on the build path · Apple Watch, Oura, Whoop</td></tr>
+        <tr><td>Environment</td><td>PM2.5, ozone, pollen, UV, by your location in real time</td><td><span class="badge ok">In the MVP</span>Open-Meteo / OpenAQ / WAQI</td></tr>
+        <tr><td>Lifestyle</td><td>Sleep, energy, stress, diet and workload, captured as lifestyle check-ins</td><td><span class="badge ok">In the MVP</span>in-app check-ins</td></tr>
+        <tr><td>Microbiome</td><td>Gut composition → inflammation, nutrient absorption, diet response</td><td><span class="badge ok">In the MVP</span>report upload; partner API on the roadmap</td></tr>
+        <tr><td>Labs &amp; blood</td><td>CRP, ApoB, HbA1c, lipid panels: the objective check on the wearable signal</td><td><span class="badge ok">In the MVP</span>PDF upload, read by the Lab Agent</td></tr>
       </tbody>
     </table>
 
     <p class="pillar-links">
       <a href="/#fabric">See the sources on the home page →</a>
-      <a href="litepaper.html#integ">Integration spec in the litepaper →</a>
+      <a href="/agent">How the Lab Agent uses it →</a>
     </p>
   </div>
 </section>
 
-<!-- ========== PILLAR 02 — CITED ========== -->
+<!-- ========== PILLAR 02: CITED ========== -->
 <section id="evidence">
   <div class="wrap">
     <div class="eyebrow">Pillar 02 · Cited to live science</div>
-    <h2 class="stitle">Every recommendation cites a real source, re-checked as new science lands.</h2>
-    <p class="lede">Most apps bake in whatever the guidelines said the year they shipped. VitaCrypt re-queries the literature continuously, so a recommendation can change the week a relevant paper, GWAS hit, or guideline update appears. Every recommendation carries a real source (PubMed PMID) retrieved live, and the model cannot invent citations.</p>
+    <h2 class="stitle">Every recommendation cites a real source, searched live.</h2>
+    <p class="lede">Most apps bake in whatever the guidelines said the year they shipped. VitaCrypt searches the literature live each time the Lab Agent runs, so a plan can change when a relevant paper or GWAS hit appears. Every recommendation carries a real source (PubMed PMID) retrieved live, and the model cannot invent citations.</p>
 
-    <h3 class="pillar-sub">How research-watch works</h3>
+    <h3 class="pillar-sub">How the research search works</h3>
     <ol class="vc-steps">
-      <li><span class="n">1</span><div><strong>The model reads only public science</strong><p>An agent continuously scans public literature and guidelines. It never touches your data, it works entirely on published papers.</p></div></li>
-      <li><span class="n">2</span><div><strong>Matching, with FHE on the roadmap</strong><p>Whether a finding applies to <em>you</em> is matched against your profile server-side, over a backend encrypted at rest. Running that match under FHE, so the model never sees your genotype or labs in the clear, is an R&amp;D roadmap goal.</p></div></li>
+      <li><span class="n">1</span><div><strong>Searches carry names, not your data</strong><p>Each run searches PubMed and Europe PMC with gene, marker and condition names only. An AI judge then checks which papers support each claim.</p></div></li>
+      <li><span class="n">2</span><div><strong>Matching on our server</strong><p>Whether a finding applies to <em>you</em> is matched against your profile on our server, which can read the data it processes. The model sees coded facts, never your name, file or exact values.</p></div></li>
       <li><span class="n">3</span><div><strong>The citation travels with the advice</strong><p>Each surfaced recommendation carries the source it rests on, graded by evidence strength.</p></div></li>
     </ol>
 
@@ -3495,12 +3493,12 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 
     <p class="pillar-links">
       <a href="/#research">See the full corpus list →</a>
-      <a href="litepaper.html#engine">Matching protocol in the litepaper →</a>
+      <a href="/agent#loop">The seven Lab Agent steps →</a>
     </p>
   </div>
 </section>
 
-<!-- ========== PILLAR 03 — PERSONALIZED ========== -->
+<!-- ========== PILLAR 03: PERSONALIZED ========== -->
 <section id="personalized">
   <div class="wrap">
     <div class="eyebrow">Pillar 03 · Personalized</div>
@@ -3510,7 +3508,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h3 class="pillar-sub">How a protocol is built</h3>
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>Inputs</strong><p>Genotype + current exposures (air, season, location) + physiology (HRV, sleep, labs).</p></div></li>
-      <li><span class="n">2</span><div><strong>Interaction reasoning</strong><p>Gene × environment interactions are evaluated against the cited literature; keeping that evaluation under FHE is on the privacy roadmap.</p></div></li>
+      <li><span class="n">2</span><div><strong>Interaction reasoning</strong><p>Gene × environment interactions are evaluated against the cited literature. A link means related, never caused; the combination is labelled Hypothesis unless a paper supports it.</p></div></li>
       <li><span class="n">3</span><div><strong>Action</strong><p>A small set of concrete, time-bound steps, each with its evidence attached.</p></div></li>
     </ol>
 
@@ -3527,32 +3525,32 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <div class="ec-src">PubMed · PMC10296707 · 2023</div>
       </div>
     </div>
-    <p class="pillar-foot-note">David is a composite case from the litepaper. Values are illustrative; the gene–environment methodology and citations are real.</p>
+    <p class="pillar-foot-note">David is a fictional composite case. Values are illustrative; the gene–environment methodology and citations are real.</p>
 
     <p class="pillar-links">
       <a href="/#case">Read David's full case →</a>
-      <a href="litepaper.html#valid">Validation plan in the litepaper →</a>
+      <a href="/#roadmap">Beta gates and dates →</a>
     </p>
   </div>
 </section>
 
-<!-- ========== PILLAR 04 — PRIVATE ========== -->
+<!-- ========== PILLAR 04: PRIVATE ========== -->
 <section id="encrypted">
   <div class="wrap">
     <div class="eyebrow">Pillar 04 · Private by design</div>
     <h2 class="stitle">Private by design, on what is true today.</h2>
-    <p class="lede">Privacy here is concrete and present-day: your data is encrypted at rest under per-user keys, retention is minimal, the most sensitive data is minimized and pseudonymized before egress, and VitaCrypt is independent, not a feature of any single AI giant and built so the underlying model can be swapped rather than welded in. Stronger cryptographic guarantees, including fully homomorphic encryption, are a far-horizon roadmap item, not a current capability.</p>
+    <p class="lede">Privacy here is concrete and present-day: your data is encrypted at rest under per-user keys, the Lab Agent sends the model a coded minimum, and every Lab Agent send is logged in the app. All model calls go to Anthropic's Claude today, and the model can be swapped rather than welded in. Our server can unwrap your key to run the agent; we do not claim otherwise.</p>
 
     <h3 class="pillar-sub">Where the line is, honestly</h3>
     <div class="boundary">
       <div class="b-col device">
         <div class="b-h">Today</div>
         <ul>
-          <li>Encrypted at rest, with per-user keys rolling out</li>
-          <li>Independent: not tied to any single AI giant; the model can be swapped</li>
+          <li>Encrypted at rest under per-user keys; delete destroys the key</li>
+          <li>Coded minimum to the model; every Lab Agent send logged</li>
           <li>External AI / OCR providers clearly disclosed</li>
         </ul>
-        <div class="b-note">Encrypted at rest, least-privilege access, minimal retention.</div>
+        <div class="b-note">Our server holds the key so it can run the agent.</div>
       </div>
       <div class="b-flow"><span>now</span><span>next →</span></div>
       <div class="b-col server">
@@ -3560,20 +3558,20 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <ul>
           <li>Tighter identifier minimization before any external inference</li>
           <li>Client-held keys (iOS Keychain / Android Keystore)</li>
-          <li>Encrypted compute (FHE): the server analyzes without decrypting</li>
+          <li>Zero data retention from the model provider: requested, not confirmed</li>
         </ul>
-        <div class="b-note">On our R&amp;D roadmap, not yet live.</div>
+        <div class="b-note">On the roadmap, not yet live.</div>
       </div>
     </div>
 
     <h3 class="pillar-sub">Is this real yet? The honest status</h3>
-    <p class="pillar-body">Today: encrypted at rest under per-user keys, minimal retention, and independence from any single AI giant. The near-term build is minimization and pseudonymization before egress and a zero-retention inference endpoint. Self-hosted open-weight inference and, far out, fully homomorphic encryption are roadmap, the strongest theoretical guarantee but today a poor fit for live multi-source cross-referencing. The master key is still server-side today, so the server can read the data it processes. We state this plainly.</p>
+    <p class="pillar-body">Today: encrypted at rest under per-user keys, a coded minimum to the model in the Lab Agent, and a log of every Lab Agent send. Older insight cards still send the model a fuller profile; that is listed on Your data and is being fixed. Zero data retention terms are requested from the model provider, not confirmed. The server can unwrap your key to run the agent, so it can read the data it processes. We state this plainly.</p>
 
-    <p class="pillar-foot-note">Early-stage MVP live, pre-launch; no production health data yet.</p>
+    <p class="pillar-foot-note">Early-stage MVP; no outside users yet. Beta users stay outside the EU and the UAE until a data protection review is done.</p>
 
     <p class="pillar-links">
       <a href="/#pipeline">Watch the live walkthrough →</a>
-      <a href="litepaper.html#threat">Threat model in the litepaper →</a>
+      <a href="/data">What happens to your data →</a>
     </p>
   </div>
 </section>
@@ -3581,13 +3579,13 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <section class="final">
   <div class="wrap-tight">
     <h2>Your whole health in one profile, read together and checked against real science.</h2>
-    <p>VitaCrypt opens to its first design partners in Q4 2026. Investors and prospective partners, reach out directly.</p>
+    <p>The free beta opens in small groups: a founder test by 30 Nov 2026, 5 friends by 31 Dec, 15 to 20 testers by 31 Jan 2027. Investors and prospective partners, reach out directly.</p>
     <div class="hero-cta">
       <a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist" class="btn btn-glow">
         Request access
         <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="litepaper.html" class="btn btn-ghost">Read the litepaper</a>
+      <a href="/agent" class="btn btn-ghost">See the Lab Agent</a>
     </div>
   </div>
 </section>
@@ -3599,8 +3597,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <div class="brand-col">
         <div class="lockup">
           <picture>
-            <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
-            <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" loading="lazy" decoding="async">
+            <img src="/img/vitacrypt-mark.svg" alt="VitaCrypt" width="32" height="32" loading="lazy" decoding="async">
           </picture>
           <span>VitaCrypt</span>
         </div>
@@ -3620,10 +3617,8 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <h5>Resources</h5>
         <ul>
           <li><a href="investor.html">For investors</a></li>
-          <li><a href="litepaper.html">Litepaper</a></li>
           <li><a href="/press">Press kit</a></li>
           <li><a href="/data">Your data</a></li>
-          <li><a href="/media/vitacrypt-deck.pdf">Deck (PDF)</a></li>
           <li><a href="mailto:marketing@vitacrypt.xyz" data-action="open-waitlist">Waitlist</a></li>
           <li><a href="https://x.com/vita_crypt">X / Twitter</a></li>
           <li><a href="https://t.me/paul_burg">Telegram</a></li>
@@ -3639,7 +3634,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </div>
     <div class="bottom">
       <span>© 2026 VITACRYPT · ALL RIGHTS RESERVED</span>
-      <span>PRIVATE BY DESIGN · EARLY-STAGE MVP LIVE, PRE-LAUNCH</span>
+      <span>EARLY-STAGE MVP · NOT MEDICAL ADVICE · NOT A MEDICAL DEVICE</span>
       <span>Built by <a href="https://paulburg.com/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">Paul Burg</a></span>
     </div>
   </div>
@@ -3739,7 +3734,7 @@ function toggleTheme(){
 }
 tBtn.addEventListener('click', toggleTheme);
 
-// Reveal on scroll — extended with A3 scanline + A7 odometer (commit 4C)
+// Reveal on scroll: extended with A3 scanline + A7 odometer (commit 4C)
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -3759,7 +3754,7 @@ document.querySelectorAll('section, .facts, .case-wrap').forEach(el => {
   revealObs.observe(el);
 });
 
-// HERO PROFILE — animate source bars when in view
+// HERO PROFILE: animate source bars when in view
 const heroProfile = document.getElementById('heroProfile');
 if (heroProfile) {
   const heroObs = new IntersectionObserver((entries) => {
@@ -3773,7 +3768,7 @@ if (heroProfile) {
   heroObs.observe(heroProfile);
 }
 
-// HERO CIPHER — live mutate hex chars, paused when offscreen or tab hidden (perf)
+// HERO CIPHER: live mutate hex chars, paused when offscreen or tab hidden (perf)
 (function cipherLoop(){
   if (RM) return;  // honor prefers-reduced-motion (no text churn)
   const stream = document.getElementById('cipherStream');
@@ -4026,7 +4021,7 @@ if (heroProfile) {
     }, { passive: true });
   }
 
-  // M6: progressive disclosure — insert "more / less" buttons
+  // M6: progressive disclosure: insert "more / less" buttons
   document.querySelectorAll('.clamp-mob').forEach(el => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -4081,8 +4076,8 @@ if (heroProfile) {
   }
 })();
 
-// ====================== PREMIUM ANIMATIONS (commit 4C — pruned in 5B.1) ======================
-// E1 heartbeat tempo, E3 hero typewriter, A1 dissolve cap, A2 living waveform —
+// ====================== PREMIUM ANIMATIONS (commit 4C: pruned in 5B.1) ======================
+// E1 heartbeat tempo, E3 hero typewriter, A1 dissolve cap, A2 living waveform -
 // removed per AI-slop audit (Phase 1.5). Kept: A3 scanline (via revealObs),
 // A7 odometer (via revealObs).
 

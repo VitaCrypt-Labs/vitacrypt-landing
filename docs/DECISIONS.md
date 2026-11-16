@@ -636,3 +636,11 @@ Verified live: `/index.html`→301→`/`; `/`→200; all pages 0 `cdn-cgi`, 0 `h
 **SEO parity (proved with curl before the switch):** all 8 sitemap URLs return 200 with 0 redirects, and all 41 served files are byte-identical to Vercel. The `vercel.json` rules were carried over: `/index.html` 301 → `/`, the `/beta|agent|press|data` rewrites (native on Pages), and media `Cache-Control` 7d. HSTS stays as Vercel sent it. www → apex 308 (was a Vercel domain redirect) is now a Cloudflare zone redirect rule. `*.pages.dev` gets `X-Robots-Tag: noindex`; the custom domain does not.
 **Trade-offs:** `/beta.html`-style URLs now 308 to their canonical instead of 200. Bare `/platform` 301s to `/platform.html` (it was 404 on Vercel).
 **Rollback:** keep the Vercel project and domains until mid-Dec 2026; repoint the apex + www CNAMEs at `vitacrypt-landing-ccv7vf74n-paulburgeths-projects.vercel.app`.
+
+## 16 Nov 2026: landing aligned to the Championship deck
+- Source of truth: app repo `docs/submission/DECK.md` (16 Nov 2026). Gap list approved by Paul (litepaper down, investor rewrite, deck PDF unlinked, logos replaced).
+- litepaper.html removed; `/litepaper` and `/litepaper.html` 301 to `/agent` (functions/). It was an FHE technical brief end to end; a rewrite was rejected as too large for the deadline.
+- investor.html rewritten to deck slides 2, 3, 6 to 12: self-funded, USD 12K ask once funded, dated gates, USD 199 founding price (plan, not charged), ~80% / ~USD 13 margin basis, measured run numbers. No SAFE, hires or data room.
+- media/vitacrypt-deck.pdf (old 12-slide deck) unlinked everywhere but still served at its URL; replace and relink once the 14-slide deck is approved.
+- Logos: old raster logos deleted; mark is the app's DNA-helix SVG (img/vitacrypt-mark.svg, PNG 512/180, wordmark PNG). OG image regenerated as og-preview-v3.jpg from img/og-preview-template.html (headless Chrome).
+- Fragile: data.html still says "as of 29 October 2026"; not re-verified against the app in this pass.

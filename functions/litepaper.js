@@ -1,2 +1,2 @@
-// Canonical is /litepaper.html; send the bare path there instead of serving a duplicate.
-export const onRequest = ({ request }) => Response.redirect(new URL('/litepaper.html', request.url), 301);
+// Litepaper taken down 16 Nov 2026 (FHE-era brief); send it to the Lab Agent page.
+export const onRequest = ({ request }) => Response.redirect(new URL('/agent', request.url), 301);
