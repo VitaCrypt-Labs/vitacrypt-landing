@@ -16,10 +16,9 @@
 <link rel="canonical" href="https://vitacrypt.xyz/agent">
 
 <!-- Favicon suite (WebP-first, JPEG fallback for older browsers) -->
-<link rel="icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
-<link rel="icon" type="image/jpeg" href="/img/vitacrypt-logo-square.jpg">
-<link rel="shortcut icon" type="image/webp" href="/img/vitacrypt-logo-square.webp">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/vitacrypt-logo-square.webp">
+<link rel="icon" type="image/svg+xml" href="/img/vitacrypt-mark.svg">
+<link rel="icon" type="image/png" href="/img/vitacrypt-mark-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/vitacrypt-mark-180.png">
 <meta name="apple-mobile-web-app-title" content="VitaCrypt">
 <meta name="application-name" content="VitaCrypt">
 
@@ -30,8 +29,8 @@
 <meta property="og:url" content="https://vitacrypt.xyz/agent">
 <meta property="og:title" content="VitaCrypt Lab Agent: your labs, followed up">
 <meta property="og:description" content="Seven fixed steps per lab: read, compare, check the last plan, link to DNA, check the research, plan, set up. No diagnoses or doses. Live demo with synthetic data.">
-<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
-<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
+<meta property="og:image:secure_url" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -44,7 +43,7 @@
 <meta name="twitter:url" content="https://vitacrypt.xyz/agent">
 <meta name="twitter:title" content="VitaCrypt Lab Agent: your labs, followed up">
 <meta name="twitter:description" content="Seven fixed steps per lab: read, compare, check the last plan, link to DNA, check the research, plan, set up. No diagnoses or doses. Live demo with synthetic data.">
-<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v2.jpg">
+<meta name="twitter:image" content="https://vitacrypt.xyz/img/og-preview-v3.jpg">
 <meta name="twitter:image:alt" content="VitaCrypt · Your whole health in one intelligent profile">
 
 <!-- Schema.org structured data -->
@@ -59,7 +58,7 @@
       "name": "VitaCrypt Lab Agent",
       "isPartOf": {"@id": "https://vitacrypt.xyz/#website"},
       "about": {"@id": "https://vitacrypt.xyz/#organization"},
-      "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v2.jpg",
+      "primaryImageOfPage": "https://vitacrypt.xyz/img/og-preview-v3.jpg",
       "description": "How the VitaCrypt Lab Agent follows up on blood tests: seven fixed steps per lab, a plan of habits, repeat tests and clinician questions, and a check of the plan at the next lab. Not medical advice.",
       "inLanguage": "en-US"
     },
@@ -116,7 +115,7 @@
   --indigo-glow: rgba(255, 152, 130, 0.18);
   --amber: #FFC58A;
   --rose: #FF7B6B;
-  /* Device (phone) palette — INVERTS vs page theme. Dark page → LIGHT device. */
+  /* Device (phone) palette: INVERTS vs page theme. Dark page → LIGHT device. */
   --device-bg: #ECE6D9;
   --device-frame-grad: linear-gradient(180deg, #E6E8EC 0%, #C6CAD2 100%);
   --device-edge-1: #F2F3F5;
@@ -1256,7 +1255,7 @@ h2.stitle .ac {
   display: none;
 }
 
-/* Wearables panel — "What only VitaCrypt does" */
+/* Wearables panel: "What only VitaCrypt does" */
 .diff-banner {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -3319,8 +3318,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap inner">
     <a class="brand" href="/">
       <picture>
-        <source type="image/webp" srcset="img/vitacrypt-logo-square.webp">
-        <img src="img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" decoding="async">
+        <img src="/img/vitacrypt-mark.svg" alt="VitaCrypt" width="32" height="32" decoding="async">
       </picture>
       <span class="word">VitaCrypt</span>
       <span class="tag">MVP</span>
@@ -3355,7 +3353,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
 <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
   <header>
-    <span id="drawerTitle" class="drawer-brand"><img src="/img/vitacrypt-logo-square.webp" alt="" aria-hidden="true">VitaCrypt</span>
+    <span id="drawerTitle" class="drawer-brand"><img src="/img/vitacrypt-mark.svg" alt="" aria-hidden="true">VitaCrypt</span>
     <button class="drawer-close" id="drawerClose" aria-label="Close menu">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
         <line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -3381,11 +3379,11 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     </a>
     <a href="investor.html" class="drawer-page" data-drawer-link>
       <span class="drawer-page-t">For investors <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
-      <span class="drawer-page-s">The raise, traction, the moat</span>
+      <span class="drawer-page-s">Stage, plan and the numbers</span>
     </a>
-    <a href="litepaper.html" class="drawer-page" data-drawer-link>
-      <span class="drawer-page-t">Read litepaper <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
-      <span class="drawer-page-s">Architecture &amp; the evidence engine</span>
+    <a href="/data" class="drawer-page" data-drawer-link>
+      <span class="drawer-page-t">Your data <span class="drawer-page-arrow" aria-hidden="true">→</span></span>
+      <span class="drawer-page-s">What we store and what leaves</span>
     </a>
   </nav>
   <footer class="drawer-foot">
@@ -3404,11 +3402,11 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap">
     <div class="status">
       <span class="dot"></span>
-      <span><strong>Lab Agent</strong> · early-stage MVP · invite-only beta</span>
+      <span><strong>Lab Agent</strong> · early-stage MVP · free beta in small groups</span>
     </div>
     <h1>Your labs, followed up. <span class="accent">Not just read once.</span></h1>
     <p class="lead lead-punch">The Lab Agent reads each new blood test, compares it with your last one and your DNA, checks the research, and keeps a plan you can act on.</p>
-    <p class="lead">Next time you upload a lab, it checks whether the plan worked and changes it. It never diagnoses and never suggests doses or treatment changes; anything clinical becomes a question for your clinician.</p>
+    <p class="lead">You tap to run each new lab; a person starts every run. Each plan item is marked Cited, Hypothesis or Ask your clinician, with a dated retest. Next time you upload a lab, it checks whether the plan worked and changes it. It never diagnoses and never suggests doses or treatment changes; anything clinical becomes a question for your clinician.</p>
     <div class="hero-cta">
       <a href="https://app.vitacrypt.xyz/demo?start=agent" class="btn btn-glow">
         Try the live demo
@@ -3425,16 +3423,16 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
   <div class="wrap">
     <div class="eyebrow">01 · How the agent works</div>
     <h2 class="stitle">Seven steps every time a new lab arrives.</h2>
-    <p class="lede">The steps are fixed in code and always run in the same order. A language model only helps phrase the result in plain words; it does not choose what the agent does.</p>
+    <p class="lede">The steps are fixed in code and always run in the same order, after you tap to run a new lab. A language model judges the papers and words the plan; fixed rules decide what the agent does.</p>
 
     <ol class="vc-steps agent-steps">
       <li><span class="n">1</span><div><strong>Read your lab file</strong><p>Pulls the text out of the PDF your lab sent and picks out the markers it knows, such as vitamin D, LDL cholesterol or homocysteine.</p></div></li>
       <li><span class="n">2</span><div><strong>Compare with your last lab</strong><p>Checks each marker against its reference range and against your previous result: in range or not, up or down.</p></div></li>
       <li><span class="n">3</span><div><strong>Check your last plan</strong><p>Did the markers you worked on move, and did you keep the habits? Each habit is kept, swapped or retired based on that.</p></div></li>
       <li><span class="n">4</span><div><strong>Link changes to your DNA</strong><p>Looks for gene variants you carry that research relates to the changed markers. A link means "related", never "caused".</p></div></li>
-      <li><span class="n">5</span><div><strong>Check the research</strong><p>Searches PubMed and Europe PMC and checks each paper against each claim. A habit is marked "Cited" only when the papers support it; otherwise it stays a hypothesis.</p></div></li>
-      <li><span class="n">6</span><div><strong>Plan next steps</strong><p>Small daily habits, a repeat test with a date, and questions for your clinician. Fixed rules decide which is which.</p></div></li>
-      <li><span class="n">7</span><div><strong>Set up your plan</strong><p>Adds the habits to your tracker, schedules repeat-test reminders, and prepares a short sheet to bring to your next appointment.</p></div></li>
+      <li><span class="n">5</span><div><strong>Check the research</strong><p>Searches PubMed and Europe PMC, and an AI judge checks each paper against each claim. A habit is marked "Cited" only when the papers support it; otherwise it stays a Hypothesis.</p></div></li>
+      <li><span class="n">6</span><div><strong>Plan next steps</strong><p>Small daily habits, a repeat test with a date, and questions for your clinician. Fixed rules route each item: Cited, Hypothesis or Ask your clinician.</p></div></li>
+      <li><span class="n">7</span><div><strong>Set up your plan</strong><p>Puts the habits, the retest date and a short sheet for your clinician into the app. Anything that leaves the app, such as a calendar or Telegram reminder, a clinician link or a lab order (US sandbox), waits for your tap and shows what it will share.</p></div></li>
     </ol>
 
     <div class="agent-gallery" aria-label="Lab Agent screenshots">
@@ -3487,10 +3485,10 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
     <h2 class="stitle">What happens to your data, honestly.</h2>
     <ol class="vc-steps">
       <li><span class="n">1</span><div><strong>The demo is synthetic</strong><p>The live demo runs on a fictional person's data. Each visitor gets a private copy that is deleted after 7 days.</p></div></li>
-      <li><span class="n">2</span><div><strong>The model sees a coded minimum</strong><p>Only coded facts go to the language model, such as "vitamin D, low, steady" and a gene code. No name, email, exact values or file text.</p></div></li>
+      <li><span class="n">2</span><div><strong>The model sees a coded minimum</strong><p>Only coded facts go to the language model (Anthropic's Claude), such as "vitamin D, low, steady" and a gene code. No name, email, exact values or file text. Zero data retention terms are requested from the provider, not confirmed.</p></div></li>
       <li><span class="n">3</span><div><strong>Logs carry no content</strong><p>The agent's step log records which step ran, when and how long it took. No values, no prompts.</p></div></li>
-      <li><span class="n">4</span><div><strong>Encrypted at rest</strong><p>Health data is stored encrypted under a per-user key held by our server. Deleting your data destroys that key.</p></div></li>
-      <li><span class="n">5</span><div><strong>Real labs are invite-only</strong><p>Uploading your own lab results is open only to approved beta members. The demo cannot upload files.</p></div></li>
+      <li><span class="n">4</span><div><strong>Encrypted at rest</strong><p>Health data is stored encrypted under a per-user key held by our server, which unwraps it to run the agent. Client-held keys are roadmap. Deleting your data destroys that key.</p></div></li>
+      <li><span class="n">5</span><div><strong>Real labs open with the free beta</strong><p>Uploading your own lab results opens to beta testers in small groups, outside the EU and the UAE until a data protection review is done. The demo cannot upload files.</p></div></li>
     </ol>
   </div>
 </section>
@@ -3518,7 +3516,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
 <section class="final">
   <div class="wrap-tight">
     <h2>Try it on a fictional person now. Use your own labs when you are invited.</h2>
-    <p>The live demo needs no sign-up. Real lab uploads are open to approved beta members.</p>
+    <p>The live demo needs no sign-up. Real lab uploads open to beta testers in small groups; the beta is free.</p>
     <div class="hero-cta">
       <a href="https://app.vitacrypt.xyz/demo?start=agent" class="btn btn-glow">
         Try the live demo
@@ -3537,8 +3535,7 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
       <div class="brand-col">
         <div class="lockup">
           <picture>
-            <source type="image/webp" srcset="/img/vitacrypt-logo-square.webp">
-            <img src="/img/vitacrypt-logo-square.jpg" alt="VitaCrypt" width="32" height="32" loading="lazy" decoding="async">
+            <img src="/img/vitacrypt-mark.svg" alt="VitaCrypt" width="32" height="32" loading="lazy" decoding="async">
           </picture>
           <span>VitaCrypt</span>
         </div>
@@ -3559,10 +3556,8 @@ section[id], .pillar-anchor { scroll-margin-top: 80px; }
         <ul>
           <li><a href="https://app.vitacrypt.xyz/demo?start=agent">Live demo</a></li>
           <li><a href="investor.html">For investors</a></li>
-          <li><a href="litepaper.html">Litepaper</a></li>
           <li><a href="/press">Press kit</a></li>
           <li><a href="/data">Your data</a></li>
-          <li><a href="/media/vitacrypt-deck.pdf">Deck (PDF)</a></li>
           <li><a href="/beta">Beta application</a></li>
           <li><a href="https://x.com/vita_crypt">X / Twitter</a></li>
           <li><a href="https://t.me/paul_burg">Telegram</a></li>
@@ -3676,7 +3671,7 @@ function toggleTheme(){
 }
 tBtn.addEventListener('click', toggleTheme);
 
-// Reveal on scroll — extended with A3 scanline + A7 odometer (commit 4C)
+// Reveal on scroll: extended with A3 scanline + A7 odometer (commit 4C)
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -3696,7 +3691,7 @@ document.querySelectorAll('section, .facts, .case-wrap').forEach(el => {
   revealObs.observe(el);
 });
 
-// HERO PROFILE — animate source bars when in view
+// HERO PROFILE: animate source bars when in view
 const heroProfile = document.getElementById('heroProfile');
 if (heroProfile) {
   const heroObs = new IntersectionObserver((entries) => {
@@ -3710,7 +3705,7 @@ if (heroProfile) {
   heroObs.observe(heroProfile);
 }
 
-// HERO CIPHER — live mutate hex chars, paused when offscreen or tab hidden (perf)
+// HERO CIPHER: live mutate hex chars, paused when offscreen or tab hidden (perf)
 (function cipherLoop(){
   if (RM) return;  // honor prefers-reduced-motion (no text churn)
   const stream = document.getElementById('cipherStream');
@@ -3961,7 +3956,7 @@ if (heroProfile) {
     }, { passive: true });
   }
 
-  // M6: progressive disclosure — insert "more / less" buttons
+  // M6: progressive disclosure: insert "more / less" buttons
   document.querySelectorAll('.clamp-mob').forEach(el => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -4016,8 +4011,8 @@ if (heroProfile) {
   }
 })();
 
-// ====================== PREMIUM ANIMATIONS (commit 4C — pruned in 5B.1) ======================
-// E1 heartbeat tempo, E3 hero typewriter, A1 dissolve cap, A2 living waveform —
+// ====================== PREMIUM ANIMATIONS (commit 4C: pruned in 5B.1) ======================
+// E1 heartbeat tempo, E3 hero typewriter, A1 dissolve cap, A2 living waveform -
 // removed per AI-slop audit (Phase 1.5). Kept: A3 scanline (via revealObs),
 // A7 odometer (via revealObs).
 
