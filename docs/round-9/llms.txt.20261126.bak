@@ -1,0 +1,11 @@
+# VitaCrypt
+> VitaCrypt unifies a person's whole health, genetics, wearables, labs, microbiome, environment and lifestyle, into one profile, checks every link against research, and its Lab Agent follows up on every new blood test. Early-stage MVP.
+
+## Core Concepts
+- **Lab Agent:** The person taps to run a new lab. Seven fixed steps: read the markers, compare with the last lab, check the last plan, link to DNA, search PubMed and Europe PMC with an AI judge, plan by fixed rules, set up. Each plan item is marked Cited, Hypothesis or Ask your clinician, with a dated retest; at the next lab it checks whether the plan worked. Every outside action waits for a tap. It never diagnoses and never sets a dose.
+- **Unified profile:** DNA, labs, wearables, microbiome, check-ins and local air read together, against genotype and local environment.
+- **Evidence-checked:** Recommendations cite literature retrieved live from PubMed and Europe PMC; invented citations are stripped. Genetics grounded on dbSNP and the GWAS Catalog.
+- **Privacy, as built:** Health data is encrypted at rest under per-user keys held by our server, which unwraps them to run the agent; client-held keys are roadmap. The Lab Agent sends the model a coded minimum, never name, file or exact values, and every send is logged. Zero data retention from the model provider is requested, not confirmed.
+
+## Status
+Early-stage MVP, pre-revenue, self-funded, solo founder. Free beta gates: founder test by 30 Nov 2026, 5 friends by 31 Dec 2026, 15 to 20 testers by 31 Jan 2027, then a founding cohort (planned founding price USD 199 a year, locked for the first 100 members, not charged yet). Beta users stay outside the EU and the UAE until a data protection review. Live demo with synthetic data: https://app.vitacrypt.xyz/demo. Lab Agent: https://vitacrypt.xyz/agent. Contact: investors@vitacrypt.xyz, t.me/paul_burg.

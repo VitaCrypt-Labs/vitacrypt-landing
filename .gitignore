@@ -6,3 +6,7 @@
 node_modules/
 *.log
 .wrangler/
+# local design audit notes (kept out of GitHub; tools and partials are tracked)
+docs/design/*.md
+docs/design/mockups/
+docs/design/tokens.css
