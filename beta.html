@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#070B1F">
+<meta name="theme-color" content="#0C0C0E">
 <meta name="color-scheme" content="dark">
 <title>Private beta · VitaCrypt</title>
 <meta name="description" content="Test VitaCrypt on your own labs: one profile from blood tests, DNA, wearable and city air, and a Lab Agent that checks its own plan at your next test. Early-stage MVP, private beta, small cohorts. The application form asks no health data.">
@@ -19,178 +19,120 @@
 <meta property="og:image" content="https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@vita_crypt">
+<!-- Fonts and shared styles (dark only, tokens from the app) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script src="/assets/site.js?v=1" defer></script>
 <style>
-:root {
-  --bg: #070B1F; --bg-2: #0B1230; --surface: #121A3F; --line: #232C5E;
-  --ink: #F5F3EE; --ink-2: #D9D6CD; --ink-mute: #95A0CC; --teal: #6B8AFF; --teal-deep: #3B5BFF;
-  --ok: #5FD4A0; --err: #FF8A8A;
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--ink); }
-body { font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-a { color: var(--teal); }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
-.narrow { max-width: 760px; }
-header.top { border-bottom: 1px solid var(--line); }
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
-.lockup { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; }
-.lockup img { border-radius: 8px; }
-header.top nav { display: flex; gap: 18px; font-size: 14px; }
-header.top nav a { color: var(--ink-mute); text-decoration: none; }
-header.top nav a:hover { color: var(--ink); }
-.eyebrow { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
-h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; margin: 56px 0 12px; font-weight: 600; }
-h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; margin: 0 0 16px; font-weight: 600; }
-.lede { color: var(--ink-2); font-size: 18px; max-width: 720px; margin: 0; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
-.tags li { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-deep); color: #fff; border: 0; border-radius: 12px; padding: 12px 20px; font: 600 15px 'Geist', sans-serif; text-decoration: none; cursor: pointer; }
-.btn:hover { background: var(--teal); }
-.btn:disabled { opacity: 0.6; cursor: default; }
-.hero-cta { margin: 28px 0 56px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-.hero-cta .alt { color: var(--ink-mute); font-size: 14px; }
-section { padding: 48px 0; border-bottom: 1px solid var(--line); }
-section p { color: var(--ink-2); margin: 0 0 12px; }
-ul.out { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-ul.out li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; color: var(--ink-2); }
-ul.out b { color: var(--ink); font-weight: 600; display: block; }
-ul.out .to { font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: var(--teal); letter-spacing: 0.04em; }
-.log-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 240px); gap: 28px; align-items: start; }
-.log-grid figure { margin: 0; }
-.log-grid img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid var(--line); }
-.log-grid figcaption { font-size: 12.5px; color: var(--ink-mute); margin-top: 6px; line-height: 1.4; }
-.note { color: var(--ink-mute); font-size: 14px; }
-
-/* form */
-[hidden] { display: none !important; }
-.apply { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: grid; gap: 20px; }
-.field { display: grid; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
-.label, .field legend { font-size: 14px; font-weight: 500; color: var(--ink); padding: 0; margin: 0 0 6px; }
-.opt { color: var(--ink-mute); font-weight: 400; }
-.hint { font-size: 13px; color: var(--ink-mute); margin: 0; }
-input[type=text], input[type=email], select, textarea {
-  width: 100%; background: var(--bg-2); color: var(--ink); border: 1px solid var(--line); border-radius: 10px;
-  padding: 11px 12px; font: 400 16px 'Geist', sans-serif;
-}
-textarea { resize: vertical; min-height: 84px; }
-input:focus-visible, select:focus-visible, textarea:focus-visible, .check input:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
-.checks { display: grid; gap: 8px; }
-.check { display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); font-size: 15px; line-height: 1.45; cursor: pointer; }
-.check input { margin: 3px 0 0; width: 18px; height: 18px; flex: none; accent-color: var(--teal-deep); }
-.seg { display: flex; gap: 8px; flex-wrap: wrap; }
-.seg label { display: inline-flex; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 9px 14px; cursor: pointer; color: var(--ink-2); }
-.seg label:has(input:checked) { border-color: var(--teal); color: var(--ink); }
-.seg input { accent-color: var(--teal-deep); margin: 0; }
-.consent { border-top: 1px solid var(--line); padding-top: 18px; }
-.nohealth { background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; color: var(--ink-2); margin: 0; }
-.honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-.status { margin: 0; font-size: 15px; min-height: 1.4em; }
-.status.waking { color: var(--ink-2); }
-.status.ok { color: var(--ok); }
-.status.err { color: var(--err); }
-.spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--teal); border-radius: 50%; animation: spin 0.9s linear infinite; vertical-align: -1px; margin-right: 8px; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
-.done { text-align: left; }
-.done h3 { margin: 0 0 8px; font-size: 20px; }
-footer { padding: 32px 0 48px; color: var(--ink-mute); font-size: 13px; }
-footer p { margin: 0 0 6px; }
-@media (max-width: 760px) {
-  .log-grid { grid-template-columns: 1fr; }
-  .log-grid figure { max-width: 240px; }
-  header.top nav a.hide-sm { display: none; }
-  .apply { padding: 18px; }
-}
+[hidden]{display:none!important}
+.narrow{max-width:760px}
+.hero .wrap.narrow{display:block}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tags li{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.rows h3{font-size:16px}
+.rows p{font-size:14px}
+.logrow{display:grid;gap:8px;margin-top:20px;justify-items:start}
+.logrow figure{max-width:240px}
+.logrow img{border:1px solid var(--line);border-radius:var(--r-in)}
+.flow .when{margin-top:0}
+.flow p{font-size:14px;color:var(--dim)}
+.apply{display:grid;gap:20px;margin-top:20px}
+.field{display:grid;gap:6px;border:0;padding:0;margin:0;min-width:0}
+.field legend{font-weight:500;padding:0;margin:0 0 6px}
+.opt{color:var(--dim);font-weight:400}
+.field .hint{margin-top:0}
+.checks{display:grid;gap:4px}
+.check{gap:0;margin:0;color:var(--dim);cursor:pointer}
+.check input{margin-top:11px}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{display:inline-flex;gap:8px;align-items:center;min-height:48px;margin:0;border:1.5px solid var(--line);border-radius:var(--r-in);padding:0 16px;cursor:pointer;font-weight:400}
+.seg label:has(input:checked){border-color:var(--ink)}
+.seg input[type=radio]{width:20px;height:20px;min-height:0;margin:0;padding:0;accent-color:#fff}
+textarea{min-height:96px;resize:vertical}
+.consent{border-top:1px solid var(--line);padding-top:18px}
+.consent .check{color:var(--ink);font-size:16px}
+.nohealth{border:1.5px dashed var(--line);border-radius:var(--r-in);padding:12px 14px;font-size:14px;color:var(--ink)}
+.honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.status{font-size:14px;min-height:1.4em}
+.status.waking{color:var(--dim)}.status.ok{color:var(--air)}.status.err{color:var(--bad)}
+.status a{color:inherit}
+.spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--line);border-top-color:var(--ink);border-radius:50%;animation:spin .9s linear infinite;vertical-align:-1px;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+.done h3{font-size:20px;margin-bottom:8px}
+.done p{color:var(--dim)}
+.mail{margin-top:20px;color:var(--dim)}
+.mail a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink)}
+#betaForm .btn.big{width:100%}
+@media (min-width:900px){#betaForm .btn.big{width:auto}}
 </style>
 </head>
 <body>
-
-<header class="top">
-  <div class="wrap">
-    <a class="lockup" href="/"><img src="/img/vitacrypt-mark.svg" alt="" width="28" height="28">VitaCrypt</a>
-    <nav aria-label="Site">
-      <a href="/agent">Lab Agent</a>
-      <a href="/data" class="hide-sm">Your data</a>
-      <a href="https://app.vitacrypt.xyz/demo">Live demo</a>
-    </nav>
-  </div>
-</header>
+<header class="top"><div class="wrap"><a class="wm" href="/"><img src="/img/vitacrypt-mark.svg" alt="" width="24" height="24"><span>Vita<i>Crypt</i></span></a><nav aria-label="Main"><a href="/agent">Lab Agent</a><a href="/platform.html">How it works</a><a href="/data">Your data</a><a href="/investor.html">Investors</a></nav><a class="btn p" href="https://app.vitacrypt.xyz/demo">Try the demo</a><button class="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></header>
+<nav id="drawer" class="drawer" aria-label="Menu" hidden><a href="/agent">Lab Agent</a><a href="/platform.html">How it works</a><a href="/data">Your data</a><a href="/investor.html">Investors</a><a href="/beta">Apply for the beta</a><a href="/press">Press kit</a><a class="btn p" href="https://app.vitacrypt.xyz/demo">Try the demo</a></nav>
 
 <main>
-<div class="wrap narrow">
-  <p class="eyebrow" style="margin-top:56px">Private beta</p>
-  <h1 style="margin-top:0">Test VitaCrypt on your own data.</h1>
-  <p class="lede">One profile from your blood tests, DNA, wearable and city air, every link marked Cited or Hypothesis, and a Lab Agent that checks its own plan at your next test.</p>
-  <ul class="tags" aria-label="About this beta">
-    <li>Early-stage MVP</li>
-    <li>Private beta</li>
-    <li>Small cohorts</li>
-    <li>Free</li>
-    <li>App in English</li>
-  </ul>
-  <div class="hero-cta">
-    <a class="btn" href="#apply">Apply</a>
-    <span class="alt">Two minutes, no health questions. Or <a href="https://app.vitacrypt.xyz/demo?start=agent">try the demo</a> with a fictional person first.</span>
-  </div>
-</div>
+<section class="hero"><div class="wrap narrow">
+ <h1>Test VitaCrypt on your own data.</h1>
+ <p class="lead">One profile from your blood tests, DNA, wearable and city air, every link marked Cited or Hypothesis, and a Lab Agent that checks its own plan at your next test.</p>
+ <p class="small">Free · small cohorts · app in English</p>
+ <div class="cta"><a class="btn p big" href="#apply">Apply for the beta<small>Two minutes · no health questions</small></a><a class="tb" href="https://app.vitacrypt.xyz/demo?start=agent">Try the demo with a fictional person first</a></div>
+</div></section>
 
-<section id="get">
-  <div class="wrap narrow">
-    <p class="eyebrow">01 · What you get</p>
-    <h2>One profile, and an agent that follows up</h2>
-    <ul class="out">
-      <li><b>One profile from your sources</b>Lab results, a DNA file, wearable data and the air quality where you live, read together instead of one PDF at a time.</li>
-      <li><b>Cited or Hypothesis on every link</b>Each connection the app draws is labelled: Cited, with the papers it rests on, or Hypothesis, when the evidence is thin.</li>
-      <li><b>A Lab Agent that checks its own plan</b>It suggests habits, a retest date and questions for your clinician. When your next lab arrives, it checks whether the plan worked and keeps, swaps or asks for more of each habit. It never diagnoses and never suggests doses.</li>
-    </ul>
-  </div>
-</section>
+<section id="get"><div class="wrap narrow">
+ <h2>What you get, and what we ask</h2>
+ <ul class="rows">
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></svg></span><div><h3>One profile from your sources</h3><p>Lab results, a DNA file, wearable data and local air, read together.</p></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div><h3>Cited or Hypothesis on every link</h3><p>Cited rests on papers; Hypothesis means the evidence is thin.</p></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5"/></svg></span><div><h3>A Lab Agent that checks its own plan</h3><p>At your next lab it keeps, swaps or asks for more of each habit.</p></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>About 10 minutes a week</h3><p>Honest reports on what broke, confused you or was missing.</p></div></li>
+ </ul>
+ <details><summary>The full description</summary><div>
+  <p>One profile from your sources: lab results, a DNA file, wearable data and the air quality where you live, read together instead of one PDF at a time.</p>
+  <p>Cited or Hypothesis on every link: each connection the app draws is labelled Cited, with the papers it rests on, or Hypothesis, when the evidence is thin.</p>
+  <p>A Lab Agent that checks its own plan: it suggests habits, a retest date and questions for your clinician. When your next lab arrives, it checks whether the plan worked and keeps, swaps or asks for more of each habit. It never diagnoses and never suggests doses.</p>
+  <p>What we ask: honest reports, about 10 minutes a week. Tell us what broke, what confused you and what was missing. This is an early-stage MVP built by one person, so expect rough edges. Your reports decide what gets fixed first.</p>
+ </div></details>
+</div></section>
 
-<section id="ask">
-  <div class="wrap narrow">
-    <p class="eyebrow">02 · What we ask</p>
-    <h2>Honest reports, about 10 minutes a week</h2>
-    <p>Tell us what broke, what confused you and what was missing. This is an early-stage MVP built by one person, so expect rough edges. Your reports decide what gets fixed first.</p>
-  </div>
-</section>
+<section id="leaves"><div class="wrap narrow">
+ <h2>What leaves the app, and to whom</h2>
+ <p class="lead">What you agree to when you apply and use the Lab Agent.</p>
+ <ul class="flow">
+  <li><div class="to"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4-4"/></svg>PubMed, Europe PMC</div><p>Research databases</p><div class="pay"><span>Gene names</span><span>Marker names</span><span>Condition names</span><span>As search terms</span></div></li>
+  <li><div class="to"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h12M12 6l6 6-6 6"/></svg>Anthropic (Claude), the Lab Agent's seven steps</div><p>Coded facts only, without your name or email.</p><div class="pay"><span>"LDL: high, rising"</span><span>Gene names</span><span>Variant IDs</span><span>Genotype letters</span></div><p class="when">In these steps: no files, no exact values.</p></li>
+  <li><div class="to"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9.500 9h5M9.500 13h5M9.500 17h3"/></svg>Anthropic (Claude), lab reading</div><p>When you upload a lab, the report text goes to Claude with lines we recognise as personal removed.</p><div class="pay"><span>Values stay</span><span>Sex, age</span><span>Test date</span><span>Lab name</span></div><p class="when">Removal can miss an unlabelled name. Images are not sent.</p></li>
+  <li><div class="to"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.600 5.600l1.400 1.400M17 17l1.400 1.400M5.600 18.400L7 17M17 7l1.400-1.400"/></svg>Air-quality services</div><p>Your location, rounded to about 1 km.</p></li>
+  <li><div class="to"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V6a2 2 0 0 1 4 0v5M13 10a2 2 0 0 1 4 0v3a6 6 0 0 1-6 6h-1a5 5 0 0 1-4-2l-2-3 2-1 2 2"/></svg>Only when you tap</div><p>A lab order or a link for your clinician. The action says what it will send.</p></li>
+ </ul>
+ <div class="note"><b>Older parts send more.</b> Some older parts of the app, such as insight cards, still send more than the Lab Agent. They are listed, with everything else, on <a href="/data">What happens to your data</a>, and we fix them before the first tester uploads a lab.</div>
+ <div class="logrow"><figure><a href="/img/press/d15-what-left.jpg"><img src="/img/press/d15-what-left.jpg" alt="What left VitaCrypt screen: each destination and the kinds of fields sent" width="750" height="1624" loading="lazy"></a><figcaption class="cap">"What left VitaCrypt" in the live demo. Synthetic data.</figcaption></figure>
+ <p class="small">Each Lab Agent send is logged in the app under "What left VitaCrypt".</p></div>
+</div></section>
 
-<section id="leaves">
-  <div class="wrap narrow">
-    <p class="eyebrow">03 · What leaves the app</p>
-    <h2>What the Lab Agent sends, and to whom</h2>
-    <div class="log-grid">
-      <div>
-        <ul class="out">
-          <li><span class="to">PubMed, Europe PMC</span><b>Research databases</b>Gene, marker and condition names, as search terms.</li>
-          <li><span class="to">Anthropic (Claude)</span><b>AI model</b>Coded facts, such as "LDL: high, rising", gene names, variant IDs and your genotype letters, without your name or email. No files, no exact values.</li>
-          <li><span class="to">Air quality, and what you tap</span><b>Everything else</b>Air-quality services get your location rounded to about 1 km. Anything more, such as a lab order or a link for your clinician, is sent only when you tap an action that says what it will send.</li>
-        </ul>
-        <p class="note" style="margin-top:14px">Each Lab Agent send is logged in the app under "What left VitaCrypt". Some older parts of the app still send more than the Lab Agent; they are listed, with everything else, on <a href="/data">What happens to your data</a>, and we fix them before the first tester uploads a lab.</p>
-      </div>
-      <figure><a href="/img/press/d15-what-left.jpg"><img src="/img/press/d15-what-left.jpg" alt="What left VitaCrypt screen: each destination and the kinds of fields sent" width="750" height="1624" loading="lazy"></a><figcaption>"What left VitaCrypt" in the live demo. Synthetic data.</figcaption></figure>
-    </div>
-  </div>
-</section>
+<section id="who"><div class="wrap narrow">
+ <h2>People who test their blood regularly</h2>
+ <p class="lead">Only they can see the agent check its own plan. A DNA file helps too.</p>
+ <ul class="rows">
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>A blood test in the last 12 months</h3></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>Another blood test in the next 3 months</h3></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>A DNA file</h3><p>23andMe, AncestryDNA or another</p></div></li>
+ </ul>
+ <p class="small" style="margin-top:16px">If you have none of these yet, apply anyway: we invite you once the app is useful without labs. We invite in small groups and email you if you are invited.</p>
+ <ul class="tags" aria-label="Terms"><li>Outside the EU and the UAE for now</li><li>Free, nothing is charged</li><li>No date promised</li></ul>
+ <ol class="gates">
+  <li><time datetime="2026-11-30">30 Nov 2026</time><p><b>Founder test</b> on Paul's own labs.</p></li>
+  <li><time datetime="2026-12-31">31 Dec 2026</time><p><b>5 friends</b></p></li>
+  <li><time datetime="2027-01-31">31 Jan 2027</time><p><b>15 to 20 testers</b>, then a founding cohort.</p></li>
+ </ol>
+ <details><summary>Why outside the EU and the UAE</summary><div><p>For now we invite only people who live outside the EU and the UAE, until a data protection review is done. The beta is free; nothing is charged. The gates above are planned, and we cannot promise you a date.</p></div></details>
+</div></section>
 
-<section id="who">
-  <div class="wrap narrow">
-    <p class="eyebrow">04 · Who we invite first</p>
-    <h2>People who test their blood regularly</h2>
-    <p>We start with people who have a blood test from the last year and expect another one soon, because only they can see the agent check its own plan. A DNA file helps too. If you have none of these yet, apply anyway: we invite you once the app is useful without labs.</p>
-    <p>We invite in small groups and email you if you are invited. The planned gates: a founder test on Paul's own labs by 30 November 2026, 5 friends by 31 December 2026, 15 to 20 testers by 31 January 2027, then a founding cohort. We cannot promise you a date.</p>
-    <p>For now we invite only people who live outside the EU and the UAE, until a data protection review is done. The beta is free; nothing is charged.</p>
-  </div>
-</section>
-
-<section id="apply" style="border-bottom:0">
-  <div class="wrap narrow">
-    <p class="eyebrow">05 · Apply</p>
-    <h2>Application</h2>
-    <form class="apply" id="betaForm" novalidate>
+<section id="apply"><div class="wrap narrow">
+ <h2>Application</h2>
+    <form class="apply tile" id="betaForm" novalidate>
       <div class="field">
         <label class="label" for="f-name">Name</label>
         <input id="f-name" name="name" type="text" required maxlength="100" autocomplete="name">
@@ -245,26 +187,20 @@ footer p { margin: 0 0 6px; }
       </div>
       <p class="nohealth">This form asks no health data: no lab values, diagnoses, medications, date of birth, sex or files.</p>
       <div>
-        <button class="btn" type="submit" id="f-submit">Apply for the beta</button>
+        <button class="btn p big" type="submit" id="f-submit">Apply for the beta</button>
       </div>
       <p class="status" id="f-status" role="status" aria-live="polite"></p>
     </form>
     <div class="done" id="betaDone" hidden>
-      <div class="apply">
+      <div class="apply tile">
         <h3 id="doneTitle">Application received</h3>
         <p style="margin:0">Thank you. It is stored on our server and Paul reads every one. If you are invited, the email comes to the address you gave. Meanwhile, the <a href="https://app.vitacrypt.xyz/demo?start=agent">live demo</a> shows the Lab Agent on a fictional person.</p>
       </div>
     </div>
-  </div>
-</section>
+  <p class="mail">Prefer email? <a href="mailto:marketing@vitacrypt.xyz">marketing@vitacrypt.xyz</a></p>
+</div></section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p>VitaCrypt is not a medical service. Not medical advice. Supplements appear only as official reference values, never as a dose.</p>
-    <p>Early-stage MVP · <a href="/data">What happens to your data</a> · <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a> · © 2026 VitaCrypt</p>
-  </div>
-</footer>
+<footer class="foot"><div class="wrap"><a class="wm" href="/"><img src="/img/vitacrypt-mark.svg" alt="" width="24" height="24"><span>Vita<i>Crypt</i></span></a><p>Your whole health in one profile, with evidence-checked guidance.</p><div class="row"><a href="/agent">Lab Agent</a><a href="/platform.html">How it works</a><a href="/beta">Beta</a><a href="/data">Your data</a><a href="/investor.html">Investors</a><a href="/press">Press kit</a></div><div class="row"><a href="mailto:marketing@vitacrypt.xyz">marketing@vitacrypt.xyz</a><a href="mailto:investors@vitacrypt.xyz">investors@vitacrypt.xyz</a><a href="https://x.com/vita_crypt">X</a><a href="https://t.me/paul_burg">Telegram</a></div><p>Not medical advice. No diagnoses, and never a dose chosen for you. Built by <a href="https://paulburg.com/">Paul Burg</a>.</p></div></footer>
 
 <script>
 (function () {
