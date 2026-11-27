@@ -1,3 +1,4 @@
+# RETIRED 27.11.2026: index.html is now edited by hand (coherence pass). Do not rerun; it would revert the home page.
 # Home page proposal mock-up. Icons, source colours and ring geometry are copied from the app's
 # docs/design/mockups/build.py (the approved "blend" system), not redrawn.
 import math, html
@@ -88,7 +89,7 @@ FOOTER = ('<footer class="foot"><div class="wrap"><a class="wm" href="/"><img sr
 ASSETS = ('<!-- Fonts and shared styles (dark only, tokens from the app) -->\n'
  '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">\n'
- '<link rel="stylesheet" href="/assets/site.css?v=2">\n<script src="/assets/site.js?v=2" defer></script>\n')
+ '<link rel="stylesheet" href="/assets/site.css?v=4">\n<script src="/assets/site.js?v=4" defer></script>\n')
 (ROOT/'docs/design/partials').mkdir(parents=True, exist_ok=True)
 (ROOT/'docs/design/partials/assets.html').write_text(ASSETS)
 for h,_ in NAV+[('/beta',''),('/press',''),('','')]:
