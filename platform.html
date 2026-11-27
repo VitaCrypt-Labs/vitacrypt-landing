@@ -266,7 +266,7 @@ p.cap a,.close .cap a{color:var(--ink)}
   <li><span class="sq pl"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>Action</h3><p>A few time-bound steps, each with its evidence.</p></div></li>
  </ol>
  <div class="grid g2">
-  <div class="tile"><p class="chips" style="margin:0 0 8px"><span class="chip sm on-dna">DNA</span><span class="chip sm on-air">Air &amp; UV</span></p><p class="mono">MTHFR C677T × PM2.5</p><p class="small">Blunted homocysteine clearance plus inflammatory load from PM2.5.</p><p class="small"><b>Why "shift cardio to low-AQI hours":</b> the variant raises sensitivity to PM2.5-driven inflammation, so timing exertion away from pollution peaks matters more.</p><p><span class="ev c">Cited</span> <span class="small">PubMed PMC6068673 · meta-analysis</span></p></div>
+  <div class="tile"><p class="chips" style="margin:0 0 8px"><span class="chip sm on-dna">DNA</span><span class="chip sm on-air">Air &amp; UV</span></p><p class="mono">MTHFR C677T × PM2.5</p><p class="small">Blunted homocysteine clearance plus inflammatory load from PM2.5.</p><p><span class="ev c">Cited</span> <span class="small">PubMed PMC6068673 · meta-analysis</span></p><p class="small"><b>Why "shift cardio to low-AQI hours":</b> the variant raises sensitivity to PM2.5-driven inflammation, so timing exertion away from pollution peaks matters more.</p></div>
   <div class="tile"><p class="chips" style="margin:0 0 8px"><span class="chip sm on-dna">DNA</span><span class="chip sm on-air">Air &amp; UV</span></p><p class="mono">APOE ε4 × PM2.5</p><p class="small">A greater neuroinflammatory response to fine particles.</p><p><span class="ev c">Cited</span> <span class="small">PubMed PMC10296707 · 2023</span></p></div>
  </div>
  <p class="cap">The evidence behind David's example below.</p>
@@ -292,6 +292,7 @@ p.cap a,.close .cap a{color:var(--ink)}
 <section id="week"><div class="wrap">
  <p class="kick k-data">Case: David's week</p><h2>One person, three combinations, three protocols</h2>
  <p class="lead">David, fictional, across three moments of one week. The answer changes when the inputs change.</p>
+ <p class="swh">1 of 3 · swipe for the next day</p>
  <ul class="grid g3 swipe">
   <li class="tile wk"><p class="mono">Tue · 06:42</p><h3>Air × MTHFR × HRV</h3><p class="small">Your air, your folate cycle and your HRV are one story.</p>
    <p class="chips wkc"><span class="chip sm on-dna">DNA · MTHFR C677T</span><span class="chip sm on-air">Air · PM2.5 p97</span><span class="chip sm on-wear">Wear · HRV ↓22%</span></p></li>
@@ -313,16 +314,17 @@ p.cap a,.close .cap a{color:var(--ink)}
 
 <section id="encrypted"><div class="wrap">
  <p class="kick k-gr">Privacy</p><h2>Private by design, on what is true today</h2>
- <p class="lead">Encrypted at rest under per-user keys; the Lab Agent sends a coded minimum and logs every send. Model calls go to Anthropic's Claude today. Our server can unwrap your key to run the agent; we do not claim otherwise.</p>
- <table class="vs">
+ <p class="lead">Model calls go to Anthropic's Claude today. What is true now, what is still roadmap, and the limit we do not hide.</p>
+ <table class="vs stk">
   <thead><tr><th scope="col"></th><th scope="col">Today</th><th scope="col">Roadmap, not yet live</th></tr></thead>
   <tbody>
-   <tr><th scope="row">Keys</th><td class="us" data-l="Today"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Per-user keys, encrypted at rest; delete destroys the key. Our server holds the key so it can run the agent.</td><td data-l="Roadmap">Client-held keys: iOS Keychain and Android Keystore.</td></tr>
+   <tr><th scope="row">Keys</th><td class="us" data-l="Today"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Per-user keys, encrypted at rest; delete destroys the key.</td><td data-l="Roadmap">Client-held keys: iOS Keychain and Android Keystore.</td></tr>
    <tr><th scope="row">What the model sees</th><td class="us" data-l="Today"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Seven Lab Agent steps send coded facts; every send is logged.</td><td data-l="Roadmap">Tighter minimization before any external inference.</td></tr>
    <tr><th scope="row">Providers</th><td class="us" data-l="Today"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Disclosed and listed on Your data.</td><td data-l="Roadmap">Zero data retention from the model provider: requested, not confirmed.</td></tr>
+   <tr><th scope="row">Limit today</th><td colspan="2" class="lim">Our server can unwrap your key to run the agent; we do not claim otherwise.</td></tr>
   </tbody>
  </table>
- <p class="note"><b>Still true.</b> Older insight cards send a fuller profile. Zero data retention is requested, not confirmed. Early-stage MVP, pre-revenue, no outside users yet; beta users stay outside the EU and the UAE.</p>
+ <p class="note"><b>Still true.</b> Older insight cards send a fuller profile. Early-stage MVP, pre-revenue, no outside users yet; beta users stay outside the EU and the UAE.</p>
  <details><summary>The honest status</summary><div><p>Today: encrypted at rest under per-user keys, a coded minimum to the model in the Lab Agent, and a log of every Lab Agent send. When you upload a lab, the report text goes to Anthropic's Claude with lines we recognise as personal removed; values, sex, age, test date and lab name stay, and the removal can miss an unlabelled name. Older insight cards still send the model a fuller profile; that is listed on Your data and is being fixed. Zero data retention terms are requested from the model provider, not confirmed. An OpenRouter fallback exists for model calls. The server can unwrap your key to run the agent, so it can read the data it processes. We state this plainly.</p></div></details>
  <p><a class="tb" href="/data">What happens to your data</a></p>
 </div></section>

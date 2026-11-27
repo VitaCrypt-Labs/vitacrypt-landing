@@ -4,7 +4,7 @@
    Change a token in the app first, then copy it here. Dark only, like the app. */
 :root{
  --bg:#0C0C0E;--tile:#18181C;--tile2:#24242B;--line:#2E2E36;--dim:#A3A3AF;--missing:#8D8D99;--ink:#FFFFFF;
- --bad:#FF6B5E;--in-range:rgba(255,255,255,.3);--agent:#6B8AFF;
+ --bad:#FF6B5E;--dna-text:#A88BF5;--in-range:rgba(255,255,255,.3);--agent:#6B8AFF;
  /* meaning by a 4px left edge on a neutral tile: agent periwinkle, plan white, alerts/clinician/map grey, air green */
  --lab:#3F5AF0;--dna:#7E4FE8;--gut:#19C2B0;--body:#C8A070;--wear:#6FC3FF;--chk:#EDE7D9;--sur:#E59BF0;--air:#7BD65A;
  --font:"Geist",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
@@ -262,24 +262,28 @@ input[type=checkbox]{width:22px;height:22px;min-height:0;accent-color:#fff;margi
 .sdots.scat{grid-template-columns:repeat(4,10px);gap:6px 10px}.sdots.scat i:nth-child(odd){transform:translateY(3px)}
 .sdots .lab{background:var(--lab)}.sdots .dna{background:var(--dna)}.sdots .gut{background:var(--gut)}.sdots .body{background:var(--body)}.sdots .wear{background:var(--wear)}.sdots .chk{background:var(--chk)}.sdots .sur{background:var(--sur)}.sdots .air{background:var(--air)}
 .sqs{display:flex;gap:6px;flex:0 0 auto}
-.c-dna{color:#A88BF5!important}.c-air{color:var(--air)!important}.c-lab{color:#7F93FF!important}
+.c-dna{color:var(--dna-text)!important}.c-air{color:var(--air)!important}.c-lab{color:#7F93FF!important}
 .wkc{margin-top:4px;gap:6px}
 .pl li.sc{display:inline-flex;align-items:center;gap:6px}.pl li.sc i{width:10px;height:10px;border-radius:3px}
 .pl .lab{background:var(--lab)}.pl .dna{background:var(--dna)}.pl .sur{background:var(--sur)}.pl .chk{background:var(--chk)}.pl .wear{background:var(--wear)}
 .wgw .hd{display:inline-block;width:8px;height:8px;border-radius:2px;margin:0 0 4px}.wgw .hd.lab{background:var(--lab)}.wgw .hd.dna{background:var(--dna)}.wgw .hd.air{background:var(--air)}
 @media (min-width:900px){.wgw .hd{margin:0 6px 0 0}}
 /* compact number strip */
-.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:16px;background:var(--line);border-radius:var(--r-in);overflow:hidden}
+.nums{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:16px;background:var(--line);border-radius:var(--r-in);overflow:hidden}
 .nums li{background:var(--tile);padding:12px 10px;display:grid;gap:4px;align-content:start}
 .nums b{font:600 20px/1.1 var(--font);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
-.nums span{font-size:12px;color:var(--dim);line-height:1.3}
-.nums small{display:block;font-size:11px;color:var(--dim);line-height:1.35;margin-top:2px}.nums li.ag b{color:var(--agent)}
-.nums.n2{grid-template-columns:repeat(2,minmax(0,1fr))}.nums.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (min-width:900px){.nums.n2{grid-template-columns:repeat(4,minmax(0,1fr))}.nums li{padding:16px}.nums b{font-size:28px}.nums span{font-size:14px}}
+.nums span{font-size:13px;color:var(--dim);line-height:1.3}
+.nums small{display:block;font-size:12px;color:var(--dim);line-height:1.35;margin-top:2px}.nums li.ag b{color:var(--agent)}
+.nums.n2{grid-template-columns:repeat(2,minmax(0,1fr))}.nums.n3{grid-template-columns:1fr}
+@media (min-width:900px){.nums{grid-template-columns:repeat(4,minmax(0,1fr))}.nums.n3{grid-template-columns:repeat(3,minmax(0,1fr))}.nums.n2{grid-template-columns:repeat(4,minmax(0,1fr))}.nums li{padding:16px}.nums b{font-size:28px}.nums span{font-size:14px}}
 /* swipe row on phone */
 @media (max-width:899px){.swipe{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;-webkit-overflow-scrolling:touch}.swipe>li{flex:0 0 84%;scroll-snap-align:start}}
 @media (min-width:900px){section .wrap>.rows.r2{grid-template-columns:repeat(2,minmax(0,1fr))}section .wrap>.rows.r3{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:599px){.gates li{grid-template-columns:1fr;gap:2px}.gates time,.gates li>span{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}}
+.rows .sdots{flex:0 0 36px;width:36px;grid-template-columns:repeat(4,6px);gap:4px}.rows .sdots i{width:6px;height:6px;border-radius:2px}.rows .sdots.scat i:nth-child(odd){transform:none}
+.vs td.lim{color:var(--dim);font-size:14px}
+@media (max-width:640px){.vs.stk tbody tr{grid-template-columns:1fr;row-gap:8px}}
+.swh{display:none}@media (max-width:899px){.swh{display:block;font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-top:12px}}
 /* compact footer */
 .foot{padding:20px 0 24px}
 .fg{display:grid;gap:12px}
