@@ -93,8 +93,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=1">
-<script src="/assets/site.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=2">
+<script src="/assets/site.js?v=2" defer></script>
 <style>
 .hero .tile .rows{margin-top:0}
 .hero .tile .rows li+li{margin-top:4px}
@@ -133,9 +133,9 @@
  </div>
  <div class="tile" style="margin-top:20px">
   <ul class="rows">
-   <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5.500a1.500 1.500 0 0 1 3 0V10M12 9.500a1.500 1.500 0 0 1 3 0V11M15 10.500a1.500 1.500 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.700l-2-3.300a1.500 1.500 0 0 1 2.600-1.500L9 15"/></svg></span><div><h3>You tap to run each new lab</h3><p>A person starts every run.</p></div></li>
-   <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>Every plan item says how sure it is</h3><p><span class="ev c">Cited</span><span class="ev h">Hypothesis</span><span class="ev a">Ask your clinician</span></p></div></li>
-   <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.300M20 4v4h-4M20 12a8 8 0 0 1-14 5.300M4 20v-4h4"/></svg></span><div><h3>Next lab, it checks the plan</h3><p>Did it work? The plan changes.</p></div></li>
+   <li><span class="sq ag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5.500a1.500 1.500 0 0 1 3 0V10M12 9.500a1.500 1.500 0 0 1 3 0V11M15 10.500a1.500 1.500 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.700l-2-3.300a1.500 1.500 0 0 1 2.600-1.500L9 15"/></svg></span><div><h3>You tap to run each new lab</h3><p>A person starts every run.</p></div></li>
+   <li><span class="sq ag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><div><h3>Every plan item says how sure it is</h3><p><span class="ev c">Cited</span><span class="ev h">Hypothesis</span><span class="ev a">Ask your clinician</span></p></div></li>
+   <li><span class="sq ag"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.300M20 4v4h-4M20 12a8 8 0 0 1-14 5.300M4 20v-4h4"/></svg></span><div><h3>Next lab, it checks the plan</h3><p>Did it work? The plan changes.</p></div></li>
   </ul>
  </div>
 </div>
@@ -147,22 +147,16 @@
  <h2>Seven steps every time a new lab arrives</h2>
  <p class="lead">Fixed in code, same order, after you tap to run.</p>
  <div class="legend"><span class="chip sm off">Fixed</span><span class="t">rules</span><span class="chip sm on-lab">Model</span><span class="t">language model</span></div>
- <ol class="rail">
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg>Read your lab file<span class="tag">Model</span></h3><p>Markers pulled from your lab PDF.</p>
-   <details><summary>Full step</summary><div><p>Pulls the text out of the PDF your lab sent and picks out the markers it knows, such as vitamin D, LDL cholesterol or homocysteine.</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M17 4v16M4 8h6M14 16h6"/></svg>Compare with your last lab<span class="tag">Fixed</span></h3><p>Reference range, and up or down.</p>
-   <details><summary>Full step</summary><div><p>Checks each marker against its reference range and against your previous result: in range or not, up or down.</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3 8-8M20 12v7H5V5h9"/></svg>Check your last plan<span class="tag">Fixed</span></h3><p>Which habits to keep, swap or retire.</p>
-   <details><summary>Full step</summary><div><p>Did the markers you worked on move, and did you keep the habits? Each habit is kept, swapped or retired based on that.</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9M9 7h6M9 17h6"/></svg>Link changes to your DNA<span class="tag">Fixed</span></h3><p>Related gene variants. A link means related.</p>
-   <details><summary>Full step</summary><div><p>Looks for gene variants you carry that research relates to the changed markers. A link means "related", never "caused".</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.500-4.500"/></svg>Check the research<span class="tag">Model</span></h3><p>PubMed and Europe PMC, paper by paper.</p>
-   <details><summary>Full step</summary><div><p>Searches PubMed and Europe PMC, and a model checks each paper against each claim. A habit is marked "Cited" only when the papers support it; otherwise it stays a Hypothesis.</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg>Plan next steps<span class="tag">Model</span></h3><p>Habits, a dated retest, clinician questions.</p>
-   <details><summary>Full step</summary><div><p>Small daily habits, a repeat test with a date, and questions for your clinician. Fixed rules route each item: Cited, Hypothesis or Ask your clinician.</p></div></details></div></li>
-  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Set up your plan<span class="tag">Fixed</span></h3><p>Into the app. Sharing waits for your tap.</p>
-   <details><summary>Full step</summary><div><p>Puts the habits, the retest date and a short sheet for your clinician into the app. Anything that leaves the app, such as a calendar or Telegram reminder, a clinician link or a lab order (US sandbox), waits for your tap and shows what it will share.</p></div></details></div></li>
+ <ol class="rail ag">
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg>Read your lab file<span class="tag">Model</span></h3><p>Markers pulled from your lab PDF.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4v16M17 4v16M4 8h6M14 16h6"/></svg>Compare with your last lab<span class="tag">Fixed</span></h3><p>Reference range, and up or down.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3 8-8M20 12v7H5V5h9"/></svg>Check your last plan<span class="tag">Fixed</span></h3><p>Which habits to keep, swap or retire.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9M9 7h6M9 17h6"/></svg>Link changes to your DNA<span class="tag">Fixed</span></h3><p>Related gene variants. A link means related.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.500-4.500"/></svg>Check the research<span class="tag">Model</span></h3><p>PubMed and Europe PMC, paper by paper.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg>Plan next steps<span class="tag">Model</span></h3><p>Habits, a dated retest, clinician questions.</p></div></li>
+  <li><div><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Set up your plan<span class="tag">Fixed</span></h3><p>Into the app. Sharing waits for your tap.</p></div></li>
  </ol>
+ <details><summary>Each step in full</summary><div><p><b>1. Read your lab file.</b> Pulls the text out of the PDF your lab sent and picks out the markers it knows, such as vitamin D, LDL cholesterol or homocysteine.</p><p><b>2. Compare with your last lab.</b> Checks each marker against its reference range and against your previous result: in range or not, up or down.</p><p><b>3. Check your last plan.</b> Did the markers you worked on move, and did you keep the habits? Each habit is kept, swapped or retired based on that.</p><p><b>4. Link changes to your DNA.</b> Looks for gene variants you carry that research relates to the changed markers. A link means "related", never "caused".</p><p><b>5. Check the research.</b> Searches PubMed and Europe PMC, and a model checks each paper against each claim. A habit is marked "Cited" only when the papers support it; otherwise it stays a Hypothesis.</p><p><b>6. Plan next steps.</b> Small daily habits, a repeat test with a date, and questions for your clinician. Fixed rules route each item: Cited, Hypothesis or Ask your clinician.</p><p><b>7. Set up your plan.</b> Puts the habits, the retest date and a short sheet for your clinician into the app. Anything that leaves the app, such as a calendar or Telegram reminder, a clinician link or a lab order (US sandbox), waits for your tap and shows what it will share.</p></div></details>
  <div class="strip" aria-label="Lab Agent screenshots">
   <figure><img src="/img/agent/run-steps.jpg" alt="Lab Agent run: each step with its result and the literature searches it sent" width="525" height="1136" loading="lazy" decoding="async"><figcaption>One run</figcaption></figure>
   <figure><img src="/img/agent/plan.jpg" alt="Plan: habits marked Cited or Hypothesis with PubMed IDs" width="525" height="1136" loading="lazy" decoding="async"><figcaption>The plan</figcaption></figure>
@@ -176,20 +170,23 @@
 <section id="difference"><div class="wrap">
  <h2>One app. The agent is the part that follows up.</h2>
  <p class="lead">A tab of the VitaCrypt app. Its plan shows on Today, Habits and Trends.</p>
- <ul class="grid g2 ba">
-  <li class="tile"><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7c0-1.700 3.600-3 8-3s8 1.300 8 3-3.600 3-8 3-8-1.300-8-3zM4 7v10c0 1.700 3.600 3 8 3s8-1.300 8-3V7M4 12c0 1.700 3.600 3 8 3s8-1.300 8-3"/></svg></span><h3>Memory</h3><p><b>Without the agent</b>A snapshot of today's data</p><p class="w"><b>With the Lab Agent</b>Keeps every lab, plan and habit it suggested</p></li>
-  <li class="tile"><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg></span><h3>Plan</h3><p><b>Without the agent</b>Recommendations to read</p><p class="w"><b>With the Lab Agent</b>Habits in your tracker, repeat tests with dates, clinician questions</p></li>
-  <li class="tile"><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.500 2h-15zM10 21h4"/></svg></span><h3>Follow-up</h3><p><b>Without the agent</b>None until you ask again</p><p class="w"><b>With the Lab Agent</b>Reminds you when a repeat test is due</p></li>
-  <li class="tile"><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.300M20 4v4h-4M20 12a8 8 0 0 1-14 5.300M4 20v-4h4"/></svg></span><h3>Learning</h3><p><b>Without the agent</b>Starts fresh each time</p><p class="w"><b>With the Lab Agent</b>Checks the next lab against the plan and adjusts it</p></li>
- </ul>
+ <table class="vs">
+  <thead><tr><th scope="col"></th><th scope="col">Without the agent</th><th scope="col" class="agc">With the Lab Agent</th></tr></thead>
+  <tbody>
+   <tr><th scope="row">Memory</th><td data-l="Without the agent">A snapshot of today's data</td><td data-l="With the Lab Agent" class="us"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Keeps every lab, plan and habit it suggested</td></tr>
+   <tr><th scope="row">Plan</th><td data-l="Without the agent">Recommendations to read</td><td data-l="With the Lab Agent" class="us"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Habits in your tracker, repeat tests with dates, clinician questions</td></tr>
+   <tr><th scope="row">Follow-up</th><td data-l="Without the agent">None until you ask again</td><td data-l="With the Lab Agent" class="us"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Reminds you when a repeat test is due</td></tr>
+   <tr><th scope="row">Learning</th><td data-l="Without the agent">Starts fresh each time</td><td data-l="With the Lab Agent" class="us"><svg class="ic y" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>Checks the next lab against the plan and adjusts it</td></tr>
+  </tbody>
+ </table>
  <details><summary>How the app and the agent split the work</summary><div><p>The app keeps your health file and matches it to research; the agent checks each new lab and keeps a plan with you.</p></div></details>
 </div></section>
 
 <section id="never"><div class="wrap">
  <h2>Reference, not prescription</h2>
  <ul class="rows never">
-  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--bad)"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><h3>Never diagnoses</h3><p>Or says what a result "means".</p></div></li>
-  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="color:var(--bad)"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><h3>Never sets a dose</h3><p>Or changes a medicine.</p></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><h3>Never diagnoses</h3><p>Or says what a result "means".</p></div></li>
+  <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><h3>Never sets a dose</h3><p>Or changes a medicine.</p></div></li>
   <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H4zM20 5h-4a3 3 0 0 0-3 3"/></svg></span><div><h3>Reference</h3><p>Official guidelines, with the source.</p></div></li>
   <li><span class="sq"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-.700.400-1 .900-1 1.700M12 17v.010"/></svg></span><div><h3>Instead</h3><p>Questions for your clinician.</p></div></li>
  </ul>
@@ -233,7 +230,7 @@
    <track kind="captions" src="/media/vitacrypt-lab-agent-demo.en.vtt" srclang="en" label="English" default>
    <a href="/media/vitacrypt-lab-agent-demo.mp4">Download the demo video (MP4, 18 MB)</a>
   </video>
-  <figcaption>Recorded in the live demo, 2:55, English captions. Synthetic data, not medical advice. <a href="/press">Press kit</a></figcaption>
+  <figcaption>Recorded in the live demo, 2:55, English captions. Synthetic data, not medical advice. <a href="/media/vitacrypt-lab-agent-demo.mp4">Download MP4</a></figcaption>
  </figure>
  <details><summary>The demo in full</summary><div><p>Follow Alex, a fictional person with a year of synthetic lab history: a new lab arrives, the agent explains what it will do, searches the research while you watch, plans habits and questions, and eight weeks later checks whether the plan worked.</p></div></details>
 </div></section>

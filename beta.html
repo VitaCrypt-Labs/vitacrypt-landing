@@ -16,15 +16,15 @@
 <meta property="og:url" content="https://vitacrypt.xyz/beta">
 <meta property="og:title" content="Test VitaCrypt on your own labs · private beta">
 <meta property="og:description" content="Early-stage MVP, small cohorts. The form asks no health data.">
-<meta property="og:image" content="https://vitacrypt.xyz/media/vitacrypt-lab-agent-poster.jpg">
+<meta property="og:image" content="https://vitacrypt.xyz/img/og-preview-v4.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@vita_crypt">
 <!-- Fonts and shared styles (dark only, tokens from the app) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=1">
-<script src="/assets/site.js?v=1" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=2">
+<script src="/assets/site.js?v=2" defer></script>
 <style>
 [hidden]{display:none!important}
 .narrow{max-width:760px}
@@ -183,7 +183,7 @@ textarea{min-height:96px;resize:vertical}
       </div>
       <input class="honey" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="field consent">
-        <label class="check"><input type="checkbox" name="consent" id="f-consent" required>I agree that VitaCrypt stores my name, email and the answers above on its own server to review my application and contact me about the beta. I am not sharing any health data in this form. I can ask for deletion at any time at privacy@vitacrypt.xyz, and applications not invited within 6 months are deleted.</label>
+        <label class="check"><input type="checkbox" name="consent" id="f-consent" required>I agree that VitaCrypt stores my name, email and the answers above on its own server to review my application and contact me about the beta. I am not sharing any health data in this form. I can ask for deletion at any time at office@vitacrypt.xyz, and applications not invited within 6 months are deleted.</label>
       </div>
       <p class="nohealth">This form asks no health data: no lab values, diagnoses, medications, date of birth, sex or files.</p>
       <div>
@@ -283,7 +283,7 @@ textarea{min-height:96px;resize:vertical}
     status.className = 'status err';
     status.textContent = text;
     var p = document.createElement('span');
-    p.innerHTML = ' If it keeps failing, write to <a href="mailto:privacy@vitacrypt.xyz">privacy@vitacrypt.xyz</a>.';
+    p.innerHTML = ' If it keeps failing, write to <a href="mailto:office@vitacrypt.xyz">office@vitacrypt.xyz</a>.';
     status.appendChild(p);
     submit.disabled = false;
   }

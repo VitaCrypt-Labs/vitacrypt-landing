@@ -88,7 +88,7 @@ FOOTER = ('<footer class="foot"><div class="wrap"><a class="wm" href="/"><img sr
 ASSETS = ('<!-- Fonts and shared styles (dark only, tokens from the app) -->\n'
  '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
  '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">\n'
- '<link rel="stylesheet" href="/assets/site.css?v=1">\n<script src="/assets/site.js?v=1" defer></script>\n')
+ '<link rel="stylesheet" href="/assets/site.css?v=2">\n<script src="/assets/site.js?v=2" defer></script>\n')
 (ROOT/'docs/design/partials').mkdir(parents=True, exist_ok=True)
 (ROOT/'docs/design/partials/assets.html').write_text(ASSETS)
 for h,_ in NAV+[('/beta',''),('/press',''),('','')]:
