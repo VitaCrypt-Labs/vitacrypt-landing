@@ -1,3 +1,4 @@
+# RETIRED 27.11.2026: index.html is now edited by hand (coherence pass). Do not rerun; it would revert the home page.
 # Home page proposal mock-up. Icons, source colours and ring geometry are copied from the app's
 # docs/design/mockups/build.py (the approved "blend" system), not redrawn.
 import math, html

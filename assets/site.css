@@ -206,7 +206,7 @@ input[type=checkbox]{width:22px;height:22px;min-height:0;accent-color:#fff;margi
 .vs tbody th{font-weight:600;width:34%}
 .vs td{color:var(--dim)}.vs td.us{color:var(--ink)}
 .vs .ic{width:16px;height:16px;position:absolute;left:0;top:12px}.vs td.us{position:relative;padding-left:22px}
-@media (max-width:640px){.vs thead{display:none}.vs tbody tr{display:grid;grid-template-columns:4fr 5fr;column-gap:12px;border-bottom:1px solid var(--line);padding:10px 0}.vs tbody th,.vs td{border:0;padding:0;width:auto}.vs tbody th{grid-column:1/-1;margin-bottom:6px}.vs.us1 tbody tr{grid-template-columns:5fr 4fr}.vs td.us .ic{top:20px}.vs td[data-l]::before{content:attr(data-l);display:block;font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-bottom:4px}.vs td.us[data-l]::before{color:var(--agent)}}
+@media (max-width:640px){.vs thead{display:none}.vs tbody tr{display:grid;grid-template-columns:4fr 5fr;column-gap:12px;border-bottom:1px solid var(--line);padding:10px 0}.vs tbody th,.vs td{border:0;padding:0;width:auto}.vs tbody th{grid-column:1/-1;margin-bottom:6px}.vs.us1 tbody tr{grid-template-columns:5fr 4fr}.vs td.us .ic{top:20px}.vs td[data-l]::before{content:attr(data-l);display:block;font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-bottom:4px}.vs td.us[data-l]::before{color:var(--ink)}.vs.ag td.us[data-l]::before{color:var(--agent)}}
 .y{color:var(--ink)}.n{color:var(--missing)}
 /* who-gets-what matrix */
 .wgww{overflow-x:auto;margin-top:16px;-webkit-overflow-scrolling:touch}
@@ -243,7 +243,7 @@ input[type=checkbox]{width:22px;height:22px;min-height:0;accent-color:#fff;margi
 .ph b{display:block;font:600 14px/1.3 var(--font);letter-spacing:0;text-transform:none;color:var(--ink)}
 .strip figure .ph{aspect-ratio:9/16;max-height:240px}
 .ph{max-width:200px;max-height:300px}
-.strip figure:has(.ph){flex-basis:150px}
+.strip.phs figure{flex-basis:150px}
 /* ring centre: N/8, no figure (app decision 27.11) */
 .ring .rc{font:600 26px/1 var(--font);fill:var(--ink)}.ring .rs{font:500 9px/1 var(--mono);fill:var(--dim);letter-spacing:.08em}
 /* drawn app card (home) */
@@ -275,11 +275,11 @@ input[type=checkbox]{width:22px;height:22px;min-height:0;accent-color:#fff;margi
 .fg .tag{margin-top:2px;display:none}
 .fg>div:first-child{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .fl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px}
-.fl a{min-height:40px!important}
+.fl a{min-height:44px!important}
 .fc{display:flex;flex-wrap:wrap;gap:6px}
-.fc a{display:inline-flex!important;align-items:center;gap:6px;min-height:40px!important;padding:0 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink)!important;font-size:13px}
+.fc a{display:inline-flex!important;align-items:center;gap:6px;min-height:44px!important;padding:0 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink)!important;font-size:13px}
 .fc .ic{width:16px;height:16px;color:var(--dim)}
-.fc a[aria-label]{width:40px;padding:0;justify-content:center}
+.fc a[aria-label]{width:44px;padding:0;justify-content:center}
 .fd{font-size:12px;margin:0!important}
 @media (min-width:900px){.fg .tag{display:block}.fg>div:first-child{display:block}.fg{grid-template-columns:1.2fr 2fr;align-items:start;column-gap:48px}.fl{grid-template-columns:repeat(6,auto);justify-content:start;gap:0 24px}.fc{grid-column:2}.fd{grid-column:1/-1}}
 /* timeline with dots */
