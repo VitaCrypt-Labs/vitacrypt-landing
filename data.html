@@ -23,8 +23,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=3">
-<script src="/assets/site.js?v=3" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=4">
+<script src="/assets/site.js?v=4" defer></script>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGT34ZL8HV"></script>
 <script>
@@ -63,10 +63,10 @@ details>div{overflow-x:auto}
 
 <section id="stored">
 <div class="wrap">
-<h2>Stored encrypted, with a key made for you</h2>
+<p class="kick k-gr">Storage</p><h2>Stored encrypted, with a key made for you</h2>
 <p class="note"><b>Our server holds the key.</b> This is not end-to-end encryption: the software, and Paul as the operator, can technically read your data. Keys held only on your device are on the roadmap.</p>
 <div class="grid g2">
-<div class="tile"><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Encrypted under your key</h3><ul class="pl"><li>DNA results</li><li>Lab results</li><li>Questionnaires</li><li>Daily check-ins</li><li>Wearable and body values</li><li>Health profile and score history</li><li>Reasons shown with habits</li></ul></div>
+<div class="tile"><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Encrypted under your key</h3><ul class="pl"><li class="sc"><i class="dna"></i>DNA results</li><li class="sc"><i class="lab"></i>Lab results</li><li class="sc"><i class="sur"></i>Questionnaires</li><li class="sc"><i class="chk"></i>Daily check-ins</li><li class="sc"><i class="wear"></i>Wearable and body values</li><li>Health profile and score history</li><li>Reasons shown with habits</li></ul></div>
 <div class="tile"><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg> Stored without encryption</h3><ul class="pl no"><li>Account email</li><li>DNA summary score and variant count</li><li>Air readings and history for your area</li><li>Habit names</li><li>File names</li><li>Tests ordered and repeat dates</li><li>Type and date of each record</li><li>The log of what left the app</li></ul></div>
 </div>
 <p class="cap">Server in France (EU). Text PDFs, scans and photos are read on our server; cloud text recognition is off. Uploaded files are not kept, only the values read from them.</p>
@@ -80,10 +80,10 @@ details>div{overflow-x:auto}
 
 <section id="outbound">
 <div class="wrap">
-<h2>Who receives what</h2>
+<p class="kick k-gr">Sharing</p><h2>Who receives what</h2>
 <p class="lead">Each row is a service outside the app; each dot, a kind of data.</p>
 <p class="note"><b>Zero data retention is requested, not confirmed.</b> We have asked Anthropic for it.</p>
-<div class="wgww"><table class="wgw"><caption class="vh">Who receives which kinds of data</caption><thead><tr><th scope="col"><span class="vh">Recipient</span></th><th scope="col"><span>Values, scores</span></th><th scope="col"><span>DNA</span></th><th scope="col"><span>Sex, age</span></th><th scope="col"><span>Name, contact</span></th><th scope="col"><span>Place</span></th><th scope="col"><span>File text</span></th><th scope="col"><span>Plan, dates</span></th></tr></thead><tbody>
+<div class="wgww"><table class="wgw"><caption class="vh">Who receives which kinds of data</caption><thead><tr><th scope="col"><span class="vh">Recipient</span></th><th scope="col"><span><i class="hd lab"></i>Values, scores</span></th><th scope="col"><span><i class="hd dna"></i>DNA</span></th><th scope="col"><span>Sex, age</span></th><th scope="col"><span>Name, contact</span></th><th scope="col"><span><i class="hd air"></i>Place</span></th><th scope="col"><span>File text</span></th><th scope="col"><span>Plan, dates</span></th></tr></thead><tbody>
 <tr class="grp"><th colspan="8" scope="colgroup">Automatic, when the app writes or checks insights</th></tr>
 <tr><th scope="row">Claude<small>insight cards</small></th><td><span class="d s" title="sent"></span><span class="vh">sent</span></td><td><span class="d s" title="sent"></span><span class="vh">sent</span></td><td><span class="d c" title="coded or partly"></span><span class="vh">coded or partly</span></td><td><span class="d n" title="never sent"></span><span class="vh">never</span></td><td><span class="d n" title="never sent"></span><span class="vh">never</span></td><td><span class="vh">not part of this send</span></td><td><span class="vh">not part of this send</span></td></tr>
 <tr><th scope="row">Claude<small>Lab Agent, 7 steps</small></th><td><span class="d c" title="coded or partly"></span><span class="vh">coded or partly</span></td><td><span class="d s" title="sent"></span><span class="vh">sent</span></td><td><span class="d c" title="coded or partly"></span><span class="vh">coded or partly</span></td><td><span class="d n" title="never sent"></span><span class="vh">never</span></td><td><span class="d n" title="never sent"></span><span class="vh">never</span></td><td><span class="d n" title="never sent"></span><span class="vh">never</span></td><td><span class="vh">not part of this send</span></td></tr>
@@ -115,7 +115,7 @@ details>div{overflow-x:auto}
 <div class="wrap">
 <div class="two">
 <div>
-<h2>“What left VitaCrypt”</h2>
+<p class="kick k-gr">The log</p><h2>“What left VitaCrypt”</h2>
 <p class="lead">Profile, then “What left VitaCrypt” lists each send: when, where, which kinds of fields.</p>
 <details><summary>What the log holds</summary><div><p>Sends from these features are written to a log in the app. The log names the fields, never their values. It shows the latest 200 entries. Some literature searches made for insight cards are not logged yet.</p></div></details>
 </div>
@@ -126,7 +126,7 @@ details>div{overflow-x:auto}
 
 <section id="erase">
 <div class="wrap">
-<h2>Deleting your data destroys your key</h2>
+<p class="kick k-gr">Deletion</p><h2>Deleting your data destroys your key</h2>
 <ol class="rail">
 <li><div><h3>Open Profile</h3><p>Profile, then “Permanently delete my health data”.</p></div></li>
 <li><div><h3>Confirm</h3><p>Your health records and Lab Agent data are deleted, including the log.</p></div></li>
@@ -144,7 +144,7 @@ details>div{overflow-x:auto}
 
 <section id="not-yet">
 <div class="wrap">
-<h2>What is not finished</h2>
+<p class="kick k-gr">Not finished</p><h2>What is not finished</h2>
 <div class="note">
 <p><b>Older insight cards send more.</b> They still send Claude lab and body values, DNA variants, symptoms and questionnaire scores, a fuller profile than the Lab Agent sends.</p>
 <p><b>Backups outlive an erase.</b> Backups made before you erase still hold your data, encrypted, for up to 35 days.</p>
@@ -154,7 +154,7 @@ details>div{overflow-x:auto}
 
 <section id="contact">
 <div class="wrap">
-<h2>Questions</h2>
+<p class="kick k-gr">Contact</p><h2>Questions</h2>
 <p class="lead">Write to <a href="mailto:office@vitacrypt.xyz">office@vitacrypt.xyz</a>.</p>
 <p class="cap">This page is about the app. This website, vitacrypt.xyz, uses Google Analytics; the app does not.</p>
 </div>
