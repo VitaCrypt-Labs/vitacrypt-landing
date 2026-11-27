@@ -142,9 +142,7 @@ details th{color:var(--ink);font-weight:600}
 @media (min-width:900px){.lab4{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .close{background:var(--tile);border-radius:var(--r-tile);padding:24px;margin:8px 20px 32px}
 .foot{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--dim);font-size:14px}
-.foot .row{display:flex;flex-wrap:wrap;gap:0 20px;margin-top:8px}
 .foot a{display:inline-flex;min-height:44px;align-items:center;text-decoration:none;color:var(--ink)}
-.foot .row+.row a{color:var(--dim)}
 .foot p{margin-top:8px}
 /* forms (beta) */
 label{display:block;font-weight:500;margin-bottom:6px}
@@ -240,10 +238,11 @@ input[type=checkbox]{width:22px;height:22px;min-height:0;accent-color:#fff;margi
 .k-data::before{width:48px;height:8px;background:linear-gradient(90deg,var(--lab) 0 12.5%,var(--dna) 0 25%,var(--gut) 0 37.5%,var(--body) 0 50%,var(--wear) 0 62.5%,var(--chk) 0 75%,var(--sur) 0 87.5%,var(--air) 0)}
 .stat.ag b{color:var(--agent)}
 /* placeholder for app screens until the redesign ships */
-.ph{display:grid;place-items:center;align-content:center;gap:8px;aspect-ratio:9/16;max-height:320px;border:1.5px dashed var(--line);border-radius:var(--r-tile);background:var(--tile);color:var(--missing);text-align:center;padding:16px;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ph{display:grid;place-items:center;align-content:center;gap:8px;aspect-ratio:9/16;max-height:320px;border:1.5px dashed var(--missing);border-radius:var(--r-tile);background:var(--tile);color:var(--missing);text-align:center;padding:16px;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .ph .ic{width:22px;height:22px}
 .ph b{display:block;font:600 14px/1.3 var(--font);letter-spacing:0;text-transform:none;color:var(--ink)}
-.strip figure .ph{aspect-ratio:9/16;max-height:240px;border-color:var(--missing)}
+.strip figure .ph{aspect-ratio:9/16;max-height:240px}
+.ph{max-width:200px;max-height:300px}
 .strip figure:has(.ph){flex-basis:150px}
 /* ring centre: N/8, no figure (app decision 27.11) */
 .ring .rc{font:600 26px/1 var(--font);fill:var(--ink)}.ring .rs{font:500 9px/1 var(--mono);fill:var(--dim);letter-spacing:.08em}
